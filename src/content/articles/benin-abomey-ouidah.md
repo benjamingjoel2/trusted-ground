@@ -60,7 +60,7 @@ At the time of writing (November 2026), the FCDO's Benin advice was last updated
 - **Advises against all travel** to the Parc du W and the Mékrou and Djona hunting zones, the area between the Parc du W and the Niger border, Pendjari National Park and its hunting grounds, and anywhere else within 5 km of the Burkina Faso border.
 - **Advises against all but essential travel** to the area between the RNIE 2 highway (Tchaourou to Malanville) and the Nigerian border, and to the rest of the Alibori and Atacora departments.
 - **Terrorism and kidnap.** The FCDO says terrorists are very likely to try to carry out attacks in Benin and that the risk of kidnap is higher in the north.
-- **Unrest.** The FCDO notes an attempted coup on 7 December and advises avoiding demonstrations and complying with any curfews.
+- **Unrest.** The FCDO travel advice (updated 4 November 2026) refers to a recent attempted coup and advises avoiding demonstrations and complying with any curfews.
 - **Crime and roads.** Street crime is common in Cotonou. The FCDO advises against driving outside towns after dark and calls the sea currents along the whole coast, including Ouidah's beaches, very strong.
 
 Read the full advice yourself before booking and again before you travel, and check your insurance covers your itinerary. See our [insurance guide](/guide/insurance/).
