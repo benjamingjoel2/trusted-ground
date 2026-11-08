@@ -335,5 +335,90 @@
    "File:St Chad, Far Headingly, Leeds 1922 - 48847840903.jpg",
    "File:Guéra.jpg"
   ]
+ },
+ "chile": {
+  "file": "File:00 2540 Riesco Island - Chile.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=115430908",
+  "author": "W. Bulach",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "description": "00 2540 Riesco Island - Chile",
+  "width": 1280,
+  "height": 850,
+  "alternatives": [
+   "File:Desert from above.jpg",
+   "File:Paisaje junto al salar de Tara, Chile, 2016-02-07, DD 83.JPG",
+   "File:Paisaje cerca de Calama, Chile, 2016-02-01, DD 83.JPG",
+   "File:.00 2647 Guanako (Lama guanicoe) - Chile.jpg",
+   "File:Cerro Aucanquilcha, Chile, 2016-02-10, DD 15.JPG"
+  ]
+ },
+ "china": {
+  "file": "File:Xinjiang, China, landscape Bebop Drone 2015-09-14T201458+0000 4D8632.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=44913200",
+  "author": "w0zny",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "description": "Xinjiang, China, landscape Bebop Drone 2015-09-14T201458+0000 4D8632",
+  "width": 1280,
+  "height": 725,
+  "alternatives": [
+   "File:Xinjiang, China, landscape Bebop Drone 2015-09-14T201553+0000 4D8632.jpg",
+   "File:Xinjiang, China, landscape Bebop Drone 2015-09-14T201524+0000 4D8632.jpg",
+   "File:Xinjiang, China, landscape Bebop Drone 2015-09-14T201533+0000 4D8632.jpg",
+   "File:Xinjiang, China, landscape Bebop Drone 2015-09-14T201605+0000 4D8632.jpg",
+   "File:Xili Station Cultural Art Wall - South China Landscape.jpg"
+  ]
+ },
+ "colombia": {
+  "file": "File:Colombia Landscape (41276985751).jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=82961434",
+  "author": "Pedro Szekely from Los Angeles, USA",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+  "description": "Colombia Landscape (41276985751)",
+  "width": 1280,
+  "height": 766,
+  "alternatives": [
+   "File:Landscape of Nuquí, Chocó, Colombia - 22 Oct 2025 - Diferoch - 10.jpg",
+   "File:Colombia Landscape (39459561610).jpg",
+   "File:Landscape of Nuquí, Chocó, Colombia - 22 Oct 2025 - Diferoch - 6.jpg",
+   "File:San Juan River in Cimitarra, Santander, Colombia - 03 Oct 2025 - Diferoch.jpg",
+   "File:Landscape of Nuquí, Chocó, Colombia - 21 Oct 2025 - Diferoch - 4.jpg"
+  ]
+ },
+ "cook-islands": {
+  "file": "File:Landscape in Mount Cook National Park 13.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=66681731",
+  "author": "Krzysztof Golik",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "description": "Landscape in Mount Cook National Park 13",
+  "width": 1280,
+  "height": 646,
+  "alternatives": [
+   "File:Landscape in Mount Cook National Park 23.jpg",
+   "File:Landscape in Mount Cook National Park 12.jpg",
+   "File:Landscape in Mount Cook National Park 25.jpg",
+   "File:Landscape in Mount Cook National Park 07.jpg",
+   "File:Landscape in Mount Cook National Park 30.jpg"
+  ]
+ },
+ "costa-rica": {
+  "file": "File:Cascajal de Coronado Costa Rica sky landscape 03.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=107376762",
+  "author": "Julián Monge-Nájera",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "description": "Cascajal de Coronado Costa Rica sky landscape 03",
+  "width": 1280,
+  "height": 612,
+  "alternatives": [
+   "File:Cascajal de Coronado Costa Rica sky landscape 02.jpg",
+   "File:Cascajal de Coronado Costa Rica Tree landscape 02.jpg",
+   "File:Cascajal de Coronado Costa Rica Tree landscape 04.jpg",
+   "File:Cascajal de Coronado Costa Rica Tree landscape 05.jpg",
+   "File:Cascajal de Coronado Costa Rica Tree landscape 03.jpg"
+  ]
  }
 }
