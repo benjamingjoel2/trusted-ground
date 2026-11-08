@@ -316,3 +316,20 @@ h3 { font-size: 1.375rem; }
 .article-head h1 { font-size: clamp(2.2rem, 1.4rem + 3vw, 3.5rem); }
 .article-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-family: var(--mono); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.04em; color: var(--slate); margin-bottom: 1rem; }
 .card .photo-link { display: block; }
+
+/* Hero B: full-bleed photo, bold headline, story strip */
+.hero-b { min-height: min(86vh, 46rem); flex-direction: column; justify-content: flex-end; align-items: stretch; }
+.hero-b::after { background: linear-gradient(180deg, rgba(0,0,0,0) 25%, rgba(0,0,0,.78) 100%); }
+.hero-b .hero-body { padding-top: 8rem; padding-bottom: 2.5rem; max-width: var(--max); }
+.hero-chip { display: inline-block; border: 1px solid #fff; padding: 0.25rem 0.5rem; font-size: 0.75rem; margin: 0 0 0.9rem; }
+.hero-title { font-family: var(--sans); font-weight: 700; font-size: clamp(2.2rem, 1.3rem + 3.6vw, 4rem); line-height: 1.05; letter-spacing: -0.02em; max-width: 22ch; margin: 0 0 1rem; color: #fff; }
+.hero-title a { text-decoration: none; color: inherit; }
+.hero-title a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.hero-dek { font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem); max-width: 44rem; margin: 0 0 1.5rem; color: #eceeef; }
+.hero-strip { position: relative; z-index: 3; display: grid; grid-template-columns: 1fr; background: rgba(15,18,20,.78); }
+@media (min-width: 48rem) { .hero-strip { grid-template-columns: repeat(3, 1fr); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); } }
+.hero-strip a { display: block; color: #fff; text-decoration: none; font-weight: 700; font-size: 1.0625rem; line-height: 1.3; padding: 1.1rem var(--gutter) 1.25rem; border-top: 1px solid rgba(255,255,255,.16); }
+@media (min-width: 48rem) { .hero-strip a { border-top: 0; border-right: 1px solid rgba(255,255,255,.18); } .hero-strip a:last-child { border-right: 0; } }
+.hero-strip a:hover { background: rgba(255,255,255,.06); text-decoration: underline; }
+.hero-strip .mono { display: block; font-weight: 400; font-size: 0.75rem; color: #c9cdd0; margin-bottom: 0.35rem; }
+.hero-b .credit { bottom: auto; top: 0.75rem; }

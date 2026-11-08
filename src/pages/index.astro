@@ -27,36 +27,42 @@ const heroPhoto = heroSlug && placePhoto(heroSlug) ? heroSlug : site.heroPhoto;
 const heroImg = placePhoto(heroPhoto) ? await getImage({ src: placePhoto(heroPhoto)!.src, widths: [640, 960, 1280, 1600], format: 'webp', quality: 70 }) : null;
 ---
 <Base title={site.name} description={site.positioning} path="/" ogType="website" full preloadSrcset={heroImg?.srcSet.attribute} preloadSizes="100vw">
-  <section class="hero" aria-labelledby="hero-h">
+  <section class="hero hero-b" aria-labelledby="hero-h">
     <Photo slug={heroPhoto} alt="" priority sizes="100vw" widths={[640, 960, 1280, 1600]} />
     <div class="wrap hero-body">
       {featured ? (
         <>
-          <p class="hero-kicker">{featured.data.category}</p>
-          <h1 id="hero-h" class="display">{featured.data.title}</h1>
-          <div class="callout">
-            <p>{featured.data.description}</p>
-            <a class="pill pill-dark" href={url.article(featured.id)}>Read the story</a>
-          </div>
+          <p class="hero-chip mono">Featured story</p>
+          <h1 id="hero-h" class="hero-title"><a href={url.article(featured.id)}>{featured.data.title}</a></h1>
+          <p class="hero-dek">{featured.data.description}</p>
+          <a class="pill pill-light" href={url.article(featured.id)}>Read the story</a>
         </>
       ) : (
         <>
-          <p class="hero-kicker">{site.name}</p>
-          <h1 id="hero-h" class="display">{site.tagline}</h1>
-          <div class="callout"><p>{site.positioning}</p><a class="pill pill-dark" href={url.articles()}>Read the stories</a></div>
+          <p class="hero-chip mono">{site.name}</p>
+          <h1 id="hero-h" class="hero-title">{site.tagline}</h1>
+          <p class="hero-dek">{site.positioning}</p>
+          <a class="pill pill-light" href={url.articles()}>Read the stories</a>
         </>
       )}
     </div>
+    {rest.length > 0 && (
+      <nav class="hero-strip" aria-label="More stories">
+        {rest.slice(0, 3).map((a) => (
+          <a href={url.article(a.id)}><span class="mono">{a.data.category}</span>{a.data.title}</a>
+        ))}
+      </nav>
+    )}
   </section>
 
-  {rest.length > 0 && (
+  {rest.length > 3 && (
     <section class="section" aria-labelledby="latest-h">
       <div class="wrap">
         <div class="sec-head">
           <h2 id="latest-h">Latest travel stories</h2>
           <div class="sec-tools"><a class="viewall" href={url.articles()}>View all</a><Carousel id="row-latest" label="latest stories" /></div>
         </div>
-        <div class="row" id="row-latest">{rest.slice(0, 10).map((a) => <ArticleCard a={a} />)}</div>
+        <div class="row" id="row-latest">{rest.slice(3, 15).map((a) => <ArticleCard a={a} />)}</div>
       </div>
     </section>
   )}
