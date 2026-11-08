@@ -12,7 +12,8 @@ import json, os, re, sys, time, urllib.parse, urllib.request, urllib.error, hash
 
 H = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(H, '..', '..')
 UA = 'TrustedGroundBuild/1.0 (+https://trustedground.tourground.com)'
-OUT = os.path.join(ROOT, 'data', 'images.json'); ASSETS = os.path.join(ROOT, 'src', 'assets', 'places')
+OUT = os.environ.get('IMAGES_JSON') or os.path.join(ROOT, 'data', 'images.json')
+ASSETS = os.environ.get('IMAGES_DIR') or os.path.join(ROOT, 'src', 'assets', 'places')
 PINS = os.path.join(ROOT, 'data', 'images.pins.json')
 FORCE = '--force' in sys.argv
 ONLY = [a for a in sys.argv[1:] if not a.startswith('--')]
