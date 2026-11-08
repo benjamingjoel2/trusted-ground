@@ -12,7 +12,7 @@
 export const site = {
   name: 'Trusted Ground',
   /** Hero photo on the home page (a destination slug with a photo in data/images.json). */
-  heroPhoto: 'namibia',
+  heroPhoto: 'peru',
   /** Short line shown under the name in the masthead. */
   tagline: 'Verified local operators, country by country',
   /** One-sentence positioning used in meta descriptions and llms.txt. */

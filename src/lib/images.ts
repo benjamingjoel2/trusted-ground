@@ -39,6 +39,6 @@ export function allCredits(): [string, Credit][] {
 
 /** "Photo: Author, CC BY-SA 4.0" */
 export function creditLine(c: Credit): string {
-  const author = c.author.replace(/\s+/g, ' ').slice(0, 60);
+  const author = c.author.replace(/\s+at\s+https?:\S+/i, '').replace(/https?:\/\/\S+/g, '').replace(/\s+/g, ' ').trim().slice(0, 60) || 'Wikimedia Commons';
   return `${author} · ${c.license}`;
 }

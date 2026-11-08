@@ -7,6 +7,7 @@ animals close-ups, aircraft, maps and night shots. Writes src/assets/places/<slu
 thumbnail from upload.wikimedia.org) and data/images.json with author, licence and source page.
 Usage: python3 scripts/images/fetch-openverse.py [--force] [slug ...]
 Pin a specific Commons file for a slug in data/images.pins.json: {"japan": "File:Mount Fuji ....jpg"}
+Steer a search with data/images.queries.json: {"peru": "Machu Picchu"} (tried first).
 """
 import json, os, re, sys, time, urllib.parse, urllib.request, urllib.error, hashlib
 
@@ -19,7 +20,7 @@ FORCE = '--force' in sys.argv
 ONLY = [a for a in sys.argv[1:] if not a.startswith('--')]
 sys.path.insert(0, H)
 PEOPLE = re.compile(r'\b(portrait|people|person|man|men|woman|women|girl|boy|child|children|kids?|family|crowd|selfie|wedding|dancer|dancers|player|players|athlete|soldier|soldiers|president|minister|actor|actress|singer|vendor|fisherm[ae]n|monks?|nun|bride|tourists?|festival|parade|carnival|market|ceremony|procession|students?|worker|workers|team|visit|meeting|delegation|ambassador)\b', re.I)
-NOPE = re.compile(r'\b(insect|beetle|moth|butterfly|spider|ant|bee|wasp|fly|lizard|agama|gecko|snake|frog|fungus|mushroom|flower|orchid|leaf|seed|macro|stamp|coin|map|flag|coat of arms|banknote|interior|museum|painting|mosaic|fresco|sculpture|statue|manuscript|bird|heron|eagle|owl|egret|kingfisher|duck|aircraft|airplane|aeroplane|jet|jets|navy|naval|military|warship|helicopter|fighter|squadron|satellite|NASA|ISS|astronaut|space station|from space|night|nocturnal|car|bus|train|locomotive|truck|logo|poster|document|book|tomb|grave|cemetery|hotel|restaurant|food|dish)\b', re.I)
+NOPE = re.compile(r'\b(insect|beetle|moth|butterfly|spider|ant|bee|wasp|fly|lizard|agama|gecko|snake|frog|fungus|mushroom|flower|orchid|leaf|seed|macro|stamp|coin|map|flag|coat of arms|banknote|interior|museum|painting|mosaic|fresco|sculpture|statue|manuscript|bird|heron|eagle|owl|egret|kingfisher|duck|aircraft|airplane|aeroplane|jet|jets|navy|naval|military|warship|helicopter|fighter|squadron|satellite|NASA|ISS|astronaut|space station|from space|night|nocturnal|car|bus|train|locomotive|truck|logo|poster|document|book|tomb|grave|cemetery|hotel|restaurant|food|dish|drawing|sketch|engraving|illustration|lithograph|beach boy|lifeguard)\b', re.I)
 GOOD = re.compile(r'\b(view|panorama|panoramic|landscape|beach|mountains?|mount|lake|national park|skyline|river|desert|coast|island|bay|valley|old town|harbou?r|waterfall|falls|glacier|fjord|cliffs?|dunes?|savann?ah|canyon|volcano|lagoon|hills?|aerial|city|village|reserve|plateau|forest)\b', re.I)
 ALIAS = {'england-wales': 'England', 'united-states': 'United States', 'turkiye': 'Turkey', 'the-gambia': 'Gambia', 'sao-tome-and-principe': 'Sao Tome', 'cape-verde': 'Cape Verde'}
 
@@ -62,19 +63,25 @@ def main():
     names = {d['slug']: d['name'] for d in feed['destinations']}
     done = json.load(open(OUT)) if os.path.exists(OUT) else {}
     pins = json.load(open(PINS)) if os.path.exists(PINS) else {}
+    qfile = os.path.join(ROOT, 'data', 'images.queries.json')
+    queries = json.load(open(qfile)) if os.path.exists(qfile) else {}
     used = {v['file'] for k, v in done.items()}
     for slug, name in sorted(names.items()):
         if ONLY and slug not in ONLY: continue
         if slug in done and not FORCE: continue
         q = ALIAS.get(slug, name)
         pool = []
-        for query in (f'{q} landscape', q):
+        qs = ([queries[slug]] if slug in queries else []) + [f'{q} landscape', q]
+        for query in qs:
             for r in search(query):
                 title = r.get('title') or ''; tags = ' '.join(t.get('name', '') for t in r.get('tags') or [])
                 text = title + ' ' + tags
                 url = r.get('url') or ''
                 if not url.lower().endswith(('.jpg', '.jpeg')): continue
                 if PEOPLE.search(text) or NOPE.search(title): continue
+                if re.match(r'^(File:)?[A-Z][a-z]+ [a-z]{3,}\b', title) and not GOOD.search(title): continue  # species names (e.g. 'Enicognathus ferrugineus')
+                if re.search(r'\([A-Z][a-z]+ [a-z]{3,}\)|woodpecker|parrot|guanaco|condor|penguin|seal|whale|dolphin|monkey|deer|horse|cattle|sheep', title, re.I): continue
+                if re.search(r'\b(collection|archive|19[0-8]\d)\b', title, re.I): continue  # archival scans
                 w, h = r.get('width') or 0, r.get('height') or 1
                 if w < 1600 or w / h < 1.3 or w / h > 2.6: continue
                 file = 'File:' + urllib.parse.unquote(url.rsplit('/', 1)[1]).replace('_', ' ')
