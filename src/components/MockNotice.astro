@@ -1,0 +1,6 @@
+---
+import { getFeed } from '../lib/feed';
+import { disclosure } from '../config/site.config';
+const feed = getFeed();
+---
+{feed.source === 'mock' && <p class="notice" role="note">{disclosure.mockFeedNotice}</p>}

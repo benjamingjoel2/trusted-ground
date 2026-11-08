@@ -1,0 +1,13 @@
+---
+import { t } from '../i18n/en';
+interface Props { sources: { url: string; label: string }[]; relFor?: (href: string) => string; id?: string }
+const { sources, relFor = () => 'noopener', id = 'sources' } = Astro.props;
+---
+<section class="sources" aria-labelledby={id}>
+  <h2 id={id} class="label-h">{t.sources}</h2>
+  <ol>
+    {sources.map((s) => (
+      <li><a href={s.url} rel={relFor(s.url)}>{s.label}</a> <span class="src-host">{new URL(s.url).hostname}</span></li>
+    ))}
+  </ol>
+</section>

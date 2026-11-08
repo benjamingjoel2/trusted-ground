@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageMeta from '../../components/PageMeta.astro';
+import { getFeed } from '../../lib/feed';
+import { regions, site } from '../../config/site.config';
+import { url } from '../../lib/urls';
+import { article } from '../../lib/schema';
+import { t } from '../../i18n/en';
+const feed = getFeed();
+const path = url.regions();
+const title = 'Regions';
+const description = 'Verified local operators grouped by world region: Africa, Asia, Europe, the Americas, the Middle East, Oceania and the Poles.';
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: t.nav.regions, path }]}
+  schema={[article({ path, title, description, published: site.launch.published, modified: feed.latestCheck })]}>
+  <h1>Regions</h1>
+  <p class="standfirst">{description}</p>
+  <PageMeta published={site.launch.published} reviewed={feed.latestCheck} reviewedLabel="Directory last checked" />
+  <ol class="entries">
+    {regions.map((r) => {
+      const l = feed.countriesByRegion.get(r.slug) ?? [];
+      const ops = new Set(l.flatMap((d) => feed.rankedByCountry.get(d.slug)!.map((e) => e.company.id))).size;
+      return (
+        <li><div>
+          <a href={url.region(r.slug)}>{r.name}</a>
+          <p>{l.length ? `${t.countriesListed(l.length)}, ${t.operatorsListed(ops)}` : 'No verified operators listed yet.'}</p>
+        </div></li>
+      );
+    })}
+  </ol>
+</Base>

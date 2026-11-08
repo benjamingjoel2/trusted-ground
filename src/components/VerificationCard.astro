@@ -1,0 +1,48 @@
+---
+/** Signature feature 1: opens every company page. Facts come only from the feed and the tier config. */
+import type { Company } from '../lib/feed';
+import { tiers, site, tierSources } from '../config/site.config';
+import { fmtDate } from '../lib/content';
+import { url, sourceRel } from '../lib/urls';
+import { t } from '../i18n/en';
+import Check from './Check.astro';
+interface Props { company: Company }
+const { company: c } = Astro.props;
+const tier = tiers[c.tier];
+---
+<section class={`vcard${c.verified ? ' vcard-verified' : ''}`} aria-labelledby="vcard-h">
+  <header class="vcard-head">
+    <h2 id="vcard-h" class="label-h">{t.card.title}</h2>
+    <p class="vcard-no">No. {c.id}</p>
+  </header>
+  <dl class="vcard-grid">
+    <div>
+      <dt>{t.card.status}</dt>
+      <dd>
+        {c.verified ? <span class="vstate"><Check />{t.card.statusVerified}</span> : <span>{t.card.statusFounder}</span>}
+      </dd>
+    </div>
+    <div>
+      <dt>{t.tier}</dt>
+      <dd><a href={`${url.verification()}#tier-${c.tier}`}>{tier.label}</a>{tier.paid && ' (paid plan)'}</dd>
+    </div>
+    <div><dt>{t.card.checkedBy}</dt><dd>{c.checked_by || site.publisher.name}</dd></div>
+    <div><dt>{t.card.checkedOn}</dt><dd><time datetime={c.last_checked}>{fmtDate(c.last_checked)}</time></dd></div>
+    {c.founder_owned && <div class="vcard-wide"><dt>Ownership</dt><dd>{site.publisher.founderLabel}</dd></div>}
+  </dl>
+  <div class="vcard-cols">
+    <div>
+      <h3 class="label-h">{t.card.whatChecked}</h3>
+      <ul class="checks">{tier.checks.map((x) => <li>{x}</li>)}</ul>
+    </div>
+    <div>
+      <h3 class="label-h">{t.card.whatNotChecked}</h3>
+      <ul class="notchecked">{tier.notChecked.map((x) => <li>{x}</li>)}</ul>
+    </div>
+  </div>
+  <p class="vcard-sources">
+    <span class="label">{t.sources}:</span>
+    {c.sources.map((s, i) => (<>{i > 0 && '; '}<a href={s.url} rel={sourceRel(c, s.url)}>{s.label}</a></>))}.
+    Tier definitions: <a href={tierSources[0].url}>{tierSources[0].label}</a>.
+  </p>
+</section>

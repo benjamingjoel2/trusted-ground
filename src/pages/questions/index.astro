@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageMeta from '../../components/PageMeta.astro';
+import { site } from '../../config/site.config';
+import { url } from '../../lib/urls';
+import { published, iso } from '../../lib/content';
+import { article, faqPage } from '../../lib/schema';
+import { t } from '../../i18n/en';
+const qs = (await published('questions')).sort((a, b) => a.data.order - b.data.order);
+const path = url.questions();
+const title = 'Questions travellers ask about local operators';
+const description = 'Short, sourced answers to common questions about booking with a local tour operator: legitimacy, price, DMCs, deposits, cancellations and insurance.';
+const reviewed = qs.reduce((m, q) => (iso(q.data.reviewed) > m ? iso(q.data.reviewed) : m), site.launch.published);
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: t.nav.questions, path }]}
+  schema={[faqPage(path, qs.map((q) => ({ q: q.data.title, a: q.data.short_answer }))), article({ path, title, description, published: site.launch.published, modified: reviewed })]}>
+  <p class="label">Questions</p>
+  <h1>{title}</h1>
+  <p class="standfirst">Short answer first, then the detail and the sources.</p>
+  <PageMeta published={site.launch.published} reviewed={reviewed} />
+  <ol class="entries">
+    {qs.map((q) => (<li><div><a href={url.question(q.id)}>{q.data.title}</a><p>{q.data.short_answer}</p></div></li>))}
+  </ol>
+</Base>

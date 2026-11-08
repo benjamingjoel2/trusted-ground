@@ -1,0 +1,1857 @@
+[
+ {
+  "project": "bolivia-unpacked",
+  "domain": "boliviaunpacked.tourground.com",
+  "kind": "booster",
+  "name": "Bolivia Unpacked",
+  "title": "Bolivia Unpacked: The plain-English reference for planning Bolivia",
+  "description": "The plain-English reference for planning Bolivia: altitude, the salt flats, the Andes and the Amazon, and the verified operators who make it easy.",
+  "country": "Bolivia",
+  "countries_covered": [
+   "Bolivia"
+  ],
+  "base_city": null,
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "region-antarctica",
+  "domain": "seventhcontinent.tourground.com",
+  "kind": "brand",
+  "name": "Seventh Continent",
+  "title": "Seventh Continent | Antarctica expeditions, planned by one polar specialist",
+  "description": "Independent Antarctica expedition specialists. We match you with the right IAATO-member ship, route and season, and one polar specialist plans every detail.",
+  "country": "Antarctica",
+  "countries_covered": [
+   "Antarctica"
+  ],
+  "base_city": "Buenos Aires",
+  "niches": [
+   "expedition cruise"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "estanciatravel",
+  "domain": "estanciatravel.tourground.com",
+  "kind": "brand",
+  "name": "Estancia Travel",
+  "title": "Estancia Travel · Uruguay at its own easy pace",
+  "description": "Estancias, wineries, empty Atlantic beaches and Montevideo’s old town: the quiet side of the River Plate, planned privately.",
+  "country": "Uruguay",
+  "countries_covered": [
+   "Uruguay"
+  ],
+  "base_city": "Montevideo",
+  "niches": [
+   "wine",
+   "beach"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "uganda",
+  "domain": "nilesourcesafaris.tourground.com",
+  "kind": "brand",
+  "name": "Nile Source Safaris",
+  "title": "Nile Source Safaris · Uganda, from the source.",
+  "description": "Uganda planned by forest sector, river and swamp: gorillas in Bwindi, chimps in Kibale, the Nile at its source and the birds that make this the primate and birding capital of Africa.",
+  "country": "Uganda",
+  "countries_covered": [
+   "Uganda"
+  ],
+  "base_city": "Nakasero, Kampala",
+  "niches": [
+   "safari",
+   "birding",
+   "gorilla/primate trekking"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "carthagejourneys",
+  "domain": "carthagejourneys.tourground.com",
+  "kind": "brand",
+  "name": "Carthage Journeys",
+  "title": "Carthage Journeys · Private journeys in Tunisia",
+  "description": "Private, design-led journeys in Tunisia: Carthage and the Roman cities, the medinas of Tunis and Kairouan, Djerba and the Sahara edge, planned only where UK and US travel advice allows.",
+  "country": "Tunisia",
+  "countries_covered": [
+   "Tunisia"
+  ],
+  "base_city": "Tunis",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "slovenia",
+  "domain": "alpstoadriatic.tourground.com",
+  "kind": "brand",
+  "name": "Alps to Adriatic",
+  "title": "Alps to Adriatic · Slovenia, slowly, from the Alps to the sea",
+  "description": "Private, slow trips through Slovenia: the Julian Alps, the Soča Valley, the Karst caves, the wine hills and a sliver of Adriatic coast, all within two hours of Ljubljana.",
+  "country": "Slovenia",
+  "countries_covered": [
+   "Slovenia"
+  ],
+  "base_city": "Ljubljana",
+  "niches": [
+   "wine",
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "chocolate-islands-travel",
+  "domain": "chocolateislandstravel.tourground.com",
+  "kind": "brand",
+  "name": "Chocolate Islands Travel",
+  "title": "Chocolate Islands Travel · São Tomé and Príncipe, slowly",
+  "description": "Slow, privately planned journeys to São Tomé and Príncipe: rainforest, old cacao roças, empty beaches and Príncipe",
+  "country": "São Tomé and Príncipe",
+  "countries_covered": [
+   "São Tomé and Príncipe"
+  ],
+  "base_city": "São Tomé",
+  "niches": [
+   "slow travel",
+   "beach"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "carpathia-travel",
+  "domain": "carpathiatravel.tourground.com",
+  "kind": "brand",
+  "name": "Carpathia Travel",
+  "title": "Carpathia Travel — Romania’s living countryside, travelled slowly.",
+  "description": "Slow, privately planned journeys through rural Romania: the Saxon villages of Transylvania, the wooden churches of Maramureș, the painted monasteries of Bucovina and the Carpathian mountains.",
+  "country": "Romania",
+  "countries_covered": [
+   "Romania"
+  ],
+  "base_city": "Bucharest",
+  "niches": [
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "black-mountain-travel",
+  "domain": "blackmountaintravel.tourground.com",
+  "kind": "brand",
+  "name": "Black Mountain Travel",
+  "title": "Black Mountain Travel · Montenegro in two halves",
+  "description": "Black Mountain Travel: private journeys through Montenegro in two halves, the Bay of Kotor and the coast for the sea, Durmitor and the north for the mountains.",
+  "country": "Montenegro",
+  "countries_covered": [
+   "Montenegro"
+  ],
+  "base_city": "Podgorica",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "knights-isles-malta",
+  "domain": "knightsisles.tourground.com",
+  "kind": "brand",
+  "name": "Knights' Isles",
+  "title": "Knights' Isles | Malta, Gozo and Comino beyond the beach",
+  "description": "Knights",
+  "country": "Malta",
+  "countries_covered": [
+   "Malta"
+  ],
+  "base_city": "Valletta",
+  "niches": [
+   "beach"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "smilingcoasttravel",
+  "domain": "smilingcoasttravel.tourground.com",
+  "kind": "brand",
+  "name": "Smiling Coast Travel",
+  "title": "Smiling Coast Travel: The Gambia, upriver",
+  "description": "Private journeys in The Gambia planned river-first: up the River Gambia by boat to Janjanbureh, birding with named guides, griot music and village life, a short flight from Europe.",
+  "country": "The Gambia",
+  "countries_covered": [
+   "The Gambia"
+  ],
+  "base_city": "Serrekunda",
+  "niches": [
+   "birding"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "bluemountaintravel-jamaica",
+  "domain": "bluemountaintravel.tourground.com",
+  "kind": "brand",
+  "name": "Blue Mountain Travel",
+  "title": "Blue Mountain Travel: Jamaica beyond the resort wall",
+  "description": "Private trips to Jamaica beyond the resort wall: the Blue Mountains, Portland’s coast, Kingston’s music and food, with honest, dated guidance on where to go after Hurricane Melissa.",
+  "country": "Jamaica",
+  "countries_covered": [
+   "Jamaica"
+  ],
+  "base_city": "Kingston",
+  "niches": [
+   "food"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "rupununi-journeys",
+  "domain": "rupununijourneys.tourground.com",
+  "kind": "brand",
+  "name": "Rupununi Journeys",
+  "title": "Rupununi Journeys | Falls, forest and savannah in Guyana’s interior",
+  "description": "Rupununi Journeys plans small-group and private trips into Guyana’s interior: Kaieteur Falls, Iwokrama Forest, the Rupununi savannah and community-run lodges.",
+  "country": "Guyana",
+  "countries_covered": [
+   "Guyana"
+  ],
+  "base_city": "Georgetown",
+  "niches": [
+   "small-group"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "czechia",
+  "domain": "bohemiajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Bohemia Journeys",
+  "title": "Bohemia Journeys — Czechia beyond a Prague weekend",
+  "description": "Private, slow journeys in Czechia: the West Bohemian spa towns, Bohemian glass and castles, Moravian wine and quiet countryside, planned around a few unhurried days in Prague.",
+  "country": "Czechia",
+  "countries_covered": [
+   "Czechia"
+  ],
+  "base_city": "Praha",
+  "niches": [
+   "wine",
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "dominican-republic",
+  "domain": "samanandsierra.tourground.com",
+  "kind": "brand",
+  "name": "Samaná & Sierra",
+  "title": "Samaná & Sierra | Private journeys in the Dominican Republic",
+  "description": "Private, tailor-made journeys through the Dominican Republic beyond the all-inclusive: Samaná’s whales, cacao and coffee farms, mountain valleys and a colonial capital, with the right beach at the end.",
+  "country": "Dominican Republic",
+  "countries_covered": [
+   "Dominican Republic"
+  ],
+  "base_city": "Santo Domingo",
+  "niches": [
+   "beach"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "nicaragua",
+  "domain": "lakesandvolcanoes.tourground.com",
+  "kind": "brand",
+  "name": "Lakes & Volcanoes",
+  "title": "Lakes & Volcanoes — Nicaragua, planned around its lakes, volcanoes and colonial towns",
+  "description": "Tailor-made Nicaragua for experienced travellers: Granada and the lake, Ometepe’s twin volcanoes, León, the Río San Juan and the Corn Islands — with the current government travel advice set out before anyone books.",
+  "country": "Nicaragua",
+  "countries_covered": [
+   "Nicaragua"
+  ],
+  "base_city": "Managua",
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "vietnam",
+  "domain": "dragonbaytravel.tourground.com",
+  "kind": "brand",
+  "name": "Dragon Bay Travel",
+  "title": "Dragon Bay Travel · Vietnam north to south, at the right pace",
+  "description": "Private journeys through Vietnam planned around season and pace: karst bays, mountain valleys, old towns and the Mekong, without the rush.",
+  "country": "Vietnam",
+  "countries_covered": [
+   "Vietnam"
+  ],
+  "base_city": "Saigon Ward, Ho Chi Minh City",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "usa-coast-to-coast",
+  "domain": "coasttocoasttravel.tourground.com",
+  "kind": "brand",
+  "name": "Coast to Coast Travel",
+  "title": "Coast to Coast Travel: USA road trips, planned as real drives",
+  "description": "Self-drive journeys across the mainland USA: national parks, desert towns, coastlines and cities, with short drive days, the right season and the right lodges.",
+  "country": "United States",
+  "countries_covered": [
+   "United States"
+  ],
+  "base_city": "New York",
+  "niches": [
+   "self-drive"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "thailand",
+  "domain": "longtailtravel.tourground.com",
+  "kind": "brand",
+  "name": "Longtail Travel",
+  "title": "Longtail Travel: Thailand by water and by season",
+  "description": "Private journeys in Thailand planned along its water and its seasons: Bangkok",
+  "country": "Thailand",
+  "countries_covered": [
+   "Thailand"
+  ],
+  "base_city": "Bangkok",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "silkandsnow",
+  "domain": "silkandsnow.tourground.com",
+  "kind": "brand",
+  "name": "Silk & Snow",
+  "title": "Silk & Snow · Kazakhstan travel from Almaty to the Silk Road",
+  "description": "Private journeys in Kazakhstan: the Tian Shan, alpine lakes and canyons from Almaty, Astana’s architecture, the Silk Road cities and the Mangystau desert. Planned around the seasons.",
+  "country": "Kazakhstan",
+  "countries_covered": [
+   "Kazakhstan"
+  ],
+  "base_city": "Almaty",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "pearllagoontravel",
+  "domain": "pearllagoontravel.tourground.com",
+  "kind": "brand",
+  "name": "Pearl Lagoon Travel",
+  "title": "Pearl Lagoon Travel · French Polynesia, island by island",
+  "description": "Private trips to French Polynesia planned island by island: Bora Bora and Moorea done well, then the Tuamotu atolls, the Marquesas and the quieter Society Islands.",
+  "country": "French Polynesia",
+  "countries_covered": [
+   "French Polynesia"
+  ],
+  "base_city": "Papeete",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "england-wales",
+  "domain": "albionjourneys.tourground.com",
+  "kind": "brand",
+  "name": "Albion Journeys",
+  "title": "Albion Journeys | Slow travel in England and Wales",
+  "description": "Slow, tailor-made journeys through England and Wales: country houses, coast paths, market towns and good pubs, planned around two or three bases.",
+  "country": "United Kingdom (England and Wales)",
+  "countries_covered": [
+   "England",
+   "Wales"
+  ],
+  "base_city": "London",
+  "niches": [
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "castleroadtravel",
+  "domain": "castleroadtravel.tourground.com",
+  "kind": "brand",
+  "name": "Castle Road Travel",
+  "title": "Castle Road Travel | Germany by rail and old town",
+  "description": "Private journeys through Germany by train: Berlin and Munich, then the river valleys, castles, Christmas markets and craft towns in between.",
+  "country": "Germany",
+  "countries_covered": [
+   "Germany"
+  ],
+  "base_city": "Berlin",
+  "niches": [
+   "rail"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "rwanda",
+  "domain": "virungajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Virunga Journeys",
+  "title": "Virunga Journeys",
+  "description": "Private journeys in Rwanda: gorilla and golden monkey treks in Volcanoes National Park, chimpanzees in Nyungwe, Akagera’s savannah and Lake Kivu, planned with care for the country’s history.",
+  "country": "Rwanda",
+  "countries_covered": [
+   "Rwanda"
+  ],
+  "base_city": "Kigali",
+  "niches": [
+   "trekking",
+   "gorilla/primate trekking"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "bulajourneys",
+  "domain": "bulajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Bula Journeys",
+  "title": "Bula Journeys: Fiji beyond the resort strip",
+  "description": "Tailor-made Fiji: outer islands, village visits and reefs, with the right island group for each kind of trip and honest transfer times from Nadi.",
+  "country": "Fiji",
+  "countries_covered": [
+   "Fiji"
+  ],
+  "base_city": "Suva",
+  "niches": [
+   "diving/reef"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "southbound",
+  "domain": "southbound.tourground.com",
+  "kind": "booster",
+  "name": "Southbound",
+  "title": "Southbound: Antarctic expedition reference",
+  "description": "The reference for choosing an Antarctic expedition: routes, seasons, ships, departure ports and the verified expedition operators who run them.",
+  "country": "Antarctica",
+  "countries_covered": [
+   "Antarctica"
+  ],
+  "base_city": null,
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "the-japan-traveller",
+  "domain": "thejapantraveller.tourground.com",
+  "kind": "booster",
+  "name": "The Japan Traveller",
+  "title": "The Japan Traveller: The reference for planning Japan with a local operator",
+  "description": "The reference for planning Japan with a local operator: regions, seasons, rail, ryokan etiquette and which verified operators deliver which kind of trip.",
+  "country": "Japan",
+  "countries_covered": [
+   "Japan"
+  ],
+  "base_city": null,
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "danubeandalps",
+  "domain": "danubeandalps.tourground.com",
+  "kind": "brand",
+  "name": "Danube & Alps",
+  "title": "Danube & Alps · Austria in three-quarter time",
+  "description": "Austria planned in three-quarter time: Vienna’s coffee houses and concerts, Salzburg and the lakes, and alpine valleys by train, with time to sit down.",
+  "country": "Austria",
+  "countries_covered": [
+   "Austria"
+  ],
+  "base_city": "Vienna",
+  "niches": [
+   "rail"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "oldhavanajourneys",
+  "domain": "oldhavanajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Old Havana Journeys",
+  "title": "Old Havana Journeys · Private journeys through Cuba",
+  "description": "Private Cuba journeys from the UK, Europe and Canada: Havana, Trinidad and Viñales with good casas and guides, planned honestly around power, fuel and travel advice.",
+  "country": "Cuba",
+  "countries_covered": [
+   "Cuba"
+  ],
+  "base_city": "El Vedado, Plaza de la Revolución, La Habana",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "china",
+  "domain": "middlekingdomjourneys.tourground.com",
+  "kind": "brand",
+  "name": "Middle Kingdom Journeys",
+  "title": "Middle Kingdom Journeys · Private journeys in China, timed to the season",
+  "description": "China beyond the checklist: Beijing, Xi",
+  "country": "China",
+  "countries_covered": [
+   "China"
+  ],
+  "base_city": "Beijing",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "kia-orana-travel",
+  "domain": "kiaoranatravel.tourground.com",
+  "kind": "brand",
+  "name": "Kia Orana Travel",
+  "title": "Kia Orana Travel | The Cook Islands at an easy pace",
+  "description": "Kia Orana Travel plans the Cook Islands at an easy pace: Rarotonga’s mountains and markets, Aitutaki’s lagoon and the quiet outer islands, island by island.",
+  "country": "Cook Islands",
+  "countries_covered": [
+   "Cook Islands"
+  ],
+  "base_city": "Avarua",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "caspianjourneys",
+  "domain": "caspianjourneys.tourground.com",
+  "kind": "brand",
+  "name": "Caspian Journeys",
+  "title": "Caspian Journeys — Azerbaijan, from the Caspian to the Caucasus",
+  "description": "Caspian Journeys plans private journeys in Azerbaijan: Baku’s Old City, Yanar Dag and the fire temple, Gobustan, Sheki, Lahij, Khinalug and Quba.",
+  "country": "Azerbaijan",
+  "countries_covered": [
+   "Azerbaijan"
+  ],
+  "base_city": "Baku",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "bolivia",
+  "domain": "altiplanojourneys.tourground.com",
+  "kind": "brand",
+  "name": "Altiplano Journeys",
+  "title": "Altiplano Journeys | Private journeys in Bolivia, planned around altitude",
+  "description": "Salt flats, coloured lagoons and La Paz",
+  "country": "Bolivia",
+  "countries_covered": [
+   "Bolivia"
+  ],
+  "base_city": "Santa Cruz de la Sierra",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "balticlight",
+  "domain": "balticlight.tourground.com",
+  "kind": "brand",
+  "name": "Baltic Light",
+  "title": "Baltic Light | Tailor-made journeys in Estonia, Latvia and Lithuania",
+  "description": "Three small countries in one trip: medieval old towns, forests, bogs and an amber coast, linked by road and rail. Tailor-made journeys through Estonia, Latvia and Lithuania.",
+  "country": "Baltic states",
+  "countries_covered": [
+   "Estonia",
+   "Latvia",
+   "Lithuania"
+  ],
+  "base_city": "Tallinn",
+  "niches": [
+   "rail"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "eagle-coast-albania",
+  "domain": "eaglecoast.tourground.com",
+  "kind": "brand",
+  "name": "Eagle Coast",
+  "title": "Eagle Coast · Albania while it is still quiet",
+  "description": "Private journeys in Albania: the Riviera",
+  "country": "Albania",
+  "countries_covered": [
+   "Albania"
+  ],
+  "base_city": "Tiranë",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "cape-verde-ten-islands",
+  "domain": "tenislandstravel.tourground.com",
+  "kind": "brand",
+  "name": "Ten Islands Travel",
+  "title": "Ten Islands Travel: Cape Verde, island by island",
+  "description": "Cape Verde planned island by island: volcano climbs on Fogo, green valleys on Santo Antão, salt flats on Sal and music in Mindelo. Tailor-made trips, ferries and flights worked out.",
+  "country": "Cape Verde",
+  "countries_covered": [
+   "Cape Verde"
+  ],
+  "base_city": "Praia",
+  "niches": [
+   "Kilimanjaro/volcano climbs"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "ararat-journeys",
+  "domain": "araratjourneys.tourground.com",
+  "kind": "brand",
+  "name": "Ararat Journeys",
+  "title": "Ararat Journeys: private journeys through Armenia",
+  "description": "Cliff-top monasteries, Yerevan’s café life, Areni wine, the apricot summer and Ararat on the horizon. Private Armenia journeys, planned slowly and routed outside every government advice area.",
+  "country": "Armenia",
+  "countries_covered": [
+   "Armenia"
+  ],
+  "base_city": "Yerevan",
+  "niches": [
+   "wine",
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "region-arabia",
+  "domain": "aravia.tourground.com",
+  "kind": "brand",
+  "name": "Aravia",
+  "title": "Aravia: private travel concierge for the Arab world",
+  "description": "A private travel concierge for the Arab world, from the Gulf to the Levant and North Africa. One personal concierge designs your journey, then stays with you, day and night, for anything you need.",
+  "country": "Arab world (multi-country)",
+  "countries_covered": [],
+  "base_city": "Dubai",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "mosi-travel",
+  "domain": "mositravel.tourground.com",
+  "kind": "brand",
+  "name": "Mosi Travel",
+  "title": "Mosi Travel: Zimbabwe on foot, with the people who know it best",
+  "description": "Mosi Travel plans Zimbabwe trips for people who want walking safaris, expert guides, fewer crowds and the country’s history.",
+  "country": "Zimbabwe",
+  "countries_covered": [
+   "Zimbabwe"
+  ],
+  "base_city": null,
+  "niches": [
+   "safari",
+   "walking safari",
+   "hiking/walking"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "luangwa-safaris",
+  "domain": "luangwasafaris.tourground.com",
+  "kind": "brand",
+  "name": "Luangwa Safaris",
+  "title": "Luangwa Safaris: Walking safaris in Zambia",
+  "description": "Zambia on foot: the valley where walking safaris began, small camps, real guides and wild rivers.",
+  "country": "Zambia",
+  "countries_covered": [
+   "Zambia"
+  ],
+  "base_city": null,
+  "niches": [
+   "safari",
+   "walking safari",
+   "hiking/walking"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "uzbekistan",
+  "domain": "goldenroad.tourground.com",
+  "kind": "brand",
+  "name": "Golden Road",
+  "title": "Golden Road: Uzbekistan, from the cauldron to the sea.",
+  "description": "For well-travelled people who want more of Uzbekistan than its three famous skylines: private, unhurried trips built around what the river made. That means the tilework and the bazaars, the looms and the plov cauldrons, and, for those who want it, the dry bed of the Aral Sea.",
+  "country": "Uzbekistan",
+  "countries_covered": [
+   "Uzbekistan"
+  ],
+  "base_city": "Tashkent",
+  "niches": [
+   "food"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "kervan-journeys",
+  "domain": "kervanjourneys.tourground.com",
+  "kind": "brand",
+  "name": "Kervan Journeys",
+  "title": "Kervan Journeys: Slow journeys through Türkiye, along the old caravan roads",
+  "description": "Kervan Journeys plans slow, small journeys through Türkiye for travellers who love history and food: İstanbul, Cappadocia, the Aegean ruins, the Lycian coast and the east.",
+  "country": "Türkiye",
+  "countries_covered": [
+   "Türkiye"
+  ],
+  "base_city": null,
+  "niches": [
+   "food",
+   "slow travel"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "tringles",
+  "domain": "tringles.tourground.com",
+  "kind": "brand",
+  "name": "Tringles",
+  "title": "Tringles",
+  "description": "Tringles: small-group singles trips to Lisbon, Rio de Janeiro, Bali and Nairobi. Sixteen members, one host, seven nights.",
+  "country": null,
+  "countries_covered": [
+   "Portugal",
+   "Brazil",
+   "Indonesia",
+   "Kenya"
+  ],
+  "base_city": "Lisboa",
+  "niches": [
+   "small-group",
+   "singles"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "tanzania",
+  "domain": "uhurujourneys.tourground.com",
+  "kind": "brand",
+  "name": "Uhuru Journeys",
+  "title": "Uhuru Journeys | Tanzania Safaris, Kilimanjaro & Zanzibar",
+  "description": "Private Tanzania safaris, Kilimanjaro climbs and Zanzibar escapes, planned end to end by one dedicated specialist. Serengeti, Ngorongoro, Great Migration…",
+  "country": "Tanzania",
+  "countries_covered": [
+   "Tanzania"
+  ],
+  "base_city": "Dar es Salaam",
+  "niches": [
+   "safari",
+   "Kilimanjaro/volcano climbs"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "formosa-journeys",
+  "domain": "formosajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Formosa Journeys",
+  "title": "Formosa Journeys: Taiwan on a second, slower look",
+  "description": "Private journeys through Taiwan",
+  "country": "Taiwan",
+  "countries_covered": [
+   "Taiwan"
+  ],
+  "base_city": null,
+  "niches": [
+   "slow travel"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "sri-lanka",
+  "domain": "serendibjourneys.tourground.com",
+  "kind": "brand",
+  "name": "Serendib Journeys",
+  "title": "Serendib Journeys · The whole island, unhurried.",
+  "description": "Tailor-made Sri Lanka for travellers who want the whole island in one trip: ancient cities, tea hills, wildlife and beaches, at an unhurried pace.",
+  "country": "Sri Lanka",
+  "countries_covered": [
+   "Sri Lanka"
+  ],
+  "base_city": "Colombo",
+  "niches": [
+   "wildlife",
+   "beach"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "sobremesa",
+  "domain": "sobremesa.tourground.com",
+  "kind": "brand",
+  "name": "Sobremesa",
+  "title": "Sobremesa · Slow, regional Spain",
+  "description": "Slow, regional travel in Spain: food, small towns, rail journeys and festivals, planned for curious adults who want to travel like locals.",
+  "country": "Spain",
+  "countries_covered": [
+   "Spain"
+  ],
+  "base_city": "Madrid",
+  "niches": [
+   "food",
+   "rail",
+   "slow travel"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "seychelles",
+  "domain": "granitecoast.tourground.com",
+  "kind": "brand",
+  "name": "Granite Coast",
+  "title": "Granite Coast · Island-hopping Seychelles, done slowly",
+  "description": "Plan a slow, island-hopping journey through the Seychelles: Mahé, Praslin, La Digue and the outer islands, with a route planner and a seasonal calm-beach finder.",
+  "country": "Seychelles",
+  "countries_covered": [
+   "Seychelles"
+  ],
+  "base_city": "Mahé",
+  "niches": [
+   "slow travel",
+   "beach"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "senegal",
+  "domain": "baobabandsea.tourground.com",
+  "kind": "brand",
+  "name": "Baobab & Sea",
+  "title": "Baobab & Sea Senegal: Senegal, as a guest.",
+  "description": "Senegal, as a guest. Private, unhurried journeys through Senegal, from Saint-Louis to the Saloum creeks, planned by specialists and hosted in the spirit of teranga.",
+  "country": "Senegal",
+  "countries_covered": [
+   "Senegal"
+  ],
+  "base_city": null,
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "safari-golf-tour",
+  "domain": "safarigolftour.tourground.com",
+  "kind": "brand",
+  "name": "Safari Golf Tour",
+  "title": "Safari Golf Tour — Golf & Safari Journeys Across Africa",
+  "description": "Golf and safari journeys across Kenya, Tanzania, South Africa, Zimbabwe, Botswana, Uganda and Mauritius. Championship courses by day, the Big Five by dawn and dusk, one planner from first call to final transfer.",
+  "country": "Africa (multi-country)",
+  "countries_covered": [
+   "Kenya",
+   "Tanzania",
+   "South Africa",
+   "Zimbabwe",
+   "Botswana",
+   "Uganda",
+   "Mauritius"
+  ],
+  "base_city": "Nairobi",
+  "niches": [
+   "safari",
+   "golf"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "sabbatical",
+  "domain": "sabbatical.tourground.com",
+  "kind": "brand",
+  "name": "Sabbatical",
+  "title": "Sabbatical",
+  "description": "Long-stay travel packages for people taking one to six months away. Furnished homes, local hosts and everything set up before you land.",
+  "country": null,
+  "countries_covered": [],
+  "base_city": "Lisboa",
+  "niches": [
+   "long-stay"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "philippines",
+  "domain": "seventhousand.tourground.com",
+  "kind": "brand",
+  "name": "Seven Thousand",
+  "title": "Seven Thousand: The Philippines by water, with the people who know it.",
+  "description": "Tailor-made trips in the Philippines, planned island by island around the weather. The Philippines by water, with the people who know it.",
+  "country": "Philippines",
+  "countries_covered": [
+   "Philippines"
+  ],
+  "base_city": "Bonifacio Global City, Taguig",
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "panama",
+  "domain": "twotides.tourground.com",
+  "kind": "brand",
+  "name": "Two Tides",
+  "title": "Two Tides: Panama, coast to coast.",
+  "description": "For well-travelled people who want more of Panama than a canal stopover: private, coast-to-coast trips planned around two oceans with different tides, seasons and cultures.",
+  "country": "Panama",
+  "countries_covered": [
+   "Panama"
+  ],
+  "base_city": null,
+  "niches": [
+   "culture"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "new-zealand",
+  "domain": "aotearoajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Aotearoa Journeys",
+  "title": "Aotearoa Journeys",
+  "description": "Self-drive and guided New Zealand for active travellers. Great Walks, road trips and wildlife, planned around honest driving times.",
+  "country": "New Zealand",
+  "countries_covered": [
+   "New Zealand"
+  ],
+  "base_city": "Auckland",
+  "niches": [
+   "hiking/walking",
+   "wildlife",
+   "self-drive"
+  ],
+  "lang": "en-NZ",
+  "http_status": 200
+ },
+ {
+  "project": "namibia",
+  "domain": "namiblight.tourground.com",
+  "kind": "brand",
+  "name": "Namib Light",
+  "title": "Namib Light: private journeys across Namibia",
+  "description": "Private journeys across Namibia: Sossusvlei's dunes at sunrise, Etosha's waterholes, the Skeleton Coast and some of the darkest skies on Earth. Self-drive, guided or fly-in.",
+  "country": "Namibia",
+  "countries_covered": [
+   "Namibia"
+  ],
+  "base_city": "Windhoek",
+  "niches": [
+   "self-drive"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "mozambique-dhow-and-dune",
+  "domain": "dhowanddune.tourground.com",
+  "kind": "brand",
+  "name": "Dhow & Dune",
+  "title": "Dhow & Dune: Mozambique by dhow and island",
+  "description": "Private trips through Mozambique by dhow and island: the Bazaruto Archipelago, the old town of Ilha de Moçambique and Gorongosa’s comeback, with honest advice on where we go and where we don’t.",
+  "country": "Mozambique",
+  "countries_covered": [
+   "Mozambique"
+  ],
+  "base_city": null,
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "morocco",
+  "domain": "azulmorocco.tourground.com",
+  "kind": "brand",
+  "name": "Azul Morocco",
+  "title": "Azul Morocco · Slow, tailor-made journeys through Morocco",
+  "description": "Azul Morocco is an independent guide to Morocco: Marrakech, Fes, Chefchaouen, the Sahara at Merzouga, the Atlas Mountains and Essaouira, with tailor-made trip planning.",
+  "country": "Morocco",
+  "countries_covered": [
+   "Morocco"
+  ],
+  "base_city": "Casablanca",
+  "niches": [
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "mexico",
+  "domain": "cenotehouse.tourground.com",
+  "kind": "brand",
+  "name": "Cenote House",
+  "title": "Cenote House · Tailor-made Mexico trips, below the surface",
+  "description": "Tailor-made Mexico trips planned by one specialist who knows the country personally: cenotes, colonial cities, haciendas and the Mexico beyond the resorts.",
+  "country": "Mexico",
+  "countries_covered": [
+   "Mexico"
+  ],
+  "base_city": "Ciudad de México",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "kreol-coast",
+  "domain": "kreolcoast.tourground.com",
+  "kind": "brand",
+  "name": "Kreol Coast",
+  "title": "Kreol Coast: Mauritius beyond the resort",
+  "description": "Food, hikes, culture and quieter coasts in Mauritius and Rodrigues, for couples and families who want more than a sunbed.",
+  "country": "Mauritius",
+  "countries_covered": [
+   "Mauritius"
+  ],
+  "base_city": null,
+  "niches": [
+   "hiking/walking",
+   "family",
+   "honeymoon/couples",
+   "food",
+   "culture"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "atoll-journeys",
+  "domain": "atolljourneys.tourground.com",
+  "kind": "brand",
+  "name": "Atoll Journeys",
+  "title": "Atoll Journeys · The Maldives, chosen reef-first.",
+  "description": "Atoll Journeys plans Maldives trips reef-first: the right atoll, island and house reef for how you want to spend the water, not just the villa.",
+  "country": "Maldives",
+  "countries_covered": [
+   "Maldives"
+  ],
+  "base_city": null,
+  "niches": [
+   "diving/reef"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "malaysia",
+  "domain": "hornbilltravel.tourground.com",
+  "kind": "brand",
+  "name": "Hornbill Travel",
+  "title": "Hornbill Travel · Malaysia beyond Kuala Lumpur",
+  "description": "Hornbill Travel plans private journeys in Malaysia and Borneo: rainforest and wildlife in Sabah and Sarawak first, then Penang, Melaka and the quiet islands.",
+  "country": "Malaysia",
+  "countries_covered": [
+   "Malaysia"
+  ],
+  "base_city": null,
+  "niches": [
+   "wildlife"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "lake-of-stars-travel",
+  "domain": "lakeofstarstravel.tourground.com",
+  "kind": "brand",
+  "name": "Lake of Stars Travel",
+  "title": "Lake of Stars Travel · Tailor-made Malawi",
+  "description": "Tailor-made trips to Malawi: freshwater beaches on Lake Malawi, small quiet safaris in Liwonde and Majete, and highland walks on Nyika, Zomba and Mulanje, at an easy pace.",
+  "country": "Malawi",
+  "countries_covered": [
+   "Malawi"
+  ],
+  "base_city": null,
+  "niches": [
+   "safari",
+   "hiking/walking",
+   "beach"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "baobab-road",
+  "domain": "baobabroad.tourground.com",
+  "kind": "brand",
+  "name": "Baobab Road",
+  "title": "Baobab Road: Slow roads. Wildlife found nowhere else.",
+  "description": "Honest, expert-led Madagascar journeys for nature lovers who accept slow roads in return for wildlife found nowhere else on Earth.",
+  "country": "Madagascar",
+  "countries_covered": [
+   "Madagascar"
+  ],
+  "base_city": "Antananarivo",
+  "niches": [
+   "wildlife",
+   "slow travel"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "laos",
+  "domain": "slowboat.tourground.com",
+  "kind": "brand",
+  "name": "Slow Boat",
+  "title": "Slow Boat: Laos at the speed of its rivers.",
+  "description": "Slow Boat plans private journeys through Laos at the speed of its rivers: the Mekong by slow boat, the Nam Ou, the Plain of Jars and the far south, in the right month and at the right hour.",
+  "country": "Laos",
+  "countries_covered": [
+   "Laos"
+  ],
+  "base_city": "Vientiane",
+  "niches": [
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "kyrgyzstan",
+  "domain": "celestialmountains.tourground.com",
+  "kind": "brand",
+  "name": "Celestial Mountains",
+  "title": "Celestial Mountains: Kyrgyzstan on horseback and foot",
+  "description": "Private trips in Kyrgyzstan on horseback, on foot and by 4x4: yurt camps, alpine lakes and Silk Road valleys, with honest altitudes and real comfort where it matters.",
+  "country": "Kyrgyzstan",
+  "countries_covered": [
+   "Kyrgyzstan"
+  ],
+  "base_city": null,
+  "niches": [
+   "hiking/walking",
+   "horse riding"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "kenya",
+  "domain": "safarinjema.tourground.com",
+  "kind": "brand",
+  "name": "Safari Njema",
+  "title": "Safari Njema · Tailor-made Kenya safaris & beach escapes",
+  "description": "Tailor-made Kenya safaris and beach escapes, planned by one dedicated specialist from your first message to the day you fly home.",
+  "country": "Kenya",
+  "countries_covered": [
+   "Kenya"
+  ],
+  "base_city": "Nairobi",
+  "niches": [
+   "safari",
+   "beach"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "italy",
+  "domain": "campaniletravel.tourground.com",
+  "kind": "brand",
+  "name": "Campanile Travel",
+  "title": "Campanile Travel: Tailor-made Italy, past the big three.",
+  "description": "Tailor-made journeys in Italy beyond Rome, Florence and Venice: small towns, agriturismi, regional food and quieter alternatives to the crowded icons.",
+  "country": "Italy",
+  "countries_covered": [
+   "Italy"
+  ],
+  "base_city": "Milano",
+  "niches": [
+   "food"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "ireland",
+  "domain": "softday.tourground.com",
+  "kind": "brand",
+  "name": "Soft Day",
+  "title": "Soft Day: Ireland, planned around the weather",
+  "description": "Private, tailor-made trips across the whole island of Ireland, North and South, planned around the weather: fewer hotel changes, longer stays and two versions of every day.",
+  "country": "Ireland",
+  "countries_covered": [
+   "Ireland",
+   "Northern Ireland"
+  ],
+  "base_city": "Dublin 2",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "india",
+  "domain": "musafirtravel.tourground.com",
+  "kind": "brand",
+  "name": "Musafir Travel",
+  "title": "Musafir Travel · Tailor-made India journeys",
+  "description": "India, beautifully planned, by people who know it personally. Tailor-made journeys across Rajasthan, Kerala, the Himalaya and India's tiger forests, with one dedicated specialist.",
+  "country": "India",
+  "countries_covered": [
+   "India"
+  ],
+  "base_city": "Mumbai",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "grounder",
+  "domain": "grounder.tourground.com",
+  "kind": "other",
+  "name": "Grounder",
+  "title": "Grounder — AI-powered global DMC network for travel agents",
+  "description": "Grounder gives travel agents and advisors instant access to vetted local DMCs in 130+ countries. One inquiry, multiple quotes, 24/7 on-the-ground operations.",
+  "country": null,
+  "countries_covered": [],
+  "base_city": null,
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "georgia",
+  "domain": "supra.tourground.com",
+  "kind": "brand",
+  "name": "Supra",
+  "title": "Supra: tailor-made travel in Georgia, the Caucasus",
+  "description": "Tailor-made Georgia, from the table to the towers. Private trips in Tbilisi, Kakheti, Svaneti and the high Caucasus, planned around the harvest, the mountain passes and the feast.",
+  "country": "Georgia",
+  "countries_covered": [
+   "Georgia"
+  ],
+  "base_city": "Tbilisi",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "extrafari",
+  "domain": "extrafari.tourground.com",
+  "kind": "brand",
+  "name": "Extrafari",
+  "title": "Extrafari | Tailor-made African Safaris",
+  "description": "Extrafari designs private, expertly guided safaris across East and Southern Africa. Great Migration, Okavango Delta, gorilla trekking and more.",
+  "country": "Africa (multi-country)",
+  "countries_covered": [],
+  "base_city": "Nairobi",
+  "niches": [
+   "safari",
+   "trekking",
+   "gorilla/primate trekking"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "ecuador",
+  "domain": "encantadasexpeditions.tourground.com",
+  "kind": "brand",
+  "name": "Encantadas Expeditions",
+  "title": "Encantadas Expeditions: The Galápagos done properly, and the rest of Ecuador most visitors skip.",
+  "description": "Galápagos cruises and land-based trips planned properly, plus the Andes, the cloud forest and the Amazon. Ecuador and the Galápagos from Encantadas Expeditions.",
+  "country": "Ecuador",
+  "countries_covered": [
+   "Ecuador"
+  ],
+  "base_city": "Quito",
+  "niches": [
+   "expedition cruise"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "maestral-croatia",
+  "domain": "maestral.tourground.com",
+  "kind": "brand",
+  "name": "Maestral",
+  "title": "Maestral: Croatia beyond the cruise-ship calendar",
+  "description": "Independent ideas for Croatia in the shoulder seasons: island hopping by ferry, sailing, Istrian food and wine, and national parks away from the crowds.",
+  "country": "Croatia",
+  "countries_covered": [
+   "Croatia"
+  ],
+  "base_city": "Zagreb",
+  "niches": [
+   "food",
+   "wine",
+   "sailing"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "colombia",
+  "domain": "cafetal.tourground.com",
+  "kind": "brand",
+  "name": "Cafetal",
+  "title": "Cafetal · Private journeys in Colombia",
+  "description": "Private journeys in Colombia. Private, tailor-made trips across Colombia’s regions, planned by altitude and month, with honest advice on seasons, closures and safety.",
+  "country": "Colombia",
+  "countries_covered": [
+   "Colombia"
+  ],
+  "base_city": "Bogotá",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "latitude-chile",
+  "domain": "latitudechile.tourground.com",
+  "kind": "brand",
+  "name": "Latitude Chile",
+  "title": "Latitude Chile — Chile from desert to ice",
+  "description": "Expert-planned active journeys through Chile: the Atacama, the wine valleys, the Lake District and Patagonia, with the logistics to cross 4,000+ km.",
+  "country": "Chile",
+  "countries_covered": [
+   "Chile"
+  ],
+  "base_city": null,
+  "niches": [
+   "wine"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "canada",
+  "domain": "canadatravelco.tourground.com",
+  "kind": "brand",
+  "name": "Canada Travel Co.",
+  "title": "Canada Travel Co. — Private journeys across Canada",
+  "description": "A small team of Canada specialists who design private journeys across the second-largest country on Earth. Canada, made for you.",
+  "country": "Canada",
+  "countries_covered": [
+   "Canada"
+  ],
+  "base_city": "Toronto",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "angkor-trails",
+  "domain": "angkortrails.tourground.com",
+  "kind": "brand",
+  "name": "Angkor Trails",
+  "title": "Angkor Trails: The temple paths of Angkor, and the trails beyond them",
+  "description": "Angkor Trails: Cambodia beyond the two-day temple stop. Angkor done well, then the countryside, the islands and the river towns, travelled responsibly.",
+  "country": "Cambodia",
+  "countries_covered": [
+   "Cambodia"
+  ],
+  "base_city": "Phnom Penh",
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "brazil",
+  "domain": "solnascente.tourground.com",
+  "kind": "brand",
+  "name": "Sol Nascente",
+  "title": "Sol Nascente · Brazil, from first light.",
+  "description": "Sol Nascente plans private journeys across Brazil: the Amazon and the Pantanal, the beaches of Bahia and the dunes of Maranhão, Rio, Iguaçu, and the music and food that tie it all together.",
+  "country": "Brazil",
+  "countries_covered": [
+   "Brazil"
+  ],
+  "base_city": "São Paulo",
+  "niches": [
+   "food",
+   "beach"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "mokoro-journeys",
+  "domain": "mokorojourneys.tourground.com",
+  "kind": "brand",
+  "name": "Mokoro Journeys",
+  "title": "Mokoro Journeys: private, low-impact safaris in Botswana",
+  "description": "Mokoro Journeys: private, low-impact safaris in Botswana. Small camps, few vehicles, the Okavango Delta and the Kalahari.",
+  "country": "Botswana",
+  "countries_covered": [
+   "Botswana"
+  ],
+  "base_city": "Gaborone",
+  "niches": [
+   "safari"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "ghana",
+  "domain": "akwaaba.tourground.com",
+  "kind": "brand",
+  "name": "Akwaaba",
+  "title": "Akwaaba: Tailor-made Ghana",
+  "description": "For well-travelled travellers and returning members of the diaspora who want Ghana in depth (court, coast, makers and savannah), Akwaaba plans private journeys around the people who make the country, at a pace that leaves time to sit down.",
+  "country": "Ghana",
+  "countries_covered": [
+   "Ghana"
+  ],
+  "base_city": "Accra",
+  "niches": [
+   "heritage/diaspora"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "caye-coast",
+  "domain": "cayecoast.tourground.com",
+  "kind": "brand",
+  "name": "Caye Coast",
+  "title": "Caye Coast: Belize, by boat and by season.",
+  "description": "For well-travelled couples and families who want Belize by water, not by coach: the right caye or atoll, a river lodge, the Kriol and Garifuna coast, and the reef's calendar, all planned privately around them.",
+  "country": "Belize",
+  "countries_covered": [
+   "Belize"
+  ],
+  "base_city": "Belize City",
+  "niches": [
+   "diving/reef",
+   "family",
+   "honeymoon/couples"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "kyma-travel",
+  "domain": "kymatravel.tourground.com",
+  "kind": "brand",
+  "name": "Kyma Travel",
+  "title": "Kyma Travel: Greece for two, island by island",
+  "description": "Kyma Travel plans Greece for couples and honeymooners: the right island, not just the famous one, plus the mainland most visitors skip.",
+  "country": "Greece",
+  "countries_covered": [
+   "Greece"
+  ],
+  "base_city": null,
+  "niches": [
+   "honeymoon/couples"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "build-tracker",
+  "domain": "sitetracker.tourground.com",
+  "kind": "other",
+  "name": "Build Tracker",
+  "title": "Sign in · Build Tracker",
+  "description": "Internal tracker for the travel brand portfolio.",
+  "country": null,
+  "countries_covered": [],
+  "base_city": null,
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "costa-rica",
+  "domain": "selvora.tourground.com",
+  "kind": "brand",
+  "name": "Selvora",
+  "title": "Selvora | Tailor-made Costa Rica journeys",
+  "description": "Private, tailor-made Costa Rica trips planned around you: rainforest, cloud forest, volcanoes, wildlife and both coasts, with exceptional places to stay.",
+  "country": "Costa Rica",
+  "countries_covered": [
+   "Costa Rica"
+  ],
+  "base_city": "San José",
+  "niches": [
+   "wildlife"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "bhutan",
+  "domain": "dzonghouse.tourground.com",
+  "kind": "brand",
+  "name": "Dzong House",
+  "title": "Dzong House · Tailor-made journeys through the Kingdom of Bhutan",
+  "description": "Dzong House opens Bhutan to a small number of thoughtful travellers. One dedicated specialist, a Bhutanese partner operator and local guides, from the first message to the day you fly home.",
+  "country": "Bhutan",
+  "countries_covered": [
+   "Bhutan"
+  ],
+  "base_city": "Thimphu",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "region-scandinavia",
+  "domain": "gustav.tourground.com",
+  "kind": "brand",
+  "name": "Gustav",
+  "title": "Gustav — Scandinavia, thoughtfully",
+  "description": "Private journeys through Norway, Sweden, Denmark and Finland. Slowly, by train, boat and on foot, following the light.",
+  "country": "Scandinavia (multi-country)",
+  "countries_covered": [
+   "Norway",
+   "Sweden",
+   "Denmark",
+   "Finland"
+  ],
+  "base_city": "Oslo",
+  "niches": [
+   "hiking/walking",
+   "rail",
+   "slow travel"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "indonesia",
+  "domain": "theislandedit.tourground.com",
+  "kind": "brand",
+  "name": "The Island Edit",
+  "title": "The Island Edit — Tailor-made Indonesia journeys",
+  "description": "Tailor-made Indonesia journeys, planned end to end by one dedicated travel specialist. Bali, Komodo, Raja Ampat, Java and beyond.",
+  "country": "Indonesia",
+  "countries_covered": [
+   "Indonesia"
+  ],
+  "base_city": "Jakarta",
+  "niches": [],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "france",
+  "domain": "rond-point.tourground.com",
+  "kind": "brand",
+  "name": "Rond-Point",
+  "title": "Rond-Point: tailor-made road trips through France",
+  "description": "Tailor-made self-drive road trips through France, with hand-picked stays, a beautiful route book and one dedicated specialist the whole way.",
+  "country": "France",
+  "countries_covered": [
+   "France"
+  ],
+  "base_city": "Paris",
+  "niches": [
+   "self-drive"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "edge-of-north",
+  "domain": "edgeofnorth.tourground.com",
+  "kind": "brand",
+  "name": "Edge of North",
+  "title": "Edge of North — Private luxury journeys in Iceland",
+  "description": "Where the map runs out. Iceland at its most extraordinary, privately guided and planned by one dedicated specialist.",
+  "country": "Iceland",
+  "countries_covered": [
+   "Iceland"
+  ],
+  "base_city": "Reykjavík",
+  "niches": [
+   "luxury"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "peru",
+  "domain": "discoverperutravel.tourground.com",
+  "kind": "brand",
+  "name": "Discover Peru Travel",
+  "title": "Discover Peru Travel: Peru, done right",
+  "description": "Private, well-paced Peru journeys planned around altitude, distance and permits. Machu Picchu, the Andes, the Amazon and the coast, done right.",
+  "country": "Peru",
+  "countries_covered": [
+   "Peru"
+  ],
+  "base_city": "San Isidro, Lima",
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "portugal",
+  "domain": "portoseason.tourground.com",
+  "kind": "brand",
+  "name": "Porto Season",
+  "title": "Porto Season: Your harbor in Portugal, for a season.",
+  "description": "Porto Season plans one to twelve months of living, working and slowing down anywhere in Portugal: Lisbon, Porto, the coast, the Alentejo, the Douro, Madeira and the Azores. Home, workspace, visa guidance and community, handled by one specialist.",
+  "country": "Portugal",
+  "countries_covered": [
+   "Portugal"
+  ],
+  "base_city": "Lisboa",
+  "niches": [
+   "slow travel",
+   "long-stay"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "scotland",
+  "domain": "highlandandisle.tourground.com",
+  "kind": "brand",
+  "name": "Highland & Isle",
+  "title": "Highland & Isle: Scotland’s islands and edges, planned privately and slowly.",
+  "description": "Private trips to Scotland’s islands and far north-west: the Hebrides, Orkney and Shetland, planned around ferries, the sleeper and the light. No prices online; a written proposal instead.",
+  "country": "United Kingdom (Scotland)",
+  "countries_covered": [
+   "Scotland"
+  ],
+  "base_city": "Edinburgh",
+  "niches": [
+   "slow travel"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "south-korea",
+  "domain": "morningcalmtravel.tourground.com",
+  "kind": "brand",
+  "name": "Morning Calm Travel",
+  "title": "Morning Calm Travel — South Korea for curious grown-ups.",
+  "description": "South Korea for curious grown-ups: Seoul",
+  "country": "South Korea",
+  "countries_covered": [
+   "South Korea"
+  ],
+  "base_city": "Youngdeungpo-gu, Seoul",
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "switzerland",
+  "domain": "swisshorizon.tourground.com",
+  "kind": "brand",
+  "name": "Swiss Horizon",
+  "title": "Swiss Horizon — Small-group journeys through Switzerland",
+  "description": "Swiss Horizon runs small-group, rail-first journeys through Switzerland — Zermatt, the Jungfrau Region, Lake Lucerne and Ticino. Ten guests at most, every train booked.",
+  "country": "Switzerland",
+  "countries_covered": [
+   "Switzerland"
+  ],
+  "base_city": "Zürich",
+  "niches": [
+   "rail",
+   "small-group"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "kathmandu-and-beyond",
+  "domain": "kathmanduandbeyond.tourground.com",
+  "kind": "brand",
+  "name": "Kathmandu & Beyond",
+  "title": "Kathmandu & Beyond: The valley first, then the mountains",
+  "description": "Kathmandu & Beyond: Nepal treks and culture done safely and well, for first-time trekkers and returning ones, with honest advice on altitude, season and fitness.",
+  "country": "Nepal",
+  "countries_covered": [
+   "Nepal"
+  ],
+  "base_city": "Lalitpur",
+  "niches": [
+   "trekking",
+   "culture"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "south-africa",
+  "domain": "capecompass.tourground.com",
+  "kind": "brand",
+  "name": "Cape Compass",
+  "title": "Cape Compass | Tailor-made South Africa Trips",
+  "description": "Tailor-made South Africa trips planned by one dedicated local specialist: Cape Town, the Winelands, the Garden Route, Kruger's private reserves and beyond.",
+  "country": "South Africa",
+  "countries_covered": [
+   "South Africa"
+  ],
+  "base_city": "Cape Town",
+  "niches": [
+   "wine"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "outback-and-reef",
+  "domain": "outbackandreef.tourground.com",
+  "kind": "brand",
+  "name": "Outback & Reef",
+  "title": "Outback & Reef | The red interior and the reef: the two halves of Australia, planned properly.",
+  "description": "Australia planned as three or four regions in the right season, with the lodges, guides and flights that make the distances worth it.",
+  "country": "Australia",
+  "countries_covered": [
+   "Australia"
+  ],
+  "base_city": "Sydney",
+  "niches": [
+   "diving/reef"
+  ],
+  "lang": "en-AU",
+  "http_status": 200
+ },
+ {
+  "project": "mongolia",
+  "domain": "steppeandsky.tourground.com",
+  "kind": "brand",
+  "name": "Steppe & Sky",
+  "title": "Steppe & Sky: Mongolia adventure travel. Nothing between you and the sky.",
+  "description": "Small-group and private adventures across Mongolia: the steppe, the Gobi Desert and the Altai, with nomad families, local guides and drivers. Planned by one dedicated specialist from your first message to the day you fly home.",
+  "country": "Mongolia",
+  "countries_covered": [
+   "Mongolia"
+  ],
+  "base_city": "Ulaanbaatar",
+  "niches": [
+   "small-group"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "pampas-and-peaks",
+  "domain": "pampasandpeaks.tourground.com",
+  "kind": "brand",
+  "name": "Pampas & Peaks",
+  "title": "Pampas & Peaks · Big-distance Argentina, made easy",
+  "description": "Big-distance Argentina, made easy. Buenos Aires, Patagonia, the wine country and Iguazú, linked into trips that work.",
+  "country": "Argentina",
+  "countries_covered": [
+   "Argentina"
+  ],
+  "base_city": "Buenos Aires",
+  "niches": [
+   "wine"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "benin",
+  "domain": "escalevoyages.tourground.com",
+  "kind": "brand",
+  "name": "Escale Voyages",
+  "title": "Escale Voyages · Premium journeys through the whole of Benin",
+  "description": "The whole of Benin, at your pace: small-group and private journeys from the Atlantic coast to the Pendjari savannah, planned and run from Cotonou.",
+  "country": "Benin",
+  "countries_covered": [
+   "Benin"
+  ],
+  "base_city": "Cotonou",
+  "niches": [
+   "small-group",
+   "luxury"
+  ],
+  "lang": "en",
+  "http_status": 200
+ },
+ {
+  "project": "abyssinia-journeys",
+  "domain": "abyssiniajourneys.tourground.com",
+  "kind": "brand",
+  "name": "Abyssinia Journeys",
+  "title": "Abyssinia Journeys · Ethiopia on its own terms",
+  "description": "Private journeys through Ethiopia's south and east: Addis Ababa, Harar, the Bale Mountains, coffee country and the Omo, planned by the Ethiopian calendar and honest about where it is safe to go.",
+  "country": "Ethiopia",
+  "countries_covered": [
+   "Ethiopia"
+  ],
+  "base_city": "Addis Ababa",
+  "niches": [],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "japan",
+  "domain": "komorebi.tourground.com",
+  "kind": "brand",
+  "name": "Komorebi",
+  "title": "Komorebi: Japan, in its own time.",
+  "description": "Private, slow journeys in Japan, planned around the seasons and away from the crowds. Ryokan nights, quiet temples at opening time, craft, food and the 72 seasons.",
+  "country": "Japan",
+  "countries_covered": [
+   "Japan"
+  ],
+  "base_city": "Chiyoda-ku, Tokyo",
+  "niches": [
+   "food",
+   "slow travel"
+  ],
+  "lang": "en-GB",
+  "http_status": 200
+ },
+ {
+  "project": "guatemala",
+  "domain": "antiguaandbeyond.tourground.com",
+  "kind": "brand",
+  "name": "Antigua & Beyond",
+  "title": "Antigua & Beyond · Tailor-made Guatemala trips",
+  "description": "Private, tailor-made Guatemala trips planned by one local specialist in Antigua: Lake Atitlán, Tikal, volcano hikes and the highlands, with 24/7 support…",
+  "country": "Guatemala",
+  "countries_covered": [
+   "Guatemala"
+  ],
+  "base_city": "Guatemala City",
+  "niches": [
+   "hiking/walking"
+  ],
+  "lang": "en",
+  "http_status": 200
+ }
+]

@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageMeta from '../../components/PageMeta.astro';
+import VerificationCard from '../../components/VerificationCard.astro';
+import Sources from '../../components/Sources.astro';
+import TierBadge from '../../components/TierBadge.astro';
+import MockNotice from '../../components/MockNotice.astro';
+import { getFeed, destName, hasCountryPage, type Company } from '../../lib/feed';
+import { site, disclosure, niches, tiers, regions } from '../../config/site.config';
+import { url, companyOutbound, sourceRel } from '../../lib/urls';
+import { companyNode, article } from '../../lib/schema';
+import { t } from '../../i18n/en';
+
+export function getStaticPaths() {
+  // Only publishable companies (verified or founder-owned). A removal from the feed removes the page.
+  return getFeed().companies.map((c) => ({ params: { id: c.id }, props: { c } }));
+}
+const { c } = Astro.props as { c: Company };
+const feed = getFeed();
+const path = url.operator(c.id);
+const base = feed.destBySlug.get(c.country_base);
+const region = base ? regions.find((r) => r.slug === base.region) : undefined;
+const nicheName = (s: string) => niches.find((n) => n.slug === s)?.name ?? s;
+const out = companyOutbound(c);
+const ranks = Object.entries(c.rank).filter(([s]) => hasCountryPage(s)).sort((a, b) => a[1] - b[1]);
+const title = `${c.name}: verification record`;
+const where = c.delivers_in.length ? c.delivers_in.map(destName).join(', ') : destName(c.country_base);
+const description = `${c.name}, ${t.kindShort[c.kind].toLowerCase()} based in ${destName(c.country_base)}. Delivers in ${where}. Tier: ${tiers[c.tier].label}. Last checked ${c.last_checked}.`.slice(0, 200);
+const published = (c as any).first_published ?? site.launch.published;
+const reviewed = c.last_checked > published ? c.last_checked : published;
+const place = (s: string) => (hasCountryPage(s) ? `<a href="${url.country(s)}">${destName(s)}</a>` : destName(s));
+const crumbs = [
+  ...(region ? [{ name: region.name, path: url.region(region.slug) }] : []),
+  ...(base && hasCountryPage(base.slug) ? [{ name: base.name, path: url.country(base.slug) }] : []),
+  { name: c.name, path },
+];
+---
+<Base title={title} description={description} path={path} crumbs={crumbs} noindex={!!c.example}
+  schema={[companyNode(c, path), article({ path, title, description, published, modified: reviewed, sources: c.sources, about: { '@id': new URL(path, site.url) + '#company' } })]}>
+  <p class="label">{t.kindName[c.kind]} · {destName(c.country_base)}</p>
+  <h1>{c.name}</h1>
+  {c.example && <p class="notice">{disclosure.exampleRecordLabel}.</p>}
+  <VerificationCard company={c} />
+  <PageMeta published={published} reviewed={reviewed} reviewedLabel={t.lastChecked} />
+
+  <h2 id="what">What it does</h2>
+  {c.summary_attribution === 'company_website' ? (
+    <>
+      <p>{c.name} is listed as {c.kind === 'dmc' ? 'a destination management company (DMC)' : 'a travel agency'} based in {destName(c.country_base)}. Its website describes it as follows:</p>
+      <blockquote class="prose"><p>{c.summary}</p></blockquote>
+    </>
+  ) : (
+    <p>{c.summary}</p>
+  )}
+
+  <h2 id="facts">Facts from the directory</h2>
+  <dl class="facts">
+    <dt>{t.kind}</dt><dd>{t.kindName[c.kind]} (<a href={url.guideChapter('dmc-or-agency')}>what this means</a>)</dd>
+    <dt>{t.basedIn}</dt><dd set:html={(c.base_city ? c.base_city + ', ' : '') + place(c.country_base)} />
+    <dt>{t.deliversIn}</dt><dd set:html={c.delivers_in.length ? c.delivers_in.map(place).join(', ') : t.notStated} />
+    <dt>{t.sellsFrom}</dt><dd>{c.sells_from.length ? c.sells_from.map(destName).join(', ') : t.notStated}</dd>
+    <dt>{t.specialties}</dt>
+    <dd>{c.niches.length ? c.niches.map((n, i) => (<>{i > 0 && ', '}<a href={url.niche(n)}>{nicheName(n)}</a></>)) : t.noneListed}</dd>
+    <dt>{t.memberships}</dt><dd>{c.memberships?.length ? c.memberships.join(', ') : t.noneListed}</dd>
+    <dt>{t.tier}</dt><dd><TierBadge company={c} /></dd>
+    <dt>{t.rank}</dt>
+    <dd>{ranks.length ? ranks.map(([s, n], i) => (<>{i > 0 && '; '}No. {n} in <a href={url.country(s)}>{destName(s)}</a></>)) : 'Not ranked in any country list.'}</dd>
+    <dt>{t.lastChecked}</dt><dd><time datetime={c.last_checked}>{c.last_checked}</time></dd>
+  </dl>
+
+  <div class="outbound">
+    {out.sponsored ? (
+      <a class="btnlink" href={out.href} rel={out.rel}>{disclosure.sponsoredLinkLabel}</a>
+    ) : (
+      <a class="btnlink" href={out.href} rel={out.rel}>{t.profileLink(c.name)}</a>
+    )}
+    <a href={site.links.correctionUrl}>{t.correction}</a>
+  </div>
+  {out.sponsored && <p class="small muted">{disclosure.platinumNote}</p>}
+  {c.founder_owned && <p class="small muted">{disclosure.founderNote}</p>}
+  <MockNotice />
+  <Sources sources={c.sources} relFor={(h) => sourceRel(c, h)} />
+</Base>

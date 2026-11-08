@@ -1,0 +1,4654 @@
+{
+  "_meta": {
+    "source": "mock",
+    "generated": "2026-11-08",
+    "note": "MOCK FEED. Founder-owned brand records are built from each brand's live homepage (retrieved 2026-11-08). Ranks are placeholders. Records with example=true are fake."
+  },
+  "destinations": [
+    {
+      "slug": "albania",
+      "name": "Albania",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/albania",
+      "booster_url": null
+    },
+    {
+      "slug": "antarctica",
+      "name": "Antarctica",
+      "type": "continent",
+      "region": "poles",
+      "content_dir": "countries/antarctica",
+      "booster_url": "https://southbound.tourground.com"
+    },
+    {
+      "slug": "argentina",
+      "name": "Argentina",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/argentina",
+      "booster_url": null
+    },
+    {
+      "slug": "armenia",
+      "name": "Armenia",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/armenia",
+      "booster_url": null
+    },
+    {
+      "slug": "australia",
+      "name": "Australia",
+      "type": "country",
+      "region": "oceania",
+      "content_dir": "countries/australia",
+      "booster_url": null
+    },
+    {
+      "slug": "austria",
+      "name": "Austria",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/austria",
+      "booster_url": null
+    },
+    {
+      "slug": "azerbaijan",
+      "name": "Azerbaijan",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/azerbaijan",
+      "booster_url": null
+    },
+    {
+      "slug": "belize",
+      "name": "Belize",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/belize",
+      "booster_url": null
+    },
+    {
+      "slug": "benin",
+      "name": "Benin",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/benin",
+      "booster_url": null
+    },
+    {
+      "slug": "bhutan",
+      "name": "Bhutan",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/bhutan",
+      "booster_url": null
+    },
+    {
+      "slug": "bolivia",
+      "name": "Bolivia",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/bolivia",
+      "booster_url": "https://boliviaunpacked.tourground.com"
+    },
+    {
+      "slug": "botswana",
+      "name": "Botswana",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/botswana",
+      "booster_url": null
+    },
+    {
+      "slug": "brazil",
+      "name": "Brazil",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/brazil",
+      "booster_url": null
+    },
+    {
+      "slug": "cambodia",
+      "name": "Cambodia",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/cambodia",
+      "booster_url": null
+    },
+    {
+      "slug": "canada",
+      "name": "Canada",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/canada",
+      "booster_url": null
+    },
+    {
+      "slug": "cape-verde",
+      "name": "Cape Verde",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/cape-verde",
+      "booster_url": null
+    },
+    {
+      "slug": "chad",
+      "name": "Chad",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/chad",
+      "booster_url": null
+    },
+    {
+      "slug": "chile",
+      "name": "Chile",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/chile",
+      "booster_url": null
+    },
+    {
+      "slug": "china",
+      "name": "China",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/china",
+      "booster_url": null
+    },
+    {
+      "slug": "colombia",
+      "name": "Colombia",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/colombia",
+      "booster_url": null
+    },
+    {
+      "slug": "cook-islands",
+      "name": "Cook Islands",
+      "type": "territory",
+      "region": "oceania",
+      "content_dir": "countries/cook-islands",
+      "booster_url": null
+    },
+    {
+      "slug": "costa-rica",
+      "name": "Costa Rica",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/costa-rica",
+      "booster_url": null
+    },
+    {
+      "slug": "croatia",
+      "name": "Croatia",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/croatia",
+      "booster_url": null
+    },
+    {
+      "slug": "cuba",
+      "name": "Cuba",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/cuba",
+      "booster_url": null
+    },
+    {
+      "slug": "czechia",
+      "name": "Czechia",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/czechia",
+      "booster_url": null
+    },
+    {
+      "slug": "denmark",
+      "name": "Denmark",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/denmark",
+      "booster_url": null
+    },
+    {
+      "slug": "dominican-republic",
+      "name": "Dominican Republic",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/dominican-republic",
+      "booster_url": null
+    },
+    {
+      "slug": "ecuador",
+      "name": "Ecuador",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/ecuador",
+      "booster_url": null
+    },
+    {
+      "slug": "england-wales",
+      "name": "England and Wales",
+      "type": "nation",
+      "region": "europe",
+      "content_dir": "countries/england-wales",
+      "booster_url": null
+    },
+    {
+      "slug": "estonia",
+      "name": "Estonia",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/estonia",
+      "booster_url": null
+    },
+    {
+      "slug": "ethiopia",
+      "name": "Ethiopia",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/ethiopia",
+      "booster_url": null
+    },
+    {
+      "slug": "fiji",
+      "name": "Fiji",
+      "type": "country",
+      "region": "oceania",
+      "content_dir": "countries/fiji",
+      "booster_url": null
+    },
+    {
+      "slug": "finland",
+      "name": "Finland",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/finland",
+      "booster_url": null
+    },
+    {
+      "slug": "france",
+      "name": "France",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/france",
+      "booster_url": null
+    },
+    {
+      "slug": "french-polynesia",
+      "name": "French Polynesia",
+      "type": "territory",
+      "region": "oceania",
+      "content_dir": "countries/french-polynesia",
+      "booster_url": null
+    },
+    {
+      "slug": "georgia",
+      "name": "Georgia",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/georgia",
+      "booster_url": null
+    },
+    {
+      "slug": "germany",
+      "name": "Germany",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/germany",
+      "booster_url": null
+    },
+    {
+      "slug": "ghana",
+      "name": "Ghana",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/ghana",
+      "booster_url": null
+    },
+    {
+      "slug": "greece",
+      "name": "Greece",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/greece",
+      "booster_url": null
+    },
+    {
+      "slug": "guatemala",
+      "name": "Guatemala",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/guatemala",
+      "booster_url": null
+    },
+    {
+      "slug": "guyana",
+      "name": "Guyana",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/guyana",
+      "booster_url": null
+    },
+    {
+      "slug": "iceland",
+      "name": "Iceland",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/iceland",
+      "booster_url": null
+    },
+    {
+      "slug": "india",
+      "name": "India",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/india",
+      "booster_url": null
+    },
+    {
+      "slug": "indonesia",
+      "name": "Indonesia",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/indonesia",
+      "booster_url": null
+    },
+    {
+      "slug": "ireland",
+      "name": "Ireland",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/ireland",
+      "booster_url": null
+    },
+    {
+      "slug": "italy",
+      "name": "Italy",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/italy",
+      "booster_url": null
+    },
+    {
+      "slug": "jamaica",
+      "name": "Jamaica",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/jamaica",
+      "booster_url": null
+    },
+    {
+      "slug": "japan",
+      "name": "Japan",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/japan",
+      "booster_url": "https://thejapantraveller.tourground.com"
+    },
+    {
+      "slug": "kazakhstan",
+      "name": "Kazakhstan",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/kazakhstan",
+      "booster_url": null
+    },
+    {
+      "slug": "kenya",
+      "name": "Kenya",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/kenya",
+      "booster_url": null
+    },
+    {
+      "slug": "kyrgyzstan",
+      "name": "Kyrgyzstan",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/kyrgyzstan",
+      "booster_url": null
+    },
+    {
+      "slug": "laos",
+      "name": "Laos",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/laos",
+      "booster_url": null
+    },
+    {
+      "slug": "latvia",
+      "name": "Latvia",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/latvia",
+      "booster_url": null
+    },
+    {
+      "slug": "lithuania",
+      "name": "Lithuania",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/lithuania",
+      "booster_url": null
+    },
+    {
+      "slug": "madagascar",
+      "name": "Madagascar",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/madagascar",
+      "booster_url": null
+    },
+    {
+      "slug": "malawi",
+      "name": "Malawi",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/malawi",
+      "booster_url": null
+    },
+    {
+      "slug": "malaysia",
+      "name": "Malaysia",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/malaysia",
+      "booster_url": null
+    },
+    {
+      "slug": "maldives",
+      "name": "Maldives",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/maldives",
+      "booster_url": null
+    },
+    {
+      "slug": "malta",
+      "name": "Malta",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/malta",
+      "booster_url": null
+    },
+    {
+      "slug": "mauritius",
+      "name": "Mauritius",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/mauritius",
+      "booster_url": null
+    },
+    {
+      "slug": "mexico",
+      "name": "Mexico",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/mexico",
+      "booster_url": null
+    },
+    {
+      "slug": "mongolia",
+      "name": "Mongolia",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/mongolia",
+      "booster_url": null
+    },
+    {
+      "slug": "montenegro",
+      "name": "Montenegro",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/montenegro",
+      "booster_url": null
+    },
+    {
+      "slug": "morocco",
+      "name": "Morocco",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/morocco",
+      "booster_url": null
+    },
+    {
+      "slug": "mozambique",
+      "name": "Mozambique",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/mozambique",
+      "booster_url": null
+    },
+    {
+      "slug": "namibia",
+      "name": "Namibia",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/namibia",
+      "booster_url": null
+    },
+    {
+      "slug": "nepal",
+      "name": "Nepal",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/nepal",
+      "booster_url": null
+    },
+    {
+      "slug": "new-zealand",
+      "name": "New Zealand",
+      "type": "country",
+      "region": "oceania",
+      "content_dir": "countries/new-zealand",
+      "booster_url": null
+    },
+    {
+      "slug": "nicaragua",
+      "name": "Nicaragua",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/nicaragua",
+      "booster_url": null
+    },
+    {
+      "slug": "northern-ireland",
+      "name": "Northern Ireland",
+      "type": "nation",
+      "region": "europe",
+      "content_dir": "countries/northern-ireland",
+      "booster_url": null
+    },
+    {
+      "slug": "norway",
+      "name": "Norway",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/norway",
+      "booster_url": null
+    },
+    {
+      "slug": "panama",
+      "name": "Panama",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/panama",
+      "booster_url": null
+    },
+    {
+      "slug": "peru",
+      "name": "Peru",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/peru",
+      "booster_url": null
+    },
+    {
+      "slug": "philippines",
+      "name": "Philippines",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/philippines",
+      "booster_url": null
+    },
+    {
+      "slug": "portugal",
+      "name": "Portugal",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/portugal",
+      "booster_url": null
+    },
+    {
+      "slug": "romania",
+      "name": "Romania",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/romania",
+      "booster_url": null
+    },
+    {
+      "slug": "rwanda",
+      "name": "Rwanda",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/rwanda",
+      "booster_url": null
+    },
+    {
+      "slug": "scotland",
+      "name": "Scotland",
+      "type": "nation",
+      "region": "europe",
+      "content_dir": "countries/scotland",
+      "booster_url": null
+    },
+    {
+      "slug": "senegal",
+      "name": "Senegal",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/senegal",
+      "booster_url": null
+    },
+    {
+      "slug": "seychelles",
+      "name": "Seychelles",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/seychelles",
+      "booster_url": null
+    },
+    {
+      "slug": "slovenia",
+      "name": "Slovenia",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/slovenia",
+      "booster_url": null
+    },
+    {
+      "slug": "south-africa",
+      "name": "South Africa",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/south-africa",
+      "booster_url": null
+    },
+    {
+      "slug": "south-korea",
+      "name": "South Korea",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/south-korea",
+      "booster_url": null
+    },
+    {
+      "slug": "spain",
+      "name": "Spain",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/spain",
+      "booster_url": null
+    },
+    {
+      "slug": "sri-lanka",
+      "name": "Sri Lanka",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/sri-lanka",
+      "booster_url": null
+    },
+    {
+      "slug": "sweden",
+      "name": "Sweden",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/sweden",
+      "booster_url": null
+    },
+    {
+      "slug": "switzerland",
+      "name": "Switzerland",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/switzerland",
+      "booster_url": null
+    },
+    {
+      "slug": "sao-tome-and-principe",
+      "name": "São Tomé and Príncipe",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/sao-tome-and-principe",
+      "booster_url": null
+    },
+    {
+      "slug": "taiwan",
+      "name": "Taiwan",
+      "type": "territory",
+      "region": "asia",
+      "content_dir": "countries/taiwan",
+      "booster_url": null
+    },
+    {
+      "slug": "tanzania",
+      "name": "Tanzania",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/tanzania",
+      "booster_url": null
+    },
+    {
+      "slug": "thailand",
+      "name": "Thailand",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/thailand",
+      "booster_url": null
+    },
+    {
+      "slug": "the-gambia",
+      "name": "The Gambia",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/the-gambia",
+      "booster_url": null
+    },
+    {
+      "slug": "tunisia",
+      "name": "Tunisia",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/tunisia",
+      "booster_url": null
+    },
+    {
+      "slug": "turkiye",
+      "name": "Türkiye",
+      "type": "country",
+      "region": "europe",
+      "content_dir": "countries/turkiye",
+      "booster_url": null
+    },
+    {
+      "slug": "uganda",
+      "name": "Uganda",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/uganda",
+      "booster_url": null
+    },
+    {
+      "slug": "united-arab-emirates",
+      "name": "United Arab Emirates",
+      "type": "country",
+      "region": "middle-east",
+      "content_dir": "countries/united-arab-emirates",
+      "booster_url": null
+    },
+    {
+      "slug": "united-states",
+      "name": "United States",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/united-states",
+      "booster_url": null
+    },
+    {
+      "slug": "uruguay",
+      "name": "Uruguay",
+      "type": "country",
+      "region": "americas",
+      "content_dir": "countries/uruguay",
+      "booster_url": null
+    },
+    {
+      "slug": "uzbekistan",
+      "name": "Uzbekistan",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/uzbekistan",
+      "booster_url": null
+    },
+    {
+      "slug": "vietnam",
+      "name": "Vietnam",
+      "type": "country",
+      "region": "asia",
+      "content_dir": "countries/vietnam",
+      "booster_url": null
+    },
+    {
+      "slug": "zambia",
+      "name": "Zambia",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/zambia",
+      "booster_url": null
+    },
+    {
+      "slug": "zimbabwe",
+      "name": "Zimbabwe",
+      "type": "country",
+      "region": "africa",
+      "content_dir": "countries/zimbabwe",
+      "booster_url": null
+    }
+  ],
+  "companies": [
+    {
+      "id": "seventhcontinent",
+      "name": "Seventh Continent",
+      "kind": "agency",
+      "country_base": "argentina",
+      "base_city": "Buenos Aires",
+      "delivers_in": [
+        "antarctica"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "antarctica": 1
+      },
+      "summary": "Independent Antarctica expedition specialists. We match you with the right IAATO-member ship, route and season, and one polar specialist plans every detail.",
+      "summary_attribution": "company_website",
+      "website": "https://seventhcontinent.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://seventhcontinent.tourground.com/",
+          "label": "Seventh Continent website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "estanciatravel",
+      "name": "Estancia Travel",
+      "kind": "agency",
+      "country_base": "uruguay",
+      "base_city": "Montevideo",
+      "delivers_in": [
+        "uruguay"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "uruguay": 1
+      },
+      "summary": "Estancias, wineries, empty Atlantic beaches and Montevideo’s old town: the quiet side of the River Plate, planned privately.",
+      "summary_attribution": "company_website",
+      "website": "https://estanciatravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://estanciatravel.tourground.com/",
+          "label": "Estancia Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "nilesourcesafaris",
+      "name": "Nile Source Safaris",
+      "kind": "agency",
+      "country_base": "uganda",
+      "base_city": "Nakasero, Kampala",
+      "delivers_in": [
+        "uganda"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari",
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "uganda": 1
+      },
+      "summary": "Uganda planned by forest sector, river and swamp: gorillas in Bwindi, chimps in Kibale, the Nile at its source and the birds that make this the primate and birding capital of Africa.",
+      "summary_attribution": "company_website",
+      "website": "https://nilesourcesafaris.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://nilesourcesafaris.tourground.com/",
+          "label": "Nile Source Safaris website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "carthagejourneys",
+      "name": "Carthage Journeys",
+      "kind": "agency",
+      "country_base": "tunisia",
+      "base_city": "Tunis",
+      "delivers_in": [
+        "tunisia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "tunisia": 1
+      },
+      "summary": "Private, design-led journeys in Tunisia: Carthage and the Roman cities, the medinas of Tunis and Kairouan, Djerba and the Sahara edge, planned only where UK and US travel advice allows.",
+      "summary_attribution": "company_website",
+      "website": "https://carthagejourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://carthagejourneys.tourground.com/",
+          "label": "Carthage Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "alpstoadriatic",
+      "name": "Alps to Adriatic",
+      "kind": "agency",
+      "country_base": "slovenia",
+      "base_city": "Ljubljana",
+      "delivers_in": [
+        "slovenia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "slovenia": 1
+      },
+      "summary": "Private, slow trips through Slovenia: the Julian Alps, the Soča Valley, the Karst caves, the wine hills and a sliver of Adriatic coast, all within two hours of Ljubljana.",
+      "summary_attribution": "company_website",
+      "website": "https://alpstoadriatic.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://alpstoadriatic.tourground.com/",
+          "label": "Alps to Adriatic website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "chocolateislandstravel",
+      "name": "Chocolate Islands Travel",
+      "kind": "agency",
+      "country_base": "sao-tome-and-principe",
+      "base_city": "São Tomé",
+      "delivers_in": [
+        "sao-tome-and-principe"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "sao-tome-and-principe": 1
+      },
+      "summary": "Slow, privately planned journeys to São Tomé and Príncipe: rainforest, old cacao roças, empty beaches and Príncipe's biosphere reserve, at the islands' own leve-leve pace.",
+      "summary_attribution": "company_website",
+      "website": "https://chocolateislandstravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://chocolateislandstravel.tourground.com/",
+          "label": "Chocolate Islands Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "carpathiatravel",
+      "name": "Carpathia Travel",
+      "kind": "agency",
+      "country_base": "romania",
+      "base_city": "Bucharest",
+      "delivers_in": [
+        "romania"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "romania": 1
+      },
+      "summary": "Slow, privately planned journeys through rural Romania: the Saxon villages of Transylvania, the wooden churches of Maramureș, the painted monasteries of Bucovina and the Carpathian mountains.",
+      "summary_attribution": "company_website",
+      "website": "https://carpathiatravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://carpathiatravel.tourground.com/",
+          "label": "Carpathia Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "blackmountaintravel",
+      "name": "Black Mountain Travel",
+      "kind": "agency",
+      "country_base": "montenegro",
+      "base_city": "Podgorica",
+      "delivers_in": [
+        "montenegro"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "montenegro": 1
+      },
+      "summary": "Black Mountain Travel: private journeys through Montenegro in two halves, the Bay of Kotor and the coast for the sea, Durmitor and the north for the mountains.",
+      "summary_attribution": "company_website",
+      "website": "https://blackmountaintravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://blackmountaintravel.tourground.com/",
+          "label": "Black Mountain Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "knightsisles",
+      "name": "Knights' Isles",
+      "kind": "agency",
+      "country_base": "malta",
+      "base_city": "Valletta",
+      "delivers_in": [
+        "malta"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "malta": 1
+      },
+      "summary": "Knights' Isles plans private journeys through Malta, Gozo and Comino: 7,000 years of history, fortified cities, island food and quiet Gozo, in the right season.",
+      "summary_attribution": "company_website",
+      "website": "https://knightsisles.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://knightsisles.tourground.com/",
+          "label": "Knights' Isles website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "smilingcoasttravel",
+      "name": "Smiling Coast Travel",
+      "kind": "agency",
+      "country_base": "the-gambia",
+      "base_city": "Serrekunda",
+      "delivers_in": [
+        "the-gambia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "the-gambia": 1
+      },
+      "summary": "Private journeys in The Gambia planned river-first: up the River Gambia by boat to Janjanbureh, birding with named guides, griot music and village life, a short flight from Europe.",
+      "summary_attribution": "company_website",
+      "website": "https://smilingcoasttravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://smilingcoasttravel.tourground.com/",
+          "label": "Smiling Coast Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "bluemountaintravel",
+      "name": "Blue Mountain Travel",
+      "kind": "agency",
+      "country_base": "jamaica",
+      "base_city": "Kingston",
+      "delivers_in": [
+        "jamaica"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "jamaica": 1
+      },
+      "summary": "Private trips to Jamaica beyond the resort wall: the Blue Mountains, Portland’s coast, Kingston’s music and food, with honest, dated guidance on where to go after Hurricane Melissa.",
+      "summary_attribution": "company_website",
+      "website": "https://bluemountaintravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://bluemountaintravel.tourground.com/",
+          "label": "Blue Mountain Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "rupununijourneys",
+      "name": "Rupununi Journeys",
+      "kind": "agency",
+      "country_base": "guyana",
+      "base_city": "Georgetown",
+      "delivers_in": [
+        "guyana"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "guyana": 1
+      },
+      "summary": "Rupununi Journeys plans small-group and private trips into Guyana’s interior: Kaieteur Falls, Iwokrama Forest, the Rupununi savannah and community-run lodges.",
+      "summary_attribution": "company_website",
+      "website": "https://rupununijourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://rupununijourneys.tourground.com/",
+          "label": "Rupununi Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "bohemiajourneys",
+      "name": "Bohemia Journeys",
+      "kind": "agency",
+      "country_base": "czechia",
+      "base_city": "Praha",
+      "delivers_in": [
+        "czechia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "czechia": 1
+      },
+      "summary": "Private, slow journeys in Czechia: the West Bohemian spa towns, Bohemian glass and castles, Moravian wine and quiet countryside, planned around a few unhurried days in Prague.",
+      "summary_attribution": "company_website",
+      "website": "https://bohemiajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://bohemiajourneys.tourground.com/",
+          "label": "Bohemia Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "samanandsierra",
+      "name": "Samaná & Sierra",
+      "kind": "agency",
+      "country_base": "dominican-republic",
+      "base_city": "Santo Domingo",
+      "delivers_in": [
+        "dominican-republic"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "dominican-republic": 1
+      },
+      "summary": "Private, tailor-made journeys through the Dominican Republic beyond the all-inclusive: Samaná’s whales, cacao and coffee farms, mountain valleys and a colonial capital, with the right beach at the end.",
+      "summary_attribution": "company_website",
+      "website": "https://samanandsierra.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://samanandsierra.tourground.com/",
+          "label": "Samaná & Sierra website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "lakesandvolcanoes",
+      "name": "Lakes & Volcanoes",
+      "kind": "agency",
+      "country_base": "nicaragua",
+      "base_city": "Managua",
+      "delivers_in": [
+        "nicaragua"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "nicaragua": 1
+      },
+      "summary": "Tailor-made Nicaragua for experienced travellers: Granada and the lake, Ometepe’s twin volcanoes, León, the Río San Juan and the Corn Islands — with the current government travel advice set out before anyone books.",
+      "summary_attribution": "company_website",
+      "website": "https://lakesandvolcanoes.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://lakesandvolcanoes.tourground.com/",
+          "label": "Lakes & Volcanoes website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "dragonbaytravel",
+      "name": "Dragon Bay Travel",
+      "kind": "agency",
+      "country_base": "vietnam",
+      "base_city": "Saigon Ward, Ho Chi Minh City",
+      "delivers_in": [
+        "vietnam"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "vietnam": 1
+      },
+      "summary": "Private journeys through Vietnam planned around season and pace: karst bays, mountain valleys, old towns and the Mekong, without the rush.",
+      "summary_attribution": "company_website",
+      "website": "https://dragonbaytravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://dragonbaytravel.tourground.com/",
+          "label": "Dragon Bay Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "coasttocoasttravel",
+      "name": "Coast to Coast Travel",
+      "kind": "agency",
+      "country_base": "united-states",
+      "base_city": "New York",
+      "delivers_in": [
+        "united-states"
+      ],
+      "sells_from": [],
+      "niches": [
+        "overland"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "united-states": 1
+      },
+      "summary": "Self-drive journeys across the mainland USA: national parks, desert towns, coastlines and cities, with short drive days, the right season and the right lodges.",
+      "summary_attribution": "company_website",
+      "website": "https://coasttocoasttravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://coasttocoasttravel.tourground.com/",
+          "label": "Coast to Coast Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "longtailtravel",
+      "name": "Longtail Travel",
+      "kind": "agency",
+      "country_base": "thailand",
+      "base_city": "Bangkok",
+      "delivers_in": [
+        "thailand"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "thailand": 1
+      },
+      "summary": "Private journeys in Thailand planned along its water and its seasons: Bangkok's khlongs, the cool north and the right coast for your month.",
+      "summary_attribution": "company_website",
+      "website": "https://longtailtravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://longtailtravel.tourground.com/",
+          "label": "Longtail Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "silkandsnow",
+      "name": "Silk & Snow",
+      "kind": "agency",
+      "country_base": "kazakhstan",
+      "base_city": "Almaty",
+      "delivers_in": [
+        "kazakhstan"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "kazakhstan": 1
+      },
+      "summary": "Private journeys in Kazakhstan: the Tian Shan, alpine lakes and canyons from Almaty, Astana’s architecture, the Silk Road cities and the Mangystau desert. Planned around the seasons.",
+      "summary_attribution": "company_website",
+      "website": "https://silkandsnow.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://silkandsnow.tourground.com/",
+          "label": "Silk & Snow website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "pearllagoontravel",
+      "name": "Pearl Lagoon Travel",
+      "kind": "agency",
+      "country_base": "french-polynesia",
+      "base_city": "Papeete",
+      "delivers_in": [
+        "french-polynesia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "french-polynesia": 1
+      },
+      "summary": "Private trips to French Polynesia planned island by island: Bora Bora and Moorea done well, then the Tuamotu atolls, the Marquesas and the quieter Society Islands.",
+      "summary_attribution": "company_website",
+      "website": "https://pearllagoontravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://pearllagoontravel.tourground.com/",
+          "label": "Pearl Lagoon Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "albionjourneys",
+      "name": "Albion Journeys",
+      "kind": "agency",
+      "country_base": "england-wales",
+      "base_city": "London",
+      "delivers_in": [
+        "england-wales"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "england-wales": 1
+      },
+      "summary": "Slow, tailor-made journeys through England and Wales: country houses, coast paths, market towns and good pubs, planned around two or three bases.",
+      "summary_attribution": "company_website",
+      "website": "https://albionjourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://albionjourneys.tourground.com/",
+          "label": "Albion Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "castleroadtravel",
+      "name": "Castle Road Travel",
+      "kind": "agency",
+      "country_base": "germany",
+      "base_city": "Berlin",
+      "delivers_in": [
+        "germany"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "germany": 1
+      },
+      "summary": "Private journeys through Germany by train: Berlin and Munich, then the river valleys, castles, Christmas markets and craft towns in between.",
+      "summary_attribution": "company_website",
+      "website": "https://castleroadtravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://castleroadtravel.tourground.com/",
+          "label": "Castle Road Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "virungajourneys",
+      "name": "Virunga Journeys",
+      "kind": "agency",
+      "country_base": "rwanda",
+      "base_city": "Kigali",
+      "delivers_in": [
+        "rwanda"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage",
+        "trekking-mountains",
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "rwanda": 1
+      },
+      "summary": "Private journeys in Rwanda: gorilla and golden monkey treks in Volcanoes National Park, chimpanzees in Nyungwe, Akagera’s savannah and Lake Kivu, planned with care for the country’s history.",
+      "summary_attribution": "company_website",
+      "website": "https://virungajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://virungajourneys.tourground.com/",
+          "label": "Virunga Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "bulajourneys",
+      "name": "Bula Journeys",
+      "kind": "agency",
+      "country_base": "fiji",
+      "base_city": "Suva",
+      "delivers_in": [
+        "fiji"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "fiji": 1
+      },
+      "summary": "Tailor-made Fiji: outer islands, village visits and reefs, with the right island group for each kind of trip and honest transfer times from Nadi.",
+      "summary_attribution": "company_website",
+      "website": "https://bulajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://bulajourneys.tourground.com/",
+          "label": "Bula Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "danubeandalps",
+      "name": "Danube & Alps",
+      "kind": "agency",
+      "country_base": "austria",
+      "base_city": "Vienna",
+      "delivers_in": [
+        "austria"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "austria": 1
+      },
+      "summary": "Austria planned in three-quarter time: Vienna’s coffee houses and concerts, Salzburg and the lakes, and alpine valleys by train, with time to sit down.",
+      "summary_attribution": "company_website",
+      "website": "https://danubeandalps.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://danubeandalps.tourground.com/",
+          "label": "Danube & Alps website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "oldhavanajourneys",
+      "name": "Old Havana Journeys",
+      "kind": "agency",
+      "country_base": "cuba",
+      "base_city": "El Vedado, Plaza de la Revolución, La Habana",
+      "delivers_in": [
+        "cuba"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "cuba": 1
+      },
+      "summary": "Private Cuba journeys from the UK, Europe and Canada: Havana, Trinidad and Viñales with good casas and guides, planned honestly around power, fuel and travel advice.",
+      "summary_attribution": "company_website",
+      "website": "https://oldhavanajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://oldhavanajourneys.tourground.com/",
+          "label": "Old Havana Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "middlekingdomjourneys",
+      "name": "Middle Kingdom Journeys",
+      "kind": "agency",
+      "country_base": "china",
+      "base_city": "Beijing",
+      "delivers_in": [
+        "china"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "china": 1
+      },
+      "summary": "China beyond the checklist: Beijing, Xi'an and Shanghai done well, then karst rivers, rice terraces, tea hills and minority villages in the south.",
+      "summary_attribution": "company_website",
+      "website": "https://middlekingdomjourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://middlekingdomjourneys.tourground.com/",
+          "label": "Middle Kingdom Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "kiaoranatravel",
+      "name": "Kia Orana Travel",
+      "kind": "agency",
+      "country_base": "cook-islands",
+      "base_city": "Avarua",
+      "delivers_in": [
+        "cook-islands"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "cook-islands": 1
+      },
+      "summary": "Kia Orana Travel plans the Cook Islands at an easy pace: Rarotonga’s mountains and markets, Aitutaki’s lagoon and the quiet outer islands, island by island.",
+      "summary_attribution": "company_website",
+      "website": "https://kiaoranatravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://kiaoranatravel.tourground.com/",
+          "label": "Kia Orana Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "caspianjourneys",
+      "name": "Caspian Journeys",
+      "kind": "agency",
+      "country_base": "azerbaijan",
+      "base_city": "Baku",
+      "delivers_in": [
+        "azerbaijan"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "azerbaijan": 1
+      },
+      "summary": "Caspian Journeys plans private journeys in Azerbaijan: Baku’s Old City, Yanar Dag and the fire temple, Gobustan, Sheki, Lahij, Khinalug and Quba.",
+      "summary_attribution": "company_website",
+      "website": "https://caspianjourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://caspianjourneys.tourground.com/",
+          "label": "Caspian Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "altiplanojourneys",
+      "name": "Altiplano Journeys",
+      "kind": "agency",
+      "country_base": "bolivia",
+      "base_city": "Santa Cruz de la Sierra",
+      "delivers_in": [
+        "bolivia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "bolivia": 1
+      },
+      "summary": "Salt flats, coloured lagoons and La Paz's cable cars. Private Bolivia journeys paced to the altitude so you enjoy every day of them.",
+      "summary_attribution": "company_website",
+      "website": "https://altiplanojourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://altiplanojourneys.tourground.com/",
+          "label": "Altiplano Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "balticlight",
+      "name": "Baltic Light",
+      "kind": "agency",
+      "country_base": "estonia",
+      "base_city": "Tallinn",
+      "delivers_in": [
+        "estonia",
+        "latvia",
+        "lithuania"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "estonia": 1,
+        "latvia": 1,
+        "lithuania": 1
+      },
+      "summary": "Three small countries in one trip: medieval old towns, forests, bogs and an amber coast, linked by road and rail. Tailor-made journeys through Estonia, Latvia and Lithuania.",
+      "summary_attribution": "company_website",
+      "website": "https://balticlight.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://balticlight.tourground.com/",
+          "label": "Baltic Light website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "eaglecoast",
+      "name": "Eagle Coast",
+      "kind": "agency",
+      "country_base": "albania",
+      "base_city": "Tiranë",
+      "delivers_in": [
+        "albania"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "albania": 1
+      },
+      "summary": "Private journeys in Albania: the Riviera's coves, the stone towns of Berat and Gjirokastër, the Accursed Mountains and Butrint, planned around the quiet hours.",
+      "summary_attribution": "company_website",
+      "website": "https://eaglecoast.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://eaglecoast.tourground.com/",
+          "label": "Eagle Coast website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "tenislandstravel",
+      "name": "Ten Islands Travel",
+      "kind": "agency",
+      "country_base": "cape-verde",
+      "base_city": "Praia",
+      "delivers_in": [
+        "cape-verde"
+      ],
+      "sells_from": [],
+      "niches": [
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "cape-verde": 1
+      },
+      "summary": "Cape Verde planned island by island: volcano climbs on Fogo, green valleys on Santo Antão, salt flats on Sal and music in Mindelo. Tailor-made trips, ferries and flights worked out.",
+      "summary_attribution": "company_website",
+      "website": "https://tenislandstravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://tenislandstravel.tourground.com/",
+          "label": "Ten Islands Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "araratjourneys",
+      "name": "Ararat Journeys",
+      "kind": "agency",
+      "country_base": "armenia",
+      "base_city": "Yerevan",
+      "delivers_in": [
+        "armenia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "armenia": 1
+      },
+      "summary": "Cliff-top monasteries, Yerevan’s café life, Areni wine, the apricot summer and Ararat on the horizon. Private Armenia journeys, planned slowly and routed outside every government advice area.",
+      "summary_attribution": "company_website",
+      "website": "https://araratjourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://araratjourneys.tourground.com/",
+          "label": "Ararat Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "aravia",
+      "name": "Aravia",
+      "kind": "agency",
+      "country_base": "united-arab-emirates",
+      "base_city": "Dubai",
+      "delivers_in": [
+        "united-arab-emirates"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "united-arab-emirates": 1
+      },
+      "summary": "A private travel concierge for the Arab world, from the Gulf to the Levant and North Africa. One personal concierge designs your journey, then stays with you, day and night, for anything you need.",
+      "summary_attribution": "company_website",
+      "website": "https://aravia.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://aravia.tourground.com/",
+          "label": "Aravia website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "mositravel",
+      "name": "Mosi Travel",
+      "kind": "agency",
+      "country_base": "zimbabwe",
+      "base_city": null,
+      "delivers_in": [
+        "zimbabwe"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage",
+        "safari",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "zimbabwe": 1
+      },
+      "summary": "Mosi Travel plans Zimbabwe trips for people who want walking safaris, expert guides, fewer crowds and the country’s history.",
+      "summary_attribution": "company_website",
+      "website": "https://mositravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://mositravel.tourground.com/",
+          "label": "Mosi Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "luangwasafaris",
+      "name": "Luangwa Safaris",
+      "kind": "agency",
+      "country_base": "zambia",
+      "base_city": null,
+      "delivers_in": [
+        "zambia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "zambia": 1
+      },
+      "summary": "Zambia on foot: the valley where walking safaris began, small camps, real guides and wild rivers.",
+      "summary_attribution": "company_website",
+      "website": "https://luangwasafaris.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://luangwasafaris.tourground.com/",
+          "label": "Luangwa Safaris website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "goldenroad",
+      "name": "Golden Road",
+      "kind": "agency",
+      "country_base": "uzbekistan",
+      "base_city": "Tashkent",
+      "delivers_in": [
+        "uzbekistan"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "uzbekistan": 1
+      },
+      "summary": "For well-travelled people who want more of Uzbekistan than its three famous skylines: private, unhurried trips built around what the river made. That means the tilework and the bazaars, the looms and the plov cauldrons, and, for those who want it, the dry bed of the Aral Sea.",
+      "summary_attribution": "company_website",
+      "website": "https://goldenroad.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://goldenroad.tourground.com/",
+          "label": "Golden Road website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "kervanjourneys",
+      "name": "Kervan Journeys",
+      "kind": "agency",
+      "country_base": "turkiye",
+      "base_city": null,
+      "delivers_in": [
+        "turkiye"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "turkiye": 1
+      },
+      "summary": "Kervan Journeys plans slow, small journeys through Türkiye for travellers who love history and food: İstanbul, Cappadocia, the Aegean ruins, the Lycian coast and the east.",
+      "summary_attribution": "company_website",
+      "website": "https://kervanjourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://kervanjourneys.tourground.com/",
+          "label": "Kervan Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "tringles",
+      "name": "Tringles",
+      "kind": "agency",
+      "country_base": "portugal",
+      "base_city": "Lisboa",
+      "delivers_in": [
+        "portugal",
+        "brazil",
+        "indonesia",
+        "kenya"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "portugal": 2,
+        "brazil": 2,
+        "indonesia": 2,
+        "kenya": 4
+      },
+      "summary": "Tringles: small-group singles trips to Lisbon, Rio de Janeiro, Bali and Nairobi. Sixteen members, one host, seven nights.",
+      "summary_attribution": "company_website",
+      "website": "https://tringles.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://tringles.tourground.com/",
+          "label": "Tringles website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "uhurujourneys",
+      "name": "Uhuru Journeys",
+      "kind": "agency",
+      "country_base": "tanzania",
+      "base_city": "Dar es Salaam",
+      "delivers_in": [
+        "tanzania"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "tanzania": 1
+      },
+      "summary": "Private Tanzania safaris, Kilimanjaro climbs and Zanzibar escapes, planned end to end by one dedicated specialist. Serengeti, Ngorongoro, Great Migration…",
+      "summary_attribution": "company_website",
+      "website": "https://uhurujourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://uhurujourneys.tourground.com/",
+          "label": "Uhuru Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "formosajourneys",
+      "name": "Formosa Journeys",
+      "kind": "agency",
+      "country_base": "taiwan",
+      "base_city": null,
+      "delivers_in": [
+        "taiwan"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "taiwan": 1
+      },
+      "summary": "Private journeys through Taiwan's tea mountains, night markets, east-coast gorges and Indigenous coast, planned for travellers who want more than a Taipei stopover.",
+      "summary_attribution": "company_website",
+      "website": "https://formosajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://formosajourneys.tourground.com/",
+          "label": "Formosa Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "serendibjourneys",
+      "name": "Serendib Journeys",
+      "kind": "agency",
+      "country_base": "sri-lanka",
+      "base_city": "Colombo",
+      "delivers_in": [
+        "sri-lanka"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "sri-lanka": 1
+      },
+      "summary": "Tailor-made Sri Lanka for travellers who want the whole island in one trip: ancient cities, tea hills, wildlife and beaches, at an unhurried pace.",
+      "summary_attribution": "company_website",
+      "website": "https://serendibjourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://serendibjourneys.tourground.com/",
+          "label": "Serendib Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "sobremesa",
+      "name": "Sobremesa",
+      "kind": "agency",
+      "country_base": "spain",
+      "base_city": "Madrid",
+      "delivers_in": [
+        "spain"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "spain": 1
+      },
+      "summary": "Slow, regional travel in Spain: food, small towns, rail journeys and festivals, planned for curious adults who want to travel like locals.",
+      "summary_attribution": "company_website",
+      "website": "https://sobremesa.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://sobremesa.tourground.com/",
+          "label": "Sobremesa website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "granitecoast",
+      "name": "Granite Coast",
+      "kind": "agency",
+      "country_base": "seychelles",
+      "base_city": "Mahé",
+      "delivers_in": [
+        "seychelles"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "seychelles": 1
+      },
+      "summary": "Plan a slow, island-hopping journey through the Seychelles: Mahé, Praslin, La Digue and the outer islands, with a route planner and a seasonal calm-beach finder.",
+      "summary_attribution": "company_website",
+      "website": "https://granitecoast.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://granitecoast.tourground.com/",
+          "label": "Granite Coast website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "baobabandsea",
+      "name": "Baobab & Sea",
+      "kind": "agency",
+      "country_base": "senegal",
+      "base_city": null,
+      "delivers_in": [
+        "senegal"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "senegal": 1
+      },
+      "summary": "Senegal, as a guest. Private, unhurried journeys through Senegal, from Saint-Louis to the Saloum creeks, planned by specialists and hosted in the spirit of teranga.",
+      "summary_attribution": "company_website",
+      "website": "https://baobabandsea.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://baobabandsea.tourground.com/",
+          "label": "Baobab & Sea website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "safarigolftour",
+      "name": "Safari Golf Tour",
+      "kind": "agency",
+      "country_base": "kenya",
+      "base_city": "Nairobi",
+      "delivers_in": [
+        "kenya",
+        "tanzania",
+        "south-africa",
+        "zimbabwe",
+        "botswana",
+        "uganda",
+        "mauritius"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "uganda": 2,
+        "zimbabwe": 2,
+        "kenya": 3,
+        "tanzania": 3,
+        "south-africa": 2,
+        "botswana": 3,
+        "mauritius": 2
+      },
+      "summary": "Golf and safari journeys across Kenya, Tanzania, South Africa, Zimbabwe, Botswana, Uganda and Mauritius. Championship courses by day, the Big Five by dawn and dusk, one planner from first call to final transfer.",
+      "summary_attribution": "company_website",
+      "website": "https://safarigolftour.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://safarigolftour.tourground.com/",
+          "label": "Safari Golf Tour website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "sabbatical",
+      "name": "Sabbatical",
+      "kind": "agency",
+      "country_base": "portugal",
+      "base_city": "Lisboa",
+      "delivers_in": [],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {},
+      "summary": "Long-stay travel packages for people taking one to six months away. Furnished homes, local hosts and everything set up before you land.",
+      "summary_attribution": "company_website",
+      "website": "https://sabbatical.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://sabbatical.tourground.com/",
+          "label": "Sabbatical website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "seventhousand",
+      "name": "Seven Thousand",
+      "kind": "agency",
+      "country_base": "philippines",
+      "base_city": "Bonifacio Global City, Taguig",
+      "delivers_in": [
+        "philippines"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "philippines": 1
+      },
+      "summary": "Tailor-made trips in the Philippines, planned island by island around the weather. The Philippines by water, with the people who know it.",
+      "summary_attribution": "company_website",
+      "website": "https://seventhousand.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://seventhousand.tourground.com/",
+          "label": "Seven Thousand website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "twotides",
+      "name": "Two Tides",
+      "kind": "agency",
+      "country_base": "panama",
+      "base_city": null,
+      "delivers_in": [
+        "panama"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "panama": 1
+      },
+      "summary": "For well-travelled people who want more of Panama than a canal stopover: private, coast-to-coast trips planned around two oceans with different tides, seasons and cultures.",
+      "summary_attribution": "company_website",
+      "website": "https://twotides.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://twotides.tourground.com/",
+          "label": "Two Tides website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "aotearoajourneys",
+      "name": "Aotearoa Journeys",
+      "kind": "agency",
+      "country_base": "new-zealand",
+      "base_city": "Auckland",
+      "delivers_in": [
+        "new-zealand"
+      ],
+      "sells_from": [],
+      "niches": [
+        "overland",
+        "trekking-mountains",
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "new-zealand": 1
+      },
+      "summary": "Self-drive and guided New Zealand for active travellers. Great Walks, road trips and wildlife, planned around honest driving times.",
+      "summary_attribution": "company_website",
+      "website": "https://aotearoajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://aotearoajourneys.tourground.com/",
+          "label": "Aotearoa Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "namiblight",
+      "name": "Namib Light",
+      "kind": "agency",
+      "country_base": "namibia",
+      "base_city": "Windhoek",
+      "delivers_in": [
+        "namibia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "overland"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "namibia": 1
+      },
+      "summary": "Private journeys across Namibia: Sossusvlei's dunes at sunrise, Etosha's waterholes, the Skeleton Coast and some of the darkest skies on Earth. Self-drive, guided or fly-in.",
+      "summary_attribution": "company_website",
+      "website": "https://namiblight.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://namiblight.tourground.com/",
+          "label": "Namib Light website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "dhowanddune",
+      "name": "Dhow & Dune",
+      "kind": "agency",
+      "country_base": "mozambique",
+      "base_city": null,
+      "delivers_in": [
+        "mozambique"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "mozambique": 1
+      },
+      "summary": "Private trips through Mozambique by dhow and island: the Bazaruto Archipelago, the old town of Ilha de Moçambique and Gorongosa’s comeback, with honest advice on where we go and where we don’t.",
+      "summary_attribution": "company_website",
+      "website": "https://dhowanddune.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://dhowanddune.tourground.com/",
+          "label": "Dhow & Dune website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "azulmorocco",
+      "name": "Azul Morocco",
+      "kind": "agency",
+      "country_base": "morocco",
+      "base_city": "Casablanca",
+      "delivers_in": [
+        "morocco"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "morocco": 1
+      },
+      "summary": "Azul Morocco is an independent guide to Morocco: Marrakech, Fes, Chefchaouen, the Sahara at Merzouga, the Atlas Mountains and Essaouira, with tailor-made trip planning.",
+      "summary_attribution": "company_website",
+      "website": "https://azulmorocco.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://azulmorocco.tourground.com/",
+          "label": "Azul Morocco website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "cenotehouse",
+      "name": "Cenote House",
+      "kind": "agency",
+      "country_base": "mexico",
+      "base_city": "Ciudad de México",
+      "delivers_in": [
+        "mexico"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "mexico": 1
+      },
+      "summary": "Tailor-made Mexico trips planned by one specialist who knows the country personally: cenotes, colonial cities, haciendas and the Mexico beyond the resorts.",
+      "summary_attribution": "company_website",
+      "website": "https://cenotehouse.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://cenotehouse.tourground.com/",
+          "label": "Cenote House website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "kreolcoast",
+      "name": "Kreol Coast",
+      "kind": "agency",
+      "country_base": "mauritius",
+      "base_city": null,
+      "delivers_in": [
+        "mauritius"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage",
+        "family",
+        "honeymoon",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "mauritius": 1
+      },
+      "summary": "Food, hikes, culture and quieter coasts in Mauritius and Rodrigues, for couples and families who want more than a sunbed.",
+      "summary_attribution": "company_website",
+      "website": "https://kreolcoast.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://kreolcoast.tourground.com/",
+          "label": "Kreol Coast website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "atolljourneys",
+      "name": "Atoll Journeys",
+      "kind": "agency",
+      "country_base": "maldives",
+      "base_city": null,
+      "delivers_in": [
+        "maldives"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "maldives": 1
+      },
+      "summary": "Atoll Journeys plans Maldives trips reef-first: the right atoll, island and house reef for how you want to spend the water, not just the villa.",
+      "summary_attribution": "company_website",
+      "website": "https://atolljourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://atolljourneys.tourground.com/",
+          "label": "Atoll Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "hornbilltravel",
+      "name": "Hornbill Travel",
+      "kind": "agency",
+      "country_base": "malaysia",
+      "base_city": null,
+      "delivers_in": [
+        "malaysia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "malaysia": 1
+      },
+      "summary": "Hornbill Travel plans private journeys in Malaysia and Borneo: rainforest and wildlife in Sabah and Sarawak first, then Penang, Melaka and the quiet islands.",
+      "summary_attribution": "company_website",
+      "website": "https://hornbilltravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://hornbilltravel.tourground.com/",
+          "label": "Hornbill Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "lakeofstarstravel",
+      "name": "Lake of Stars Travel",
+      "kind": "agency",
+      "country_base": "malawi",
+      "base_city": null,
+      "delivers_in": [
+        "malawi"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "malawi": 1
+      },
+      "summary": "Tailor-made trips to Malawi: freshwater beaches on Lake Malawi, small quiet safaris in Liwonde and Majete, and highland walks on Nyika, Zomba and Mulanje, at an easy pace.",
+      "summary_attribution": "company_website",
+      "website": "https://lakeofstarstravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://lakeofstarstravel.tourground.com/",
+          "label": "Lake of Stars Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "baobabroad",
+      "name": "Baobab Road",
+      "kind": "agency",
+      "country_base": "madagascar",
+      "base_city": "Antananarivo",
+      "delivers_in": [
+        "madagascar"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "madagascar": 1
+      },
+      "summary": "Honest, expert-led Madagascar journeys for nature lovers who accept slow roads in return for wildlife found nowhere else on Earth.",
+      "summary_attribution": "company_website",
+      "website": "https://baobabroad.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://baobabroad.tourground.com/",
+          "label": "Baobab Road website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "slowboat",
+      "name": "Slow Boat",
+      "kind": "agency",
+      "country_base": "laos",
+      "base_city": "Vientiane",
+      "delivers_in": [
+        "laos"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "laos": 1
+      },
+      "summary": "Slow Boat plans private journeys through Laos at the speed of its rivers: the Mekong by slow boat, the Nam Ou, the Plain of Jars and the far south, in the right month and at the right hour.",
+      "summary_attribution": "company_website",
+      "website": "https://slowboat.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://slowboat.tourground.com/",
+          "label": "Slow Boat website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "celestialmountains",
+      "name": "Celestial Mountains",
+      "kind": "agency",
+      "country_base": "kyrgyzstan",
+      "base_city": null,
+      "delivers_in": [
+        "kyrgyzstan"
+      ],
+      "sells_from": [],
+      "niches": [
+        "overland",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "kyrgyzstan": 1
+      },
+      "summary": "Private trips in Kyrgyzstan on horseback, on foot and by 4x4: yurt camps, alpine lakes and Silk Road valleys, with honest altitudes and real comfort where it matters.",
+      "summary_attribution": "company_website",
+      "website": "https://celestialmountains.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://celestialmountains.tourground.com/",
+          "label": "Celestial Mountains website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "safarinjema",
+      "name": "Safari Njema",
+      "kind": "agency",
+      "country_base": "kenya",
+      "base_city": "Nairobi",
+      "delivers_in": [
+        "kenya"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "kenya": 1
+      },
+      "summary": "Tailor-made Kenya safaris and beach escapes, planned by one dedicated specialist from your first message to the day you fly home.",
+      "summary_attribution": "company_website",
+      "website": "https://safarinjema.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://safarinjema.tourground.com/",
+          "label": "Safari Njema website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "campaniletravel",
+      "name": "Campanile Travel",
+      "kind": "agency",
+      "country_base": "italy",
+      "base_city": "Milano",
+      "delivers_in": [
+        "italy"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "italy": 1
+      },
+      "summary": "Tailor-made journeys in Italy beyond Rome, Florence and Venice: small towns, agriturismi, regional food and quieter alternatives to the crowded icons.",
+      "summary_attribution": "company_website",
+      "website": "https://campaniletravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://campaniletravel.tourground.com/",
+          "label": "Campanile Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "softday",
+      "name": "Soft Day",
+      "kind": "agency",
+      "country_base": "ireland",
+      "base_city": "Dublin 2",
+      "delivers_in": [
+        "ireland",
+        "northern-ireland"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "ireland": 1,
+        "northern-ireland": 1
+      },
+      "summary": "Private, tailor-made trips across the whole island of Ireland, North and South, planned around the weather: fewer hotel changes, longer stays and two versions of every day.",
+      "summary_attribution": "company_website",
+      "website": "https://softday.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://softday.tourground.com/",
+          "label": "Soft Day website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "musafirtravel",
+      "name": "Musafir Travel",
+      "kind": "agency",
+      "country_base": "india",
+      "base_city": "Mumbai",
+      "delivers_in": [
+        "india"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "india": 1
+      },
+      "summary": "India, beautifully planned, by people who know it personally. Tailor-made journeys across Rajasthan, Kerala, the Himalaya and India's tiger forests, with one dedicated specialist.",
+      "summary_attribution": "company_website",
+      "website": "https://musafirtravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://musafirtravel.tourground.com/",
+          "label": "Musafir Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "supra",
+      "name": "Supra",
+      "kind": "agency",
+      "country_base": "georgia",
+      "base_city": "Tbilisi",
+      "delivers_in": [
+        "georgia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "georgia": 1
+      },
+      "summary": "Tailor-made Georgia, from the table to the towers. Private trips in Tbilisi, Kakheti, Svaneti and the high Caucasus, planned around the harvest, the mountain passes and the feast.",
+      "summary_attribution": "company_website",
+      "website": "https://supra.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://supra.tourground.com/",
+          "label": "Supra website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "extrafari",
+      "name": "Extrafari",
+      "kind": "agency",
+      "country_base": "kenya",
+      "base_city": "Nairobi",
+      "delivers_in": [
+        "kenya",
+        "tanzania",
+        "botswana"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari",
+        "trekking-mountains",
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "kenya": 2,
+        "tanzania": 2,
+        "botswana": 2
+      },
+      "summary": "Extrafari designs private, expertly guided safaris across East and Southern Africa. Great Migration, Okavango Delta, gorilla trekking and more.",
+      "summary_attribution": "company_website",
+      "website": "https://extrafari.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://extrafari.tourground.com/",
+          "label": "Extrafari website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "encantadasexpeditions",
+      "name": "Encantadas Expeditions",
+      "kind": "agency",
+      "country_base": "ecuador",
+      "base_city": "Quito",
+      "delivers_in": [
+        "ecuador"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "ecuador": 1
+      },
+      "summary": "Galápagos cruises and land-based trips planned properly, plus the Andes, the cloud forest and the Amazon. Ecuador and the Galápagos from Encantadas Expeditions.",
+      "summary_attribution": "company_website",
+      "website": "https://encantadasexpeditions.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://encantadasexpeditions.tourground.com/",
+          "label": "Encantadas Expeditions website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "maestral",
+      "name": "Maestral",
+      "kind": "agency",
+      "country_base": "croatia",
+      "base_city": "Zagreb",
+      "delivers_in": [
+        "croatia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "croatia": 1
+      },
+      "summary": "Independent ideas for Croatia in the shoulder seasons: island hopping by ferry, sailing, Istrian food and wine, and national parks away from the crowds.",
+      "summary_attribution": "company_website",
+      "website": "https://maestral.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://maestral.tourground.com/",
+          "label": "Maestral website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "cafetal",
+      "name": "Cafetal",
+      "kind": "agency",
+      "country_base": "colombia",
+      "base_city": "Bogotá",
+      "delivers_in": [
+        "colombia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "colombia": 1
+      },
+      "summary": "Private journeys in Colombia. Private, tailor-made trips across Colombia’s regions, planned by altitude and month, with honest advice on seasons, closures and safety.",
+      "summary_attribution": "company_website",
+      "website": "https://cafetal.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://cafetal.tourground.com/",
+          "label": "Cafetal website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "latitudechile",
+      "name": "Latitude Chile",
+      "kind": "agency",
+      "country_base": "chile",
+      "base_city": null,
+      "delivers_in": [
+        "chile"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "chile": 1
+      },
+      "summary": "Expert-planned active journeys through Chile: the Atacama, the wine valleys, the Lake District and Patagonia, with the logistics to cross 4,000+ km.",
+      "summary_attribution": "company_website",
+      "website": "https://latitudechile.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://latitudechile.tourground.com/",
+          "label": "Latitude Chile website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "canadatravelco",
+      "name": "Canada Travel Co.",
+      "kind": "agency",
+      "country_base": "canada",
+      "base_city": "Toronto",
+      "delivers_in": [
+        "canada"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "canada": 1
+      },
+      "summary": "A small team of Canada specialists who design private journeys across the second-largest country on Earth. Canada, made for you.",
+      "summary_attribution": "company_website",
+      "website": "https://canadatravelco.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://canadatravelco.tourground.com/",
+          "label": "Canada Travel Co. website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "angkortrails",
+      "name": "Angkor Trails",
+      "kind": "agency",
+      "country_base": "cambodia",
+      "base_city": "Phnom Penh",
+      "delivers_in": [
+        "cambodia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "cambodia": 1
+      },
+      "summary": "Angkor Trails: Cambodia beyond the two-day temple stop. Angkor done well, then the countryside, the islands and the river towns, travelled responsibly.",
+      "summary_attribution": "company_website",
+      "website": "https://angkortrails.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://angkortrails.tourground.com/",
+          "label": "Angkor Trails website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "solnascente",
+      "name": "Sol Nascente",
+      "kind": "agency",
+      "country_base": "brazil",
+      "base_city": "São Paulo",
+      "delivers_in": [
+        "brazil"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "brazil": 1
+      },
+      "summary": "Sol Nascente plans private journeys across Brazil: the Amazon and the Pantanal, the beaches of Bahia and the dunes of Maranhão, Rio, Iguaçu, and the music and food that tie it all together.",
+      "summary_attribution": "company_website",
+      "website": "https://solnascente.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://solnascente.tourground.com/",
+          "label": "Sol Nascente website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "mokorojourneys",
+      "name": "Mokoro Journeys",
+      "kind": "agency",
+      "country_base": "botswana",
+      "base_city": "Gaborone",
+      "delivers_in": [
+        "botswana"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "botswana": 1
+      },
+      "summary": "Mokoro Journeys: private, low-impact safaris in Botswana. Small camps, few vehicles, the Okavango Delta and the Kalahari.",
+      "summary_attribution": "company_website",
+      "website": "https://mokorojourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://mokorojourneys.tourground.com/",
+          "label": "Mokoro Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "akwaaba",
+      "name": "Akwaaba",
+      "kind": "agency",
+      "country_base": "ghana",
+      "base_city": "Accra",
+      "delivers_in": [
+        "ghana"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage",
+        "heritage-diaspora"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "ghana": 1
+      },
+      "summary": "For well-travelled travellers and returning members of the diaspora who want Ghana in depth (court, coast, makers and savannah), Akwaaba plans private journeys around the people who make the country, at a pace that leaves time to sit down.",
+      "summary_attribution": "company_website",
+      "website": "https://akwaaba.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://akwaaba.tourground.com/",
+          "label": "Akwaaba website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "cayecoast",
+      "name": "Caye Coast",
+      "kind": "agency",
+      "country_base": "belize",
+      "base_city": "Belize City",
+      "delivers_in": [
+        "belize"
+      ],
+      "sells_from": [],
+      "niches": [
+        "family",
+        "honeymoon",
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "belize": 1
+      },
+      "summary": "For well-travelled couples and families who want Belize by water, not by coach: the right caye or atoll, a river lodge, the Kriol and Garifuna coast, and the reef's calendar, all planned privately around them.",
+      "summary_attribution": "company_website",
+      "website": "https://cayecoast.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://cayecoast.tourground.com/",
+          "label": "Caye Coast website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "kymatravel",
+      "name": "Kyma Travel",
+      "kind": "agency",
+      "country_base": "greece",
+      "base_city": null,
+      "delivers_in": [
+        "greece"
+      ],
+      "sells_from": [],
+      "niches": [
+        "honeymoon"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "greece": 1
+      },
+      "summary": "Kyma Travel plans Greece for couples and honeymooners: the right island, not just the famous one, plus the mainland most visitors skip.",
+      "summary_attribution": "company_website",
+      "website": "https://kymatravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://kymatravel.tourground.com/",
+          "label": "Kyma Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "selvora",
+      "name": "Selvora",
+      "kind": "agency",
+      "country_base": "costa-rica",
+      "base_city": "San José",
+      "delivers_in": [
+        "costa-rica"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "costa-rica": 1
+      },
+      "summary": "Private, tailor-made Costa Rica trips planned around you: rainforest, cloud forest, volcanoes, wildlife and both coasts, with exceptional places to stay.",
+      "summary_attribution": "company_website",
+      "website": "https://selvora.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://selvora.tourground.com/",
+          "label": "Selvora website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "dzonghouse",
+      "name": "Dzong House",
+      "kind": "dmc",
+      "country_base": "bhutan",
+      "base_city": "Thimphu",
+      "delivers_in": [
+        "bhutan"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "bhutan": 1
+      },
+      "summary": "Dzong House opens Bhutan to a small number of thoughtful travellers. One dedicated specialist, a Bhutanese partner operator and local guides, from the first message to the day you fly home.",
+      "summary_attribution": "company_website",
+      "website": "https://dzonghouse.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://dzonghouse.tourground.com/",
+          "label": "Dzong House website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "gustav",
+      "name": "Gustav",
+      "kind": "agency",
+      "country_base": "norway",
+      "base_city": "Oslo",
+      "delivers_in": [
+        "norway",
+        "sweden",
+        "denmark",
+        "finland"
+      ],
+      "sells_from": [],
+      "niches": [
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "norway": 1,
+        "sweden": 1,
+        "denmark": 1,
+        "finland": 1
+      },
+      "summary": "Private journeys through Norway, Sweden, Denmark and Finland. Slowly, by train, boat and on foot, following the light.",
+      "summary_attribution": "company_website",
+      "website": "https://gustav.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://gustav.tourground.com/",
+          "label": "Gustav website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "theislandedit",
+      "name": "The Island Edit",
+      "kind": "agency",
+      "country_base": "indonesia",
+      "base_city": "Jakarta",
+      "delivers_in": [
+        "indonesia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "indonesia": 1
+      },
+      "summary": "Tailor-made Indonesia journeys, planned end to end by one dedicated travel specialist. Bali, Komodo, Raja Ampat, Java and beyond.",
+      "summary_attribution": "company_website",
+      "website": "https://theislandedit.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://theislandedit.tourground.com/",
+          "label": "The Island Edit website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "rond-point",
+      "name": "Rond-Point",
+      "kind": "agency",
+      "country_base": "france",
+      "base_city": "Paris",
+      "delivers_in": [
+        "france"
+      ],
+      "sells_from": [],
+      "niches": [
+        "overland"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "france": 1
+      },
+      "summary": "Tailor-made self-drive road trips through France, with hand-picked stays, a beautiful route book and one dedicated specialist the whole way.",
+      "summary_attribution": "company_website",
+      "website": "https://rond-point.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://rond-point.tourground.com/",
+          "label": "Rond-Point website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "edgeofnorth",
+      "name": "Edge of North",
+      "kind": "agency",
+      "country_base": "iceland",
+      "base_city": "Reykjavík",
+      "delivers_in": [
+        "iceland"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "iceland": 1
+      },
+      "summary": "Where the map runs out. Iceland at its most extraordinary, privately guided and planned by one dedicated specialist.",
+      "summary_attribution": "company_website",
+      "website": "https://edgeofnorth.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://edgeofnorth.tourground.com/",
+          "label": "Edge of North website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "discoverperutravel",
+      "name": "Discover Peru Travel",
+      "kind": "agency",
+      "country_base": "peru",
+      "base_city": "San Isidro, Lima",
+      "delivers_in": [
+        "peru"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "peru": 1
+      },
+      "summary": "Private, well-paced Peru journeys planned around altitude, distance and permits. Machu Picchu, the Andes, the Amazon and the coast, done right.",
+      "summary_attribution": "company_website",
+      "website": "https://discoverperutravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://discoverperutravel.tourground.com/",
+          "label": "Discover Peru Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "portoseason",
+      "name": "Porto Season",
+      "kind": "agency",
+      "country_base": "portugal",
+      "base_city": "Lisboa",
+      "delivers_in": [
+        "portugal"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "portugal": 1
+      },
+      "summary": "Porto Season plans one to twelve months of living, working and slowing down anywhere in Portugal: Lisbon, Porto, the coast, the Alentejo, the Douro, Madeira and the Azores. Home, workspace, visa guidance and community, handled by one specialist.",
+      "summary_attribution": "company_website",
+      "website": "https://portoseason.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://portoseason.tourground.com/",
+          "label": "Porto Season website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "highlandandisle",
+      "name": "Highland & Isle",
+      "kind": "agency",
+      "country_base": "scotland",
+      "base_city": "Edinburgh",
+      "delivers_in": [
+        "scotland"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "scotland": 1
+      },
+      "summary": "Private trips to Scotland’s islands and far north-west: the Hebrides, Orkney and Shetland, planned around ferries, the sleeper and the light. No prices online; a written proposal instead.",
+      "summary_attribution": "company_website",
+      "website": "https://highlandandisle.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://highlandandisle.tourground.com/",
+          "label": "Highland & Isle website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "morningcalmtravel",
+      "name": "Morning Calm Travel",
+      "kind": "agency",
+      "country_base": "south-korea",
+      "base_city": "Youngdeungpo-gu, Seoul",
+      "delivers_in": [
+        "south-korea"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "south-korea": 1
+      },
+      "summary": "South Korea for curious grown-ups: Seoul's design and food, then temples, tea fields, islands and craft villages most visitors miss.",
+      "summary_attribution": "company_website",
+      "website": "https://morningcalmtravel.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://morningcalmtravel.tourground.com/",
+          "label": "Morning Calm Travel website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "swisshorizon",
+      "name": "Swiss Horizon",
+      "kind": "agency",
+      "country_base": "switzerland",
+      "base_city": "Zürich",
+      "delivers_in": [
+        "switzerland"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "switzerland": 1
+      },
+      "summary": "Swiss Horizon runs small-group, rail-first journeys through Switzerland — Zermatt, the Jungfrau Region, Lake Lucerne and Ticino. Ten guests at most, every train booked.",
+      "summary_attribution": "company_website",
+      "website": "https://swisshorizon.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://swisshorizon.tourground.com/",
+          "label": "Swiss Horizon website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "kathmanduandbeyond",
+      "name": "Kathmandu & Beyond",
+      "kind": "agency",
+      "country_base": "nepal",
+      "base_city": "Lalitpur",
+      "delivers_in": [
+        "nepal"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage",
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "nepal": 1
+      },
+      "summary": "Kathmandu & Beyond: Nepal treks and culture done safely and well, for first-time trekkers and returning ones, with honest advice on altitude, season and fitness.",
+      "summary_attribution": "company_website",
+      "website": "https://kathmanduandbeyond.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://kathmanduandbeyond.tourground.com/",
+          "label": "Kathmandu & Beyond website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "capecompass",
+      "name": "Cape Compass",
+      "kind": "dmc",
+      "country_base": "south-africa",
+      "base_city": "Cape Town",
+      "delivers_in": [
+        "south-africa"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "south-africa": 1
+      },
+      "summary": "Tailor-made South Africa trips planned by one dedicated local specialist: Cape Town, the Winelands, the Garden Route, Kruger's private reserves and beyond.",
+      "summary_attribution": "company_website",
+      "website": "https://capecompass.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://capecompass.tourground.com/",
+          "label": "Cape Compass website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "outbackandreef",
+      "name": "Outback & Reef",
+      "kind": "agency",
+      "country_base": "australia",
+      "base_city": "Sydney",
+      "delivers_in": [
+        "australia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "wildlife-diving"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "australia": 1
+      },
+      "summary": "Australia planned as three or four regions in the right season, with the lodges, guides and flights that make the distances worth it.",
+      "summary_attribution": "company_website",
+      "website": "https://outbackandreef.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://outbackandreef.tourground.com/",
+          "label": "Outback & Reef website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "steppeandsky",
+      "name": "Steppe & Sky",
+      "kind": "agency",
+      "country_base": "mongolia",
+      "base_city": "Ulaanbaatar",
+      "delivers_in": [
+        "mongolia"
+      ],
+      "sells_from": [],
+      "niches": [
+        "family"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "mongolia": 1
+      },
+      "summary": "Small-group and private adventures across Mongolia: the steppe, the Gobi Desert and the Altai, with nomad families, local guides and drivers. Planned by one dedicated specialist from your first message to the day you fly home.",
+      "summary_attribution": "company_website",
+      "website": "https://steppeandsky.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://steppeandsky.tourground.com/",
+          "label": "Steppe & Sky website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "pampasandpeaks",
+      "name": "Pampas & Peaks",
+      "kind": "agency",
+      "country_base": "argentina",
+      "base_city": "Buenos Aires",
+      "delivers_in": [
+        "argentina"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "argentina": 1
+      },
+      "summary": "Big-distance Argentina, made easy. Buenos Aires, Patagonia, the wine country and Iguazú, linked into trips that work.",
+      "summary_attribution": "company_website",
+      "website": "https://pampasandpeaks.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://pampasandpeaks.tourground.com/",
+          "label": "Pampas & Peaks website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "escalevoyages",
+      "name": "Escale Voyages",
+      "kind": "dmc",
+      "country_base": "benin",
+      "base_city": "Cotonou",
+      "delivers_in": [
+        "benin"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "benin": 1
+      },
+      "summary": "The whole of Benin, at your pace: small-group and private journeys from the Atlantic coast to the Pendjari savannah, planned and run from Cotonou.",
+      "summary_attribution": "company_website",
+      "website": "https://escalevoyages.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://escalevoyages.tourground.com/",
+          "label": "Escale Voyages website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "abyssiniajourneys",
+      "name": "Abyssinia Journeys",
+      "kind": "agency",
+      "country_base": "ethiopia",
+      "base_city": "Addis Ababa",
+      "delivers_in": [
+        "ethiopia"
+      ],
+      "sells_from": [],
+      "niches": [],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "ethiopia": 1
+      },
+      "summary": "Private journeys through Ethiopia's south and east: Addis Ababa, Harar, the Bale Mountains, coffee country and the Omo, planned by the Ethiopian calendar and honest about where it is safe to go.",
+      "summary_attribution": "company_website",
+      "website": "https://abyssiniajourneys.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://abyssiniajourneys.tourground.com/",
+          "label": "Abyssinia Journeys website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "komorebi",
+      "name": "Komorebi",
+      "kind": "agency",
+      "country_base": "japan",
+      "base_city": "Chiyoda-ku, Tokyo",
+      "delivers_in": [
+        "japan"
+      ],
+      "sells_from": [],
+      "niches": [
+        "culture-heritage"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "japan": 1
+      },
+      "summary": "Private, slow journeys in Japan, planned around the seasons and away from the crowds. Ryokan nights, quiet temples at opening time, craft, food and the 72 seasons.",
+      "summary_attribution": "company_website",
+      "website": "https://komorebi.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://komorebi.tourground.com/",
+          "label": "Komorebi website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "antiguaandbeyond",
+      "name": "Antigua & Beyond",
+      "kind": "dmc",
+      "country_base": "guatemala",
+      "base_city": "Guatemala City",
+      "delivers_in": [
+        "guatemala"
+      ],
+      "sells_from": [],
+      "niches": [
+        "trekking-mountains"
+      ],
+      "tier": "founder",
+      "verified": false,
+      "founder_owned": true,
+      "rank": {
+        "guatemala": 1
+      },
+      "summary": "Private, tailor-made Guatemala trips planned by one local specialist in Antigua: Lake Atitlán, Tikal, volcano hikes and the highlands, with 24/7 support…",
+      "summary_attribution": "company_website",
+      "website": "https://antiguaandbeyond.tourground.com",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://antiguaandbeyond.tourground.com/",
+          "label": "Antigua & Beyond website (homepage, retrieved 8 Nov 2026)"
+        },
+        {
+          "url": "https://tourground.com/",
+          "label": "Tourground directory (founding portfolio)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": false
+    },
+    {
+      "id": "example-operator-kenya",
+      "name": "Example Operator (Kenya)",
+      "kind": "dmc",
+      "country_base": "kenya",
+      "base_city": null,
+      "delivers_in": [
+        "kenya",
+        "tanzania"
+      ],
+      "sells_from": [
+        "united-kingdom",
+        "united-states"
+      ],
+      "niches": [
+        "safari",
+        "family"
+      ],
+      "tier": "platinum",
+      "verified": true,
+      "founder_owned": false,
+      "rank": {
+        "kenya": 5,
+        "tanzania": 4
+      },
+      "summary": "EXAMPLE RECORD. This is not a real company. It exists in the mock feed to show how a Platinum (paid plan) listing renders, including the sponsored link to its own website.",
+      "summary_attribution": "example",
+      "website": "https://example.com/",
+      "profile_url": null,
+      "memberships": [
+        "ATTA (example only)"
+      ],
+      "sources": [
+        {
+          "url": "https://example.com/",
+          "label": "Example source (not real)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": true
+    },
+    {
+      "id": "example-operator-peru",
+      "name": "Example Operator (Peru)",
+      "kind": "agency",
+      "country_base": "peru",
+      "base_city": null,
+      "delivers_in": [
+        "peru",
+        "bolivia"
+      ],
+      "sells_from": [
+        "brazil"
+      ],
+      "niches": [
+        "trekking-mountains",
+        "culture-heritage"
+      ],
+      "tier": "black",
+      "verified": true,
+      "founder_owned": false,
+      "rank": {
+        "peru": 2,
+        "bolivia": 2
+      },
+      "summary": "EXAMPLE RECORD. This is not a real company. It exists in the mock feed to show how a Black tier listing renders.",
+      "summary_attribution": "example",
+      "website": "https://example.org/",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://example.org/",
+          "label": "Example source (not real)"
+        }
+      ],
+      "checked_by": "Tourground",
+      "last_checked": "2026-11-08",
+      "example": true
+    },
+    {
+      "id": "example-prospect-unverified",
+      "name": "Example Prospect (unverified, must never publish)",
+      "kind": "agency",
+      "country_base": "kenya",
+      "base_city": null,
+      "delivers_in": [
+        "kenya"
+      ],
+      "sells_from": [],
+      "niches": [
+        "safari"
+      ],
+      "tier": "verified",
+      "verified": false,
+      "founder_owned": false,
+      "rank": {
+        "kenya": 99
+      },
+      "summary": "EXAMPLE RECORD used by the build check. Not verified and not founder-owned, so the build must exclude it.",
+      "summary_attribution": "example",
+      "website": "https://example.net/",
+      "profile_url": null,
+      "memberships": [],
+      "sources": [
+        {
+          "url": "https://example.net/",
+          "label": "Example"
+        }
+      ],
+      "checked_by": null,
+      "last_checked": "2026-11-08",
+      "example": true
+    }
+  ]
+}

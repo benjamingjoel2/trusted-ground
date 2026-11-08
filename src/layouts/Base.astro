@@ -1,0 +1,132 @@
+---
+import '@fontsource/source-serif-4/latin-600.css';
+import '@fontsource/ibm-plex-sans/latin-400.css';
+import '@fontsource/ibm-plex-sans/latin-600.css';
+import '../styles/global.css';
+import serif600 from '@fontsource/source-serif-4/files/source-serif-4-latin-600-normal.woff2?url';
+import sans400 from '@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2?url';
+import sans600 from '@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-600-normal.woff2?url';
+import { site, disclosure } from '../config/site.config';
+import { t } from '../i18n/en';
+import { url, abs } from '../lib/urls';
+import { graph, breadcrumbs as bc } from '../lib/schema';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CountryIndex from '../components/CountryIndex.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  crumbs?: { name: string; path: string }[];
+  schema?: object[];
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  wide?: boolean;
+}
+const { title, description, path, crumbs = [], schema = [], noindex = false, ogType = 'article', wide = false } = Astro.props;
+const canonical = abs(path);
+const fullTitle = path === '/' ? `${site.name}: ${site.tagline}` : `${title} | ${site.name}`;
+const allCrumbs = path === '/' ? [] : [{ name: t.breadcrumbHome, path: '/' }, ...crumbs];
+const ld = graph(...(allCrumbs.length ? [bc(allCrumbs)] : []), ...schema);
+const c = site.colors;
+const rootVars = `:root{--paper:${c.paper};--paper-alt:${c.paperAlt};--ink:${c.ink};--slate:${c.slate};--rule:${c.rule};--verified:${c.verified};--brass:${c.brass};--ad:${c.ad}}`;
+const nav = [
+  [t.nav.countries, url.countries()],
+  [t.nav.regions, url.regions()],
+  [t.nav.best, url.best()],
+  [t.nav.guide, url.guide()],
+  [t.nav.verification, url.verification()],
+  [t.nav.questions, url.questions()],
+  [t.nav.checklist, url.checklist()],
+];
+const current = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="preload" href={serif600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={sans400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={sans600} as="font" type="font/woff2" crossorigin />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:image" content={abs('/og.png')} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${site.name}: ${site.tagline}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content={c.paper} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+    <style set:html={rootVars}></style>
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+    {site.analytics.vercel && (
+      <>
+        <script is:inline>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+        <script is:inline defer src="/_vercel/insights/script.js"></script>
+      </>
+    )}
+  </head>
+  <body>
+    <a class="skip" href="#main">{t.skip}</a>
+    <header class="masthead">
+      <div class="wrap masthead-inner">
+        <a class="wordmark" href="/">
+          <span class="wordmark-name">{site.name}</span>
+          <span class="wordmark-tag">{site.tagline}</span>
+        </a>
+        <nav class="primary" aria-label="Main">
+          <ul>
+            {nav.map(([label, href]) => (
+              <li><a href={href} aria-current={current(href) ? 'page' : undefined}>{label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class={`wrap layout${wide ? ' layout-wide' : ''}`}>
+      <aside class="margin" aria-label={t.marginIndex}>
+        <CountryIndex current={path} />
+      </aside>
+      <main id="main" class="main">
+        {allCrumbs.length > 0 && <Breadcrumbs items={allCrumbs} />}
+        <slot />
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <p class="footer-pub">
+          <a href={site.publisher.url}>{disclosure.footerPublishedBy}</a>
+        </p>
+        <p class="footer-short">{disclosure.footerShort}</p>
+        <nav aria-label="Site information">
+          <ul class="footer-links">
+            <li><a href={url.about()}>About</a></li>
+            <li><a href={url.howWeRank()}>How we rank</a></li>
+            <li><a href={url.verification()}>How verification works</a></li>
+            <li><a href={url.disclosure()}>Publisher disclosure</a></li>
+            <li><a href={url.corrections()}>Corrections and removal</a></li>
+            <li><a href={url.operators()}>{t.nav.operators}</a></li>
+            <li><a href={url.compare()}>{t.nav.compare}</a></li>
+            <li><a href={url.privacy()}>Privacy Policy</a></li>
+            <li><a href={url.terms()}>Terms</a></li>
+            <li><a href={url.cookies()}>Cookie Policy</a></li>
+          </ul>
+        </nav>
+        <p class="footer-contact">
+          <a href={`mailto:${site.email}`}>{site.email}</a> · {site.domain}
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

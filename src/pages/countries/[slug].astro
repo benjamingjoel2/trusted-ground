@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import MockNotice from '../../components/MockNotice.astro';
+import PageMeta from '../../components/PageMeta.astro';
+import RankedList from '../../components/RankedList.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import Sources from '../../components/Sources.astro';
+import { getFeed, type Destination } from '../../lib/feed';
+import { regions, site, disclosure } from '../../config/site.config';
+import { url } from '../../lib/urls';
+import { published, iso } from '../../lib/content';
+import { article, placeNode, itemList } from '../../lib/schema';
+import { render } from 'astro:content';
+import { t } from '../../i18n/en';
+
+export function getStaticPaths() {
+  // Only destinations with at least one verified/founder-owned company get a page.
+  return getFeed().countries.map((d) => ({ params: { slug: d.slug }, props: { d } }));
+}
+const { d } = Astro.props as { d: Destination };
+const feed = getFeed();
+const entries = feed.rankedByCountry.get(d.slug)!;
+const region = regions.find((r) => r.slug === d.region)!;
+const snapId = d.content_dir ? d.content_dir.split('/').pop() : d.slug;
+const snap = (await published('countries')).find((e) => e.id === snapId);
+const Snap = snap ? (await render(snap)).Content : null;
+const path = url.country(d.slug);
+const title = `Best local tour operators in ${d.name}`;
+const description = `${t.operatorsCount(entries.length)} in ${d.name}, verified or founder-owned, ranked on merit from the Tourground directory${snap?.data.best_months ? `. Best months: ${snap.data.best_months}` : ''}.`.slice(0, 200);
+const checked = entries.reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), '0000-00-00');
+const reviewed = snap && iso(snap.data.reviewed) > checked ? iso(snap.data.reviewed) : checked;
+const pub = snap ? iso(snap.data.published) : site.launch.published;
+const sources = [
+  ...(snap?.data.sources ?? []),
+  { url: site.publisher.url + '/', label: `Tourground directory feed (ranks and company records, last checked ${checked})` },
+];
+---
+<Base title={title} description={description} path={path}
+  crumbs={[{ name: region.name, path: url.region(region.slug) }, { name: d.name, path }]}
+  schema={[
+    placeNode(d, path),
+    itemList(`Best local operators in ${d.name}`, path, entries, url.operator),
+    article({ path, title, description, published: pub, modified: reviewed, sources, about: { '@id': new URL(path, site.url) + '#place' } }),
+  ]}>
+  <AdSlot />
+  <p class="label">{region.name} · {d.name}</p>
+  <h1>{title}</h1>
+  <p class="standfirst">{t.operatorsCount(entries.length)} listed for {d.name}. Each is verified by Tourground or founder-owned, and labelled. {disclosure.rankingStatement}</p>
+  <PageMeta published={pub} reviewed={reviewed} />
+  <MockNotice />
+
+  <h2 id="ranked">The ranked list</h2>
+  <RankedList entries={entries} caption={`Local tour operators in ${d.name}, by rank`} />
+
+  {d.booster_url && (
+    <p class="notice">{t.countrySiteNote} <a href={d.booster_url}>{new URL(d.booster_url).hostname}</a></p>
+  )}
+
+  <h2 id="snapshot">{t.snapshot}</h2>
+  {snap && Snap ? (
+    <>
+      <dl class="facts">
+        {snap.data.best_months && (<><dt>{t.bestMonths}</dt><dd>{snap.data.best_months}</dd></>)}
+        {snap.data.main_regions.length > 0 && (<><dt>{t.mainRegions}</dt><dd>{snap.data.main_regions.join(', ')}</dd></>)}
+        {snap.data.entry_basics && (<><dt>{t.entryBasics}</dt><dd>{snap.data.entry_basics}</dd></>)}
+      </dl>
+      <div class="prose"><Snap /></div>
+    </>
+  ) : (
+    <p>{t.noSnapshot}</p>
+  )}
+
+  <h2 id="check">Before you book in {d.name}</h2>
+  <ul>
+    <li><a href={url.guide()}>{t.readGuide}</a>: licences, insurance, memberships and payment protection.</li>
+    <li><a href={url.checklist()}>The before-you-pay checklist</a> (printable).</li>
+    <li><a href={url.verification()}>What Tourground verification checks</a>, and what it does not.</li>
+  </ul>
+  <Sources sources={sources} />
+</Base>

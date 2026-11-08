@@ -1,0 +1,65 @@
+---
+/** Reference and legal pages written in markdown (about, how-we-rank, disclosure, corrections, privacy, terms, cookies). */
+import Base from '../layouts/Base.astro';
+import PageMeta from '../components/PageMeta.astro';
+import Sources from '../components/Sources.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { published, iso } from '../lib/content';
+import { article } from '../lib/schema';
+import { render, type CollectionEntry } from 'astro:content';
+import { site, disclosure } from '../config/site.config';
+import { getFeed } from '../lib/feed';
+import { t } from '../i18n/en';
+export async function getStaticPaths() {
+  return (await published('pages')).filter((e) => !['checklist', 'compare'].includes(e.id)).map((entry) => ({ params: { page: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props as { entry: CollectionEntry<'pages'> };
+const d = entry.data;
+const { Content } = await render(entry);
+const path = `/${entry.id}/`;
+const feed = getFeed();
+---
+<Base title={d.title} description={d.description} path={path} crumbs={[{ name: d.title, path }]}
+  schema={[article({ path, title: d.title, description: d.description, published: iso(d.published), modified: iso(d.reviewed), sources: d.sources })]}>
+  <p class="label">{d.kind === 'legal' ? 'Legal' : 'About this site'}</p>
+  <h1>{d.title}</h1>
+  <PageMeta published={d.published} reviewed={d.reviewed} />
+
+  {entry.id === 'how-we-rank' && <p class="answer">{disclosure.rankingStatement}</p>}
+  {entry.id === 'disclosure' && (
+    <dl class="facts">
+      <dt>Publisher</dt><dd><a href={site.publisher.url}>{site.publisher.name}</a></dd>
+      <dt>Relationship</dt><dd>{disclosure.publisherRelationship}</dd>
+      <dt>Ranking</dt><dd>{disclosure.rankingStatement}</dd>
+      <dt>Paid placements</dt><dd>{disclosure.paidSlotNote}</dd>
+      <dt>Platinum</dt><dd>{disclosure.platinumNote}</dd>
+      <dt>Founder-owned brands</dt><dd>{disclosure.founderNote} Label used: “{site.publisher.founderLabel}”.</dd>
+      <dt>No bookings</dt><dd>{disclosure.noAdvice}</dd>
+    </dl>
+  )}
+
+  {entry.id === 'disclosure' && (
+    <>
+      <h2 id="ad-slot">How a paid placement would look</h2>
+      <p>Paid placement is not running. This is the empty slot, shown as a specimen. If paid placements start, they will appear only in this box, at the top of a page, above any ranked list.</p>
+      <AdSlot specimen />
+    </>
+  )}
+  <div class="prose"><Content /></div>
+
+  {(entry.id === 'about' || d.kind === 'legal' || entry.id === 'corrections') && (
+    <>
+      <h2 id="contact">Contact</h2>
+      <dl class="facts">
+        <dt>Publisher</dt><dd>{site.publisher.name} (<a href={site.publisher.url}>{new URL(site.publisher.url).hostname}</a>)</dd>
+        <dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+        <dt>Postal address</dt><dd>{site.address.isPlaceholder ? site.address.placeholderNotice : site.address.lines.join(', ')}</dd>
+        {(entry.id === 'corrections' || entry.id === 'about') && (<><dt>Corrections and removals</dt><dd><a href={site.links.correctionUrl}>{t.correction}</a></dd></>)}
+      </dl>
+    </>
+  )}
+  {entry.id === 'about' && (
+    <p class="small muted">Current coverage, computed from the directory feed: {t.countriesListed(feed.countries.length)}, {t.operatorsListed(feed.companies.length)}.</p>
+  )}
+  <Sources sources={d.sources} />
+</Base>

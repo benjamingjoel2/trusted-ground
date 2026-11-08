@@ -1,0 +1,21 @@
+{
+  "name": "trusted-ground",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/fetch-feed.mjs && node scripts/check-feed.mjs && astro build && node scripts/validate-build.mjs",
+    "preview": "astro preview",
+    "check:feed": "node scripts/check-feed.mjs",
+    "validate": "node scripts/validate-build.mjs"
+  },
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@fontsource/source-serif-4": "^5.3.1",
+    "astro": "^7.4.7"
+  }
+}

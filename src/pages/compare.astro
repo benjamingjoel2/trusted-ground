@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import PageMeta from '../components/PageMeta.astro';
+import Sources from '../components/Sources.astro';
+import MockNotice from '../components/MockNotice.astro';
+import { getFeed } from '../lib/feed';
+import { site, regions, tiers, tierSources, type TierKey } from '../config/site.config';
+import { publishedPage, iso } from '../lib/content';
+import { url } from '../lib/urls';
+import { article } from '../lib/schema';
+import { render } from 'astro:content';
+import { t } from '../i18n/en';
+const feed = getFeed();
+const entry = await publishedPage('compare');
+const Content = entry ? (await render(entry)).Content : null;
+const path = url.compare();
+const title = 'Comparison tables';
+const description = 'Comparison tables built only from the Tourground directory feed and sourced facts: coverage by region, verification tiers, membership bodies and payment protection.';
+const order: TierKey[] = ['verified', 'black', 'platinum', 'founder'];
+const rows = regions.map((r) => {
+  const ds = feed.countriesByRegion.get(r.slug) ?? [];
+  const cs = new Map(ds.flatMap((d) => feed.rankedByCountry.get(d.slug)!.map((e) => [e.company.id, e.company] as const)));
+  const list = [...cs.values()];
+  return { r, countries: ds.length, ops: list.length, dmc: list.filter((c) => c.kind === 'dmc').length, agency: list.filter((c) => c.kind === 'agency').length };
+});
+const reviewed = entry && iso(entry.data.reviewed) > feed.latestCheck ? iso(entry.data.reviewed) : feed.latestCheck;
+const sources = [...(entry?.data.sources ?? []), ...tierSources, { url: site.publisher.url + '/', label: 'Tourground directory feed (counts)' }];
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: t.nav.compare, path }]}
+  schema={[article({ path, title, description, published: entry ? iso(entry.data.published) : site.launch.published, modified: reviewed, sources })]}>
+  <p class="label">Reference</p>
+  <h1>{title}</h1>
+  <p class="standfirst">{description}</p>
+  <PageMeta published={entry ? entry.data.published : site.launch.published} reviewed={reviewed} />
+  <MockNotice />
+  <h2 id="coverage">Coverage by region</h2>
+  <table class="register">
+    <caption class="vh">Countries and operators listed, by region</caption>
+    <thead><tr><th scope="col">Region</th><th scope="col">Countries</th><th scope="col">Operators</th><th scope="col">DMCs</th><th scope="col">Agencies</th></tr></thead>
+    <tbody>
+      {rows.map((x) => (
+        <tr><th scope="row" data-label="Region"><a href={url.region(x.r.slug)}>{x.r.name}</a></th><td data-label="Countries" class="tnum">{x.countries}</td><td data-label="Operators" class="tnum">{x.ops}</td><td data-label="DMCs" class="tnum">{x.dmc}</td><td data-label="Agencies" class="tnum">{x.agency}</td></tr>
+      ))}
+    </tbody>
+  </table>
+  <p class="small muted">Computed from the directory feed at build time. Operators that deliver in several regions are counted in each.</p>
+  <h2 id="tiers">Verification tiers compared</h2>
+  <table class="register">
+    <caption class="vh">What each tier checks</caption>
+    <thead><tr><th scope="col">Tier</th><th scope="col">Paid</th><th scope="col">What is checked</th></tr></thead>
+    <tbody>
+      {order.map((k) => (
+        <tr><th scope="row" data-label="Tier"><a href={`${url.verification()}#tier-${k}`}>{tiers[k].label}</a></th><td data-label="Paid">{tiers[k].paid ? 'Yes' : 'No'}</td><td data-label="Checked">{tiers[k].checks.join(' ')}</td></tr>
+      ))}
+    </tbody>
+  </table>
+  {Content && <div class="prose"><Content /></div>}
+  <Sources sources={sources} />
+</Base>

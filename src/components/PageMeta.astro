@@ -1,0 +1,12 @@
+---
+import { site } from '../config/site.config';
+import { fmtDate, iso } from '../lib/content';
+import { t } from '../i18n/en';
+interface Props { published: Date | string; reviewed: Date | string; reviewedLabel?: string }
+const { published, reviewed, reviewedLabel = t.reviewed } = Astro.props;
+---
+<dl class="pagemeta">
+  <div><dt>{t.published}</dt><dd><time datetime={iso(published)}>{fmtDate(published)}</time></dd></div>
+  <div><dt>{reviewedLabel}</dt><dd><time datetime={iso(reviewed)}>{fmtDate(reviewed)}</time></dd></div>
+  <div class="pagemeta-editor"><dt class="vh">Editor</dt><dd>{site.editorLine}</dd></div>
+</dl>

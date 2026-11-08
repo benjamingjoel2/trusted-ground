@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import PageMeta from '../components/PageMeta.astro';
+import Sources from '../components/Sources.astro';
+import { publishedPage, iso } from '../lib/content';
+import { url } from '../lib/urls';
+import { article } from '../lib/schema';
+import { render } from 'astro:content';
+import { site } from '../config/site.config';
+import { t } from '../i18n/en';
+const entry = await publishedPage('checklist');
+if (!entry) throw new Error('checklist.md must be reviewed and sourced');
+const d = entry.data;
+const { Content } = await render(entry);
+const path = url.checklist();
+const items = d.items ?? [];
+const seen = new Set<string>();
+const sources = [...d.sources, ...items.map((i) => i.source)].filter((s) => (seen.has(s.url) ? false : (seen.add(s.url), true)));
+---
+<Base title={d.title} description={d.description} path={path} crumbs={[{ name: t.nav.checklist, path }]}
+  schema={[article({ path, title: d.title, description: d.description, published: iso(d.published), modified: iso(d.reviewed), sources })]}>
+  <p class="label">Checklist · one page</p>
+  <h1>{d.title}</h1>
+  <p class="standfirst">{d.description}</p>
+  <PageMeta published={d.published} reviewed={d.reviewed} />
+  <p><button class="printbtn" type="button" onclick="window.print()">{t.print}</button></p>
+  <ol class="checklist">
+    {items.map((it) => (
+      <li>
+        <span class="box" aria-hidden="true"></span>
+        <span class="n" aria-hidden="true"></span>
+        <div>
+          <strong>{it.text}</strong>
+          {it.detail && <p>{it.detail}</p>}
+          <p>Source: <a class="print-url" href={it.source.url}>{it.source.label}</a>{it.guide && <> · <a href={url.guideChapter(it.guide)}>Guide</a></>}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+  <div class="prose small"><Content /></div>
+  <p class="small muted">{site.name} · {site.domain}</p>
+  <Sources sources={sources} />
+</Base>

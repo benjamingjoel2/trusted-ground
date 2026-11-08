@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import MockNotice from '../components/MockNotice.astro';
+import Check from '../components/Check.astro';
+import { getFeed } from '../lib/feed';
+import { site, regions, niches } from '../config/site.config';
+import { url } from '../lib/urls';
+import { published } from '../lib/content';
+import { t } from '../i18n/en';
+
+const feed = getFeed();
+const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.order);
+const questions = (await published('questions')).sort((a, b) => a.data.order - b.data.order);
+const description = site.positioning;
+---
+<Base title={site.name} description={description} path="/" ogType="website" wide>
+  <p class="label">A public register · {site.publisher.name}</p>
+  <h1>Verified local tour operators, country by country</h1>
+  <p class="standfirst">{site.positioning}</p>
+
+  <div class="lede-grid">
+    <div>
+      <h2 class="label-h"><Check />How verification works</h2>
+      <p>Only companies that Tourground has checked appear here. Each company page opens with a record of what was checked, by whom and when. <a href={url.verification()}>What each tier checks</a>.</p>
+    </div>
+    <div>
+      <h2 class="label-h">How ranking works</h2>
+      <p>Rank comes only from the Tourground directory. No company can pay to appear or to move up. <a href={url.howWeRank()}>How we rank</a>.</p>
+    </div>
+  </div>
+
+  <MockNotice />
+
+  <div class="section-head">
+    <h2 id="countries">Country index</h2>
+    <a href={url.countries()}>{t.countriesListed(feed.countries.length)}, {t.operatorsCount(feed.companies.length)}</a>
+  </div>
+  {regions.map((r) => {
+    const list = feed.countriesByRegion.get(r.slug) ?? [];
+    return list.length > 0 && (
+      <section aria-labelledby={`r-${r.slug}`}>
+        <h3 id={`r-${r.slug}`}><a href={url.region(r.slug)}>{r.name}</a></h3>
+        <ul class="cols">
+          {list.map((d) => (
+            <li><a href={url.country(d.slug)}>{d.name}</a><span class="count">{feed.rankedByCountry.get(d.slug)!.length}</span></li>
+          ))}
+        </ul>
+      </section>
+    );
+  })}
+
+  <div class="section-head">
+    <h2>Best local operators by niche</h2>
+    <a href={url.best()}>All ranked lists</a>
+  </div>
+  <ul class="cols">
+    {niches.map((n) => {
+      const count = [...(feed.niche.get(n.slug)?.values() ?? [])].reduce((s, l) => s + l.length, 0);
+      return count > 0 && <li><a href={url.niche(n.slug)}>{n.name}</a><span class="count">{count}</span></li>;
+    })}
+  </ul>
+
+  {guide.length > 0 && (
+    <>
+      <div class="section-head">
+        <h2>Booking with a local operator</h2>
+        <a href={url.guide()}>The full guide</a>
+      </div>
+      <ol class="entries">
+        {guide.map((g) => (<li><div><a href={url.guideChapter(g.id)}>{g.data.title}</a><p>{g.data.description}</p></div></li>))}
+      </ol>
+      <p><a href={url.checklist()} class="btnlink">The before-you-pay checklist</a></p>
+    </>
+  )}
+
+  {questions.length > 0 && (
+    <>
+      <div class="section-head">
+        <h2>Questions travellers ask</h2>
+        <a href={url.questions()}>All questions</a>
+      </div>
+      <ol class="entries">
+        {questions.map((q) => (<li><div><a href={url.question(q.id)}>{q.data.title}</a><p>{q.data.short_answer}</p></div></li>))}
+      </ol>
+    </>
+  )}
+</Base>

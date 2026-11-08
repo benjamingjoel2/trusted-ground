@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageMeta from '../../components/PageMeta.astro';
+import MockNotice from '../../components/MockNotice.astro';
+import TierBadge from '../../components/TierBadge.astro';
+import { getFeed, destName } from '../../lib/feed';
+import { site } from '../../config/site.config';
+import { url } from '../../lib/urls';
+import { article } from '../../lib/schema';
+import { t } from '../../i18n/en';
+const feed = getFeed();
+const path = url.operators();
+const title = 'All listed operators, A to Z';
+const description = `An alphabetical register of all ${feed.companies.length} verified or founder-owned operators in the Tourground directory feed.`;
+const letters = [...new Set(feed.companies.map((c) => c.name[0].toUpperCase()))];
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: t.nav.operators, path }]}
+  schema={[article({ path, title, description, published: site.launch.published, modified: feed.latestCheck })]}>
+  <h1>{title}</h1>
+  <p class="standfirst">{description} This list is alphabetical, not ranked. For ranks, open a <a href={url.countries()}>country</a>.</p>
+  <PageMeta published={site.launch.published} reviewed={feed.latestCheck} reviewedLabel="Directory last checked" />
+  <MockNotice />
+  <p class="small">{letters.map((l, i) => (<>{i > 0 && ' · '}<a href={`#l-${l}`}>{l}</a></>))}</p>
+  {letters.map((l) => (
+    <section aria-labelledby={`l-${l}`}>
+      <h2 id={`l-${l}`}>{l}</h2>
+      <table class="register">
+        <caption class="vh">Operators beginning with {l}</caption>
+        <thead><tr><th scope="col">{t.operator}</th><th scope="col">{t.basedIn}</th><th scope="col">{t.deliversIn}</th></tr></thead>
+        <tbody>
+          {feed.companies.filter((c) => c.name[0].toUpperCase() === l).map((c) => (
+            <tr>
+              <th scope="row" data-label={t.operator}><a class="entry-name" href={url.operator(c.id)}>{c.name}</a><TierBadge company={c} /></th>
+              <td data-label={t.basedIn}>{destName(c.country_base)}</td>
+              <td data-label={t.deliversIn}>{c.delivers_in.map(destName).join(', ') || '–'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  ))}
+</Base>
