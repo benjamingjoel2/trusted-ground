@@ -17,4 +17,4 @@ sources:
     label: "GOV.UK: Common Travel Area guidance"
 ---
 
-Northern Ireland is part of the UK, which shares the Common Travel Area with Ireland; GOV.UK says other nationalities travelling within it remain subject to immigration requirements, so check whether you need a UK visa or ETA if you are not British or Irish and are arriving from Ireland. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Northern Ireland is part of the UK, which shares the Common Travel Area with Ireland; GOV.UK says other nationalities travelling within it remain subject to immigration requirements, so check whether you need a UK visa or ETA if you are not British or Irish and are arriving from Ireland.

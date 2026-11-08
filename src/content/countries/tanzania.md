@@ -15,4 +15,4 @@ sources:
     label: "Tanzania Immigration Services Department"
 ---
 
-Seasons differ between the northern parks, the south and the coast, and we have not yet reviewed a source for the best months. Ask any operator which months suit the parks on your route, and why.
+Seasons differ between the northern parks, the south and the coast, so the right months depend on your route.

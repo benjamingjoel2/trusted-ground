@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: São Tomé and Príncipe entry requirements"
 ---
 
-UK travel advice says credit cards are not widely accepted and there are only a few ATMs, so plan how you will pay. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says credit cards are not widely accepted and there are only a few ATMs, so plan how you will pay.

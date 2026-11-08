@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Fiji safety and security"
 ---
 
-UK travel advice says the tropical cyclone season normally runs from November to April, but cyclones occur throughout the year. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says the tropical cyclone season normally runs from November to April, but cyclones occur throughout the year.

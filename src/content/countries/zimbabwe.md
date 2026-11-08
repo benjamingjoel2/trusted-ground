@@ -13,4 +13,4 @@ sources:
     label: "UK FCDO: Zimbabwe entry requirements"
 ---
 
-UK travel advice says the KAZA UniVisa (50 US dollars, valid for 30 days) covers travel between Zimbabwe and Zambia and day trips into Botswana. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says the KAZA UniVisa (50 US dollars, valid for 30 days) covers travel between Zimbabwe and Zambia and day trips into Botswana.

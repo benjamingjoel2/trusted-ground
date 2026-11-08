@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Italy travel advice (updated 3 November 2026)"
 ---
 
-As of 3 November 2026, UK travel advice reports recent demonstrations in northern Italian cities that led to riots and looting, and says further demonstrations may take place in major cities. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+As of 3 November 2026, UK travel advice reports recent demonstrations in northern Italian cities that led to riots and looting, and says further demonstrations may take place in major cities.

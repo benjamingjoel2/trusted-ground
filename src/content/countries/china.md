@@ -15,4 +15,4 @@ sources:
     label: "Travel China (official tourism website of the People's Republic of China): featured destinations"
 ---
 
-UK travel advice notes that the typhoon season normally runs from May to November and affects southern and eastern coastal regions. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice notes that the typhoon season normally runs from May to November and affects southern and eastern coastal regions.

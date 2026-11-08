@@ -14,5 +14,3 @@ sources:
   - url: https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta
     label: "GOV.UK: Get an electronic travel authorisation (ETA) to visit the UK"
 ---
-
-We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

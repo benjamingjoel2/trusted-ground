@@ -15,4 +15,4 @@ sources:
     label: "Incredible India (Ministry of Tourism, Government of India): States and UTs"
 ---
 
-**Check travel advice before you book.** As of 7 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 10km of the India-Pakistan border (except the Wagah-Attari crossing) and to the Union Territory of Jammu and Kashmir (except travel by air to and within the city of Jammu), and against all but essential travel to Manipur. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 7 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 10km of the India-Pakistan border (except the Wagah-Attari crossing) and to the Union Territory of Jammu and Kashmir (except travel by air to and within the city of Jammu), and against all but essential travel to Manipur.

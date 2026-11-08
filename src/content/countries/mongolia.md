@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Mongolia entry requirements"
 ---
 
-UK travel advice reports fuel shortages that may affect flights, road travel and access to remote areas; check with your transport provider and allow extra time. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice reports fuel shortages that may affect flights, road travel and access to remote areas; check with your transport provider and allow extra time.

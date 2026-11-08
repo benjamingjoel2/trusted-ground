@@ -17,4 +17,4 @@ sources:
     label: "GOV.UK: Visits to Antarctica, how to apply for a permit"
 ---
 
-The Government of the British Antarctic Territory notes that the Drake Passage crossing to the Peninsula is notoriously rough. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+The Government of the British Antarctic Territory notes that the Drake Passage crossing to the Peninsula is notoriously rough.

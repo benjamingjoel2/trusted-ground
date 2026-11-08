@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Sri Lanka entry requirements"
 ---
 
-UK travel advice notes that heavy inter-monsoon rainfall has raised the risk of flooding and landslides across Sri Lanka. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice notes that heavy inter-monsoon rainfall has raised the risk of flooding and landslides across Sri Lanka.

@@ -15,4 +15,4 @@ sources:
     label: "Tourism Malaysia: media release naming the main destination clusters"
 ---
 
-**Check travel advice before you book.** As of 19 March 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to the islands and dive sites off the coast of eastern Sabah from Sandakan to Tawau, including Lankayan Island; this does not apply to mainland Sabah. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 19 March 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to the islands and dive sites off the coast of eastern Sabah from Sandakan to Tawau, including Lankayan Island; this does not apply to mainland Sabah.

@@ -15,4 +15,4 @@ sources:
     label: "Go Türkiye (Türkiye Tourism Promotion and Development Agency): All Türkiye destinations"
 ---
 
-**Check travel advice before you book.** As of 27 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 10km of the border with Syria. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 27 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 10km of the border with Syria.

@@ -13,4 +13,4 @@ sources:
     label: "UK FCDO: Uganda entry requirements"
 ---
 
-UK travel advice says Uganda closed its border with the Democratic Republic of Congo on 27 May in response to Ebola, with limited exceptions. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says Uganda closed its border with the Democratic Republic of Congo on 27 May in response to Ebola, with limited exceptions.

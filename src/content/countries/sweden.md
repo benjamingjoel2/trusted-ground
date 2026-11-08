@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Sweden entry requirements"
 ---
 
-Visit Sweden says the Midnight Sun can be seen in Arctic Sweden (Swedish Lapland) roughly between late May and mid-July, lasting longer the further north you go. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Visit Sweden says the Midnight Sun can be seen in Arctic Sweden (Swedish Lapland) roughly between late May and mid-July, lasting longer the further north you go.

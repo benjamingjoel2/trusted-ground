@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Mozambique entry requirements"
 ---
 
-**Check travel advice before you book.** As of 20 August 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to most of Cabo Delgado Province, the Memba and Eráti districts of Nampula Province and the Mecula and Marrupa districts of Niassa Province, and against all but essential travel to Palma town and the area around Pemba and Afungi. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 20 August 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to most of Cabo Delgado Province, the Memba and Eráti districts of Nampula Province and the Mecula and Marrupa districts of Niassa Province, and against all but essential travel to Palma town and the area around Pemba and Afungi.

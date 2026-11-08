@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: United Arab Emirates travel advice (updated 27 October 2026)"
 ---
 
-**Check travel advice before you book.** As of 27 October 2026, UK travel advice says the situation in the Middle East is unpredictable and that travellers should be prepared for flight cancellations, airspace closures and travel disruption. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 27 October 2026, UK travel advice says the situation in the Middle East is unpredictable and that travellers should be prepared for flight cancellations, airspace closures and travel disruption.

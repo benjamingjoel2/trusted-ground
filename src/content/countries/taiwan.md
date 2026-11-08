@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Taiwan entry requirements"
 ---
 
-UK travel advice says typhoons can affect Taiwan from June, with the most active period between July and September. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says typhoons can affect Taiwan from June, with the most active period between July and September.

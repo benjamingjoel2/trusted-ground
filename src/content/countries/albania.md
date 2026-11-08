@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Albania travel advice (updated 15 October 2026)"
 ---
 
-As of 15 October 2026, UK travel advice reports demonstrations in central Tirana, some with violence and property damage, and advises staying away from them. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+As of 15 October 2026, UK travel advice reports demonstrations in central Tirana, some with violence and property damage, and advises staying away from them.

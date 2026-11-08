@@ -13,4 +13,4 @@ sources:
     label: "UK FCDO: Kyrgyzstan entry requirements"
 ---
 
-Kyrgyzstan's Department of Tourism notes that more than 80% of the country lies above 1,500 metres. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Kyrgyzstan's Department of Tourism notes that more than 80% of the country lies above 1,500 metres.

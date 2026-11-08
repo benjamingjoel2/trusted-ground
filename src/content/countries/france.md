@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: France travel advice (updated 22 October 2026)"
 ---
 
-As of 22 October 2026, UK travel advice says demonstrations are more likely across France, sometimes at short notice, and may disrupt local transport. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+As of 22 October 2026, UK travel advice says demonstrations are more likely across France, sometimes at short notice, and may disrupt local transport.

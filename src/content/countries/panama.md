@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Panama safety and security"
 ---
 
-UK travel advice says that hurricanes do not directly affect Panama but often bring heavy rain, and that October and November have the heaviest rainfall. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says that hurricanes do not directly affect Panama but often bring heavy rain, and that October and November have the heaviest rainfall.

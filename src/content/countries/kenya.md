@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Kenya entry requirements"
 ---
 
-**Check travel advice before you book.** As of 6 November 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to Mandera County, parts of Wajir and Garissa counties, and Lamu County except Lamu and Manda islands, and against all but essential travel to Garissa Town, parts of Tana River County, a coastal strip between the Tana and Galana rivers, and Moyale Town. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 6 November 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to Mandera County, parts of Wajir and Garissa counties, and Lamu County except Lamu and Manda islands, and against all but essential travel to Garissa Town, parts of Tana River County, a coastal strip between the Tana and Galana rivers, and Moyale Town.

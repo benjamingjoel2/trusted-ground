@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Indonesia entry requirements"
 ---
 
-UK travel advice notes that volcanic eruptions occur frequently across Indonesia; follow local authorities' advice on exclusion zones. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice notes that volcanic eruptions occur frequently across Indonesia; follow local authorities' advice on exclusion zones.

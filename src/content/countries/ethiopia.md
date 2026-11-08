@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Ethiopia entry requirements"
 ---
 
-**Check travel advice before you book.** As of 30 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to the Tigray, Amhara and Gambela regions, parts of Afar and Oromia, and areas near the borders with Sudan, South Sudan, Somalia, Kenya and Eritrea, and against all but essential travel to the rest of Afar and parts of Oromia; some of these areas lie on the routes listed above, so ask any operator how its itinerary follows current advice. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 30 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to the Tigray, Amhara and Gambela regions, parts of Afar and Oromia, and areas near the borders with Sudan, South Sudan, Somalia, Kenya and Eritrea, and against all but essential travel to the rest of Afar and parts of Oromia; some of these areas lie on the routes listed above, so ask any operator how its itinerary follows current advice.

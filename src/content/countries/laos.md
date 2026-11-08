@@ -15,4 +15,4 @@ sources:
     label: "Lao Ministry of Information, Culture and Tourism (tourismlaos.org): provinces"
 ---
 
-**Check travel advice before you book.** As of 13 August 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to Xaisomboun Province. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 13 August 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to Xaisomboun Province.

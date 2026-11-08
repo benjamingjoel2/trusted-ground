@@ -13,4 +13,4 @@ sources:
     label: "UK FCDO: The Gambia entry requirements"
 ---
 
-UK travel advice says an airport security fee of 20 US dollars is charged on arrival and departure. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says an airport security fee of 20 US dollars is charged on arrival and departure.

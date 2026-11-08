@@ -12,5 +12,3 @@ sources:
   - url: https://www.gov.uk/foreign-travel-advice/czechia/entry-requirements
     label: "UK FCDO: Czechia entry requirements"
 ---
-
-We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

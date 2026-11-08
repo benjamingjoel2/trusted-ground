@@ -13,4 +13,4 @@ sources:
     label: "UK FCDO: Norway entry requirements"
 ---
 
-Visit Norway notes that the polar night on Svalbard lasts from the end of October until the middle of February. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Visit Norway notes that the polar night on Svalbard lasts from the end of October until the middle of February.

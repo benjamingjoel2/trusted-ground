@@ -12,5 +12,3 @@ sources:
   - url: https://www.gov.uk/foreign-travel-advice/croatia/entry-requirements
     label: "UK FCDO: Croatia entry requirements"
 ---
-
-We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

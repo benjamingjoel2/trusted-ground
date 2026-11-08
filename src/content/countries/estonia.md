@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Estonia entry requirements"
 ---
 
-Visit Estonia notes that summers are mild, with up to 19 hours of daylight, and that spring and autumn bring frequent light rain. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Visit Estonia notes that summers are mild, with up to 19 hours of daylight, and that spring and autumn bring frequent light rain.

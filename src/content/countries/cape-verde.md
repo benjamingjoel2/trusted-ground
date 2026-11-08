@@ -17,4 +17,4 @@ sources:
     label: "Government of Cabo Verde: EASE traveller pre-registration"
 ---
 
-Turismo de Cabo Verde describes a dry climate with two seasons, the time of breezes and the time of waters, with scarce rain and moderate temperatures all year. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Turismo de Cabo Verde describes a dry climate with two seasons, the time of breezes and the time of waters, with scarce rain and moderate temperatures all year.

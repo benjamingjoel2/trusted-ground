@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Cuba entry requirements"
 ---
 
-**Check travel advice before you book.** As of 25 September 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to the whole of Cuba, citing shortages of fuel, electricity and water, power cuts and disruption to transport and tourism services. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 25 September 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to the whole of Cuba, citing shortages of fuel, electricity and water, power cuts and disruption to transport and tourism services.

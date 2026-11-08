@@ -12,5 +12,3 @@ sources:
   - url: https://www.gov.uk/foreign-travel-advice/lithuania/entry-requirements
     label: "UK FCDO: Lithuania entry requirements"
 ---
-
-We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

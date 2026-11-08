@@ -20,5 +20,3 @@ sources:
   - url: https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/
     label: "Department of Conservation: Fiordland places to go"
 ---
-
-We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

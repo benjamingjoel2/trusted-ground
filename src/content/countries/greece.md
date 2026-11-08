@@ -17,4 +17,4 @@ sources:
     label: "UK FCDO: Greece travel advice (updated 3 November 2026)"
 ---
 
-As of 3 November 2026, UK travel advice warns that Greece can have severe winter weather, including storms that can lead to flash flooding. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+As of 3 November 2026, UK travel advice warns that Greece can have severe winter weather, including storms that can lead to flash flooding.

@@ -15,4 +15,4 @@ sources:
     label: "Tourism Authority of Thailand Newsroom: Thailand's five regions"
 ---
 
-**Check travel advice before you book.** As of 12 October 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to Pattani, Yala and Narathiwat provinces and parts of southern Songkhla near the Malaysian border, and to within 20km of the land border with Cambodia. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 12 October 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to Pattani, Yala and Narathiwat provinces and parts of southern Songkhla near the Malaysian border, and to within 20km of the land border with Cambodia.

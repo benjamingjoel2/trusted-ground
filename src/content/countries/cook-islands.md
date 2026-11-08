@@ -17,4 +17,4 @@ sources:
     label: "Airport Authority Cook Islands"
 ---
 
-New Zealand's SafeTravel service says the tropical cyclone season runs from November to April. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+New Zealand's SafeTravel service says the tropical cyclone season runs from November to April.

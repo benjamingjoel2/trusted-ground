@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: USA safety and security"
 ---
 
-UK travel advice says the Atlantic hurricane season normally runs from June to November and the Pacific season from May to November. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says the Atlantic hurricane season normally runs from June to November and the Pacific season from May to November.

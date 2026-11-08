@@ -13,4 +13,4 @@ sources:
     label: "UK FCDO: Canada entry requirements"
 ---
 
-Destination Canada lists all 13 provinces and territories; the regions above are a selection. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Destination Canada lists all 13 provinces and territories; the regions above are a selection.

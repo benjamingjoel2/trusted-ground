@@ -17,4 +17,4 @@ sources:
     label: "UK FCDO: Maldives entry requirements"
 ---
 
-Visit Maldives notes that the country's 1,192 islands are grouped into 26 atolls, with only about 200 islands inhabited. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+Visit Maldives notes that the country's 1,192 islands are grouped into 26 atolls, with only about 200 islands inhabited.

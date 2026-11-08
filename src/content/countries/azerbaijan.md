@@ -15,4 +15,4 @@ sources:
     label: "Azerbaijan Tourism Board: market profile naming the most visited regions"
 ---
 
-**Check travel advice before you book.** As of 23 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 5km of the border with Armenia (not including Nakhchivan's border), and against all but essential travel to the south-western districts affected by conflict in 2020 and 2023, including Kelbajar, Lachin, Shusha, Fuzuli, Aghdam and Khankendi. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 23 October 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 5km of the border with Armenia (not including Nakhchivan's border), and against all but essential travel to the south-western districts affected by conflict in 2020 and 2023, including Kelbajar, Lachin, Shusha, Fuzuli, Aghdam and Khankendi.

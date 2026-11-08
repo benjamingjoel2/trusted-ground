@@ -5,7 +5,6 @@ import CountryCard from '../../components/CountryCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import Carousel from '../../components/Carousel.astro';
 import Icon from '../../components/Icon.astro';
-import Sources from '../../components/Sources.astro';
 import { getFeed, type Destination } from '../../lib/feed';
 import { regions, site } from '../../config/site.config';
 import { url } from '../../lib/urls';
@@ -68,20 +67,40 @@ const tips = [
     </div>
   </section>
 
-  <section class="section tips" id="tips" aria-labelledby="tips-h">
+  <section class="section kn" id="tips" aria-labelledby="tips-h">
     <div class="wrap">
-      <p class="mono center">Travel guides</p>
-      <h2 id="tips-h" class="center">{d.name} travel tips</h2>
-      <p class="center tips-dek">Practical, sourced guidance on when to go, where to go and how to get in. Last reviewed {fmtDate(reviewed)}.</p>
-      <div class="tipgrid">
-        {tips.map((x) => (
-          <div class="tip"><h3><Icon name={x.icon} />{x.title}</h3><p>{x.text}</p></div>
-        ))}
-        {snap && Snap && (
-          <div class="tip tip-wide"><h3><Icon name="alert" />Things to know</h3><div class="prose"><Snap /></div></div>
-        )}
+      <div class="sec-head">
+        <div><p class="mono kn-kicker">Travel guide</p><h2 id="tips-h">{d.name} travel tips</h2></div>
+        <p class="mono kn-date">Last reviewed {fmtDate(reviewed)}</p>
       </div>
-      {snap && snap.data.sources.length > 0 && <div class="tips-sources"><Sources sources={snap.data.sources} /></div>}
+      <div class="kn-grid">
+        <div class="kn-fact">
+          <p class="mono kn-label"><Icon name="calendar" />When to go</p>
+          {snap?.data.best_months ? <p class="kn-big">{snap.data.best_months}</p> : <p class="kn-muted">We have not yet reviewed an official source for the best months. Ask your operator which months suit your route, and why.</p>}
+        </div>
+        <div class="kn-fact">
+          <p class="mono kn-label"><Icon name="map" />Where to go</p>
+          {snap && snap.data.main_regions.length > 0 ? (
+            <ul class="kn-chips">{snap.data.main_regions.map((r) => <li>{r}</li>)}</ul>
+          ) : <p class="kn-muted">No reviewed source yet.</p>}
+        </div>
+        <div class="kn-fact">
+          <p class="mono kn-label"><Icon name="passport" />Entry requirements</p>
+          <p>{snap?.data.entry_basics ?? 'Check your own government\'s travel advice.'}</p>
+        </div>
+      </div>
+      {snap && Snap && (snap.body ?? '').trim().length > 0 && (
+        <div class="kn-advice">
+          <p class="mono kn-label"><Icon name="alert" />Things to know</p>
+          <div class="prose"><Snap /></div>
+        </div>
+      )}
+      {snap && snap.data.sources.length > 0 && (
+        <details class="kn-sources">
+          <summary class="mono">Sources ({snap.data.sources.length})</summary>
+          <ol>{snap.data.sources.map((x) => <li><a href={x.url} rel="noopener">{x.label}</a></li>)}</ol>
+        </details>
+      )}
     </div>
   </section>
 

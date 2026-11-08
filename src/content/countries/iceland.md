@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: Iceland travel advice (updated 11 August 2026)"
 ---
 
-As of 11 August 2026, UK travel advice notes a recent series of volcanic eruptions on the Reykjanes peninsula in south-west Iceland. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+As of 11 August 2026, UK travel advice notes a recent series of volcanic eruptions on the Reykjanes peninsula in south-west Iceland.

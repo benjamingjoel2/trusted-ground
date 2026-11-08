@@ -25,4 +25,4 @@ sources:
     label: "UK FCDO: Ghana entry requirements"
 ---
 
-**Check travel advice before you book.** As of 4 November 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to the Bawku Municipal area in the Upper East Region. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 4 November 2026, the UK Foreign, Commonwealth & Development Office advises against all but essential travel to the Bawku Municipal area in the Upper East Region.

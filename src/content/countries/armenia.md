@@ -15,4 +15,4 @@ sources:
     label: "Armenia Tourism Committee (armenia.travel): Top cities"
 ---
 
-**Check travel advice before you book.** As of 1 March 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 5km of Armenia's eastern border with Azerbaijan, and along the M16/H26 road between Ijevan and Noyemberyan. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+**Check travel advice before you book.** As of 1 March 2026, the UK Foreign, Commonwealth & Development Office advises against all travel to within 5km of Armenia's eastern border with Azerbaijan, and along the M16/H26 road between Ijevan and Noyemberyan.

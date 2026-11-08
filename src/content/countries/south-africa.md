@@ -15,4 +15,4 @@ sources:
     label: "UK FCDO: South Africa entry requirements"
 ---
 
-UK travel advice says that from 1 July 2026 all travellers entering or leaving South Africa must submit an online traveller declaration before travelling, and that there are special requirements for travelling with children aged 17 and under. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.
+UK travel advice says that from 1 July 2026 all travellers entering or leaving South Africa must submit an online traveller declaration before travelling, and that there are special requirements for travelling with children aged 17 and under.

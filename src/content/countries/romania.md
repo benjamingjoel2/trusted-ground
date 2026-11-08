@@ -12,5 +12,3 @@ sources:
   - url: https://www.gov.uk/foreign-travel-advice/romania/entry-requirements
     label: "UK FCDO: Romania entry requirements"
 ---
-
-We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

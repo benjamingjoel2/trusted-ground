@@ -86,7 +86,7 @@ for (const f of html) {
   if (!is404 && rel !== '/') {
     const listing = /^\/(regions(\/[a-z-]+)?|articles|countries|guide|questions)\/$/.test(rel);
     if (!listing && !s.includes('class="pagemeta"') && !/last reviewed/i.test(s)) err(f, 'missing published / last reviewed dates');
-    if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions(\/[a-z-]+)?|articles|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
+    if (!/class="sources"|class="vrec-sources"|class="kn-sources"/.test(s) && !/^\/(regions(\/[a-z-]+)?|articles|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
   }
   // JSON-LD
   for (const m of s.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
