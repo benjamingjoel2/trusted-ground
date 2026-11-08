@@ -9,7 +9,7 @@ export const en = {
     countries: 'Destinations',
     regions: 'Regions',
     best: 'Specialties',
-    guide: 'Travel tips',
+    guide: 'Travel guide',
     verification: 'Verification',
     questions: 'Questions',
     checklist: 'Checklist',
