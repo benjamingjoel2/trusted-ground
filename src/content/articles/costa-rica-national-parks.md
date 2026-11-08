@@ -22,7 +22,7 @@ sources:
     label: "FCDO: Costa Rica travel advice, safety and security"
 ---
 
-Many of Costa Rica's most visited national parks now sell entry tickets online only, through the national conservation agency SINAC, so you need to buy before you go. A guide is not required in most parks, but Corcovado is a firm exception. On the Pacific side the rainy season runs from about May to October, and it can close trails and roads without notice.
+Many of Costa Rica's most visited national parks sell entry tickets online through the national conservation agency SINAC, and some, such as Manuel Antonio, sell them only online, so buy before you go. Guiding is usually an optional extra, but Corcovado can be visited only with an authorised guide. On the Pacific side the rainy season runs from about May to October and can close park sectors and roads.
 
 ## Buying tickets online through SINAC
 
@@ -45,7 +45,7 @@ The Costa Rica Tourism Board's (ICT) sheet for Manuel Antonio states that ticket
 
 **Chirripó.** No guide requirement is stated for Costa Rica's highest peak, but booking has two steps. According to the ICT sheet, you reserve park entry with SINAC, then separately reserve the mountain lodge, meals and porters. You must also register at the park office in San Gerardo de Rivas the day before you climb. The sheet warns that temperatures can drop below freezing.
 
-**Other parks.** In most parks a guide is optional. At Manuel Antonio, the ICT advises hiring certified guides only at the park entrance, checking the price and what is included first, and not trusting strangers who approach you outside. The UK Foreign, Commonwealth and Development Office (FCDO) advises going with an experienced local guide in jungle areas, and notes that there are fines for entering restricted conservation areas without authorisation.
+**Other parks.** Elsewhere, SINAC's ticket covers entry only, and guiding is a separate service you can choose to book. At Manuel Antonio, the ICT advises hiring certified guides only at the park entrance, checking the price and what is included first, and not trusting strangers who approach you outside. The UK Foreign, Commonwealth and Development Office (FCDO) advises going with an experienced local guide in jungle areas, and notes that there are fines for entering restricted conservation areas without authorisation.
 
 ## The rainy season, coast by coast
 
