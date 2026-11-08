@@ -1,0 +1,20 @@
+---
+title: Northern Ireland snapshot
+description: Main regions and entry basics for Northern Ireland, with sources.
+published: 2026-11-08
+reviewed: 2026-11-08
+status: reviewed
+main_regions: ["Belfast", "Causeway Coastal Route", "Derry-Londonderry", "County Down", "County Fermanagh", "County Tyrone"]
+entry_basics: "GOV.UK says most visitors to the UK need an electronic travel authorisation (ETA) or a visa, and that you usually need an ETA rather than a visa if you are from Europe, the USA, Australia, Canada or certain other countries. British and Irish citizens do not need one. Requirements depend on nationality."
+sources:
+  - url: https://discovernorthernireland.com/destinations/
+    label: "Discover Northern Ireland (Tourism NI): Destinations"
+  - url: https://www.gov.uk/check-uk-visa
+    label: "GOV.UK: Check if you need a UK visa"
+  - url: https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta
+    label: "GOV.UK: Get an electronic travel authorisation (ETA) to visit the UK"
+  - url: https://www.gov.uk/government/publications/common-travel-area-guidance/common-travel-area-guidance
+    label: "GOV.UK: Common Travel Area guidance"
+---
+
+Northern Ireland is part of the UK, which shares the Common Travel Area with Ireland; GOV.UK says other nationalities travelling within it remain subject to immigration requirements, so check whether you need a UK visa or ETA if you are not British or Irish and are arriving from Ireland. We have not yet reviewed a source for the best months; ask any operator which months suit your route, and why.

@@ -1,0 +1,37 @@
+---
+/** Responsive photo with width/height, lazy by default, and a credit chip linking to the licence source. */
+import { Picture } from 'astro:assets';
+import { placePhoto, creditLine } from '../lib/images';
+interface Props {
+  slug: string;
+  alt: string;
+  sizes?: string;
+  widths?: number[];
+  priority?: boolean;
+  class?: string;
+  credit?: boolean;
+}
+const { slug, alt, sizes = '(min-width: 64rem) 25vw, 80vw', widths = [360, 560, 800], priority = false, class: cls = '', credit = true } = Astro.props;
+const p = placePhoto(slug);
+---
+{p ? (
+  <figure class={`photo ${cls}`}>
+    <Picture
+      src={p.src}
+      alt={alt}
+      widths={widths}
+      sizes={sizes}
+      formats={['webp']}
+      fallbackFormat="jpg"
+      loading={priority ? 'eager' : 'lazy'}
+      decoding={priority ? 'sync' : 'async'}
+      fetchpriority={priority ? 'high' : 'auto'}
+      quality={70}
+    />
+    {credit && (
+      <figcaption class="credit"><a href={p.credit.page} rel="noopener">{creditLine(p.credit)}</a></figcaption>
+    )}
+  </figure>
+) : (
+  <div class={`photo photo-empty ${cls}`} aria-hidden="true"></div>
+)}

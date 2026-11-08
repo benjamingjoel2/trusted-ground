@@ -15,7 +15,7 @@ export async function sectionEntries(section: Section): Promise<Entry[]> {
   switch (section) {
     case 'pages': {
       const pages = (await published('pages')).map((p) => e(`/${p.id}/`, iso(p.data.reviewed)));
-      return [e('/', feed.latestCheck), e(url.verification(), L), e(url.operators(), feed.latestCheck), ...pages];
+      return [e('/', feed.latestCheck), e(url.verification(), L), e(url.operators(), feed.latestCheck), e('/credits/', L), ...pages];
     }
     case 'countries': {
       const out = [e(url.countries(), feed.latestCheck), e(url.regions(), feed.latestCheck)];

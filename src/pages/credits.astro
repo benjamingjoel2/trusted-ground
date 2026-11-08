@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import PageMeta from '../components/PageMeta.astro';
+import Sources from '../components/Sources.astro';
+import { allCredits } from '../lib/images';
+import { destName } from '../lib/feed';
+import { site } from '../config/site.config';
+import { article } from '../lib/schema';
+const path = '/credits/';
+const title = 'Photo credits';
+const description = 'Every photograph on Trusted Ground, its author, its licence and its source on Wikimedia Commons.';
+const list = allCredits();
+---
+<Base title={title} description={description} path={path} crumbs={[{ name: title, path }]}
+  schema={[article({ path, title, description, published: site.launch.published, modified: site.launch.published })]}>
+  <p class="label">About this site</p>
+  <h1>{title}</h1>
+  <p class="standfirst">{description} We use only photographs that are freely licensed on Wikimedia Commons (featured or quality images), shown with their author and licence. We do not use scraped or AI-generated images, or photos of identifiable people.</p>
+  <PageMeta published={site.launch.published} reviewed={site.launch.published} />
+  <table class="register">
+    <caption class="vh">Photo credits</caption>
+    <thead><tr><th scope="col">Destination</th><th scope="col">Photograph</th><th scope="col">Author</th><th scope="col">Licence</th></tr></thead>
+    <tbody>
+      {list.map(([slug, c]) => (
+        <tr>
+          <th scope="row" data-label="Destination">{destName(slug)}</th>
+          <td data-label="Photograph"><a href={c.page}>{c.file.replace(/^File:/, '').replace(/\.jpe?g$/i, '')}</a></td>
+          <td data-label="Author">{c.author}</td>
+          <td data-label="Licence">{c.license_url ? <a href={c.license_url}>{c.license}</a> : c.license}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <Sources sources={[{ url: 'https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia', label: 'Wikimedia Commons: Reusing content outside Wikimedia' }]} />
+</Base>

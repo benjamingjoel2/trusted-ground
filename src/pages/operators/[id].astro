@@ -5,6 +5,7 @@ import VerificationCard from '../../components/VerificationCard.astro';
 import Sources from '../../components/Sources.astro';
 import TierBadge from '../../components/TierBadge.astro';
 import MockNotice from '../../components/MockNotice.astro';
+import Photo from '../../components/Photo.astro';
 import { getFeed, destName, hasCountryPage, type Company } from '../../lib/feed';
 import { site, disclosure, niches, tiers, regions } from '../../config/site.config';
 import { url, companyOutbound, sourceRel } from '../../lib/urls';
@@ -37,8 +38,9 @@ const crumbs = [
 ---
 <Base title={title} description={description} path={path} crumbs={crumbs} noindex={!!c.example}
   schema={[companyNode(c, path), article({ path, title, description, published, modified: reviewed, sources: c.sources, about: { '@id': new URL(path, site.url) + '#company' } })]}>
-  <p class="label">{t.kindName[c.kind]} · {destName(c.country_base)}</p>
+  <p>{region && <a class="chip" href={url.region(region.slug)}>{region.name}</a>} <span class="label">{t.kindName[c.kind]} · {destName(c.country_base)}</span></p>
   <h1>{c.name}</h1>
+  <Photo slug={c.country_base} alt={`Landscape in ${destName(c.country_base)}, where ${c.name} is based`} priority class="lead-photo" sizes="(min-width: 64rem) 52rem, 100vw" widths={[480, 800, 1100]} />
   {c.example && <p class="notice">{disclosure.exampleRecordLabel}.</p>}
   <VerificationCard company={c} />
   <PageMeta published={published} reviewed={reviewed} reviewedLabel={t.lastChecked} />

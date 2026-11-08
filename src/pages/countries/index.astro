@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import MockNotice from '../../components/MockNotice.astro';
 import PageMeta from '../../components/PageMeta.astro';
+import CountryCard from '../../components/CountryCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getFeed } from '../../lib/feed';
 import { regions, site } from '../../config/site.config';
 import { url } from '../../lib/urls';
@@ -9,8 +11,8 @@ import { article } from '../../lib/schema';
 import { t } from '../../i18n/en';
 const feed = getFeed();
 const path = url.countries();
-const title = 'Country index: verified local operators by country';
-const description = `Every country with at least one verified or founder-owned operator in the Tourground directory: ${t.countriesListed(feed.countries.length)}, ${t.operatorsListed(feed.companies.length)}.`;
+const title = 'Destinations: local operators by country';
+const description = `Every country with at least one verified or founder-owned operator in the Tourground directory: ${t.countriesListed(feed.countries.length)}, ${t.operatorsCount(feed.companies.length)}.`;
 const list = {
   '@type': 'ItemList',
   name: 'Countries with verified local operators',
@@ -18,22 +20,25 @@ const list = {
   itemListElement: feed.countries.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: new URL(url.country(d.slug), site.url).toString() })),
 };
 ---
-<Base title={title} description={description} path={path} crumbs={[{ name: t.nav.countries, path }]}
+<Base title={title} description={description} path={path} full crumbs={[{ name: t.nav.countries, path }]}
   schema={[article({ path, title, description, published: site.launch.published, modified: feed.latestCheck }), list]}>
-  <h1>Country index</h1>
-  <p class="standfirst">{description} Countries with no verified operator are not listed.</p>
-  <PageMeta published={site.launch.published} reviewed={feed.latestCheck} reviewedLabel="Directory last checked" />
-  <MockNotice />
-  {regions.map((r) => {
-    const l = feed.countriesByRegion.get(r.slug) ?? [];
-    return l.length > 0 && (
-      <section aria-labelledby={`r-${r.slug}`}>
-        <div class="section-head"><h2 id={`r-${r.slug}`}>{r.name}</h2><a href={url.region(r.slug)}>{t.countriesListed(l.length)}</a></div>
-        <ul class="cols">
-          {l.map((d) => <li><a href={url.country(d.slug)}>{d.name}</a><span class="count">{feed.rankedByCountry.get(d.slug)!.length}</span></li>)}
-        </ul>
-      </section>
-    );
-  })}
-  <p class="small muted">Figures are counts of verified or founder-owned companies ranked for each country in the directory feed.</p>
+  <div class="wrap">
+    <div class="page-head">
+      <Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.countries, path }]} />
+      <h1 class="display" style="color:var(--ink)">Destinations</h1>
+      <p class="standfirst">{description} Countries with no listed operator have no page.</p>
+      <PageMeta published={site.launch.published} reviewed={feed.latestCheck} reviewedLabel="Directory last checked" />
+      <p class="small">{regions.filter((r) => (feed.countriesByRegion.get(r.slug) ?? []).length).map((r, i) => (<>{i > 0 && ' · '}<a href={`#r-${r.slug}`}>{r.name}</a></>))}</p>
+    </div>
+    <MockNotice />
+    {regions.map((r) => {
+      const l = feed.countriesByRegion.get(r.slug) ?? [];
+      return l.length > 0 && (
+        <section aria-labelledby={`r-${r.slug}`} style="padding-bottom:2.5rem">
+          <div class="sec-head"><h2 id={`r-${r.slug}`}>{r.name}</h2><a class="viewall" href={url.region(r.slug)}>{t.countriesListed(l.length)}</a></div>
+          <div class="grid">{l.map((d) => <CountryCard d={d} />)}</div>
+        </section>
+      );
+    })}
+  </div>
 </Base>

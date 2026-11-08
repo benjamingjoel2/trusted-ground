@@ -1,0 +1,12 @@
+---
+/** A horizontally scrolling card row with prev/next buttons (progressive enhancement, tiny inline script). */
+interface Props { id: string; label: string }
+const { id, label } = Astro.props;
+---
+<div class="arrows" data-for={id}>
+  <button type="button" aria-label={`Previous: ${label}`} data-dir="-1">←</button>
+  <button type="button" aria-label={`Next: ${label}`} data-dir="1">→</button>
+</div>
+<script is:inline>
+document.currentScript.previousElementSibling.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var r=document.getElementById(this.dataset.for);r.scrollBy({left:(+b.dataset.dir)*r.clientWidth*0.9,behavior:'smooth'});});
+</script>

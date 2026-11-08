@@ -1,0 +1,13 @@
+---
+import Photo from './Photo.astro';
+interface Props { slug: string; kicker: string; title: string; href: string; cta: string }
+const { slug, kicker, title, href, cta } = Astro.props;
+---
+<article class="tile">
+  <Photo slug={slug} alt="" sizes="(min-width: 48rem) 50vw, 100vw" widths={[480, 720, 1000]} />
+  <div class="tile-body">
+    <p class="tile-kicker">{kicker}</p>
+    <h3 class="display">{title}</h3>
+    <a class="pill pill-light" href={href}>{cta}</a>
+  </div>
+</article>

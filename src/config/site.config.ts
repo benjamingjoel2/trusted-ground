@@ -11,6 +11,8 @@
 
 export const site = {
   name: 'Trusted Ground',
+  /** Hero photo on the home page (a destination slug with a photo in data/images.json). */
+  heroPhoto: 'namibia',
   /** Short line shown under the name in the masthead. */
   tagline: 'Verified local operators, country by country',
   /** One-sentence positioning used in meta descriptions and llms.txt. */
@@ -57,16 +59,21 @@ export const site = {
     profileFallbackUrl: 'https://tourground.com/',
   },
 
-  /** Palette (REGISTER theme). `verified` is used only for verified states. */
+  /** Palette (design language modelled on lonelyplanet.com). `verified` is used only for verified states. */
   colors: {
-    paper: '#FBFAF6',
-    paperAlt: '#F3F1EA',
-    ink: '#14213D',
-    slate: '#4A5465',
-    rule: '#D5D8DE',
+    white: '#FFFFFF',
+    grey: '#F2F2F2',
+    grey2: '#C9CACB',
+    grey3: '#DDDCD8',
+    line: '#D3D4D5',
+    ink: '#1F2528',
+    inkDeep: '#121A10',
+    slate: '#50575C',
+    lime: '#CFDCB2',
+    yellow: '#FFD21F',
+    yellowSoft: '#FFF5CC',
+    blue: '#0047D6',
     verified: '#1E6B45',
-    brass: '#7A5C1E',
-    ad: '#F6EFE0',
   },
 
   /**

@@ -1,17 +1,20 @@
 ---
-import '@fontsource/source-serif-4/latin-600.css';
-import '@fontsource/ibm-plex-sans/latin-400.css';
-import '@fontsource/ibm-plex-sans/latin-600.css';
+import '@fontsource/archivo/latin-400.css';
+import '@fontsource/archivo/latin-700.css';
+import '@fontsource/archivo/latin-800.css';
+import '@fontsource/anton/latin-400.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
 import '../styles/global.css';
-import serif600 from '@fontsource/source-serif-4/files/source-serif-4-latin-600-normal.woff2?url';
-import sans400 from '@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2?url';
-import sans600 from '@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-600-normal.woff2?url';
-import { site, disclosure } from '../config/site.config';
+import archivo400 from '@fontsource/archivo/files/archivo-latin-400-normal.woff2?url';
+import archivo700 from '@fontsource/archivo/files/archivo-latin-700-normal.woff2?url';
+import anton400 from '@fontsource/anton/files/anton-latin-400-normal.woff2?url';
+import { site, disclosure, regions } from '../config/site.config';
 import { t } from '../i18n/en';
 import { url, abs } from '../lib/urls';
 import { graph, breadcrumbs as bc } from '../lib/schema';
+import { getFeed } from '../lib/feed';
+import { published } from '../lib/content';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import CountryIndex from '../components/CountryIndex.astro';
 
 interface Props {
   title: string;
@@ -21,15 +24,21 @@ interface Props {
   schema?: object[];
   noindex?: boolean;
   ogType?: 'website' | 'article';
-  wide?: boolean;
+  ogImage?: string;
+  preloadImage?: string;
+  preloadSrcset?: string;
+  preloadSizes?: string;
+  /** Full-width pages build their own structure (home, country). */
+  full?: boolean;
+  aside?: boolean;
 }
-const { title, description, path, crumbs = [], schema = [], noindex = false, ogType = 'article', wide = false } = Astro.props;
+const { title, description, path, crumbs = [], schema = [], noindex = false, ogType = 'article', ogImage, preloadImage, preloadSrcset, preloadSizes, full = false, aside = true } = Astro.props;
 const canonical = abs(path);
 const fullTitle = path === '/' ? `${site.name}: ${site.tagline}` : `${title} | ${site.name}`;
 const allCrumbs = path === '/' ? [] : [{ name: t.breadcrumbHome, path: '/' }, ...crumbs];
 const ld = graph(...(allCrumbs.length ? [bc(allCrumbs)] : []), ...schema);
 const c = site.colors;
-const rootVars = `:root{--paper:${c.paper};--paper-alt:${c.paperAlt};--ink:${c.ink};--slate:${c.slate};--rule:${c.rule};--verified:${c.verified};--brass:${c.brass};--ad:${c.ad}}`;
+const rootVars = `:root{--white:${c.white};--grey:${c.grey};--grey-2:${c.grey2};--grey-3:${c.grey3};--line:${c.line};--ink:${c.ink};--ink-deep:${c.inkDeep};--slate:${c.slate};--lime:${c.lime};--yellow:${c.yellow};--yellow-soft:${c.yellowSoft};--blue:${c.blue};--verified:${c.verified}}`;
 const nav = [
   [t.nav.countries, url.countries()],
   [t.nav.regions, url.regions()],
@@ -37,9 +46,11 @@ const nav = [
   [t.nav.guide, url.guide()],
   [t.nav.verification, url.verification()],
   [t.nav.questions, url.questions()],
-  [t.nav.checklist, url.checklist()],
 ];
-const current = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const current = (href: string) => path.startsWith(href);
+const feed = getFeed();
+const topCountries = [...feed.countries].sort((a, b) => feed.rankedByCountry.get(b.slug)!.length - feed.rankedByCountry.get(a.slug)!.length || a.name.localeCompare(b.name)).slice(0, 10);
+const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.order);
 ---
 <!doctype html>
 <html lang={site.language}>
@@ -48,9 +59,11 @@ const current = (href: string) => (href === '/' ? path === '/' : path.startsWith
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="preload" href={serif600} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={sans400} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={sans600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={anton400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={archivo400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={archivo700} as="font" type="font/woff2" crossorigin />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+    {preloadSrcset && <link rel="preload" as="image" type="image/webp" imagesrcset={preloadSrcset} imagesizes={preloadSizes} fetchpriority="high" />}
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, follow" />}
     <meta property="og:site_name" content={site.name} />
@@ -59,12 +72,12 @@ const current = (href: string) => (href === '/' ? path === '/' : path.startsWith
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={site.locale} />
-    <meta property="og:image" content={abs('/og.png')} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content={ogImage ? abs(ogImage) : abs('/og.png')} />
+    {!ogImage && <meta property="og:image:width" content="1200" />}
+    {!ogImage && <meta property="og:image:height" content="630" />}
     <meta property="og:image:alt" content={`${site.name}: ${site.tagline}`} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content={c.paper} />
+    <meta name="theme-color" content={c.grey} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
@@ -79,53 +92,100 @@ const current = (href: string) => (href === '/' ? path === '/' : path.startsWith
   </head>
   <body>
     <a class="skip" href="#main">{t.skip}</a>
-    <header class="masthead">
-      <div class="wrap masthead-inner">
-        <a class="wordmark" href="/">
-          <span class="wordmark-name">{site.name}</span>
-          <span class="wordmark-tag">{site.tagline}</span>
+    <header class="hdr">
+      <div class="hdr-inner">
+        <a class="logo" href="/" aria-label={`${site.name}, home`}>
+          <svg class="logo-mark" viewBox="0 0 20 20" aria-hidden="true"><rect width="20" height="20" rx="10" fill="currentColor"/><path d="M5 6.5h10M10 6.5V15" stroke="#fff" stroke-width="2.2"/></svg>
+          <span class="logo-name">{site.name}</span>
         </a>
-        <nav class="primary" aria-label="Main">
+        <nav class="nav" aria-label="Main">
           <ul>
             {nav.map(([label, href]) => (
               <li><a href={href} aria-current={current(href) ? 'page' : undefined}>{label}</a></li>
             ))}
           </ul>
         </nav>
+        <div class="hdr-cells">
+          <a href={url.checklist()}>{t.nav.checklist}</a>
+          <a href={url.operators()}>{t.nav.operators}</a>
+        </div>
       </div>
     </header>
-    <div class={`wrap layout${wide ? ' layout-wide' : ''}`}>
-      <aside class="margin" aria-label={t.marginIndex}>
-        <CountryIndex current={path} />
-      </aside>
-      <main id="main" class="main">
-        {allCrumbs.length > 0 && <Breadcrumbs items={allCrumbs} />}
+    <main id="main">
+      {full ? (
         <slot />
-      </main>
-    </div>
-    <footer class="footer">
-      <div class="wrap footer-inner">
-        <p class="footer-pub">
-          <a href={site.publisher.url}>{disclosure.footerPublishedBy}</a>
-        </p>
-        <p class="footer-short">{disclosure.footerShort}</p>
-        <nav aria-label="Site information">
-          <ul class="footer-links">
-            <li><a href={url.about()}>About</a></li>
-            <li><a href={url.howWeRank()}>How we rank</a></li>
-            <li><a href={url.verification()}>How verification works</a></li>
-            <li><a href={url.disclosure()}>Publisher disclosure</a></li>
-            <li><a href={url.corrections()}>Corrections and removal</a></li>
-            <li><a href={url.operators()}>{t.nav.operators}</a></li>
-            <li><a href={url.compare()}>{t.nav.compare}</a></li>
-            <li><a href={url.privacy()}>Privacy Policy</a></li>
-            <li><a href={url.terms()}>Terms</a></li>
-            <li><a href={url.cookies()}>Cookie Policy</a></li>
-          </ul>
-        </nav>
-        <p class="footer-contact">
-          <a href={`mailto:${site.email}`}>{site.email}</a> · {site.domain}
-        </p>
+      ) : (
+        <div class="wrap">
+          <div class="page-head">{allCrumbs.length > 0 && <Breadcrumbs items={allCrumbs} />}</div>
+          <div class="layout" style={aside ? undefined : 'grid-template-columns:1fr'}>
+            <div class="main"><slot /></div>
+            {aside && (
+              <aside class="aside" aria-label="Before you book">
+                <slot name="aside" />
+                <div class="aside-box">
+                  <h2>Before you pay</h2>
+                  <ul>
+                    {guide.map((g) => <li><a href={url.guideChapter(g.id)}>{g.data.short_title}</a></li>)}
+                  </ul>
+                  <a class="pill pill-dark" href={url.checklist()}>The checklist</a>
+                </div>
+                <div class="aside-box">
+                  <h2>Destinations</h2>
+                  <ul>
+                    {topCountries.slice(0, 6).map((d) => <li><a href={url.country(d.slug)}>{d.name}</a></li>)}
+                  </ul>
+                  <a class="pill" href={url.countries()}>All countries</a>
+                </div>
+              </aside>
+            )}
+          </div>
+        </div>
+      )}
+    </main>
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot-top">
+          <div class="foot-brand">
+            <span class="logo-name">{site.name}</span>
+            <p>{disclosure.footerShort}</p>
+            <p class="foot-pub"><a href={site.publisher.url}>{disclosure.footerPublishedBy}</a></p>
+            <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+          </div>
+          <nav aria-label="Top destinations">
+            <h2>Top destinations</h2>
+            <ul>
+              {topCountries.map((d) => <li><a href={url.country(d.slug)}>{d.name}</a></li>)}
+              <li><a href={url.countries()}>All countries</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Before you book">
+            <h2>Before you book</h2>
+            <ul>
+              {guide.map((g) => <li><a href={url.guideChapter(g.id)}>{g.data.short_title}</a></li>)}
+              <li><a href={url.checklist()}>Checklist</a></li>
+              <li><a href={url.questions()}>Questions</a></li>
+              <li><a href={url.compare()}>{t.nav.compare}</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="About">
+            <h2>About</h2>
+            <ul>
+              <li><a href={url.about()}>About</a></li>
+              <li><a href={url.verification()}>How verification works</a></li>
+              <li><a href={url.howWeRank()}>How we rank</a></li>
+              <li><a href={url.disclosure()}>Publisher disclosure</a></li>
+              <li><a href={url.corrections()}>Corrections and removal</a></li>
+              <li><a href="/credits/">Photo credits</a></li>
+              <li><a href={url.privacy()}>Privacy Policy</a></li>
+              <li><a href={url.terms()}>Terms</a></li>
+              <li><a href={url.cookies()}>Cookie Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="foot-bottom">
+          <span>{site.name} · {site.domain}</span>
+          <span>{regions.map((r, i) => (<>{i > 0 && ' · '}<a href={url.region(r.slug)}>{r.name}</a></>))}</span>
+        </div>
       </div>
     </footer>
   </body>

@@ -3,9 +3,13 @@ import Base from '../../layouts/Base.astro';
 import PageMeta from '../../components/PageMeta.astro';
 import MockNotice from '../../components/MockNotice.astro';
 import Sources from '../../components/Sources.astro';
+import Photo from '../../components/Photo.astro';
+import CountryCard from '../../components/CountryCard.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getFeed } from '../../lib/feed';
 import { regions, site } from '../../config/site.config';
 import { url, abs } from '../../lib/urls';
+import { placePhoto } from '../../lib/images';
 import { article } from '../../lib/schema';
 import { t } from '../../i18n/en';
 export function getStaticPaths() {
@@ -16,11 +20,13 @@ const feed = getFeed();
 const list = feed.countriesByRegion.get(r.slug) ?? [];
 const path = url.region(r.slug);
 const ops = new Set(list.flatMap((d) => feed.rankedByCountry.get(d.slug)!.map((e) => e.company.id))).size;
-const title = `Verified local operators in ${r.name.replace(/^The /, 'the ')}`;
+const lname = r.name.replace(/^The /, 'the ');
+const title = `Local tour operators in ${lname}`;
 const description = list.length
-  ? `${t.countriesListed(list.length)} in ${r.name.replace(/^The /, 'the ')} with verified local operators (${t.operatorsListed(ops)}), from the Tourground directory.`
-  : `No verified local operators are listed in ${r.name.replace(/^The /, 'the ')} yet.`;
+  ? `${t.countriesListed(list.length)} in ${lname} with verified or founder-owned local operators (${t.operatorsCount(ops)}), from the Tourground directory.`
+  : `No verified local operators are listed in ${lname} yet.`;
 const checked = list.flatMap((d) => feed.rankedByCountry.get(d.slug)!).reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), site.launch.published);
+const heroSlug = [...list].sort((a, b) => feed.rankedByCountry.get(b.slug)!.length - feed.rankedByCountry.get(a.slug)!.length).map((d) => d.slug).find((s) => placePhoto(s));
 const placeList = {
   '@type': 'ItemList',
   name: `Countries in ${r.name} with verified operators`,
@@ -28,35 +34,27 @@ const placeList = {
   itemListElement: list.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: abs(url.country(d.slug)) })),
 };
 ---
-<Base title={title} description={description} path={path}
+<Base title={title} description={description} path={path} full
   crumbs={[{ name: t.nav.regions, path: url.regions() }, { name: r.name, path }]}
   schema={[article({ path, title, description, published: site.launch.published, modified: checked }), placeList]}>
-  <p class="label">Region</p>
-  <h1>{r.name}</h1>
-  <p class="standfirst">{description}</p>
-  <PageMeta published={site.launch.published} reviewed={checked} reviewedLabel="Directory last checked" />
-  <MockNotice />
-  {list.length > 0 ? (
-    <table class="register">
-      <caption class="vh">Countries in {r.name}</caption>
-      <thead><tr><th scope="col" class="num">No.</th><th scope="col">Country</th><th scope="col">Operators listed</th><th scope="col">Ranked first</th><th scope="col">Country site</th></tr></thead>
-      <tbody>
-        {list.map((d, i) => {
-          const e = feed.rankedByCountry.get(d.slug)!;
-          return (
-            <tr>
-              <td class="num" data-label="No.">{String(i + 1).padStart(2, '0')}</td>
-              <th scope="row" data-label="Country"><a class="entry-name" href={url.country(d.slug)}>{d.name}</a></th>
-              <td data-label="Operators listed" class="tnum">{e.length}</td>
-              <td data-label="Ranked first"><a href={url.operator(e[0].company.id)}>{e[0].company.name}</a></td>
-              <td data-label="Country site">{d.booster_url ? <a href={d.booster_url}>{new URL(d.booster_url).hostname}</a> : '–'}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  ) : (
-    <p>This region has no verified operators in the directory yet, so it has no country pages. The <a href={url.guide()}>booking guide</a> and <a href={url.checklist()}>checklist</a> apply anywhere.</p>
-  )}
-  <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (countries, counts and ranks)' }]} />
+  <section class="hero" aria-labelledby="r-h" style="min-height:min(60vh,34rem)">
+    {heroSlug && <Photo slug={heroSlug} alt="" priority sizes="100vw" widths={[640, 960, 1280, 1600]} />}
+    <div class="wrap hero-body">
+      <p class="hero-kicker">Region</p>
+      <h1 id="r-h" class="display"><span class="vh">Local tour operators in </span>{r.name}</h1>
+      <div class="callout"><p>{description}</p></div>
+    </div>
+  </section>
+  <div class="wrap">
+    <div style="padding-top:1.5rem"><Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.regions, path: url.regions() }, { name: r.name, path }]} /></div>
+    <PageMeta published={site.launch.published} reviewed={checked} reviewedLabel="Directory last checked" />
+    <MockNotice />
+    {list.length > 0 ? (
+      <div class="grid" style="padding-bottom:3rem">{list.map((d) => <CountryCard d={d} />)}</div>
+    ) : (
+      <p>This region has no verified operators in the directory yet, so it has no country pages. The <a href={url.guide()}>booking guide</a> and <a href={url.checklist()}>checklist</a> apply anywhere.</p>
+    )}
+    <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (countries, counts and ranks)' }]} />
+    <div style="height:3rem"></div>
+  </div>
 </Base>

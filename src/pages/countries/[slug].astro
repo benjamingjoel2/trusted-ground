@@ -5,6 +5,9 @@ import PageMeta from '../../components/PageMeta.astro';
 import RankedList from '../../components/RankedList.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import Sources from '../../components/Sources.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Photo from '../../components/Photo.astro';
+import CountryCard from '../../components/CountryCard.astro';
 import { getFeed, type Destination } from '../../lib/feed';
 import { regions, site, disclosure } from '../../config/site.config';
 import { url } from '../../lib/urls';
@@ -34,47 +37,90 @@ const sources = [
   ...(snap?.data.sources ?? []),
   { url: site.publisher.url + '/', label: `Tourground directory feed (ranks and company records, last checked ${checked})` },
 ];
+const crumbs = [{ name: t.breadcrumbHome, path: '/' }, { name: region.name, path: url.region(region.slug) }, { name: d.name, path }];
+const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug !== d.slug).slice(0, 8);
 ---
-<Base title={title} description={description} path={path}
-  crumbs={[{ name: region.name, path: url.region(region.slug) }, { name: d.name, path }]}
+<Base title={title} description={description} path={path} full
+  crumbs={crumbs.slice(1)}
   schema={[
     placeNode(d, path),
     itemList(`Best local operators in ${d.name}`, path, entries, url.operator),
     article({ path, title, description, published: pub, modified: reviewed, sources, about: { '@id': new URL(path, site.url) + '#place' } }),
   ]}>
-  <AdSlot />
-  <p class="label">{region.name} · {d.name}</p>
-  <h1>{title}</h1>
-  <p class="standfirst">{t.operatorsCount(entries.length)} listed for {d.name}. Each is verified by Tourground or founder-owned, and labelled. {disclosure.rankingStatement}</p>
-  <PageMeta published={pub} reviewed={reviewed} />
-  <MockNotice />
+  <section class="dest" aria-labelledby="dest-h">
+    <div class="dest-main">
+      <Breadcrumbs items={crumbs} />
+      <a class="chip" href={url.region(region.slug)}>{region.name}</a>
+      <h1 id="dest-h" class="display"><span class="vh">Best local tour operators in </span>{d.name}</h1>
+      <p>{t.operatorsCount(entries.length)} listed for {d.name}. Each is verified by Tourground or founder-owned, and labelled. Rank comes only from the directory and is never paid.</p>
+      <Photo slug={d.slug} alt={`Landscape in ${d.name}`} priority sizes="(min-width: 64rem) 50vw, 100vw" widths={[480, 720, 960, 1280]} />
+    </div>
+    <div class="dest-side">
+      <h2>At a glance</h2>
+      <ul class="glance">
+        <li><span class="label">Operators listed</span><strong>{entries.length}</strong> · <a href="#ranked">See the ranked list</a></li>
+        <li><span class="label">{t.bestMonths}</span><strong>{snap?.data.best_months ?? 'No reviewed source yet'}</strong></li>
+        {snap && snap.data.main_regions.length > 0 && <li><span class="label">{t.mainRegions}</span><strong>{snap.data.main_regions.join(', ')}</strong></li>}
+        <li><span class="label">{t.entryBasics}</span>{snap?.data.entry_basics ?? 'Check your own government\'s travel advice and the destination\'s official immigration site.'}</li>
+        {d.booster_url && <li><span class="label">{t.countrySite}</span><a href={d.booster_url}>{new URL(d.booster_url).hostname}</a></li>}
+        <li><span class="label">{t.reviewed}</span>{reviewed}</li>
+      </ul>
+      <a class="pill pill-dark" href={url.checklist()}>Before-you-pay checklist</a>
+    </div>
+  </section>
 
-  <h2 id="ranked">The ranked list</h2>
-  <RankedList entries={entries} caption={`Local tour operators in ${d.name}, by rank`} />
+  <div class="wrap">
+    <AdSlot />
+    <MockNotice />
+    <div class="layout">
+      <div class="main">
+        <PageMeta published={pub} reviewed={reviewed} />
+        <h2 id="ranked">The ranked list</h2>
+        <p class="muted">{disclosure.rankingStatement}</p>
+        <RankedList entries={entries} caption={`Local tour operators in ${d.name}, by rank`} />
 
-  {d.booster_url && (
-    <p class="notice">{t.countrySiteNote} <a href={d.booster_url}>{new URL(d.booster_url).hostname}</a></p>
+        <h2 id="snapshot">{t.snapshot}</h2>
+        {snap && Snap ? (
+          <>
+            <dl class="facts">
+              {snap.data.best_months && (<><dt>{t.bestMonths}</dt><dd>{snap.data.best_months}</dd></>)}
+              {snap.data.main_regions.length > 0 && (<><dt>{t.mainRegions}</dt><dd>{snap.data.main_regions.join(', ')}</dd></>)}
+              {snap.data.entry_basics && (<><dt>{t.entryBasics}</dt><dd>{snap.data.entry_basics}</dd></>)}
+            </dl>
+            <div class="prose"><Snap /></div>
+          </>
+        ) : (
+          <p>{t.noSnapshot}</p>
+        )}
+
+        <h2 id="check">Before you book in {d.name}</h2>
+        <ul>
+          <li><a href={url.guide()}>{t.readGuide}</a>: licences, insurance, memberships and payment protection.</li>
+          <li><a href={url.checklist()}>The before-you-pay checklist</a> (printable).</li>
+          <li><a href={url.verification()}>What Tourground verification checks</a>, and what it does not.</li>
+        </ul>
+        <Sources sources={sources} />
+      </div>
+      <aside class="aside" aria-label="More">
+        <div class="aside-box">
+          <h2>Guide</h2>
+          <ul>
+            <li><a href="/guide/licences/">Check a licence</a></li>
+            <li><a href="/guide/deposits-and-payment-protection/">Deposits and payment</a></li>
+            <li><a href="/guide/red-flags/">Red flags</a></li>
+            <li><a href="/questions/how-do-i-know-a-local-tour-operator-is-legitimate/">Is an operator legitimate?</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  {nearby.length > 0 && (
+    <section class="section section-grey" aria-labelledby="near-h">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="near-h">More in {region.name}</h2><a class="viewall" href={url.region(region.slug)}>View all</a></div>
+        <div class="row">{nearby.map((x) => <CountryCard d={x} />)}</div>
+      </div>
+    </section>
   )}
-
-  <h2 id="snapshot">{t.snapshot}</h2>
-  {snap && Snap ? (
-    <>
-      <dl class="facts">
-        {snap.data.best_months && (<><dt>{t.bestMonths}</dt><dd>{snap.data.best_months}</dd></>)}
-        {snap.data.main_regions.length > 0 && (<><dt>{t.mainRegions}</dt><dd>{snap.data.main_regions.join(', ')}</dd></>)}
-        {snap.data.entry_basics && (<><dt>{t.entryBasics}</dt><dd>{snap.data.entry_basics}</dd></>)}
-      </dl>
-      <div class="prose"><Snap /></div>
-    </>
-  ) : (
-    <p>{t.noSnapshot}</p>
-  )}
-
-  <h2 id="check">Before you book in {d.name}</h2>
-  <ul>
-    <li><a href={url.guide()}>{t.readGuide}</a>: licences, insurance, memberships and payment protection.</li>
-    <li><a href={url.checklist()}>The before-you-pay checklist</a> (printable).</li>
-    <li><a href={url.verification()}>What Tourground verification checks</a>, and what it does not.</li>
-  </ul>
-  <Sources sources={sources} />
 </Base>
