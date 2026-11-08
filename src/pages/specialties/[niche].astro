@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import PageMeta from '../../components/PageMeta.astro';
 import MockNotice from '../../components/MockNotice.astro';
 import AdSlot from '../../components/AdSlot.astro';
-import RankedList from '../../components/RankedList.astro';
+import OperatorList from '../../components/OperatorList.astro';
 import Sources from '../../components/Sources.astro';
 import { getFeed } from '../../lib/feed';
 import { site, niches, disclosure } from '../../config/site.config';
@@ -20,7 +20,7 @@ const feed = getFeed();
 const groups = feed.countries.filter((d) => feed.niche.get(n.slug)!.has(d.slug)).map((d) => ({ d, entries: feed.niche.get(n.slug)!.get(d.slug)! }));
 const total = groups.reduce((s, g) => s + g.entries.length, 0);
 const path = url.niche(n.slug);
-const title = `Best local operators for ${n.name.toLowerCase()}`;
+const title = `${n.name}: local operators`;
 const description = `${t.operatorsListed(total)} listing ${n.name.toLowerCase()} as a specialty, in ${t.countriesListed(groups.length)}. Grouped by country, in each country's directory rank order.`;
 const checked = groups.flatMap((g) => g.entries).reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), site.launch.published);
 const lists = groups.map((g) => ({
@@ -32,20 +32,20 @@ const lists = groups.map((g) => ({
 }));
 ---
 <Base title={title} description={description} path={path}
-  crumbs={[{ name: t.nav.best, path: url.best() }, { name: n.name, path }]}
+  crumbs={[{ name: t.nav.best, path: url.specialties() }, { name: n.name, path }]}
   schema={[article({ path, title, description, published: site.launch.published, modified: checked }), ...lists]}>
   <AdSlot />
-  <p class="label">Ranked list · {n.name}</p>
+  <p class="label">Specialty</p>
   <h1>{title}</h1>
   <p class="standfirst">{description}</p>
   <PageMeta published={site.launch.published} reviewed={checked} reviewedLabel="Directory last checked" />
   <MockNotice />
-  <p class="small">Rank is per country, so this list is grouped by country and never re-ordered across countries. {disclosure.rankingStatement}</p>
+  <p class="small">{disclosure.listingStatement}</p>
   {groups.map((g) => (
     <section aria-labelledby={`c-${g.d.slug}`}>
       <h2 id={`c-${g.d.slug}`}><a href={url.country(g.d.slug)}>{g.d.name}</a></h2>
-      <RankedList entries={g.entries} caption={`${title} in ${g.d.name}`} />
+      <OperatorList entries={g.entries} caption={`${title} in ${g.d.name}`} />
     </section>
   ))}
-  <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (niches and ranks)' }]} />
+  <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (specialties)' }]} />
 </Base>

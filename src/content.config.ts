@@ -45,6 +45,18 @@ const questions = defineCollection({
   schema: z.intersection(base, z.object({ order: z.number().int(), short_answer: z.string().min(1) })),
 });
 
+const articles = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/articles' }),
+  schema: z.intersection(
+    base,
+    z.object({
+      category: z.string().default('Planning'),
+      hero: z.string().optional(),
+      countries: z.array(z.string()).default([]),
+    }),
+  ),
+});
+
 const pages = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/pages' }),
   schema: z.intersection(
@@ -65,4 +77,4 @@ const pages = defineCollection({
   ),
 });
 
-export const collections = { guide, countries, questions, pages };
+export const collections = { guide, countries, questions, pages, articles };

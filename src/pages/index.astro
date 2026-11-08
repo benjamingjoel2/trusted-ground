@@ -6,6 +6,7 @@ import CountryCard from '../components/CountryCard.astro';
 import Tile from '../components/Tile.astro';
 import Carousel from '../components/Carousel.astro';
 import Check from '../components/Check.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import { getFeed } from '../lib/feed';
 import { site, regions, niches, disclosure } from '../config/site.config';
 import { url } from '../lib/urls';
@@ -15,11 +16,12 @@ import { t } from '../i18n/en';
 import { getImage } from 'astro:assets';
 
 const feed = getFeed();
+const stories = (await published('articles')).sort((a, b) => b.data.published.getTime() - a.data.published.getTime() || a.data.title.localeCompare(b.data.title));
 const questions = (await published('questions')).sort((a, b) => a.data.order - b.data.order);
-const byCount = [...feed.countries].sort((a, b) => feed.rankedByCountry.get(b.slug)!.length - feed.rankedByCountry.get(a.slug)!.length || a.name.localeCompare(b.name));
+const byCount = [...feed.countries].sort((a, b) => feed.byCountry.get(b.slug)!.length - feed.byCountry.get(a.slug)!.length || a.name.localeCompare(b.name));
 const featured = byCount.filter((d) => placePhoto(d.slug)).slice(0, 12);
 const withPhoto = (slugs: string[]) => slugs.find((s) => placePhoto(s)) ?? featured[0]?.slug ?? '';
-const regionPhoto = (r: string) => withPhoto((feed.countriesByRegion.get(r) ?? []).map((d) => d.slug).sort((a, b) => feed.rankedByCountry.get(b)!.length - feed.rankedByCountry.get(a)!.length));
+const regionPhoto = (r: string) => withPhoto((feed.countriesByRegion.get(r) ?? []).map((d) => d.slug).sort((a, b) => feed.byCountry.get(b)!.length - feed.byCountry.get(a)!.length));
 const hero = placePhoto(site.heroPhoto) ? site.heroPhoto : featured[0]?.slug;
 const heroImg = hero ? await getImage({ src: placePhoto(hero)!.src, widths: [640, 960, 1280, 1600], format: 'webp', quality: 70 }) : null;
 const nicheCounts = niches.map((n) => ({ n, count: [...feed.niche.get(n.slug)!.values()].reduce((s, l) => s + l.length, 0) })).filter((x) => x.count > 0);
@@ -32,17 +34,29 @@ const nicheCounts = niches.map((n) => ({ n, count: [...feed.niche.get(n.slug)!.v
       <h1 id="hero-h" class="display">Find a local operator you can trust</h1>
       <div class="callout">
         <p>{site.positioning}</p>
-        <a class="pill pill-dark" href={url.countries()}>Browse {feed.countries.length} countries</a>
+        <a class="pill pill-dark" href={url.articles()}>Read the latest stories</a>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="best-h">
+  {stories.length > 0 && (
+    <section class="section" aria-labelledby="stories-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="stories-h">Latest travel stories</h2>
+          <div class="sec-tools"><a class="viewall" href={url.articles()}>View all</a><Carousel id="row-stories" label="stories" /></div>
+        </div>
+        <div class="row" id="row-stories">{stories.map((a) => <ArticleCard a={a} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="section section-grey" aria-labelledby="best-h">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <h2 id="best-h">Best local operators by country</h2>
-          <p>Every company listed is verified by Tourground or founder-owned, and ranked on merit. {disclosure.rankingStatement.split('. ')[1]}</p>
+          <h2 id="best-h">Destinations</h2>
+          <p>{feed.countries.length} countries, each with its verified local operators, entry basics and seasons.</p>
         </div>
         <div class="sec-tools"><a class="viewall" href={url.countries()}>View all</a><Carousel id="row-countries" label="countries" /></div>
       </div>
@@ -59,7 +73,7 @@ const nicheCounts = niches.map((n) => ({ n, count: [...feed.niche.get(n.slug)!.v
       <div class="tiles">
         <Tile slug={withPhoto(['georgia', 'nepal'])} kicker="Before you book" title="The booking guide" href={url.guide()} cta="Read the guide" />
         <Tile slug={withPhoto(['chile', 'iceland'])} kicker="What we check" title="Verification" href={url.verification()} cta="How it works" />
-        <Tile slug={withPhoto(['zambia', 'botswana'])} kicker="Ranked on merit" title="Best lists" href={url.best()} cta="See the lists" />
+        <Tile slug={withPhoto(['zambia', 'botswana'])} kicker="Safari, trekking, diving and more" title="Specialties" href={url.specialties()} cta="Browse" />
         <Tile slug={withPhoto(['cambodia', 'japan'])} kicker="One page" title="The checklist" href={url.checklist()} cta="Print it" />
       </div>
     </div>
@@ -90,14 +104,14 @@ const nicheCounts = niches.map((n) => ({ n, count: [...feed.niche.get(n.slug)!.v
   <section class="section section-grey" aria-labelledby="niche-h">
     <div class="wrap">
       <div class="sec-head">
-        <div><h2 id="niche-h">Ranked by niche</h2><p>Grouped by country, each in that country's rank order.</p></div>
-        <a class="viewall" href={url.best()}>View all</a>
+        <div><h2 id="niche-h">Browse by specialty</h2><p>Operators who list each specialty, grouped by country.</p></div>
+        <a class="viewall" href={url.specialties()}>View all</a>
       </div>
       <div class="grid">
         {nicheCounts.map(({ n, count }) => (
           <article class="card card-text">
-            <p class="meta"><span>Ranked list</span><span>{count} listed</span></p>
-            <h3><a href={url.niche(n.slug)}>Best local operators for {n.name.toLowerCase()}</a></h3>
+            <p class="meta"><span>Specialty</span><span>{count} listed</span></p>
+            <h3><a href={url.niche(n.slug)}>{n.name}</a></h3>
             <a class="pill" href={url.niche(n.slug)} aria-label={`See the ${n.name} list`}>See the list</a>
           </article>
         ))}
@@ -136,10 +150,10 @@ const nicheCounts = niches.map((n) => ({ n, count: [...feed.niche.get(n.slug)!.v
           <a class="pill pill-dark" href={url.verification()}>What each tier checks</a>
         </div>
         <div>
-          <p class="label">How ranking works</p>
-          <h2>Rank is merit, never paid</h2>
-          <p>{disclosure.rankingStatement}</p>
-          <a class="pill" href={url.howWeRank()}>How we rank</a>
+          <p class="label">How listing works</p>
+          <h2>No company pays to be listed</h2>
+          <p>{disclosure.listingStatement}</p>
+          <a class="pill" href={url.disclosure()}>Publisher disclosure</a>
         </div>
       </div>
     </div>

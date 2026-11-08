@@ -19,14 +19,14 @@ const { r } = Astro.props as { r: (typeof regions)[number] };
 const feed = getFeed();
 const list = feed.countriesByRegion.get(r.slug) ?? [];
 const path = url.region(r.slug);
-const ops = new Set(list.flatMap((d) => feed.rankedByCountry.get(d.slug)!.map((e) => e.company.id))).size;
+const ops = new Set(list.flatMap((d) => feed.byCountry.get(d.slug)!.map((e) => e.company.id))).size;
 const lname = r.name.replace(/^The /, 'the ');
 const title = `Local tour operators in ${lname}`;
 const description = list.length
   ? `${t.countriesListed(list.length)} in ${lname} with verified or founder-owned local operators (${t.operatorsCount(ops)}), from the Tourground directory.`
   : `No verified local operators are listed in ${lname} yet.`;
-const checked = list.flatMap((d) => feed.rankedByCountry.get(d.slug)!).reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), site.launch.published);
-const heroSlug = [...list].sort((a, b) => feed.rankedByCountry.get(b.slug)!.length - feed.rankedByCountry.get(a.slug)!.length).map((d) => d.slug).find((s) => placePhoto(s));
+const checked = list.flatMap((d) => feed.byCountry.get(d.slug)!).reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), site.launch.published);
+const heroSlug = [...list].sort((a, b) => feed.byCountry.get(b.slug)!.length - feed.byCountry.get(a.slug)!.length).map((d) => d.slug).find((s) => placePhoto(s));
 const placeList = {
   '@type': 'ItemList',
   name: `Countries in ${r.name} with verified operators`,
@@ -54,7 +54,7 @@ const placeList = {
     ) : (
       <p>This region has no verified operators in the directory yet, so it has no country pages. The <a href={url.guide()}>booking guide</a> and <a href={url.checklist()}>checklist</a> apply anywhere.</p>
     )}
-    <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (countries, counts and ranks)' }]} />
+    <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (countries and counts)' }]} />
     <div style="height:3rem"></div>
   </div>
 </Base>

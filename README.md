@@ -30,7 +30,7 @@ npm run preview    # serve dist/
 | Guide chapters | `src/content/guide/*.md` |
 | Country snapshots | `src/content/countries/<slug>.md` |
 | Q&A | `src/content/questions/*.md` |
-| About, How we rank, Disclosure, Corrections, legal pages, checklist, comparison tables | `src/content/pages/*.md` |
+| About, Disclosure, Corrections, legal pages, checklist, comparison tables | `src/content/pages/*.md` |
 | Layout and components | `src/layouts/`, `src/components/` |
 | JSON-LD builders | `src/lib/schema.ts` |
 | Sitemaps, robots.txt, llms.txt | `src/pages/sitemap*.ts`, `src/pages/robots.txt.ts`, `src/pages/llms.txt.ts` |
@@ -85,7 +85,7 @@ What happens on each build:
 - Only companies with `verified: true` **or** `founder_owned: true` are published. Anything else, including prospects, is dropped and the validator fails the build if it leaks.
 - **A company removed from the feed, or no longer verified, loses its page in the next build.** Static output means there is nothing left to serve; the 404 page explains that listings are removed after directory updates.
 - Destinations with no publishable company get no page.
-- Rank comes only from `rank` in the feed and is never reordered. Niche lists are grouped by country, each in that country's rank order.
+- There is no ranking. Operators are listed alphabetically on every page, and the feed's `rank` field is ignored. Specialty lists are grouped by country.
 - If `_meta.source` is `"mock"`, every list shows the preview-data notice.
 
 ## Rules built into the templates
@@ -93,7 +93,7 @@ What happens on each build:
 - Every page footer: "Published by Tourground." linking to tourground.com.
 - Founder-owned brands are labelled "Founder-owned (Tourground Geotrax)", decided by the feed's `founder_owned` flag, never a hard-coded list.
 - Platinum companies may link to their own site with `rel="sponsored nofollow"`; all others link only to their Tourground profile.
-- Paid placement: `src/components/AdSlot.astro` is the only place a paid item can render. It is labelled "Advertisement feature", sits above any ranked list and is visually separate. Paid placement is not built yet, so the slot renders nothing unless `site.showEmptyAdSlot` is `true`; a specimen is shown on `/disclosure/`.
+- Paid placement: `src/components/AdSlot.astro` is the only place a paid item can render. It is labelled "Advertisement feature", sits above any list of operators and is visually separate. Paid placement is not built yet, so the slot renders nothing unless `site.showEmptyAdSlot` is `true`; a specimen is shown on `/disclosure/`.
 - Every company page opens with the verification card and has a "Request a correction or removal" link (`links.correctionUrl`, placeholder for now).
 - No phone numbers, WhatsApp, team section, social links, testimonials or reviews.
 

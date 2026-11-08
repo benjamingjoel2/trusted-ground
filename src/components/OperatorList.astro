@@ -1,12 +1,13 @@
 ---
-import type { RankedEntry } from '../lib/feed';
+/** Operators for a country or specialty, alphabetical. No ranking. */
+import type { ListedEntry } from '../lib/feed';
 import { destName } from '../lib/feed';
 import { niches } from '../config/site.config';
 import { url } from '../lib/urls';
 import { fmtDate } from '../lib/content';
 import { t } from '../i18n/en';
 import TierBadge from './TierBadge.astro';
-interface Props { entries: RankedEntry[]; caption: string; showBase?: boolean }
+interface Props { entries: ListedEntry[]; caption: string; showBase?: boolean }
 const { entries, caption, showBase = true } = Astro.props;
 const nicheName = (s: string) => niches.find((n) => n.slug === s)?.name ?? s;
 ---
@@ -14,7 +15,6 @@ const nicheName = (s: string) => niches.find((n) => n.slug === s)?.name ?? s;
   <caption class="vh">{caption}</caption>
   <thead>
     <tr>
-      <th scope="col" class="num">{t.rank}</th>
       <th scope="col">{t.operator}</th>
       <th scope="col">{t.kind}</th>
       {showBase && <th scope="col">{t.basedIn}</th>}
@@ -25,7 +25,6 @@ const nicheName = (s: string) => niches.find((n) => n.slug === s)?.name ?? s;
   <tbody>
     {entries.map((e) => (
       <tr>
-        <td class="num" data-label={t.rank}>{String(e.rank).padStart(2, '0')}</td>
         <th scope="row" data-label={t.operator}>
           <a href={url.operator(e.company.id)} class="entry-name">{e.company.name}</a>
           <TierBadge company={e.company} />

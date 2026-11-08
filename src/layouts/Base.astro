@@ -40,16 +40,17 @@ const ld = graph(...(allCrumbs.length ? [bc(allCrumbs)] : []), ...schema);
 const c = site.colors;
 const rootVars = `:root{--white:${c.white};--grey:${c.grey};--grey-2:${c.grey2};--grey-3:${c.grey3};--line:${c.line};--ink:${c.ink};--ink-deep:${c.inkDeep};--slate:${c.slate};--lime:${c.lime};--yellow:${c.yellow};--yellow-soft:${c.yellowSoft};--blue:${c.blue};--verified:${c.verified}}`;
 const nav = [
+  [t.nav.articles, url.articles()],
   [t.nav.countries, url.countries()],
   [t.nav.regions, url.regions()],
-  [t.nav.best, url.best()],
+  [t.nav.best, url.specialties()],
   [t.nav.guide, url.guide()],
   [t.nav.verification, url.verification()],
   [t.nav.questions, url.questions()],
 ];
 const current = (href: string) => path.startsWith(href);
 const feed = getFeed();
-const topCountries = [...feed.countries].sort((a, b) => feed.rankedByCountry.get(b.slug)!.length - feed.rankedByCountry.get(a.slug)!.length || a.name.localeCompare(b.name)).slice(0, 10);
+const topCountries = [...feed.countries].sort((a, b) => feed.byCountry.get(b.slug)!.length - feed.byCountry.get(a.slug)!.length || a.name.localeCompare(b.name)).slice(0, 10);
 const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.order);
 ---
 <!doctype html>
@@ -172,7 +173,6 @@ const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.or
             <ul>
               <li><a href={url.about()}>About</a></li>
               <li><a href={url.verification()}>How verification works</a></li>
-              <li><a href={url.howWeRank()}>How we rank</a></li>
               <li><a href={url.disclosure()}>Publisher disclosure</a></li>
               <li><a href={url.corrections()}>Corrections and removal</a></li>
               <li><a href="/credits/">Photo credits</a></li>

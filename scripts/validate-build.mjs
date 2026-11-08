@@ -85,7 +85,7 @@ for (const f of html) {
   // Factual pages: dates + sources
   if (!is404 && rel !== '/') {
     if (!s.includes('class="pagemeta"')) err(f, 'missing published / last reviewed dates');
-    if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions|best|operators|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
+    if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions|specialties|articles|operators|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
   }
   // JSON-LD
   for (const m of s.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
@@ -97,10 +97,10 @@ for (const f of html) {
       err(f, 'JSON-LD does not parse: ' + e.message);
     }
   }
-  // Paid/ad slot must come before the first ranked table
+  // Paid/ad slot must come before the first operator table
   const ad = s.indexOf('class="adslot"');
   const reg = s.indexOf('class="register"');
-  if (ad > -1 && reg > -1 && ad > reg) err(f, 'ad slot must sit above ranked lists');
+  if (ad > -1 && reg > -1 && ad > reg) err(f, 'ad slot must sit above operator lists');
   // Unverified companies must never appear
   for (const c of unpublishable) if (s.includes(`/operators/${c.id}/`) || s.includes(c.name)) err(f, `unpublishable company appears: ${c.id}`);
   // Example records must be noindex
@@ -114,6 +114,11 @@ for (const f of html) {
   }
 }
 
+// No ranking anywhere: no rank column, no 'ranked' wording.
+for (const f of html) {
+  const s = fs.readFileSync(f, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '');
+  if (/\branked\b|>Rank<|How we rank|Best local operators/i.test(s)) err(f, 'ranking wording found');
+}
 // Every publishable company has a page; no unpublishable one does.
 for (const c of feed.companies) {
   const exists = fs.existsSync(path.join(DIST, 'operators', c.id, 'index.html'));
@@ -122,7 +127,7 @@ for (const c of feed.companies) {
   if (!should && exists) errors.push(`page exists for unpublishable company ${c.id}`);
 }
 // Country pages only for destinations with listed companies.
-const ranked = new Set(feed.companies.filter((c) => c.verified || c.founder_owned).flatMap((c) => Object.keys(c.rank || {})));
+const ranked = new Set(feed.companies.filter((c) => c.verified || c.founder_owned).flatMap((c) => (c.delivers_in?.length ? c.delivers_in : [c.country_base])));
 for (const d of feed.destinations) {
   const exists = fs.existsSync(path.join(DIST, 'countries', d.slug, 'index.html'));
   if (exists !== ranked.has(d.slug)) errors.push(`country page for ${d.slug}: exists=${exists}, should=${ranked.has(d.slug)}`);

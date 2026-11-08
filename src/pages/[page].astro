@@ -1,5 +1,5 @@
 ---
-/** Reference and legal pages written in markdown (about, how-we-rank, disclosure, corrections, privacy, terms, cookies). */
+/** Reference and legal pages written in markdown (about, disclosure, corrections, privacy, terms, cookies). */
 import Base from '../layouts/Base.astro';
 import PageMeta from '../components/PageMeta.astro';
 import Sources from '../components/Sources.astro';
@@ -25,12 +25,11 @@ const feed = getFeed();
   <h1>{d.title}</h1>
   <PageMeta published={d.published} reviewed={d.reviewed} />
 
-  {entry.id === 'how-we-rank' && <p class="answer">{disclosure.rankingStatement}</p>}
   {entry.id === 'disclosure' && (
     <dl class="facts">
       <dt>Publisher</dt><dd><a href={site.publisher.url}>{site.publisher.name}</a></dd>
       <dt>Relationship</dt><dd>{disclosure.publisherRelationship}</dd>
-      <dt>Ranking</dt><dd>{disclosure.rankingStatement}</dd>
+      <dt>Order of lists</dt><dd>{disclosure.listingStatement}</dd>
       <dt>Paid placements</dt><dd>{disclosure.paidSlotNote}</dd>
       <dt>Platinum</dt><dd>{disclosure.platinumNote}</dd>
       <dt>Founder-owned brands</dt><dd>{disclosure.founderNote} Label used: “{site.publisher.founderLabel}”.</dd>
@@ -41,7 +40,7 @@ const feed = getFeed();
   {entry.id === 'disclosure' && (
     <>
       <h2 id="ad-slot">How a paid placement would look</h2>
-      <p>Paid placement is not running. This is the empty slot, shown as a specimen. If paid placements start, they will appear only in this box, at the top of a page, above any ranked list.</p>
+      <p>Paid placement is not running. This is the empty slot, shown as a specimen. If paid placements start, they will appear only in this box, at the top of a page, above any list of operators.</p>
       <AdSlot specimen />
     </>
   )}

@@ -17,7 +17,7 @@ const letters = [...new Set(feed.companies.map((c) => c.name[0].toUpperCase()))]
 <Base title={title} description={description} path={path} crumbs={[{ name: t.nav.operators, path }]}
   schema={[article({ path, title, description, published: site.launch.published, modified: feed.latestCheck })]}>
   <h1>{title}</h1>
-  <p class="standfirst">{description} This list is alphabetical, not ranked. For ranks, open a <a href={url.countries()}>country</a>.</p>
+  <p class="standfirst">{description} For operators in one country, open a <a href={url.countries()}>country</a>.</p>
   <PageMeta published={site.launch.published} reviewed={feed.latestCheck} reviewedLabel="Directory last checked" />
   <MockNotice />
   <p class="small">{letters.map((l, i) => (<>{i > 0 && ' · '}<a href={`#l-${l}`}>{l}</a></>))}</p>

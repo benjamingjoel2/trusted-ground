@@ -6,12 +6,12 @@ import { url } from '../lib/urls';
 interface Props { d: Destination; headingLevel?: 'h2' | 'h3' }
 const { d } = Astro.props;
 const feed = getFeed();
-const n = feed.rankedByCountry.get(d.slug)?.length ?? 0;
+const n = feed.byCountry.get(d.slug)?.length ?? 0;
 const region = regions.find((r) => r.slug === d.region)?.name ?? '';
 ---
 <article class="card">
   <a href={url.country(d.slug)} tabindex="-1" aria-hidden="true"><Photo slug={d.slug} alt="" credit={false} /></a>
   <p class="meta"><span>{region}</span><span>{n} {n === 1 ? 'operator' : 'operators'}</span></p>
-  <h3><a href={url.country(d.slug)}>Best local operators in {d.name}</a></h3>
-  <a class="pill" href={url.country(d.slug)} aria-label={`See the list for ${d.name}`}>See the list</a>
+  <h3><a href={url.country(d.slug)}>{d.name}</a></h3>
+  <a class="pill" href={url.country(d.slug)} aria-label={`Explore ${d.name}`}>Explore</a>
 </article>

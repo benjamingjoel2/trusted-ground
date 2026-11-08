@@ -7,7 +7,7 @@ reviewed: 2026-11-08
 status: reviewed
 sources:
   - url: https://eur-lex.europa.eu/eli/dir/2019/2161/oj
-    label: "Directive (EU) 2019/2161 (consumer protection rules, including transparency of rankings)"
+    label: "Directive (EU) 2019/2161 (consumer protection rules)"
   - url: https://www.legislation.gov.uk/ukpga/2015/15/contents
     label: "Consumer Rights Act 2015 (UK)"
   - url: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
@@ -22,15 +22,15 @@ The site is published by Tourground ("we", "us"). Contact details are at the end
 
 ## 2. What the site is
 
-The site is a free reference. It explains how to check a local tour operator and lists operators that the Tourground directory marks as verified or founder-owned, in the rank order given by that directory. We do not sell travel, take bookings, handle payments or act as anyone's agent. Any contract you make is between you and the company you book with.
+The site is a free reference. It explains how to check a local tour operator and lists operators that the Tourground directory marks as verified or founder-owned, in alphabetical order. We do not sell travel, take bookings, handle payments or act as anyone's agent. Any contract you make is between you and the company you book with.
 
 ## 3. Information, not advice
 
 We write carefully and cite our sources, but the site gives general information, not legal, financial or travel advice. Laws, entry rules and company details change. Check important facts with the sources we cite and with the company before you book.
 
-## 4. Verification and ranking
+## 4. Verification and order of lists
 
-A verification record shows only what Tourground checked, by whom and when, as described on [How verification works](/verification/). It is not a licence, a guarantee, an insurance policy or an endorsement of any particular trip. Rank comes only from the Tourground directory and is not influenced by payment, as explained on [How we rank](/how-we-rank/). Paid placements, if any, are labelled "Advertisement feature" and kept separate from ranked lists.
+A verification record shows only what Tourground checked, by whom and when, as described on [How verification works](/verification/). It is not a licence, a guarantee, an insurance policy or an endorsement of any particular trip. We do not rank operators: lists are alphabetical, and payment does not affect whether or where a company appears. Paid placements, if any, are labelled "Advertisement feature" and kept separate from the lists.
 
 ## 5. Links to other sites
 

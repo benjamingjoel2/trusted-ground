@@ -36,7 +36,8 @@ export interface Company {
   tier: TierKey;
   verified: boolean;
   founder_owned: boolean;
-  rank: Record<string, number>;
+  /** Ignored: Trusted Ground does not rank operators. */
+  rank?: Record<string, number>;
   summary: string;
   summary_attribution?: string | null;
   website: string | null;
@@ -48,8 +49,8 @@ export interface Company {
   example?: boolean;
 }
 
-export interface RankedEntry {
-  rank: number;
+/** One company listed for one country. Lists are alphabetical; there is no ranking. */
+export interface ListedEntry {
   company: Company;
 }
 
@@ -64,11 +65,11 @@ export interface Feed {
   excludedCount: number;
   destBySlug: Map<string, Destination>;
   companyById: Map<string, Company>;
-  /** Ranked list per destination, in feed rank order. */
-  rankedByCountry: Map<string, RankedEntry[]>;
+  /** Companies listed per destination (from delivers_in), alphabetical. */
+  byCountry: Map<string, ListedEntry[]>;
   countriesByRegion: Map<string, Destination[]>;
-  /** niche -> destination slug -> ranked entries (feed rank order within each country). */
-  niche: Map<string, Map<string, RankedEntry[]>>;
+  /** specialty -> destination slug -> entries (alphabetical). */
+  niche: Map<string, Map<string, ListedEntry[]>>;
   latestCheck: string;
 }
 
@@ -135,31 +136,31 @@ export function getFeed(): Feed {
   }
   companies.sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
-  // Ranked list per country: straight from the feed's rank field, never reordered.
-  const rankedByCountry = new Map<string, RankedEntry[]>();
+  // Listed per country: every country the company delivers in (or its base if none given).
+  // Companies are already sorted by name, so each list is alphabetical.
+  const byCountry = new Map<string, ListedEntry[]>();
   for (const c of companies) {
-    for (const [slug, rank] of Object.entries(c.rank ?? {})) {
+    const where = c.delivers_in?.length ? c.delivers_in : [c.country_base];
+    for (const slug of new Set(where)) {
       if (!destBySlug.has(slug)) continue;
-      if (!Number.isInteger(rank) || rank < 1) fail(`company ${c.id}: bad rank for ${slug}`);
-      let list = rankedByCountry.get(slug);
-      if (!list) rankedByCountry.set(slug, (list = []));
-      list.push({ rank, company: c });
+      let list = byCountry.get(slug);
+      if (!list) byCountry.set(slug, (list = []));
+      list.push({ company: c });
     }
   }
-  for (const list of rankedByCountry.values()) list.sort((a, b) => a.rank - b.rank);
 
   const countries = destinations
-    .filter((d) => (rankedByCountry.get(d.slug)?.length ?? 0) > 0)
+    .filter((d) => (byCountry.get(d.slug)?.length ?? 0) > 0)
     .sort((a, b) => a.name.localeCompare(b.name, 'en'));
 
   const countriesByRegion = new Map<string, Destination[]>();
   for (const r of regions) countriesByRegion.set(r.slug, []);
   for (const d of countries) countriesByRegion.get(d.region)!.push(d);
 
-  const niche = new Map<string, Map<string, RankedEntry[]>>();
+  const niche = new Map<string, Map<string, ListedEntry[]>>();
   for (const n of niches) niche.set(n.slug, new Map());
   for (const d of countries) {
-    for (const e of rankedByCountry.get(d.slug)!) {
+    for (const e of byCountry.get(d.slug)!) {
       for (const n of e.company.niches) {
         const m = niche.get(n)!;
         let l = m.get(d.slug);
@@ -180,7 +181,7 @@ export function getFeed(): Feed {
     excludedCount,
     destBySlug,
     companyById,
-    rankedByCountry,
+    byCountry,
     countriesByRegion,
     niche,
     latestCheck,
@@ -194,5 +195,5 @@ export function destName(slug: string): string {
 
 /** A country page exists only for publishable destinations. */
 export function hasCountryPage(slug: string): boolean {
-  return (getFeed().rankedByCountry.get(slug)?.length ?? 0) > 0;
+  return (getFeed().byCountry.get(slug)?.length ?? 0) > 0;
 }

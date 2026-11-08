@@ -1,7 +1,7 @@
 /** JSON-LD builders. Every node uses absolute URLs and only feed or sourced facts. */
 import { site } from '../config/site.config';
 import { abs } from './urls';
-import { destName, type Company, type Destination, type RankedEntry } from './feed';
+import { destName, type Company, type Destination, type ListedEntry } from './feed';
 
 export const ORG_ID = `${site.url}/#publisher`;
 export const SITE_ID = `${site.url}/#website`;
@@ -95,12 +95,12 @@ export function placeNode(d: Destination, path: string) {
   };
 }
 
-export function itemList(name: string, path: string, entries: RankedEntry[], companyPath: (id: string) => string) {
+export function itemList(name: string, path: string, entries: ListedEntry[], companyPath: (id: string) => string) {
   return {
     '@type': 'ItemList',
     '@id': abs(path) + '#list',
     name,
-    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    itemListOrder: 'https://schema.org/ItemListUnordered',
     numberOfItems: entries.length,
     itemListElement: entries.map((e, i) => ({
       '@type': 'ListItem',

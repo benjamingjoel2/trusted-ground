@@ -10,7 +10,7 @@ sources:
     label: "Tourground (publisher and directory)"
 ---
 
-Trusted Ground is a reference for finding a trustworthy local tour operator anywhere in the world. It explains how to check an operator, what verification means, and lists the verified operators in each country, ranked on merit.
+Trusted Ground is a reference for finding a trustworthy local tour operator anywhere in the world. It explains how to check an operator, what verification means, and lists the verified operators in each country.
 
 ## Who publishes it
 
@@ -18,7 +18,7 @@ Trusted Ground is published by **Tourground**, which runs a directory of travel 
 
 ## Where the facts come from
 
-- **Company facts** (name, type, where it is based, where it delivers, specialties, memberships, tier, rank, sources and check date) come only from the Tourground directory export. They are not edited by hand on this site.
+- **Company facts** (name, type, where it is based, where it delivers, specialties, memberships, tier, sources and check date) come only from the Tourground directory export. They are not edited by hand on this site.
 - **Guide, country snapshots and answers** are written by the Trusted Ground desk. Each page lists its sources and shows when it was published and last reviewed. A page without sources is not published.
 - **Counts** of companies and countries are computed from the directory feed when the site is built.
 
@@ -27,7 +27,7 @@ Trusted Ground is published by **Tourground**, which runs a directory of travel 
 - We do not sell trips, take bookings or handle payments.
 - We do not publish reviews, ratings or testimonials.
 - We do not list companies that are not verified, even if they appear elsewhere.
-- No company can pay to be listed or to move up a ranked list. See [How we rank](/how-we-rank/).
+- We do not rank operators. Lists are alphabetical, and no company can pay to be listed or to appear higher.
 
 ## Errors
 

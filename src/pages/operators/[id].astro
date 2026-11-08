@@ -23,7 +23,6 @@ const base = feed.destBySlug.get(c.country_base);
 const region = base ? regions.find((r) => r.slug === base.region) : undefined;
 const nicheName = (s: string) => niches.find((n) => n.slug === s)?.name ?? s;
 const out = companyOutbound(c);
-const ranks = Object.entries(c.rank).filter(([s]) => hasCountryPage(s)).sort((a, b) => a[1] - b[1]);
 const title = `${c.name}: verification record`;
 const where = c.delivers_in.length ? c.delivers_in.map(destName).join(', ') : destName(c.country_base);
 const description = `${c.name}, ${t.kindShort[c.kind].toLowerCase()} based in ${destName(c.country_base)}. Delivers in ${where}. Tier: ${tiers[c.tier].label}. Last checked ${c.last_checked}.`.slice(0, 200);
@@ -65,8 +64,6 @@ const crumbs = [
     <dd>{c.niches.length ? c.niches.map((n, i) => (<>{i > 0 && ', '}<a href={url.niche(n)}>{nicheName(n)}</a></>)) : t.noneListed}</dd>
     <dt>{t.memberships}</dt><dd>{c.memberships?.length ? c.memberships.join(', ') : t.noneListed}</dd>
     <dt>{t.tier}</dt><dd><TierBadge company={c} /></dd>
-    <dt>{t.rank}</dt>
-    <dd>{ranks.length ? ranks.map(([s, n], i) => (<>{i > 0 && '; '}No. {n} in <a href={url.country(s)}>{destName(s)}</a></>)) : 'Not ranked in any country list.'}</dd>
     <dt>{t.lastChecked}</dt><dd><time datetime={c.last_checked}>{c.last_checked}</time></dd>
   </dl>
 

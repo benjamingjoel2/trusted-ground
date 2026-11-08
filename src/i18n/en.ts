@@ -5,9 +5,10 @@
 export const en = {
   skip: 'Skip to content',
   nav: {
-    countries: 'Countries',
+    articles: 'Articles',
+    countries: 'Destinations',
     regions: 'Regions',
-    best: 'Best by niche',
+    best: 'Specialties',
     guide: 'Booking guide',
     verification: 'Verification',
     questions: 'Questions',
@@ -23,7 +24,6 @@ export const en = {
   lastChecked: 'Last checked',
   sources: 'Sources',
   onThisPage: 'On this page',
-  rank: 'Rank',
   operator: 'Operator',
   kind: 'Type',
   tier: 'Tier',

@@ -17,7 +17,7 @@ export const site = {
   tagline: 'Verified local operators, country by country',
   /** One-sentence positioning used in meta descriptions and llms.txt. */
   positioning:
-    'The plain-English reference for finding a trustworthy local operator anywhere in the world: how to check one, what verification means, and the verified operators in each country, ranked on merit.',
+    'The plain-English reference for finding a trustworthy local operator anywhere in the world: how to check one, what verification means, and the verified operators in each country.',
   domain: 'trustedground.tourground.com',
   url: 'https://trustedground.tourground.com',
   language: 'en',
@@ -85,7 +85,7 @@ export const site = {
   /** Analytics: Vercel Web Analytics only. No other tracking. */
   analytics: { vercel: true },
 
-  /** Dates used on site-level pages (About, How we rank, legal pages). */
+  /** Dates used on site-level pages (About, legal pages). */
   launch: { published: '2026-11-08' },
 } as const;
 
@@ -96,22 +96,23 @@ export const site = {
 export const disclosure = {
   footerPublishedBy: 'Published by Tourground.',
   footerShort:
-    'Trusted Ground is an independent reference published by Tourground. It lists only companies that Tourground has verified. Rank is merit, never paid.',
-  rankingStatement:
-    'Rank comes only from the rank in the Tourground directory feed. No company can pay to be listed, to move up, or to be included in a ranked list.',
+    'Trusted Ground is an independent reference published by Tourground. It lists only companies that Tourground has verified. Lists are alphabetical and never paid.',
+  /** How lists are ordered. Trusted Ground does not rank operators. */
+  listingStatement:
+    'Operators are listed in alphabetical order. Trusted Ground does not rank them, and no company can pay to be listed or to appear higher.',
   paidLabel: 'Advertisement feature',
   paidSlotNote:
-    'Paid placements appear only in this box, are labelled "Advertisement feature" and never change the ranked list below.',
+    'Paid placements appear only in this box, are labelled "Advertisement feature" and never change which companies are listed or their order.',
   paidSlotEmpty: 'No advertisement feature is running on this page.',
   platinumNote:
-    'Platinum is a paid Tourground plan. It allows a link to the company\'s own website, marked as sponsored. It does not change rank.',
+    'Platinum is a paid Tourground plan. It allows a link to the company\'s own website, marked as sponsored. It does not change where a company appears.',
   sponsoredLinkLabel: 'Company website (sponsored link)',
   founderNote:
-    'Founder-owned brands belong to Tourground\'s founders. They are checked and ranked under the same rules as every other company and never placed above others for that reason.',
+    'Founder-owned brands belong to Tourground\'s founders. They are checked and listed under the same rules as every other company and never placed above others for that reason.',
   publisherRelationship:
     'Trusted Ground is published by Tourground, which runs the directory the listings come from. Tourground earns money from paid plans sold to travel companies, including the Platinum plan. Some listed brands are owned by Tourground\'s founders and are labelled as such.',
   mockFeedNotice:
-    'Preview data: this build uses a mock directory feed. Company records and ranks are placeholders until the live Tourground directory export is connected.',
+    'Preview data: this build uses a mock directory feed. Company records are placeholders until the live Tourground directory export is connected.',
   exampleRecordLabel: 'Example record, not a real company',
   noAdvice:
     'Trusted Ground is a reference, not a travel agent. We do not sell trips, take bookings or handle payments.',
@@ -155,7 +156,7 @@ export const tiers: Record<
   },
   platinum: {
     label: 'Platinum',
-    short: 'A paid Tourground plan with services. Paying does not prove data and does not change rank.',
+    short: 'A paid Tourground plan with services. Paying does not prove data and does not change where a company appears.',
     paid: true,
     checks: [
       'Everything checked at the Verified tier.',
@@ -163,7 +164,7 @@ export const tiers: Record<
     ],
     notChecked: [
       'Paying for Platinum does not give a company the proof required for Black.',
-      'Paying for Platinum does not change rank.',
+      'Paying for Platinum does not change where a company appears.',
     ],
   },
   founder: {
@@ -172,7 +173,7 @@ export const tiers: Record<
     paid: false,
     checks: [
       'Ownership: the brand belongs to Tourground\'s founders (Tourground Geotrax).',
-      'It follows the same fees and ranking rules as every other company in the directory.',
+      'It follows the same fees and listing rules as every other company in the directory.',
     ],
     notChecked: ['Verification is not a licence, an insurance policy or a financial guarantee.'],
   },
@@ -194,7 +195,7 @@ export const regions = [
   { slug: 'poles', name: 'The Poles' },
 ] as const;
 
-/** Niches for cross-country ranked lists. Slugs are used in companies[].niches. */
+/** Specialties (niches) for cross-country lists. Slugs are used in companies[].niches. */
 export const niches = [
   { slug: 'safari', name: 'Safari' },
   { slug: 'trekking-mountains', name: 'Trekking and mountains' },

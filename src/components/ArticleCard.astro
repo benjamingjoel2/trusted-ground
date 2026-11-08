@@ -1,0 +1,15 @@
+---
+import Photo from './Photo.astro';
+import { url } from '../lib/urls';
+import { fmtDate, readMinutes } from '../lib/content';
+import type { CollectionEntry } from 'astro:content';
+interface Props { a: CollectionEntry<'articles'> }
+const { a } = Astro.props;
+const href = url.article(a.id);
+---
+<article class="card">
+  <a class="photo-link" href={href} tabindex="-1" aria-hidden="true"><Photo slug={a.data.hero ?? a.data.countries[0] ?? ''} alt="" credit={false} /></a>
+  <p class="meta"><span>{fmtDate(a.data.published)}</span><span>{readMinutes(a.body)} min read</span></p>
+  <h3><a href={href}>{a.data.title}</a></h3>
+  <a class="pill" href={href} aria-label={`Read: ${a.data.title}`}>Read story</a>
+</article>

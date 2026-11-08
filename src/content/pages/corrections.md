@@ -20,4 +20,4 @@ To report an error in our own text, email us with the page address, what is wron
 
 ## What we will not do
 
-We do not remove accurate, sourced information because a company prefers it not to appear, and we do not change rank on request. Rank comes only from the directory.
+We do not remove accurate, sourced information because a company prefers it not to appear, and we do not change the order of any list on request. Lists are alphabetical.

@@ -8,7 +8,7 @@ Loader: `src/lib/feed.ts`. Structural check: `scripts/check-feed.mjs` (runs befo
 
 | Field | Type | Status | Notes |
 | --- | --- | --- | --- |
-| `_meta.source` | `"mock"` \| `"live"` | **Assumed** | If `"mock"`, every ranked page shows the preview-data notice from `site.config.ts`. |
+| `_meta.source` | `"mock"` \| `"live"` | **Assumed** | If `"mock"`, every list page shows the preview-data notice from `site.config.ts`. |
 | `_meta.generated` | date | **Assumed** | Informational only. |
 | `destinations[]` | array | Given | |
 | `companies[]` | array | Given | |
@@ -17,14 +17,14 @@ Loader: `src/lib/feed.ts`. Structural check: `scripts/check-feed.mjs` (runs befo
 
 | Field | Type | Status | Notes |
 | --- | --- | --- | --- |
-| `slug` | string | Given | Lowercase, hyphenated. **Assumed** to be the key used in `companies[].country_base`, `delivers_in[]`, `sells_from[]` and `rank{}` (the brief shows `rank{COUNTRY:n}` without saying whether COUNTRY is a slug or an ISO code). |
+| `slug` | string | Given | Lowercase, hyphenated. **Assumed** to be the key used in `companies[].country_base`, `delivers_in[]`, `sells_from[]` and `rank{}`. |
 | `name` | string | Given | Display name. |
 | `type` | string | Given | Values used in the mock: `country`, `nation` (e.g. Scotland), `territory` (e.g. French Polynesia, Taiwan, Cook Islands), `continent` (Antarctica). Only `country` produces schema.org `Country`; all others produce `Place`. |
 | `region` | string | Given | Must be one of: `africa`, `asia`, `europe`, `americas`, `middle-east`, `oceania`, `poles` (see `regions` in `site.config.ts`). Build fails on any other value. |
 | `content_dir` | string \| null | Given | **Assumed** format `countries/<slug>`; the last segment is matched to `src/content/countries/<slug>.md` (the country snapshot). |
 | `booster_url` | string \| null | Given | The country's own Tourground reference site, if any. |
 
-A destination gets a page only when at least one publishable company has a `rank` for it.
+A destination gets a page only when at least one publishable company delivers in it (`delivers_in`, or `country_base` if `delivers_in` is empty).
 
 ## `companies[]`
 
@@ -40,7 +40,7 @@ A destination gets a page only when at least one publishable company has a `rank
 | `tier` | `verified` \| `black` \| `platinum` \| `founder` | Given | |
 | `verified` | boolean | Given | Publication rule: listed only if `verified === true` **or** `founder_owned === true`. |
 | `founder_owned` | boolean | Given | Drives the "Founder-owned (Tourground Geotrax)" label. Never hard-coded. |
-| `rank` | `{ [destination slug]: integer ≥ 1 }` | Given | The only source of order. Never reordered. |
+| `rank` | `{ [destination slug]: integer ≥ 1 }` | Given, **ignored** | Trusted Ground does not rank operators; lists are alphabetical. The field may stay in the export. |
 | `summary` | string | Given | |
 | `website` | URL \| null | Given | Linked as an outbound CTA **only** for `tier: platinum` (with `rel="sponsored nofollow"`). |
 | `profile_url` | URL \| null | Given | Tourground profile. If null, the site links to `links.profileFallbackUrl` in `site.config.ts`. |
@@ -62,7 +62,6 @@ A destination gets a page only when at least one publishable company has a `rank
   - `kind` is a guess: `dmc` only where the homepage says the trip is run on the ground or from the destination; otherwise `agency`.
   - `niches` are tagged from the brand's own stated niches plus keywords in its meta description (see `KW` in the script).
   - `delivers_in` for multi-country brands (Extrafari, Safari Golf Tour, Tringles, Gustav, Baltic Light, Aravia, Soft Day) is read from their homepage text; Sabbatical states no country and has none.
-  - `rank` values are **placeholders**: inside each country, the brand based there first, then multi-country brands, then alphabetical.
   - `sells_from`, `memberships` and `profile_url` are empty because no source was available.
 - **Two fake records**: `example-operator-kenya` (Platinum, to exercise the sponsored link) and `example-operator-peru` (Black).
 - **One fake negative record**: `example-prospect-unverified` (`verified: false`, `founder_owned: false`). The build validator fails if it ever appears anywhere in the output.

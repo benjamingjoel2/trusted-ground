@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import MockNotice from '../../components/MockNotice.astro';
 import PageMeta from '../../components/PageMeta.astro';
-import RankedList from '../../components/RankedList.astro';
+import OperatorList from '../../components/OperatorList.astro';
 import AdSlot from '../../components/AdSlot.astro';
 import Sources from '../../components/Sources.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
@@ -22,20 +22,20 @@ export function getStaticPaths() {
 }
 const { d } = Astro.props as { d: Destination };
 const feed = getFeed();
-const entries = feed.rankedByCountry.get(d.slug)!;
+const entries = feed.byCountry.get(d.slug)!;
 const region = regions.find((r) => r.slug === d.region)!;
 const snapId = d.content_dir ? d.content_dir.split('/').pop() : d.slug;
 const snap = (await published('countries')).find((e) => e.id === snapId);
 const Snap = snap ? (await render(snap)).Content : null;
 const path = url.country(d.slug);
-const title = `Best local tour operators in ${d.name}`;
-const description = `${t.operatorsCount(entries.length)} in ${d.name}, verified or founder-owned, ranked on merit from the Tourground directory${snap?.data.best_months ? `. Best months: ${snap.data.best_months}` : ''}.`.slice(0, 200);
+const title = `Local tour operators in ${d.name}`;
+const description = `${t.operatorsCount(entries.length)} in ${d.name}, verified or founder-owned, from the Tourground directory${snap?.data.best_months ? `. Best months: ${snap.data.best_months}` : ''}.`.slice(0, 200);
 const checked = entries.reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), '0000-00-00');
 const reviewed = snap && iso(snap.data.reviewed) > checked ? iso(snap.data.reviewed) : checked;
 const pub = snap ? iso(snap.data.published) : site.launch.published;
 const sources = [
   ...(snap?.data.sources ?? []),
-  { url: site.publisher.url + '/', label: `Tourground directory feed (ranks and company records, last checked ${checked})` },
+  { url: site.publisher.url + '/', label: `Tourground directory feed (company records, last checked ${checked})` },
 ];
 const crumbs = [{ name: t.breadcrumbHome, path: '/' }, { name: region.name, path: url.region(region.slug) }, { name: d.name, path }];
 const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug !== d.slug).slice(0, 8);
@@ -44,21 +44,21 @@ const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug
   crumbs={crumbs.slice(1)}
   schema={[
     placeNode(d, path),
-    itemList(`Best local operators in ${d.name}`, path, entries, url.operator),
+    itemList(`Local tour operators in ${d.name}`, path, entries, url.operator),
     article({ path, title, description, published: pub, modified: reviewed, sources, about: { '@id': new URL(path, site.url) + '#place' } }),
   ]}>
   <section class="dest" aria-labelledby="dest-h">
     <div class="dest-main">
       <Breadcrumbs items={crumbs} />
       <a class="chip" href={url.region(region.slug)}>{region.name}</a>
-      <h1 id="dest-h" class="display"><span class="vh">Best local tour operators in </span>{d.name}</h1>
-      <p>{t.operatorsCount(entries.length)} listed for {d.name}. Each is verified by Tourground or founder-owned, and labelled. Rank comes only from the directory and is never paid.</p>
+      <h1 id="dest-h" class="display"><span class="vh">Local tour operators in </span>{d.name}</h1>
+      <p>{t.operatorsCount(entries.length)} listed for {d.name}. Each is verified by Tourground or founder-owned, and labelled. Listed in alphabetical order.</p>
       <Photo slug={d.slug} alt={`Landscape in ${d.name}`} priority sizes="(min-width: 64rem) 50vw, 100vw" widths={[480, 720, 960, 1280]} />
     </div>
     <div class="dest-side">
       <h2>At a glance</h2>
       <ul class="glance">
-        <li><span class="label">Operators listed</span><strong>{entries.length}</strong> · <a href="#ranked">See the ranked list</a></li>
+        <li><span class="label">Operators listed</span><strong>{entries.length}</strong> · <a href="#operators">See the list</a></li>
         <li><span class="label">{t.bestMonths}</span><strong>{snap?.data.best_months ?? 'No reviewed source yet'}</strong></li>
         {snap && snap.data.main_regions.length > 0 && <li><span class="label">{t.mainRegions}</span><strong>{snap.data.main_regions.join(', ')}</strong></li>}
         <li><span class="label">{t.entryBasics}</span>{snap?.data.entry_basics ?? 'Check your own government\'s travel advice and the destination\'s official immigration site.'}</li>
@@ -75,9 +75,9 @@ const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug
     <div class="layout">
       <div class="main">
         <PageMeta published={pub} reviewed={reviewed} />
-        <h2 id="ranked">The ranked list</h2>
-        <p class="muted">{disclosure.rankingStatement}</p>
-        <RankedList entries={entries} caption={`Local tour operators in ${d.name}, by rank`} />
+        <h2 id="operators">Operators in {d.name}</h2>
+        <p class="muted">{disclosure.listingStatement}</p>
+        <OperatorList entries={entries} caption={`Local tour operators in ${d.name}, alphabetical`} />
 
         <h2 id="snapshot">{t.snapshot}</h2>
         {snap && Snap ? (

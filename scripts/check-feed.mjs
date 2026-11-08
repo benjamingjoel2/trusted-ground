@@ -5,7 +5,7 @@ const file = process.env.FEED_PATH || (fs.existsSync('data/feed.json') ? 'data/f
 const feed = JSON.parse(fs.readFileSync(path.resolve(file), 'utf8'));
 const errors = [];
 const REQ_D = ['slug', 'name', 'type', 'region'];
-const REQ_C = ['id', 'name', 'kind', 'country_base', 'delivers_in', 'niches', 'tier', 'verified', 'founder_owned', 'rank', 'summary', 'sources', 'last_checked'];
+const REQ_C = ['id', 'name', 'kind', 'country_base', 'delivers_in', 'niches', 'tier', 'verified', 'founder_owned', 'summary', 'sources', 'last_checked'];
 const slugs = new Set();
 for (const d of feed.destinations) {
   for (const k of REQ_D) if (d[k] == null) errors.push(`destination ${d.slug ?? '?'}: missing ${k}`);
@@ -17,7 +17,7 @@ for (const c of feed.companies) {
   if (!['dmc', 'agency'].includes(c.kind)) errors.push(`company ${c.id}: kind must be dmc|agency`);
   if (!['verified', 'black', 'platinum', 'founder'].includes(c.tier)) errors.push(`company ${c.id}: bad tier ${c.tier}`);
   if (c.last_checked && !/^\d{4}-\d{2}-\d{2}$/.test(c.last_checked)) errors.push(`company ${c.id}: last_checked must be YYYY-MM-DD`);
-  for (const s of [c.country_base, ...(c.delivers_in || []), ...Object.keys(c.rank || {})]) if (s && !slugs.has(s)) errors.push(`company ${c.id}: unknown destination "${s}"`);
+  for (const s of [c.country_base, ...(c.delivers_in || [])]) if (s && !slugs.has(s)) errors.push(`company ${c.id}: unknown destination "${s}"`);
   if (c.verified === true || c.founder_owned === true) pub++; else ex++;
 }
 if (errors.length) {

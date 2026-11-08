@@ -4,7 +4,7 @@ import { niches, regions, site } from '../config/site.config';
 import { url, abs } from './urls';
 
 export type Entry = { loc: string; lastmod: string };
-export const SECTIONS = ['pages', 'countries', 'operators', 'rankings', 'guide', 'questions'] as const;
+export const SECTIONS = ['pages', 'articles', 'countries', 'operators', 'specialties', 'guide', 'questions'] as const;
 export type Section = (typeof SECTIONS)[number];
 
 export async function sectionEntries(section: Section): Promise<Entry[]> {
@@ -22,15 +22,19 @@ export async function sectionEntries(section: Section): Promise<Entry[]> {
       for (const r of regions) out.push(e(url.region(r.slug), feed.latestCheck));
       const snaps = new Map((await published('countries')).map((s) => [s.id, iso(s.data.reviewed)]));
       for (const d of feed.countries) {
-        const checked = feed.rankedByCountry.get(d.slug)!.reduce((m, x) => max(m, x.company.last_checked), L);
+        const checked = feed.byCountry.get(d.slug)!.reduce((m, x) => max(m, x.company.last_checked), L);
         out.push(e(url.country(d.slug), max(checked, snaps.get(d.slug) ?? L)));
       }
       return out;
     }
     case 'operators':
       return feed.companies.filter((c) => !c.example).map((c) => e(url.operator(c.id), max(c.last_checked, L)));
-    case 'rankings':
-      return [e(url.best(), feed.latestCheck), ...niches.filter((n) => feed.niche.get(n.slug)!.size > 0).map((n) => e(url.niche(n.slug), feed.latestCheck))];
+    case 'specialties':
+      return [e(url.specialties(), feed.latestCheck), ...niches.filter((n) => feed.niche.get(n.slug)!.size > 0).map((n) => e(url.niche(n.slug), feed.latestCheck))];
+    case 'articles': {
+      const a = await published('articles');
+      return [e(url.articles(), a.reduce((m, x) => max(m, iso(x.data.reviewed)), L)), ...a.map((x) => e(url.article(x.id), iso(x.data.reviewed)))];
+    }
     case 'guide': {
       const g = await published('guide');
       return [e(url.guide(), g.reduce((m, x) => max(m, iso(x.data.reviewed)), L)), e(url.checklist(), L), ...g.map((x) => e(url.guideChapter(x.id), iso(x.data.reviewed)))];

@@ -19,7 +19,7 @@ const description = 'Comparison tables built only from the Tourground directory 
 const order: TierKey[] = ['verified', 'black', 'platinum', 'founder'];
 const rows = regions.map((r) => {
   const ds = feed.countriesByRegion.get(r.slug) ?? [];
-  const cs = new Map(ds.flatMap((d) => feed.rankedByCountry.get(d.slug)!.map((e) => [e.company.id, e.company] as const)));
+  const cs = new Map(ds.flatMap((d) => feed.byCountry.get(d.slug)!.map((e) => [e.company.id, e.company] as const)));
   const list = [...cs.values()];
   return { r, countries: ds.length, ops: list.length, dmc: list.filter((c) => c.kind === 'dmc').length, agency: list.filter((c) => c.kind === 'agency').length };
 });
