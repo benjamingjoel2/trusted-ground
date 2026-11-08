@@ -35,7 +35,7 @@ Typical activities listed by ONMT include:
 - a camel caravan into the dunes and a night in a bivouac (a desert tent camp)
 - watching sunrise over the dunes after a night on site
 - hiking on foot or by camel
-- Dayet Srij, a seasonal lake among the dunes that attracts stilts, wagtails and storks
+- Dayet Srij, a lake among the dunes that attracts stilts, wagtails and storks
 - quad biking
 - side trips to the Todra (Tudgha) gorges
 
@@ -46,9 +46,9 @@ This is the part people most often underestimate. ONMT's suggested "desert break
 - **Marrakech to the Ouarzazate-Zagora-Tinghir area:** 193.7 km, about 3 hours 47 minutes.
 - **On to the Errachidia-Midelt-Merzouga area:** 303.0 km, about 4 hours 20 minutes.
 
-That is around eight hours at the wheel before you add stops, and the route crosses the Atlas mountains. From the north, ONMT gives about 341.8 km and 5 hours 21 minutes from Fez to the Errachidia-Midelt-Merzouga area, with the route crossing the Talghemt pass. It also puts Merzouga about 2 hours 30 minutes from Errachidia.
+That is around eight hours at the wheel before you add stops. From the north, ONMT gives about 341.8 km and 5 hours 21 minutes from Fez to the Errachidia-Midelt-Merzouga area, with the route crossing the Talghemt pass. It also puts Merzouga about 2 hours 30 minutes from Errachidia.
 
-Most visitors break the journey with at least one night on the way. ONMT's own recommendation is three days for the region. One night in the dunes after a single long drive from Marrakech leaves very little time actually in the desert.
+Breaking the journey with a night on the way makes the drive far easier, and ONMT's own recommendation is three days for the region. One night in the dunes after a single long drive from Marrakech leaves very little time actually in the desert.
 
 ## Heat, cold and when to go
 
@@ -69,7 +69,7 @@ ONMT also notes that the dunes are shaped by the Chergui, a Saharan wind. Ask wh
 
 - **Night driving.** The FCDO warns that poor lighting makes driving at night dangerous, with vehicles, pedestrians and animals on the road. Secondary and mountain roads can be especially hazardous in bad weather. Plan long drives for daylight.
 - **Self-driving.** The FCDO says UK drivers need a 1968 international driving permit alongside their licence, plus an insurer's green card.
-- **The Algerian border.** Merzouga is in Morocco's south-east. The FCDO states that the land border between Morocco and Algeria is closed and patrolled, and that crossing it without authorisation is illegal.
+- **The Algerian border.** Merzouga lies on Morocco's eastern side, near Algeria. The FCDO states that the land border between Morocco and Algeria is closed and patrolled, and that crossing it without authorisation is illegal.
 - **Activity standards.** The FCDO notes that adventure providers may not meet UK safety standards. It reports that quad biking accidents involving British nationals are frequent, and advises always wearing a helmet. Check that your insurance covers the activities you plan.
 - **Medical care.** The FCDO says public health facilities provide limited care and recommends insurance that covers local treatment and medical evacuation. See our [insurance guide](/guide/insurance/).
 
@@ -77,7 +77,7 @@ For wider trip planning see our [Morocco travel guide](/countries/morocco/), and
 
 ## Planning desert nights
 
-Camps around Erg Chebbi range from simple tents to more comfortable bivouacs. Before booking, find out:
+Before booking a night in a bivouac, find out:
 
 - how you reach the camp (by camel, on foot or by 4x4) and how long that takes
 - what the sleeping, washing and toilet arrangements are
