@@ -63,10 +63,10 @@ Two further rules shape the way trips are run. The park asks visitors to "visit 
 
 Both are common ways to see the islands. The park rules apply equally, and either way your visits to protected sites should be led by a specialised guide.
 
-- **A cruise** (a "live-aboard" trip) means you sleep on the boat, which moves between visitor sites, often overnight. Ask which islands and sites are on the itinerary. Ask too how many passengers each guide leads.
-- **A land-based trip** means you stay in hotels on the inhabited islands and join day trips by boat to visitor sites. You will spend more time ashore in towns. Ask which sites the day trips can reach.
+- **A cruise** (a "live-aboard" trip) means you sleep on board and the boat moves between visitor sites. Ask which islands and sites are on the itinerary. Ask too how many passengers each guide leads.
+- **A land-based trip** means you stay in hotels on the inhabited islands and join day trips by boat to visitor sites. Ask which sites the day trips can reach.
 
-Either way, the questions that matter are the same. Is the boat or day-tour provider authorised? Is each landing led by a guide? Is the itinerary fixed in writing before you pay? The national park fee and transit card are normally paid separately from the trip price, so check what your quote includes.
+Either way, the questions that matter are the same. Is the boat or day-tour provider authorised? Is each landing led by a guide? Is the itinerary fixed in writing before you pay? The park fee and transit card may or may not be included in a trip price, so check what your quote covers.
 
 Our [Ecuador travel guide](/countries/ecuador/) covers the rest of the country.
 

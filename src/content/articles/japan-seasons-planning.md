@@ -47,7 +47,7 @@ Rain does not shut the country down, but the FCDO warns that heavy rain during t
 
 ## High summer: heat, festivals and Mount Fuji
 
-The FCDO says Japanese summers are extremely hot and humid, with temperatures often above 35°C in July and August, and that heatstroke is a significant risk. It points travellers to the heatstroke alerts published by Japan's Ministry of the Environment. Plan outdoor sightseeing for early morning and evening, and carry water.
+The FCDO says Japanese summers are extremely hot and humid, with temperatures often above 35°C in July and August, and that heatstroke is a significant risk. It points travellers to the heatstroke alerts published by Japan's environment authorities. Plan outdoor sightseeing for early morning and evening, and carry water.
 
 JNTO notes that many Japanese people travel home for **Obon** in mid-August, so expect busy transport around then. If you plan to climb **Mount Fuji**, JNTO gives the climbing season as early July to around the first week of September and advises booking mountain accommodation well in advance.
 
