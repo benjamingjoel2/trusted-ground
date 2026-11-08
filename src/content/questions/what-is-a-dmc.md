@@ -6,6 +6,7 @@ order: 3
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: namibia
 sources:
   - url: https://www.admei.org/
     label: "ADMEI (Association of Destination Management Executives International)"

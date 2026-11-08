@@ -6,6 +6,7 @@ order: 6
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: chile
 sources:
   - url: https://www.gov.uk/guidance/foreign-travel-insurance
     label: "UK FCDO: Foreign travel insurance"

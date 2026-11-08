@@ -6,6 +6,7 @@ order: 1
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: botswana
 sources:
   - url: https://consumer.ftc.gov/articles/avoid-scams-when-you-travel
     label: "US Federal Trade Commission: Avoid scams when you travel"

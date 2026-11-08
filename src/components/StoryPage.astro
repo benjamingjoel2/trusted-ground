@@ -1,0 +1,55 @@
+---
+/** Article layout shared by stories, guide chapters and questions (split header, single-column body). */
+import Base from '../layouts/Base.astro';
+import Photo from './Photo.astro';
+import Sources from './Sources.astro';
+import StoryCard from './StoryCard.astro';
+import Carousel from './Carousel.astro';
+import { url } from '../lib/urls';
+import { iso, fmtDate } from '../lib/content';
+import { article } from '../lib/schema';
+import { destName } from '../lib/feed';
+import { placePhoto, creditLine } from '../lib/images';
+import { site } from '../config/site.config';
+import type { Story } from '../lib/stories';
+import { t } from '../i18n/en';
+interface Props {
+  path: string; title: string; description: string; category: string;
+  published: Date; reviewed: Date; minutes: number; hero?: string;
+  sources: { url: string; label: string }[]; more: Story[]; lead?: string; schema?: object[];
+}
+const p = Astro.props;
+const photo = p.hero ? placePhoto(p.hero) : null;
+---
+<Base title={p.title} description={p.description} path={p.path} full ogType="article"
+  crumbs={[{ name: t.nav.articles, path: url.articles() }, { name: p.title, path: p.path }]}
+  schema={[...(p.schema ?? []), article({ path: p.path, title: p.title, description: p.description, published: iso(p.published), modified: iso(p.reviewed), sources: p.sources })]}>
+  <header class="ahead">
+    <div class="ahead-text">
+      <a class="chip" href={url.articles()}>{p.category}</a>
+      <div class="ahead-bottom">
+        <h1>{p.title}</h1>
+        <p class="ahead-meta">{fmtDate(p.published)} <span aria-hidden="true">•</span> <span class="mono">{p.minutes} min read</span></p>
+        <div class="byline"><span class="byline-name">{site.name} editors</span><span class="mono">Writer</span></div>
+        {photo && p.hero && <p class="ahead-credit">{destName(p.hero)}. <a href={photo.credit.page}>{creditLine(photo.credit)}</a></p>}
+      </div>
+    </div>
+    <div class="ahead-photo">{p.hero && <Photo slug={p.hero} alt={destName(p.hero)} priority credit={false} sizes="(min-width: 64rem) 50vw, 100vw" widths={[480, 720, 960, 1280]} />}</div>
+  </header>
+  <div class="wrap">
+    <article class="abody">
+      <p class="adisclaimer">{site.name} articles are written from official sources, listed at the end. Rules, fees and advice change: check them before you book. Last reviewed {fmtDate(p.reviewed)}.</p>
+      {p.lead && <p class="alead">{p.lead}</p>}
+      <div class="prose"><slot /></div>
+      <Sources sources={p.sources} />
+    </article>
+  </div>
+  {p.more.length > 0 && (
+    <section class="section section-grey" aria-labelledby="more-h">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="more-h">More stories</h2><div class="sec-tools"><a class="viewall" href={url.articles()}>Read more</a><Carousel id="row-more" label="more stories" /></div></div>
+        <div class="row" id="row-more">{p.more.map((s) => <StoryCard s={s} />)}</div>
+      </div>
+    </section>
+  )}
+</Base>

@@ -428,3 +428,22 @@ h3 { font-size: 1.375rem; }
 .kn-sources summary { cursor: pointer; font-size: 0.75rem; display: inline-block; border-bottom: 1px solid var(--ink); padding-bottom: 0.15rem; }
 .kn-sources ol { margin-top: 1rem; padding-left: 1.25rem; }
 .kn-sources li { margin-bottom: 0.3rem; }
+.alead { font-size: 1.25rem; line-height: 1.5; font-weight: 600; margin: 0 0 1.5rem; }
+
+/* Travel advice listing */
+.filters { margin-bottom: 2rem; }
+.flabel { font-size: 0.8125rem; margin: 0 0 0.6rem; }
+.fpills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.4rem; }
+.fpill { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.8125rem; background: #fff; border: 1px solid var(--line); color: var(--ink); border-radius: 999px; padding: 0.55rem 0.9rem; cursor: pointer; text-decoration: none; }
+.fpill:hover { border-color: var(--ink); }
+.fpill[aria-pressed='true'] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.noresults { color: var(--slate); }
+.card[hidden] { display: none; }
+.explore h2 { margin-bottom: 1.75rem; }
+.xtiles { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+@media (min-width: 48rem) { .xtiles { grid-template-columns: repeat(3, 1fr); } }
+.xtile { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; min-height: 20rem; padding: 1.5rem; text-decoration: none; color: var(--ink); }
+.xtile .mono { font-size: 0.875rem; }
+.xtile .display { font-size: clamp(2.5rem, 1.8rem + 2.4vw, 3.5rem); margin: 0.3rem 0 1rem; }
+.x1 { background: #F79FE0; } .x2 { background: #F95D0F; } .x3 { background: var(--yellow); }
+.xtile:hover .pill { background: #000; }

@@ -6,6 +6,7 @@ order: 2
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: tanzania
 sources:
   - url: https://cadastur.turismo.gov.br/
     label: "Cadastur: Brazil's official register of tourism service providers (Ministério do Turismo)"

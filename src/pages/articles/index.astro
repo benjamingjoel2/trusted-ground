@@ -1,31 +1,10 @@
 ---
-import Base from '../../layouts/Base.astro';
-import ArticleCard from '../../components/ArticleCard.astro';
-import { site } from '../../config/site.config';
-import { url, abs } from '../../lib/urls';
-import { published, iso } from '../../lib/content';
-import { article } from '../../lib/schema';
+import StoryListing from '../../components/StoryListing.astro';
+import { allStories } from '../../lib/stories';
+import { url } from '../../lib/urls';
 import { t } from '../../i18n/en';
-const list = (await published('articles')).sort((a, b) => b.data.published.getTime() - a.data.published.getTime() || a.data.title.localeCompare(b.data.title));
-const cats = [...new Set(list.map((a) => a.data.category))];
-const path = url.articles();
-const title = 'Travel stories';
-const description = 'Practical, sourced travel stories: permits and park rules, seasons, planning and booking safely with a local operator.';
-const reviewed = list.reduce((m, a) => (iso(a.data.reviewed) > m ? iso(a.data.reviewed) : m), site.launch.published);
-const listLd = { '@type': 'ItemList', name: title, itemListOrder: 'https://schema.org/ItemListUnordered', numberOfItems: list.length, itemListElement: list.map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.data.title, url: abs(url.article(a.id)) })) };
+const all = await allStories();
 ---
-<Base title={title} description={description} path={path} full crumbs={[{ name: t.nav.articles, path }]}
-  schema={[article({ path, title, description, published: site.launch.published, modified: reviewed }), ...(list.length ? [listLd] : [])]}>
-  <div class="wrap listing">
-    <h1>Travel stories</h1>
-    <p class="listing-dek">{description}</p>
-    <p class="results">{cats.map((c, i) => (<>{i > 0 && ' · '}<a href={`#${c.replace(/\W+/g, '-').toLowerCase()}`}>{c}</a></>))}</p>
-    <div class="grid4">{list.map((a) => <ArticleCard a={a} />)}</div>
-    {cats.map((c) => (
-      <section aria-labelledby={c.replace(/\W+/g, '-').toLowerCase()} style="padding-top:3rem">
-        <div class="sec-head"><h2 id={c.replace(/\W+/g, '-').toLowerCase()}>{c}</h2></div>
-        <div class="grid4">{list.filter((a) => a.data.category === c).map((a) => <ArticleCard a={a} />)}</div>
-      </section>
-    ))}
-  </div>
-</Base>
+<StoryListing path={url.articles()} title="Travel advice and inspiration" crumbs={[{ name: t.nav.guide, path: url.articles() }]}
+  dek="Plan your next trip with practical, sourced travel advice: permits and park rules, seasons, travel tips and answers to the questions travellers ask."
+  stories={all} all={all} />

@@ -6,6 +6,7 @@ order: 1
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: kenya
 sources:
   - url: https://www.admei.org/
     label: "ADMEI (Association of Destination Management Executives International): definition of a DMC"

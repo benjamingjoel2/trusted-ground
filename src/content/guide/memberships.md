@@ -6,6 +6,7 @@ order: 4
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: antarctica
 sources:
   - url: https://www.adventuretravel.biz/
     label: "Adventure Travel Trade Association (ATTA)"

@@ -6,6 +6,7 @@ order: 3
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: nepal
 sources:
   - url: https://www.gov.uk/guidance/foreign-travel-insurance
     label: "UK Foreign, Commonwealth & Development Office: Foreign travel insurance"

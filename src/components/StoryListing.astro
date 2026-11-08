@@ -1,0 +1,60 @@
+---
+/** Story listing in the travel-advice layout: title, filter pills, results count, 4-column grid, Explore more band. */
+import Base from '../layouts/Base.astro';
+import StoryCard from './StoryCard.astro';
+import { regions, site } from '../config/site.config';
+import { url, abs } from '../lib/urls';
+import { article } from '../lib/schema';
+import type { Story } from '../lib/stories';
+interface Props { path: string; title: string; dek: string; stories: Story[]; all: Story[]; filters?: boolean; crumbs: { name: string; path: string }[] }
+const { path, title, dek, stories, all, filters = true, crumbs } = Astro.props;
+const cats = [...new Set(all.map((s) => s.category))].sort();
+const usedRegions = regions.filter((r) => all.some((s) => s.regions.includes(r.slug)));
+const listLd = { '@type': 'ItemList', name: title, itemListOrder: 'https://schema.org/ItemListUnordered', numberOfItems: stories.length, itemListElement: stories.map((s, i) => ({ '@type': 'ListItem', position: i + 1, name: s.title, url: abs(s.href) })) };
+---
+<Base title={title} description={dek} path={path} full crumbs={crumbs}
+  schema={[article({ path, title, description: dek, published: site.launch.published, modified: site.launch.published }), ...(stories.length ? [listLd] : [])]}>
+  <div class="wrap listing" data-listing>
+    <h1>{title}</h1>
+    <p class="listing-dek">{dek}</p>
+    <div class="filters">
+      <p class="mono flabel">Destination:</p>
+      <div class="fpills">
+        {usedRegions.map((r) => filters
+          ? <button type="button" class="fpill" data-filter="region" data-value={r.slug} aria-pressed="false">{r.name.replace(/^The /, '')}</button>
+          : <a class="fpill" href={`${url.articles()}?region=${r.slug}`}>{r.name.replace(/^The /, '')}</a>)}
+      </div>
+      <p class="mono flabel">Category:</p>
+      <div class="fpills">
+        {cats.map((c) => filters
+          ? <button type="button" class="fpill" data-filter="cat" data-value={c} aria-pressed="false">{c}</button>
+          : <a class="fpill" href={`${url.articles()}?category=${encodeURIComponent(c)}`}>{c}</a>)}
+      </div>
+    </div>
+    <p class="results">Results (<span data-count>{stories.length}</span>)</p>
+    <div class="grid4" data-grid>{stories.map((s) => <StoryCard s={s} />)}</div>
+    <p class="noresults" data-empty hidden>No stories match these filters yet.</p>
+  </div>
+  <section class="section section-band explore" aria-labelledby="explore-h">
+    <div class="wrap">
+      <h2 id="explore-h">Explore more</h2>
+      <div class="xtiles">
+        <a class="xtile x1" href={url.countries()}><span class="mono">Explore</span><span class="display">Destinations</span><span class="pill pill-dark">View all</span></a>
+        <a class="xtile x2" href={url.regions()}><span class="mono">Explore</span><span class="display">Regions</span><span class="pill pill-dark">View all</span></a>
+        <a class="xtile x3" href={url.checklist()}><span class="mono">Print</span><span class="display">Checklist</span><span class="pill pill-dark">View</span></a>
+      </div>
+    </div>
+  </section>
+  {filters && (
+    <script is:inline>
+    (function(){var root=document.querySelector('[data-listing]');if(!root)return;var state={region:null,cat:null};
+    var q=new URLSearchParams(location.search);state.region=q.get('region');state.cat=q.get('category');
+    function apply(){var n=0;root.querySelectorAll('[data-grid] > .card').forEach(function(c){var ok=(!state.cat||c.dataset.cat===state.cat)&&(!state.region||(' '+c.dataset.regions+' ').indexOf(' '+state.region+' ')>-1);c.hidden=!ok;if(ok)n++;});
+    root.querySelector('[data-count]').textContent=n;root.querySelector('[data-empty]').hidden=n>0;
+    root.querySelectorAll('.fpill[data-filter]').forEach(function(b){b.setAttribute('aria-pressed',state[b.dataset.filter]===b.dataset.value?'true':'false');});}
+    root.addEventListener('click',function(e){var b=e.target.closest('.fpill[data-filter]');if(!b)return;var k=b.dataset.filter;state[k]=state[k]===b.dataset.value?null:b.dataset.value;
+    var u=new URL(location.href);u.searchParams.delete('region');u.searchParams.delete('category');if(state.region)u.searchParams.set('region',state.region);if(state.cat)u.searchParams.set('category',state.cat);history.replaceState(null,'',u);apply();});
+    apply();})();
+    </script>
+  )}
+</Base>

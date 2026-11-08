@@ -1,32 +1,22 @@
 ---
-import Base from '../../layouts/Base.astro';
-import PageMeta from '../../components/PageMeta.astro';
-import Sources from '../../components/Sources.astro';
+import StoryPage from '../../components/StoryPage.astro';
 import { url } from '../../lib/urls';
-import { published, iso } from '../../lib/content';
-import { article, faqPage } from '../../lib/schema';
+import { published, readMinutes } from '../../lib/content';
+import { allStories } from '../../lib/stories';
+import { faqPage } from '../../lib/schema';
 import { render, type CollectionEntry } from 'astro:content';
-import { t } from '../../i18n/en';
 export async function getStaticPaths() {
-  const list = (await published('questions')).sort((a, b) => a.data.order - b.data.order);
-  return list.map((entry) => ({ params: { id: entry.id }, props: { entry, others: list.filter((x) => x.id !== entry.id) } }));
+  return (await published('questions')).map((entry) => ({ params: { id: entry.id }, props: { entry } }));
 }
-type E = CollectionEntry<'questions'>;
-const { entry, others } = Astro.props as { entry: E; others: E[] };
+const { entry } = Astro.props as { entry: CollectionEntry<'questions'> };
 const { Content } = await render(entry);
 const d = entry.data;
 const path = url.question(entry.id);
+const stories = (await allStories()).filter((s) => !(s.kind === 'question' && s.id === entry.id));
+const more = [...stories.filter((s) => s.kind === 'question'), ...stories.filter((s) => s.kind !== 'question')].slice(0, 8);
 ---
-<Base title={d.title} description={d.description} path={path}
-  crumbs={[{ name: t.nav.questions, path: url.questions() }, { name: d.title, path }]}
-  schema={[faqPage(path, [{ q: d.title, a: d.short_answer }]), article({ path, title: d.title, description: d.description, published: iso(d.published), modified: iso(d.reviewed), sources: d.sources })]}>
-  <p class="label">Question</p>
-  <h1>{d.title}</h1>
-  <div class="answer"><span class="label">{t.shortAnswer}</span>{d.short_answer}</div>
-  <PageMeta published={d.published} reviewed={d.reviewed} />
-  <h2 id="detail">{t.detail}</h2>
-  <div class="prose"><Content /></div>
-  <Sources sources={d.sources} />
-  <h2>Other questions</h2>
-  <ul>{others.map((o) => <li><a href={url.question(o.id)}>{o.data.title}</a></li>)}</ul>
-</Base>
+<StoryPage path={path} title={d.title} description={d.description} category="Questions" lead={d.short_answer}
+  published={d.published} reviewed={d.reviewed} minutes={readMinutes(entry.body)} hero={d.hero} sources={d.sources} more={more}
+  schema={[faqPage(path, [{ q: d.title, a: d.short_answer }])]}>
+  <Content />
+</StoryPage>

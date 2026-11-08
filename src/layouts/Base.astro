@@ -40,8 +40,8 @@ const ld = graph(...(allCrumbs.length ? [bc(allCrumbs)] : []), ...schema);
 const c = site.colors;
 const rootVars = `:root{--white:${c.white};--grey:${c.grey};--grey-2:${c.grey2};--grey-3:${c.grey3};--line:${c.line};--ink:${c.ink};--ink-deep:${c.inkDeep};--slate:${c.slate};--lime:${c.lime};--yellow:${c.yellow};--yellow-soft:${c.yellowSoft};--blue:${c.blue};--verified:${c.verified}}`;
 const nav = [
-  [t.nav.articles, url.articles()],
   [t.nav.countries, url.countries()],
+  [t.nav.articles, url.articles()],
   [t.nav.guide, url.guide()],
   [t.nav.questions, url.questions()],
 ];

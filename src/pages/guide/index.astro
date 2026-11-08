@@ -1,25 +1,10 @@
 ---
-import Base from '../../layouts/Base.astro';
-import PageMeta from '../../components/PageMeta.astro';
-import { site } from '../../config/site.config';
+import StoryListing from '../../components/StoryListing.astro';
+import { allStories } from '../../lib/stories';
 import { url } from '../../lib/urls';
-import { published, iso } from '../../lib/content';
-import { article } from '../../lib/schema';
-import { t } from '../../i18n/en';
-const chapters = (await published('guide')).sort((a, b) => a.data.order - b.data.order);
-const path = url.guide();
-const title = "A traveller's guide to booking with a local operator";
-const description = 'How to check a local tour operator before you pay: DMC or agency, licences, insurance, memberships, deposits and payment protection, red flags and what to ask.';
-const reviewed = chapters.reduce((m, c) => (iso(c.data.reviewed) > m ? iso(c.data.reviewed) : m), site.launch.published);
+const all = await allStories();
+const list = all.filter((s) => s.kind === 'guide');
 ---
-<Base title={title} description={description} path={path} crumbs={[{ name: t.nav.guide, path }]}
-  schema={[article({ path, title, description, published: site.launch.published, modified: reviewed })]}>
-  <p class="label">Guide</p>
-  <h1>{title}</h1>
-  <p class="standfirst">{description}</p>
-  <PageMeta published={site.launch.published} reviewed={reviewed} />
-  <ol class="entries">
-    {chapters.map((c) => (<li><div><a href={url.guideChapter(c.id)}>{c.data.title}</a><p>{c.data.description}</p></div></li>))}
-  </ol>
-  <p><a class="btnlink" href={url.checklist()}>The before-you-pay checklist</a></p>
-</Base>
+<StoryListing path={url.guide()} title="Travel tips" filters={false} crumbs={[{ name: 'Travel tips', path: url.guide() }]}
+  dek="How to book a trip with a local operator: what a DMC is, licences, insurance, memberships, deposits, red flags and what to ask before you pay."
+  stories={list} all={all} />

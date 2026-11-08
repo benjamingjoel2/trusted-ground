@@ -6,6 +6,7 @@ order: 4
 published: 2026-11-08
 reviewed: 2026-11-08
 status: reviewed
+hero: india
 sources:
   - url: https://eur-lex.europa.eu/eli/dir/2015/2302/oj
     label: "Directive (EU) 2015/2302 on package travel"
