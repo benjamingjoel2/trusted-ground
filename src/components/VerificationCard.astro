@@ -10,12 +10,12 @@ interface Props { company: Company }
 const { company: c } = Astro.props;
 const tier = tiers[c.tier];
 ---
-<section class={`vcard${c.verified ? ' vcard-verified' : ''}`} aria-labelledby="vcard-h">
-  <header class="vcard-head">
-    <h2 id="vcard-h" class="label-h">{t.card.title}</h2>
-    <p class="vcard-no">No. {c.id}</p>
+<section class={`vrec${c.verified ? ' vrec-verified' : ''}`} aria-labelledby="vrec-h">
+  <header class="vrec-head">
+    <h2 id="vrec-h" class="label-h">{t.card.title}</h2>
+    <p class="vrec-no">No. {c.id}</p>
   </header>
-  <dl class="vcard-grid">
+  <dl class="vrec-grid">
     <div>
       <dt>{t.card.status}</dt>
       <dd>
@@ -28,9 +28,9 @@ const tier = tiers[c.tier];
     </div>
     <div><dt>{t.card.checkedBy}</dt><dd>{c.checked_by || site.publisher.name}</dd></div>
     <div><dt>{t.card.checkedOn}</dt><dd><time datetime={c.last_checked}>{fmtDate(c.last_checked)}</time></dd></div>
-    {c.founder_owned && <div class="vcard-wide"><dt>Ownership</dt><dd>{site.publisher.founderLabel}</dd></div>}
+    {c.founder_owned && <div class="vrec-wide"><dt>Ownership</dt><dd>{site.publisher.founderLabel}</dd></div>}
   </dl>
-  <div class="vcard-cols">
+  <div class="vrec-cols">
     <div>
       <h3 class="label-h">{t.card.whatChecked}</h3>
       <ul class="checks">{tier.checks.map((x) => <li>{x}</li>)}</ul>
@@ -40,7 +40,7 @@ const tier = tiers[c.tier];
       <ul class="notchecked">{tier.notChecked.map((x) => <li>{x}</li>)}</ul>
     </div>
   </div>
-  <p class="vcard-sources">
+  <p class="vrec-sources">
     <span class="label">{t.sources}:</span>
     {c.sources.map((s, i) => (<>{i > 0 && '; '}<a href={s.url} rel={sourceRel(c, s.url)}>{s.label}</a></>))}.
     Tier definitions: <a href={tierSources[0].url}>{tierSources[0].label}</a>.

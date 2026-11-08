@@ -56,6 +56,7 @@ export function article(o: {
     description: o.description,
     url: abs(o.path),
     mainEntityOfPage: abs(o.path),
+    image: { '@type': 'ImageObject', url: abs('/og.png'), width: 1200, height: 630 },
     datePublished: o.published,
     dateModified: o.modified,
     inLanguage: site.language,

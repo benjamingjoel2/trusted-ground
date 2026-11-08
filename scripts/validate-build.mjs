@@ -85,7 +85,7 @@ for (const f of html) {
   // Factual pages: dates + sources
   if (!is404 && rel !== '/') {
     if (!s.includes('class="pagemeta"')) err(f, 'missing published / last reviewed dates');
-    if (!/class="sources"|class="vcard-sources"/.test(s) && !/^\/(regions|best|operators|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
+    if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions|best|operators|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
   }
   // JSON-LD
   for (const m of s.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
