@@ -46,17 +46,42 @@
   "redirects": [
     {
       "source": "/best",
-      "destination": "/specialties/",
+      "destination": "/articles/",
       "permanent": true
     },
     {
-      "source": "/best/:niche",
-      "destination": "/specialties/:niche/",
+      "source": "/best/:path*",
+      "destination": "/articles/",
+      "permanent": true
+    },
+    {
+      "source": "/specialties",
+      "destination": "/articles/",
+      "permanent": true
+    },
+    {
+      "source": "/specialties/:path*",
+      "destination": "/articles/",
+      "permanent": true
+    },
+    {
+      "source": "/operators",
+      "destination": "/countries/",
+      "permanent": true
+    },
+    {
+      "source": "/operators/:path*",
+      "destination": "/countries/",
+      "permanent": true
+    },
+    {
+      "source": "/verification",
+      "destination": "/about/",
       "permanent": true
     },
     {
       "source": "/how-we-rank",
-      "destination": "/disclosure/",
+      "destination": "/about/",
       "permanent": true
     }
   ]

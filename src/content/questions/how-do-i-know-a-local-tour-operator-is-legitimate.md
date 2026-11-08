@@ -1,6 +1,6 @@
 ---
 title: How do I know a local tour operator is legitimate?
-short_answer: Check its licence or registration with the issuing authority, confirm any membership with the body itself, read its written terms, and pay the company named on the contract by credit card. A listing on Trusted Ground adds a Tourground check, but does not replace these steps.
+short_answer: Check its licence or registration with the issuing authority, confirm any membership with the body itself, read its written terms, and pay the company named on the contract by credit card.
 description: How to check that a local tour operator is a real, licensed company before you pay, step by step, with sources.
 order: 1
 published: 2026-11-08
@@ -23,4 +23,4 @@ A legitimate operator can prove who it is, and the proof checks out when you loo
 4. **Payment.** The payee should be the company on your contract. Consumer-protection agencies in the US and the UK warn against paying by bank transfer, money-transfer service or cryptocurrency, because these are hard to reverse.
 5. **Consistency.** The company name, address and contact details should match across the contract, the website and the register.
 
-Trusted Ground lists only companies the Tourground directory marks verified or founder-owned, and every company page shows [what was checked](/verification/), by whom and when. Use that as one input, then do the checks above for your own booking. The [before-you-pay checklist](/checklist/) puts them on one page.
+The [before-you-pay checklist](/checklist/) puts them on one page.

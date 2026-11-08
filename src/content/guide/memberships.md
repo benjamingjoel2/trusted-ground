@@ -40,5 +40,3 @@ Trade associations are membership bodies. Each sets its own entry rules. Some ch
 2. Search for the operator's exact legal name and trading name.
 3. For ABTA and ATOL, note the membership or licence number and check it is valid for the company that takes your money.
 4. If you cannot find the company, ask the body directly before you pay.
-
-On Trusted Ground, memberships are shown only when they appear in the Tourground directory feed. If a company page says "None listed", the directory holds no membership for it. That does not mean the company has none.

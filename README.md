@@ -1,6 +1,6 @@
 # Trusted Ground
 
-**trustedground.tourground.com**: the plain-English reference for finding a trustworthy local operator anywhere in the world: how to check one, what verification means, and the verified operators in each country, ranked on merit. Published by Tourground.
+**trustedground.tourground.com**: practical, sourced travel stories and destination guides, published by Tourground.
 
 A static site built with [Astro](https://astro.build). No client-side framework, no tracking beyond Vercel Web Analytics, no cookies.
 
@@ -35,73 +35,50 @@ npm run preview    # serve dist/
 | JSON-LD builders | `src/lib/schema.ts` |
 | Sitemaps, robots.txt, llms.txt | `src/pages/sitemap*.ts`, `src/pages/robots.txt.ts`, `src/pages/llms.txt.ts` |
 
-## Add or update reviewed content
+## Publish a new article
 
-Every guide chapter, country snapshot, answer and reference page is a markdown file with this front matter:
+Articles are markdown files in `src/content/articles/`. One file per article; the file name is the URL (`src/content/articles/gorilla-trekking-permits.md` → `/articles/gorilla-trekking-permits/`).
 
 ```yaml
 ---
-title: What is a DMC?
-description: One sentence, under 200 characters.
+title: "Gorilla trekking permits in Rwanda and Uganda"
+description: "One sentence for listings and search results, under 200 characters."
+category: "Permits and rules"     # groups articles on /articles/ and the home page
+hero: rwanda                       # destination slug: its photo is used as the hero
+countries: [rwanda, uganda]        # links the article to these destination guides
 published: 2026-11-08
 reviewed: 2026-11-08
-status: draft            # draft | reviewed
+status: reviewed                   # draft | reviewed — only reviewed is published
 sources:
-  - url: https://example.org/official-page
+  - url: https://example.gov/official-page
     label: "Publisher: page title"
 ---
+
+Opening paragraph...
+
+## First section
 ```
 
-Rules, enforced by `src/content.config.ts` and `src/lib/content.ts`:
+Then commit and push to `main`; Vercel publishes it in about a minute. The newest article becomes the home page's featured story.
 
-- **Only `status: reviewed` is published.** Drafts stay in the repo and never reach the site.
-- **A reviewed file must list at least one source**, or the build fails. Never publish text without sources.
-- `reviewed` cannot be earlier than `published`.
-- When you re-check a page, update `reviewed`. That date is shown on the page and used in the sitemap and in `dateModified`.
+Rules, enforced by the build:
 
-Extra fields:
+- **Only `status: reviewed` is published**, and a reviewed file must list at least one source.
+- `reviewed` cannot be earlier than `published`. Update `reviewed` whenever you re-check a page.
+- No invented facts, statistics, quotes or prices. If you cannot source it, leave it out.
+- No ranking: the build fails on words like "ranked" or "best operators".
+- Photos: `hero` must be a destination slug with a photo in `data/images.json` (all 101 countries have one). To add or replace a photo, see `scripts/images/fetch-openverse.py`.
 
-- Guide: `order`, `short_title`.
-- Q&A: `order`, `short_answer` (shown first, and used in FAQPage JSON-LD).
-- Country snapshot (`src/content/countries/<slug>.md`, matched by the last part of the destination's `content_dir`): optional `best_months`, `main_regions` (list), `entry_basics`. Leave a field out if you have no source for it. Pages stay short rather than padded.
-- Checklist (`src/content/pages/checklist.md`): `items`, each with `text`, optional `detail`, a `source` and an optional `guide` chapter id.
+## Other content
 
-No invented facts: no made-up statistics, reviews, quotes or counts. Counts of companies or countries are only ever computed from the feed.
+| What | Where |
+| --- | --- |
+| Destination guides (one per country) | `src/content/countries/<slug>.md` (fields: `best_months`, `main_regions`, `entry_basics`) |
+| Booking guide chapters | `src/content/guide/*.md` (`order`, `short_title`) |
+| Questions | `src/content/questions/*.md` (`order`, `short_answer`) |
+| About, disclosure, legal pages, checklist, comparison tables | `src/content/pages/*.md` |
 
-## Refresh the feed
-
-Company facts come only from the Tourground directory export. Never hand-edit them here.
-
-The build looks for the feed in this order:
-
-1. `FEED_PATH` (a local file path), if set;
-2. `data/feed.json` (git-ignored);
-3. `data/feed.mock.json`.
-
-To build from the live export, set `FEED_URL` (and `FEED_TOKEN` if the export needs a bearer token) in the Vercel project's environment variables. `scripts/fetch-feed.mjs` downloads it to `data/feed.json` at the start of every build. Then trigger a redeploy (or a Vercel Deploy Hook from the directory when it changes).
-
-What happens on each build:
-
-- Only companies with `verified: true` **or** `founder_owned: true` are published. Anything else, including prospects, is dropped and the validator fails the build if it leaks.
-- **A company removed from the feed, or no longer verified, loses its page in the next build.** Static output means there is nothing left to serve; the 404 page explains that listings are removed after directory updates.
-- Destinations with no publishable company get no page.
-- There is no ranking. Operators are listed alphabetically on every page, and the feed's `rank` field is ignored. Specialty lists are grouped by country.
-- If `_meta.source` is `"mock"`, every list shows the preview-data notice.
-
-## Rules built into the templates
-
-- Every page footer: "Published by Tourground." linking to tourground.com.
-- Founder-owned brands are labelled "Founder-owned (Tourground Geotrax)", decided by the feed's `founder_owned` flag, never a hard-coded list.
-- Platinum companies may link to their own site with `rel="sponsored nofollow"`; all others link only to their Tourground profile.
-- Paid placement: `src/components/AdSlot.astro` is the only place a paid item can render. It is labelled "Advertisement feature", sits above any list of operators and is visually separate. Paid placement is not built yet, so the slot renders nothing unless `site.showEmptyAdSlot` is `true`; a specimen is shown on `/disclosure/`.
-- Every company page opens with the verification card and has a "Request a correction or removal" link (`links.correctionUrl`, placeholder for now).
-- No phone numbers, WhatsApp, team section, social links, testimonials or reviews.
-
-## Performance
-
-Static HTML, CSS inlined, no client JavaScript except the deferred Vercel Web Analytics script and a one-line print button. Fonts are self-hosted (Source Serif 4 600, IBM Plex Sans 400 and 600, Latin subsets preloaded) with `font-display: swap` and metric-matched fallbacks to keep CLS at zero. There are no images in page content; if photographs are added later, use only owned, Unsplash or Wikimedia Commons images, record credits, set `width` and `height`, and lazy-load anything below the fold. The validator rejects an `<img>` without dimensions.
-
-Measured locally with Lighthouse 12 (mobile): performance 100, accessibility 100, SEO 100, CLS 0 on the home, country, company, niche, Q&A and checklist pages. A synthetic feed of 150 countries and 4,500 companies builds 4,246 pages in about 8 seconds.
+The list of destinations comes from `data/feed.mock.json` (`destinations[]`). To add a country, add it there, add its guide in `src/content/countries/`, and fetch a photo.
 
 ## Deploy
 

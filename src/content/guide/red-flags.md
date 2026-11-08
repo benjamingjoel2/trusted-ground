@@ -30,5 +30,3 @@ sources:
 ## What to do
 
 Check each point against the [before-you-pay checklist](/checklist/). If the company cannot answer in writing, do not pay. If you think you have been targeted by fraud, report it to the fraud or consumer authority in your country.
-
-Being listed on Trusted Ground means a company passed the checks for its [tier](/verification/). It does not replace these checks for your own booking.

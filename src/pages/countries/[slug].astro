@@ -1,85 +1,78 @@
 ---
 import Base from '../../layouts/Base.astro';
-import MockNotice from '../../components/MockNotice.astro';
 import PageMeta from '../../components/PageMeta.astro';
-import OperatorList from '../../components/OperatorList.astro';
-import AdSlot from '../../components/AdSlot.astro';
 import Sources from '../../components/Sources.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Photo from '../../components/Photo.astro';
 import CountryCard from '../../components/CountryCard.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
 import { getFeed, type Destination } from '../../lib/feed';
-import { regions, site, disclosure } from '../../config/site.config';
+import { regions, site } from '../../config/site.config';
 import { url } from '../../lib/urls';
 import { published, iso } from '../../lib/content';
-import { article, placeNode, itemList } from '../../lib/schema';
+import { article, placeNode } from '../../lib/schema';
 import { render } from 'astro:content';
 import { t } from '../../i18n/en';
 
 export function getStaticPaths() {
-  // Only destinations with at least one verified/founder-owned company get a page.
   return getFeed().countries.map((d) => ({ params: { slug: d.slug }, props: { d } }));
 }
 const { d } = Astro.props as { d: Destination };
 const feed = getFeed();
-const entries = feed.byCountry.get(d.slug)!;
 const region = regions.find((r) => r.slug === d.region)!;
 const snapId = d.content_dir ? d.content_dir.split('/').pop() : d.slug;
 const snap = (await published('countries')).find((e) => e.id === snapId);
 const Snap = snap ? (await render(snap)).Content : null;
+const stories = (await published('articles')).filter((a) => a.data.countries.includes(d.slug) || a.data.hero === d.slug);
 const path = url.country(d.slug);
-const title = `Local tour operators in ${d.name}`;
-const description = `${t.operatorsCount(entries.length)} in ${d.name}, verified or founder-owned, from the Tourground directory${snap?.data.best_months ? `. Best months: ${snap.data.best_months}` : ''}.`.slice(0, 200);
-const checked = entries.reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), '0000-00-00');
-const reviewed = snap && iso(snap.data.reviewed) > checked ? iso(snap.data.reviewed) : checked;
+const title = `${d.name} travel guide`;
+const description = (snap?.data.best_months
+  ? `${d.name}: when to go, main regions and entry basics, with sources. ${snap.data.best_months}`
+  : `${d.name}: main regions, entry basics and travel advice, with sources.`).slice(0, 200);
 const pub = snap ? iso(snap.data.published) : site.launch.published;
-const sources = [
-  ...(snap?.data.sources ?? []),
-  { url: site.publisher.url + '/', label: `Tourground directory feed (company records, last checked ${checked})` },
-];
+const reviewed = snap ? iso(snap.data.reviewed) : site.launch.published;
+const sources = snap?.data.sources ?? [];
 const crumbs = [{ name: t.breadcrumbHome, path: '/' }, { name: region.name, path: url.region(region.slug) }, { name: d.name, path }];
 const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug !== d.slug).slice(0, 8);
 ---
 <Base title={title} description={description} path={path} full
   crumbs={crumbs.slice(1)}
-  schema={[
-    placeNode(d, path),
-    itemList(`Local tour operators in ${d.name}`, path, entries, url.operator),
-    article({ path, title, description, published: pub, modified: reviewed, sources, about: { '@id': new URL(path, site.url) + '#place' } }),
-  ]}>
+  schema={[placeNode(d, path), article({ path, title, description, published: pub, modified: reviewed, sources, about: { '@id': new URL(path, site.url) + '#place' } })]}>
   <section class="dest" aria-labelledby="dest-h">
     <div class="dest-main">
       <Breadcrumbs items={crumbs} />
       <a class="chip" href={url.region(region.slug)}>{region.name}</a>
-      <h1 id="dest-h" class="display"><span class="vh">Local tour operators in </span>{d.name}</h1>
-      <p>{t.operatorsCount(entries.length)} listed for {d.name}. Each is verified by Tourground or founder-owned, and labelled. Listed in alphabetical order.</p>
+      <h1 id="dest-h" class="display">{d.name}<span class="vh"> travel guide</span></h1>
+      <p>{snap?.data.description ?? description}</p>
       <Photo slug={d.slug} alt={`Landscape in ${d.name}`} priority sizes="(min-width: 64rem) 50vw, 100vw" widths={[480, 720, 960, 1280]} />
     </div>
     <div class="dest-side">
       <h2>At a glance</h2>
       <ul class="glance">
-        <li><span class="label">Operators listed</span><strong>{entries.length}</strong> · <a href="#operators">See the list</a></li>
         <li><span class="label">{t.bestMonths}</span><strong>{snap?.data.best_months ?? 'No reviewed source yet'}</strong></li>
         {snap && snap.data.main_regions.length > 0 && <li><span class="label">{t.mainRegions}</span><strong>{snap.data.main_regions.join(', ')}</strong></li>}
-        <li><span class="label">{t.entryBasics}</span>{snap?.data.entry_basics ?? 'Check your own government\'s travel advice and the destination\'s official immigration site.'}</li>
-        {d.booster_url && <li><span class="label">{t.countrySite}</span><a href={d.booster_url}>{new URL(d.booster_url).hostname}</a></li>}
+        <li><span class="label">{t.entryBasics}</span>{snap?.data.entry_basics ?? 'Check your own government\'s travel advice.'}</li>
+        {d.booster_url && <li><span class="label">More on {d.name}</span><a href={d.booster_url}>{new URL(d.booster_url).hostname}</a></li>}
         <li><span class="label">{t.reviewed}</span>{reviewed}</li>
       </ul>
-      <a class="pill pill-dark" href={url.checklist()}>Before-you-pay checklist</a>
+      <a class="pill pill-dark" href={site.publisher.url}>Find a local operator on Tourground</a>
     </div>
   </section>
 
+  {stories.length > 0 && (
+    <section class="section" aria-labelledby="stories-h">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="stories-h">Stories about {d.name}</h2><a class="viewall" href={url.articles()}>All articles</a></div>
+        <div class="row">{stories.map((a) => <ArticleCard a={a} />)}</div>
+      </div>
+    </section>
+  )}
+
   <div class="wrap">
-    <AdSlot />
-    <MockNotice />
-    <div class="layout">
+    <div class="layout" style="padding-top:2.5rem">
       <div class="main">
         <PageMeta published={pub} reviewed={reviewed} />
-        <h2 id="operators">Operators in {d.name}</h2>
-        <p class="muted">{disclosure.listingStatement}</p>
-        <OperatorList entries={entries} caption={`Local tour operators in ${d.name}, alphabetical`} />
-
-        <h2 id="snapshot">{t.snapshot}</h2>
+        <h2 id="snapshot">Before you go</h2>
         {snap && Snap ? (
           <>
             <dl class="facts">
@@ -90,25 +83,22 @@ const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug
             <div class="prose"><Snap /></div>
           </>
         ) : (
-          <p>{t.noSnapshot}</p>
+          <p>No reviewed guide for this country yet.</p>
         )}
-
-        <h2 id="check">Before you book in {d.name}</h2>
+        <h2 id="book">Booking a trip to {d.name}</h2>
         <ul>
-          <li><a href={url.guide()}>{t.readGuide}</a>: licences, insurance, memberships and payment protection.</li>
+          <li><a href={url.guide()}>How to check a local operator</a>: licences, insurance and payment protection.</li>
           <li><a href={url.checklist()}>The before-you-pay checklist</a> (printable).</li>
-          <li><a href={url.verification()}>What Tourground verification checks</a>, and what it does not.</li>
         </ul>
-        <Sources sources={sources} />
+        {sources.length > 0 && <Sources sources={sources} />}
       </div>
       <aside class="aside" aria-label="More">
         <div class="aside-box">
-          <h2>Guide</h2>
+          <h2>Booking guide</h2>
           <ul>
             <li><a href="/guide/licences/">Check a licence</a></li>
             <li><a href="/guide/deposits-and-payment-protection/">Deposits and payment</a></li>
             <li><a href="/guide/red-flags/">Red flags</a></li>
-            <li><a href="/questions/how-do-i-know-a-local-tour-operator-is-legitimate/">Is an operator legitimate?</a></li>
           </ul>
         </div>
       </aside>

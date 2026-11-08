@@ -18,7 +18,7 @@ export const en = {
   },
   marginIndex: 'Country index',
   marginIndexAll: 'All countries',
-  breadcrumbHome: 'Register',
+  breadcrumbHome: 'Home',
   published: 'Published',
   reviewed: 'Last reviewed',
   lastChecked: 'Last checked',

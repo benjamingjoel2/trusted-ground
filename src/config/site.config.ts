@@ -14,10 +14,10 @@ export const site = {
   /** Hero photo on the home page (a destination slug with a photo in data/images.json). */
   heroPhoto: 'peru',
   /** Short line shown under the name in the masthead. */
-  tagline: 'Verified local operators, country by country',
+  tagline: 'Travel stories and destination guides',
   /** One-sentence positioning used in meta descriptions and llms.txt. */
   positioning:
-    'The plain-English reference for finding a trustworthy local operator anywhere in the world: how to check one, what verification means, and the verified operators in each country.',
+    'Practical, sourced travel stories and destination guides: when to go, how things work on the ground, and how to book a trip safely with a local operator. Published by Tourground.',
   domain: 'trustedground.tourground.com',
   url: 'https://trustedground.tourground.com',
   language: 'en',
@@ -96,7 +96,7 @@ export const site = {
 export const disclosure = {
   footerPublishedBy: 'Published by Tourground.',
   footerShort:
-    'Trusted Ground is an independent reference published by Tourground. It lists only companies that Tourground has verified. Lists are alphabetical and never paid.',
+    'Trusted Ground publishes practical, sourced travel stories and destination guides. It is published by Tourground.',
   /** How lists are ordered. Trusted Ground does not rank operators. */
   listingStatement:
     'Operators are listed in alphabetical order. Trusted Ground does not rank them, and no company can pay to be listed or to appear higher.',

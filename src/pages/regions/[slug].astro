@@ -1,8 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PageMeta from '../../components/PageMeta.astro';
-import MockNotice from '../../components/MockNotice.astro';
-import Sources from '../../components/Sources.astro';
 import Photo from '../../components/Photo.astro';
 import CountryCard from '../../components/CountryCard.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
@@ -19,17 +17,14 @@ const { r } = Astro.props as { r: (typeof regions)[number] };
 const feed = getFeed();
 const list = feed.countriesByRegion.get(r.slug) ?? [];
 const path = url.region(r.slug);
-const ops = new Set(list.flatMap((d) => feed.byCountry.get(d.slug)!.map((e) => e.company.id))).size;
 const lname = r.name.replace(/^The /, 'the ');
-const title = `Local tour operators in ${lname}`;
-const description = list.length
-  ? `${t.countriesListed(list.length)} in ${lname} with verified or founder-owned local operators (${t.operatorsCount(ops)}), from the Tourground directory.`
-  : `No verified local operators are listed in ${lname} yet.`;
-const checked = list.flatMap((d) => feed.byCountry.get(d.slug)!).reduce((m, e) => (e.company.last_checked > m ? e.company.last_checked : m), site.launch.published);
-const heroSlug = [...list].sort((a, b) => feed.byCountry.get(b.slug)!.length - feed.byCountry.get(a.slug)!.length).map((d) => d.slug).find((s) => placePhoto(s));
+const title = `${r.name}: destination guides`;
+const description = list.length ? `Travel guides to ${t.countriesListed(list.length)} in ${lname}: when to go, main regions and entry basics.` : `No destination guides for ${lname} yet.`;
+const checked = site.launch.published;
+const heroSlug = list.map((d) => d.slug).find((s) => placePhoto(s));
 const placeList = {
   '@type': 'ItemList',
-  name: `Countries in ${r.name} with verified operators`,
+  name: `Destination guides in ${r.name}`,
   numberOfItems: list.length,
   itemListElement: list.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: abs(url.country(d.slug)) })),
 };
@@ -41,20 +36,18 @@ const placeList = {
     {heroSlug && <Photo slug={heroSlug} alt="" priority sizes="100vw" widths={[640, 960, 1280, 1600]} />}
     <div class="wrap hero-body">
       <p class="hero-kicker">Region</p>
-      <h1 id="r-h" class="display"><span class="vh">Local tour operators in </span>{r.name}</h1>
+      <h1 id="r-h" class="display">{r.name}<span class="vh"> destination guides</span></h1>
       <div class="callout"><p>{description}</p></div>
     </div>
   </section>
   <div class="wrap">
     <div style="padding-top:1.5rem"><Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.regions, path: url.regions() }, { name: r.name, path }]} /></div>
-    <PageMeta published={site.launch.published} reviewed={checked} reviewedLabel="Directory last checked" />
-    <MockNotice />
+    <PageMeta published={site.launch.published} reviewed={checked} />
     {list.length > 0 ? (
       <div class="grid" style="padding-bottom:3rem">{list.map((d) => <CountryCard d={d} />)}</div>
     ) : (
-      <p>This region has no verified operators in the directory yet, so it has no country pages. The <a href={url.guide()}>booking guide</a> and <a href={url.checklist()}>checklist</a> apply anywhere.</p>
+      <p>No destination guides for this region yet.</p>
     )}
-    <Sources sources={[{ url: site.publisher.url + '/', label: 'Tourground directory feed (countries and counts)' }]} />
     <div style="height:3rem"></div>
   </div>
 </Base>

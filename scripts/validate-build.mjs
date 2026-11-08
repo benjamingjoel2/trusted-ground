@@ -85,7 +85,7 @@ for (const f of html) {
   // Factual pages: dates + sources
   if (!is404 && rel !== '/') {
     if (!s.includes('class="pagemeta"')) err(f, 'missing published / last reviewed dates');
-    if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions|specialties|articles|operators|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
+    if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions(\/[a-z-]+)?|articles|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
   }
   // JSON-LD
   for (const m of s.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
@@ -117,15 +117,10 @@ for (const f of html) {
 // No ranking anywhere: no rank column, no 'ranked' wording.
 for (const f of html) {
   const s = fs.readFileSync(f, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '');
-  if (/\branked\b|>Rank<|How we rank|Best local operators/i.test(s)) err(f, 'ranking wording found');
+  if (/\branked\b|>Rank<|How we rank|Best local operators|How verification works|href="\/verification\/"/i.test(s)) err(f, 'ranking or verification wording found');
 }
-// Every publishable company has a page; no unpublishable one does.
-for (const c of feed.companies) {
-  const exists = fs.existsSync(path.join(DIST, 'operators', c.id, 'index.html'));
-  const should = c.verified === true || c.founder_owned === true;
-  if (should && !exists) errors.push(`missing page for publishable company ${c.id}`);
-  if (!should && exists) errors.push(`page exists for unpublishable company ${c.id}`);
-}
+// Directory removed: no operator pages may exist.
+if (fs.existsSync(path.join(DIST, 'operators'))) errors.push('operator pages must not be generated');
 // Country pages only for destinations with listed companies.
 const ranked = new Set(feed.companies.filter((c) => c.verified || c.founder_owned).flatMap((c) => (c.delivers_in?.length ? c.delivers_in : [c.country_base])));
 for (const d of feed.destinations) {

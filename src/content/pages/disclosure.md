@@ -1,6 +1,6 @@
 ---
 title: Publisher disclosure
-description: Who publishes Trusted Ground, how Tourground earns money, how paid plans and founder-owned brands are labelled, and what that means for the lists.
+description: Who publishes Trusted Ground, how Tourground earns money, and how any paid content would be labelled.
 kind: reference
 published: 2026-11-08
 reviewed: 2026-11-08
@@ -12,12 +12,19 @@ sources:
     label: "Google Search Central: Qualify your outbound links (rel=\"sponsored\")"
 ---
 
+## Publisher
+
+Trusted Ground is published by Tourground. Tourground works with travel companies and earns money from paid plans sold to them. Some travel brands are owned by Tourground's founders.
+
+## Editorial independence
+
+Articles and guides are written to be useful to travellers. No company pays to be mentioned in an article, and we do not publish sponsored content without labelling it.
+
 ## Links
 
-- **Platinum companies** may link to their own website. These links are marked `rel="sponsored nofollow"` and labelled as sponsored.
-- **All other companies** link only to their profile on Tourground.
-- Links to a company's own website inside a list of sources are citations, marked `nofollow`.
+- Links to company websites inside a list of sources are citations, marked `nofollow`.
+- If we ever publish paid content, it will be labelled "Advertisement feature" and kept visually separate from editorial content.
 
 ## Changes to this disclosure
 
-The wording above is held in one configuration file and reviewed before any change is published. The date of the last review is shown at the top of this page.
+The date of the last review is shown at the top of this page.

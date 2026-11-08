@@ -9,23 +9,17 @@ import { t } from '../../i18n/en';
 const feed = getFeed();
 const path = url.regions();
 const title = 'Regions';
-const description = 'Verified local operators grouped by world region: Africa, Asia, Europe, the Americas, the Middle East, Oceania and the Poles.';
+const description = 'Destination guides by world region: Africa, Asia, Europe, the Americas, the Middle East, Oceania and the Poles.';
 ---
 <Base title={title} description={description} path={path} crumbs={[{ name: t.nav.regions, path }]}
-  schema={[article({ path, title, description, published: site.launch.published, modified: feed.latestCheck })]}>
+  schema={[article({ path, title, description, published: site.launch.published, modified: site.launch.published })]}>
   <h1>Regions</h1>
   <p class="standfirst">{description}</p>
-  <PageMeta published={site.launch.published} reviewed={feed.latestCheck} reviewedLabel="Directory last checked" />
+  <PageMeta published={site.launch.published} reviewed={site.launch.published} />
   <ol class="entries">
     {regions.map((r) => {
       const l = feed.countriesByRegion.get(r.slug) ?? [];
-      const ops = new Set(l.flatMap((d) => feed.byCountry.get(d.slug)!.map((e) => e.company.id))).size;
-      return (
-        <li><div>
-          <a href={url.region(r.slug)}>{r.name}</a>
-          <p>{l.length ? `${t.countriesListed(l.length)}, ${t.operatorsListed(ops)}` : 'No verified operators listed yet.'}</p>
-        </div></li>
-      );
+      return (<li><div><a href={url.region(r.slug)}>{r.name}</a><p>{l.length ? `${t.countriesListed(l.length)}: ${l.slice(0, 6).map((d) => d.name).join(', ')}${l.length > 6 ? '…' : ''}` : 'No destination guides yet.'}</p></div></li>);
     })}
   </ol>
 </Base>

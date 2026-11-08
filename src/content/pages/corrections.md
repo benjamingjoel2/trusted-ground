@@ -1,6 +1,6 @@
 ---
-title: Corrections and removal
-description: How to report an error on Trusted Ground, how companies can ask for a correction or removal, and what happens next.
+title: Corrections
+description: How to report an error on Trusted Ground and what happens next.
 kind: reference
 published: 2026-11-08
 reviewed: 2026-11-08
@@ -10,14 +10,10 @@ sources:
     label: "Tourground: claim, update or remove a listing (FAQ, retrieved 8 November 2026)"
 ---
 
-## Company facts
+## Report an error
 
-Every fact about a company on this site comes from the Tourground directory. To correct or remove a company listing, use the **Request a correction or removal** link on the company's page, or the link below. Tourground handles the request in its directory. When the directory changes, the next build of this site follows it: a corrected record is updated, and a removed record's page is deleted.
-
-## Guide, country snapshots and answers
-
-To report an error in our own text, email us with the page address, what is wrong and, if you can, a source. We check the source, correct the page if needed, and update its "last reviewed" date.
+If you find a mistake in an article, destination guide or answer, email us with the page address, what is wrong and, if you can, a source. We check the source, correct the page if needed and update its "last reviewed" date.
 
 ## What we will not do
 
-We do not remove accurate, sourced information because a company prefers it not to appear, and we do not change the order of any list on request. Lists are alphabetical.
+We do not remove accurate, sourced information because someone prefers it not to appear.

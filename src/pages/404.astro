@@ -3,12 +3,12 @@ import Base from '../layouts/Base.astro';
 import { url } from '../lib/urls';
 import { t } from '../i18n/en';
 ---
-<Base title={t.notFound} description="This page is not in the register. It may have been removed after a directory update." path="/404/" noindex>
+<Base title={t.notFound} description="This page does not exist or has moved." path="/404/" noindex>
   <h1>{t.notFound}</h1>
-  <p>This page is not in the register. Company pages are removed when a company leaves the directory or loses its verified status.</p>
+  <p>This page does not exist or has moved.</p>
   <ul>
     <li><a href={url.countries()}>Country index</a></li>
-    <li><a href={url.operators()}>All operators, A to Z</a></li>
-    <li><a href={url.corrections()}>Corrections and removal</a></li>
+    <li><a href={url.articles()}>Travel articles</a></li>
+    <li><a href={url.guide()}>Booking guide</a></li>
   </ul>
 </Base>

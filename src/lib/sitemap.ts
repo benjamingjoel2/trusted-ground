@@ -4,7 +4,7 @@ import { niches, regions, site } from '../config/site.config';
 import { url, abs } from './urls';
 
 export type Entry = { loc: string; lastmod: string };
-export const SECTIONS = ['pages', 'articles', 'countries', 'operators', 'specialties', 'guide', 'questions'] as const;
+export const SECTIONS = ['pages', 'articles', 'countries', 'guide', 'questions'] as const;
 export type Section = (typeof SECTIONS)[number];
 
 export async function sectionEntries(section: Section): Promise<Entry[]> {
@@ -15,22 +15,15 @@ export async function sectionEntries(section: Section): Promise<Entry[]> {
   switch (section) {
     case 'pages': {
       const pages = (await published('pages')).map((p) => e(`/${p.id}/`, iso(p.data.reviewed)));
-      return [e('/', feed.latestCheck), e(url.verification(), L), e(url.operators(), feed.latestCheck), e('/credits/', L), ...pages];
+      return [e('/', L), e('/credits/', L), e(url.compare(), L), ...pages];
     }
     case 'countries': {
-      const out = [e(url.countries(), feed.latestCheck), e(url.regions(), feed.latestCheck)];
-      for (const r of regions) out.push(e(url.region(r.slug), feed.latestCheck));
+      const out = [e(url.countries(), L), e(url.regions(), L)];
+      for (const r of regions) out.push(e(url.region(r.slug), L));
       const snaps = new Map((await published('countries')).map((s) => [s.id, iso(s.data.reviewed)]));
-      for (const d of feed.countries) {
-        const checked = feed.byCountry.get(d.slug)!.reduce((m, x) => max(m, x.company.last_checked), L);
-        out.push(e(url.country(d.slug), max(checked, snaps.get(d.slug) ?? L)));
-      }
+      for (const d of feed.countries) out.push(e(url.country(d.slug), snaps.get(d.slug) ?? L));
       return out;
     }
-    case 'operators':
-      return feed.companies.filter((c) => !c.example).map((c) => e(url.operator(c.id), max(c.last_checked, L)));
-    case 'specialties':
-      return [e(url.specialties(), feed.latestCheck), ...niches.filter((n) => feed.niche.get(n.slug)!.size > 0).map((n) => e(url.niche(n.slug), feed.latestCheck))];
     case 'articles': {
       const a = await published('articles');
       return [e(url.articles(), a.reduce((m, x) => max(m, iso(x.data.reviewed)), L)), ...a.map((x) => e(url.article(x.id), iso(x.data.reviewed)))];

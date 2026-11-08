@@ -32,7 +32,7 @@ The controller of personal data processed through this site is **Tourground**, t
 **2. Server logs.** Our hosting provider, Vercel, processes technical request data (such as IP address, time, requested address and browser details) to deliver pages and protect the service against abuse.
 *Legal basis:* legitimate interest in operating a secure website.
 
-**3. Emails you send us.** If you email us, we process your email address, name if given, and the content of your message to reply, and to handle any correction or removal request.
+**3. Emails you send us.** If you email us, we process your email address, name if given, and the content of your message to reply, and to handle any correction request.
 *Legal basis:* legitimate interest in answering you; where your message concerns a company record, also our legal obligation to handle data-protection requests.
 
 We do not sell personal data, share it for cross-context behavioural advertising, or use it for automated decision-making.
@@ -41,7 +41,6 @@ We do not sell personal data, share it for cross-context behavioural advertising
 
 - **Vercel Inc.** (hosting and analytics), acting as our processor.
 - **Our email provider**, acting as our processor, for messages you send us.
-- **Tourground's directory team**, if your message is a correction or removal request about a company listing.
 
 Vercel is based in the United States. Where personal data is transferred outside the EU, the UK or Brazil, we rely on the safeguards the law provides for that transfer, such as an adequacy decision or standard contractual clauses.
 

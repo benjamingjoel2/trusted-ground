@@ -21,8 +21,6 @@ A **destination management company (DMC)** is a company based in the destination
 
 A **travel agency** sells and arranges travel. Many agencies are in the traveller's home country and buy the ground arrangements from a DMC in the destination. Some agencies are based in the destination themselves.
 
-On Trusted Ground, every company is labelled **DMC** or **Agency** from the Tourground directory feed.
-
 ## Why the difference matters to you
 
 - **Who is on the ground.** A DMC usually controls the guides, vehicles and suppliers directly. If something goes wrong mid-trip, it is often the company that fixes it.

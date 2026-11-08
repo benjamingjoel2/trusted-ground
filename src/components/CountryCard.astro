@@ -1,17 +1,15 @@
 ---
 import Photo from './Photo.astro';
-import { getFeed, type Destination } from '../lib/feed';
+import type { Destination } from '../lib/feed';
 import { regions } from '../config/site.config';
 import { url } from '../lib/urls';
-interface Props { d: Destination; headingLevel?: 'h2' | 'h3' }
+interface Props { d: Destination }
 const { d } = Astro.props;
-const feed = getFeed();
-const n = feed.byCountry.get(d.slug)?.length ?? 0;
 const region = regions.find((r) => r.slug === d.region)?.name ?? '';
 ---
 <article class="card">
-  <a href={url.country(d.slug)} tabindex="-1" aria-hidden="true"><Photo slug={d.slug} alt="" credit={false} /></a>
-  <p class="meta"><span>{region}</span><span>{n} {n === 1 ? 'operator' : 'operators'}</span></p>
+  <a class="photo-link" href={url.country(d.slug)} tabindex="-1" aria-hidden="true"><Photo slug={d.slug} alt="" credit={false} /></a>
+  <p class="meta"><span>{region}</span><span>Travel guide</span></p>
   <h3><a href={url.country(d.slug)}>{d.name}</a></h3>
   <a class="pill" href={url.country(d.slug)} aria-label={`Explore ${d.name}`}>Explore</a>
 </article>
