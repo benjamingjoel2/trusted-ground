@@ -454,5 +454,22 @@
    "File:Valle de los Ingenios landscape.jpg",
    "File:Country landscape, Sancti Spíritus province.jpg"
   ]
+ },
+ "czechia": {
+  "file": "File:Radčice (Malonty), landscape north 01.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=132652665",
+  "author": "Czeva",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "description": "Radčice (Malonty), landscape north 01",
+  "width": 1280,
+  "height": 720,
+  "alternatives": [
+   "File:Žďárské vrchy, CZ170702-070.jpg",
+   "File:Chvaletická pahorkatina, CZ170609-015.jpg",
+   "File:Vysočina obec, CZ180225-088.jpg",
+   "File:Svratouch - Na panenkách, CZ160922 - 01.jpg",
+   "File:Stružinecká pahorkatina, CZ161028 - 01.jpg"
+  ]
  }
 }
