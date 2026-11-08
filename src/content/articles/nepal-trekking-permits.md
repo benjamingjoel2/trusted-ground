@@ -59,11 +59,11 @@ These permits are charged per person, per week or per day, and some cost more in
 
 The FCDO lists the hazards of trekking, "especially above 3,000m": altitude sickness, sudden changes in weather, avalanches and sun exposure. It also warns about cheap trekking deals. It says some guides have taken "inexperienced trekkers to high altitudes too quickly" and then arranged costly helicopter evacuations. Its advice:
 
-- Make sure your insurance covers mountain rescue and helicopter costs. See our [insurance guide](/guide/insurance/).
+- Make sure your insurance covers mountain rescue and helicopter costs. See our insurance guide.
 - Carry enough cash for flight delays, as ATMs and card payments may be unavailable in remote areas.
 - Mobile coverage is limited in places, including long stretches of the Annapurna Circuit. The FCDO suggests you consider a satellite phone.
 
-A realistic itinerary, with time to acclimatise, matters as much as the paperwork. Our guide to [operator licences](/guide/licences/) explains how to check registration, and our [Nepal travel guide](/countries/nepal/) covers the wider trip.
+A realistic itinerary, with time to acclimatise, matters as much as the paperwork. Our guide to operator licences explains how to check registration, and our [Nepal travel guide](/countries/nepal/) covers the wider trip.
 
 ## Questions to ask your operator
 
@@ -74,4 +74,4 @@ A realistic itinerary, with time to acclimatise, matters as much as the paperwor
 - What is your procedure for helicopter evacuation, and who pays at the time?
 - Will you send copies of our TIMS e-cards and permits before we leave Kathmandu?
 
-Before paying a deposit, work through our [pre-booking checklist](/checklist/) and our guide to [deposits and payment protection](/guide/deposits-and-payment-protection/).
+Before paying a deposit, work through our [pre-booking checklist](/checklist/) and our guide to deposits and payment protection.

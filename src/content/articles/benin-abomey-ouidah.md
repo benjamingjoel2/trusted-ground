@@ -63,13 +63,13 @@ At the time of writing (November 2026), the FCDO's Benin advice was last updated
 - **Unrest.** The FCDO travel advice (updated 4 November 2026) refers to a recent attempted coup and advises avoiding demonstrations and complying with any curfews.
 - **Crime and roads.** Street crime is common in Cotonou. The FCDO advises against driving outside towns after dark and calls the sea currents along the whole coast, including Ouidah's beaches, very strong.
 
-Read the full advice yourself before booking and again before you travel, and check your insurance covers your itinerary. See our [insurance guide](/guide/insurance/).
+Read the full advice yourself before booking and again before you travel, and check your insurance covers your itinerary. See our insurance guide.
 
 ## Entry and guides
 
 According to the FCDO, British passport holders need a visa, applied for online at least four working days before arrival, and must show a yellow fever vaccination certificate on entry.
 
-Benin is also regulating its guides. Under decree no. 2025-668, the national tourism agency, Bénin Tourisme, held a census and online registration of working tourism guides throughout October 2026. Guides already working could apply for a provisional authorisation to practise. It is reasonable to ask whether your guide has registered. For how licensing works more generally, see our [licences guide](/guide/licences/) and our [Benin guide](/countries/benin/).
+Benin is also regulating its guides. Under decree no. 2025-668, the national tourism agency, Bénin Tourisme, held a census and online registration of working tourism guides throughout October 2026. Guides already working could apply for a provisional authorisation to practise. It is reasonable to ask whether your guide has registered. For how licensing works more generally, see our licences guide and our [Benin guide](/countries/benin/).
 
 ## Questions to ask your operator
 

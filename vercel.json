@@ -83,6 +83,16 @@
       "source": "/how-we-rank",
       "destination": "/about/",
       "permanent": true
+    },
+    {
+      "source": "/guide",
+      "destination": "/articles/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/:path*",
+      "destination": "/articles/",
+      "permanent": true
     }
   ]
 }

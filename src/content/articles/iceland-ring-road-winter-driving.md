@@ -77,7 +77,7 @@ For more on winter trips, see our article on [seeing the northern lights in Icel
 - **Tyres.** The FCDO says tyres must suit the conditions, including winter tyres when needed. Check what your hire car comes with.
 - **Before you set off.** Clear snow and ice from the windows, mirrors, lights and roof.
 - **Stopping.** Never stop on the road or the hard shoulder to take photos. Safetravel says many accidents have happened this way.
-- **Licences.** According to the FCDO, a UK photocard licence is valid for up to 30 days, but hire companies may set stricter rules on age and experience. Check our guides to [insurance](/guide/insurance/) and [deposits and payment protection](/guide/deposits-and-payment-protection/) before you pay.
+- **Licences.** According to the FCDO, a UK photocard licence is valid for up to 30 days, but hire companies may set stricter rules on age and experience. Check our guides to insurance and deposits and payment protection before you pay.
 - **Emergencies.** Call 112. Safetravel recommends sharing a travel plan with someone you trust, and its app can send your GPS location to the 112 emergency service.
 
 ## Questions to ask your operator

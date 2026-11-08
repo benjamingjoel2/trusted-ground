@@ -32,7 +32,7 @@ const sources = [...d.sources, ...items.map((i) => i.source)].filter((s) => (see
         <div>
           <strong>{it.text}</strong>
           {it.detail && <p>{it.detail}</p>}
-          <p>Source: <a class="print-url" href={it.source.url}>{it.source.label}</a>{it.guide && <> · <a href={url.guideChapter(it.guide)}>Guide</a></>}</p>
+          <p>Source: <a class="print-url" href={it.source.url}>{it.source.label}</a></p>
         </div>
       </li>
     ))}

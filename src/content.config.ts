@@ -23,11 +23,6 @@ const base = z
   })
   .refine((d) => d.reviewed >= d.published, { message: '`reviewed` cannot be earlier than `published`.' });
 
-const guide = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/guide' }),
-  schema: z.intersection(base, z.object({ order: z.number().int(), short_title: z.string(), hero: z.string().optional() })),
-});
-
 const countries = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/countries' }),
   schema: z.intersection(
@@ -77,4 +72,4 @@ const pages = defineCollection({
   ),
 });
 
-export const collections = { guide, countries, questions, pages, articles };
+export const collections = { countries, questions, pages, articles };

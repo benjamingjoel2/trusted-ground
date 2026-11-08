@@ -77,9 +77,9 @@ Both gorilla areas lie close to the border with the Democratic Republic of the C
 
 - Is my permit already secured for a specific date and park, and can I see the permit or booking confirmation?
 - Which tariff and rate applies to my trekking date, and is the permit cost shown separately from your fees?
-- Are you licensed in the country where I am trekking? (See our [guide to licences](/guide/licences/).)
+- Are you licensed in the country where I am trekking? (See our guide to licences.)
 - What happens to my permit and payment if I am ill on the day, or if the park or a border closes?
 - How will you assess my fitness, and can you arrange a porter?
-- What are your deposit and refund terms for the permit and the rest of the trip? (See [deposits and payment protection](/guide/deposits-and-payment-protection/).)
+- What are your deposit and refund terms for the permit and the rest of the trip? (See deposits and payment protection.)
 
 For more on each country, see our [Rwanda](/countries/rwanda/) and [Uganda](/countries/uganda/) guides, and the [booking checklist](/checklist/).

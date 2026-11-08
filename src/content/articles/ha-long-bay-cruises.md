@@ -57,7 +57,7 @@ What this means for a cruise:
 - **Watch the forecasts.** The FCDO points travellers to Vietnam's National Centre for Hydro-Meteorological Forecasting and the Japan Meteorological Agency for approaching storms.
 - **Follow local instructions,** including any evacuation orders.
 
-Before you pay, ask what happens to your booking if sailings are cancelled because of the weather. See our guide to [deposits and payment protection](/guide/deposits-and-payment-protection/) and check your [travel insurance](/guide/insurance/) covers weather disruption.
+Before you pay, ask what happens to your booking if sailings are cancelled because of the weather. See our guide to deposits and payment protection and check your travel insurance covers weather disruption.
 
 ## Choosing a boat safely
 
@@ -72,7 +72,7 @@ The management board publishes a list of tourist boats on its website, grouped a
 
 During peak season, the board says it carries out inspections at busy sites such as Ti Top beach. These cover lifeguard services, lifesaving equipment, weather warning systems and emergency response plans for incidents at sea.
 
-For general warning signs when booking, see our [red flags guide](/guide/red-flags/) and the [booking checklist](/checklist/). Our [Vietnam guide](/countries/vietnam/) covers the rest of the country.
+For general warning signs when booking, see our red flags guide and the [booking checklist](/checklist/). Our [Vietnam guide](/countries/vietnam/) covers the rest of the country.
 
 ## Questions to ask your operator
 

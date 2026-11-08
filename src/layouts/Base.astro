@@ -42,7 +42,6 @@ const rootVars = `:root{--white:${c.white};--grey:${c.grey};--grey-2:${c.grey2};
 const nav = [
   [t.nav.countries, url.countries()],
   [t.nav.articles, url.articles()],
-  [t.nav.guide, url.guide()],
   [t.nav.questions, url.questions()],
 ];
 const current = (href: string) => path.startsWith(href);
@@ -142,7 +141,6 @@ const categories = [...new Set((await published('articles')).map((a) => a.data.c
             <ul>
               {categories.map((c) => <li><a href={`${url.articles()}#${c.replace(/\W+/g, '-').toLowerCase()}`}>{c}</a></li>)}
               <li><a href={url.articles()}>All stories</a></li>
-              <li><a href={url.guide()}>Travel advice</a></li>
               <li><a href={url.questions()}>Questions</a></li>
             </ul>
           </nav>

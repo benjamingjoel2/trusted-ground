@@ -28,4 +28,4 @@ Before you pay, get in writing:
 - what you get back if the operator cancels, and how fast (in the EU, organisers of packages must refund within 14 days of terminating);
 - whether your money is protected if the company fails.
 
-Pay by credit card where you can. In the UK, section 75 of the Consumer Credit Act can give you a claim against the card issuer for purchases over £100 and up to £30,000; in the US, the FTC explains how to dispute a credit card charge. Read more in [deposits and payment protection](/guide/deposits-and-payment-protection/).
+Pay by credit card where you can. In the UK, section 75 of the Consumer Credit Act can give you a claim against the card issuer for purchases over £100 and up to £30,000; in the US, the FTC explains how to dispute a credit card charge. Read more in deposits and payment protection.

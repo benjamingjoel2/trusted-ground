@@ -68,7 +68,7 @@ Flood size and timing vary from year to year, so treat any calendar as a guide r
 - Which camps are on permanent water and which on seasonal floodplain, and can I do mokoro or boat trips at each in my month?
 - If there is too much or too little water, how would activities or transfers change?
 - How do you handle transfers if rain or flooding closes roads or airstrips?
-- What malaria precautions do you advise for my dates, and what does your evacuation cover include? (See our [insurance guide](/guide/insurance/).)
-- What are your deposit and cancellation terms? (See [deposits and payment protection](/guide/deposits-and-payment-protection/).)
+- What malaria precautions do you advise for my dates, and what does your evacuation cover include? (See our insurance guide.)
+- What are your deposit and cancellation terms? (See deposits and payment protection.)
 
 For more on the country, see our [Botswana guide](/countries/botswana/) and the [booking checklist](/checklist/).

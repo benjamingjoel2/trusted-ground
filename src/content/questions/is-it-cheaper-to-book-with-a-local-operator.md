@@ -20,6 +20,6 @@ We know of no reliable, published data that shows booking direct is cheaper in g
 
 **Why it may not.** Agencies that sell in volume may get rates a traveller cannot. Some lodges and permits are sold mainly through the trade. And a price is only comparable if the trips are the same: same lodges, same guides, same season, same inclusions.
 
-**What you may give up.** In the EU and the UK, an organiser selling a package in that market must protect your payments against its insolvency (in the UK, flight-inclusive packages are generally protected by ATOL). A local operator abroad selling to you directly may not be bound by those rules. Your protection then depends on how you pay and on your insurance. See [deposits and payment protection](/guide/deposits-and-payment-protection/).
+**What you may give up.** In the EU and the UK, an organiser selling a package in that market must protect your payments against its insolvency (in the UK, flight-inclusive packages are generally protected by ATOL). A local operator abroad selling to you directly may not be bound by those rules. Your protection then depends on how you pay and on your insurance. See deposits and payment protection.
 
 **How to compare.** Ask both for an itemised quote with the same lodges and inclusions, and ask both how your money is protected. Then compare the total, not the headline.

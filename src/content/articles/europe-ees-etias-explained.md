@@ -77,7 +77,7 @@ The EU says the launch will be followed by transitional and grace periods. Durin
 - **Count your days.** The 90-in-180-day limit covers all Schengen countries together, and the EES now tracks it automatically. The EU's Travel to Europe site has an online tool for checking how long you can stay.
 - **Ignore ETIAS sellers for now.** When ETIAS opens, apply only on the official EU site, travel-europe.europa.eu/etias, or the official app.
 
-Our [booking checklist](/checklist/) and [red flags guide](/guide/red-flags/) cover the rest of your pre-trip checks. For France specifically, see our [France guide](/countries/france/).
+Our [booking checklist](/checklist/) and red flags guide cover the rest of your pre-trip checks. For France specifically, see our [France guide](/countries/france/).
 
 ## Questions to ask your operator
 

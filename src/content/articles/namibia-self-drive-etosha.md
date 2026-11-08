@@ -49,7 +49,7 @@ The Namibia Tourism Board's self-drive planning guide sets out the main trade-of
 
 The same guide suggests vehicle spares should include a spare wheel (preferably two), an air compressor or pump, a tyre gauge, jump leads, a tow rope, a shovel and a basic toolkit.
 
-Insurance needs careful reading. The FCDO advises taking out comprehensive cover and notes that most hire policies will not cover accidents that do not involve another vehicle or an animal. On gravel, a single-vehicle rollover is exactly the kind of accident that happens, so ask what is excluded and what excess you would pay. See our guide to [travel insurance](/guide/insurance/) for what your own policy should cover.
+Insurance needs careful reading. The FCDO advises taking out comprehensive cover and notes that most hire policies will not cover accidents that do not involve another vehicle or an animal. On gravel, a single-vehicle rollover is exactly the kind of accident that happens, so ask what is excluded and what excess you would pay. See our guide to travel insurance for what your own policy should cover.
 
 On paperwork, the FCDO says UK visitors must have their valid UK photocard driving licence with them in the car. The Tourism Board's guide also mentions an international driving licence, so confirm with your hire company exactly which documents it requires. Since 1 April 2025 UK passport holders need a visa for Namibia, available on arrival or as an e-visa; check the FCDO entry requirements page for the current position.
 

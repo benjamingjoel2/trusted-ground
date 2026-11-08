@@ -67,9 +67,9 @@ Booking a trek or expedition direct with an operator in the destination country 
 
 Citizens Advice explains that if you book at least two parts of a holiday with the same company at the same time, "it's probably a package holiday". UK package holiday rules give you rights if the company makes a significant change or you cannot travel because of exceptional circumstances. Before you book direct with a company based abroad, ask which rules, if any, protect your booking, and whether the parts you are buying from different companies count as a package.
 
-The FCDO also notes that travel insurance "typically" does not cover an airline or travel agent going out of business. Check whether your policy includes supplier failure cover, or how else your payment is protected. Our guides to [deposits and payment protection](/guide/deposits-and-payment-protection/) and [paying a local operator abroad](/articles/paying-a-local-operator-abroad/) explain the options.
+The FCDO also notes that travel insurance "typically" does not cover an airline or travel agent going out of business. Check whether your policy includes supplier failure cover, or how else your payment is protected. Our guides to deposits and payment protection and [paying a local operator abroad](/articles/paying-a-local-operator-abroad/) explain the options.
 
-Check the cancellation section of your policy carefully. If your operator takes a non-refundable deposit, check whether your policy would cover it. Citizens Advice notes that you may be able to claim for a cancelled trip under travel insurance, depending on your policy. For more on Nepal's trekking rules, including the requirement for a licensed guide on main routes, see [trekking permits in Nepal](/articles/nepal-trekking-permits/). Our general [insurance guide](/guide/insurance/) covers the basics.
+Check the cancellation section of your policy carefully. If your operator takes a non-refundable deposit, check whether your policy would cover it. Citizens Advice notes that you may be able to claim for a cancelled trip under travel insurance, depending on your policy. For more on Nepal's trekking rules, including the requirement for a licensed guide on main routes, see [trekking permits in Nepal](/articles/nepal-trekking-permits/). Our general insurance guide covers the basics.
 
 ## Questions to ask your operator
 

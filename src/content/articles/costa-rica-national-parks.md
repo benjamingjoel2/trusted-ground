@@ -63,7 +63,7 @@ The FCDO describes June to November as the peak rainy season and the hurricane s
 - **Sectors can close.** The ICT's Corcovado sheet says sectors open and close according to weather conditions, and that the Sirena station is closed to visitors in October. It names December to April as the best time to visit.
 - **Plan for slow roads.** Landslides and potholes can add hours to transfers in the wet months, so avoid tight connections.
 - **Book flexibly.** Because SINAC does not refund tickets for bad weather, ask your operator what happens if a park or sector closes on your date.
-- **Insurance.** The FCDO notes that activities such as zip-lining, rock-climbing and surfing are often excluded from general travel insurance. See our [insurance guide](/guide/insurance/).
+- **Insurance.** The FCDO notes that activities such as zip-lining, rock-climbing and surfing are often excluded from general travel insurance. See our insurance guide.
 
 For the wider trip, see our [Costa Rica guide](/countries/costa-rica/).
 
@@ -76,4 +76,4 @@ For the wider trip, see our [Costa Rica guide](/countries/costa-rica/).
 - For Chirripó, have both the park permit and the lodge been booked, and who handles the registration the day before?
 - How do you adjust routes and transfer times in the rainy season, especially in September and October?
 
-Before you pay a deposit, work through our [booking checklist](/checklist/) and read [deposits and payment protection](/guide/deposits-and-payment-protection/).
+Before you pay a deposit, work through our [booking checklist](/checklist/) and read deposits and payment protection.

@@ -16,4 +16,4 @@ ADMEI, the trade association for destination management, describes a DMC as a pr
 
 In practice, a DMC is the company that knows which lodge has the better guide, books the permits, and sends the driver. Many DMCs work mostly for overseas agencies and tour operators; some also sell to travellers directly.
 
-For what the difference means when you book, read [What a DMC is, and how it differs from a travel agency](/guide/dmc-or-agency/).
+For what the difference means when you book, read What a DMC is, and how it differs from a travel agency.

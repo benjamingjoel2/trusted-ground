@@ -27,7 +27,6 @@ npm run preview    # serve dist/
 | Mock feed | `data/feed.mock.json` (generator: `scripts/mock/build-mock-feed.py`) |
 | Feed field reference | `DATA-FIELDS.md` |
 | Facts that need human sign-off | `FACTS-TO-VERIFY.md` |
-| Guide chapters | `src/content/guide/*.md` |
 | Country snapshots | `src/content/countries/<slug>.md` |
 | Q&A | `src/content/questions/*.md` |
 | About, Disclosure, Corrections, legal pages, checklist, comparison tables | `src/content/pages/*.md` |
@@ -74,7 +73,6 @@ Rules, enforced by the build:
 | What | Where |
 | --- | --- |
 | Destination guides (one per country) | `src/content/countries/<slug>.md` (fields: `best_months`, `main_regions`, `entry_basics`) |
-| Booking guide chapters | `src/content/guide/*.md` (`order`, `short_title`) |
 | Questions | `src/content/questions/*.md` (`order`, `short_answer`) |
 | About, disclosure, legal pages, checklist, comparison tables | `src/content/pages/*.md` |
 

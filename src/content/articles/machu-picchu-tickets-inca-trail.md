@@ -77,7 +77,7 @@ The ministry says breaking these rules means immediate removal without a refund,
 
 The UK Foreign, Commonwealth and Development Office (FCDO) notes that the rainy season runs from November to May. Rockslides and mudslides can affect walking routes, including the alternative route to Machu Picchu via Santa Maria, Santa Teresa and the hydroelectric plant. It also warns that protests sometimes disrupt train services to and from Machu Picchu, and advises travellers to check the latest conditions with their tour operator.
 
-Make sure your [travel insurance](/guide/insurance/) covers all the activities you plan, and read our [Peru travel guide](/countries/peru/) for the wider trip.
+Make sure your travel insurance covers all the activities you plan, and read our [Peru travel guide](/countries/peru/) for the wider trip.
 
 ## Questions to ask your operator
 
@@ -88,4 +88,4 @@ Make sure your [travel insurance](/guide/insurance/) covers all the activities y
 - What happens if the trail or the trains are closed on our dates?
 - What is your cancellation policy, given that site tickets themselves cannot be refunded?
 
-Before you pay a deposit, see our guides to [operator licences](/guide/licences/) and [deposits and payment protection](/guide/deposits-and-payment-protection/), and our [pre-booking checklist](/checklist/).
+Before you pay a deposit, see our guides to operator licences and deposits and payment protection, and our [pre-booking checklist](/checklist/).

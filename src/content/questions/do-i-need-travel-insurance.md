@@ -20,4 +20,4 @@ sources:
 
 **Why booking locally can make it more important.** If you book direct with an operator outside your home market, the package travel protections of the EU or UK may not apply. Your insurance may be one of the few ways to recover costs if the trip does not go ahead.
 
-Buy your policy when you book, so that cancellation cover starts straight away. See [insurance](/guide/insurance/) in the booking guide.
+Buy your policy when you book, so that cancellation cover starts straight away. See insurance in the booking guide.

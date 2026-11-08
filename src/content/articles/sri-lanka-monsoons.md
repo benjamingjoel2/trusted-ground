@@ -66,7 +66,7 @@ A few practical points follow from the patterns above:
 - October and November bring inter-monsoon thunderstorms across the island, a raised flood risk and the start of the cyclone period.
 - Whatever the month, check the sea conditions locally before swimming.
 
-For wider trip planning, see our [Sri Lanka guide](/countries/sri-lanka/), our [pre-trip checklist](/checklist/) and the [insurance guide](/guide/insurance/), and check that your policy covers weather disruption.
+For wider trip planning, see our [Sri Lanka guide](/countries/sri-lanka/), our [pre-trip checklist](/checklist/) and the insurance guide, and check that your policy covers weather disruption.
 
 ## Questions to ask your operator
 
