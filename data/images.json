@@ -420,5 +420,39 @@
    "File:Cascajal de Coronado Costa Rica Tree landscape 05.jpg",
    "File:Cascajal de Coronado Costa Rica Tree landscape 03.jpg"
   ]
+ },
+ "croatia": {
+  "file": "File:Nature landscape Lim fjord Rovinj Croatia color (8225691773).jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=23655620",
+  "author": "Valerii Tkachenko",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/",
+  "description": "Nature landscape Lim fjord Rovinj Croatia color (8225691773)",
+  "width": 1280,
+  "height": 720,
+  "alternatives": [
+   "File:Aerial view of the landscape in Plitvice Lakes National Park, Croatia (48607300338).jpg",
+   "File:08 Nature of Croatia - Krka river landscape in Krka National Park in Croatia.jpg",
+   "File:Croatia-landscape.jpg",
+   "File:Island Rab, Croatia - My Landscape - panoramio.jpg",
+   "File:Panorama From Gdinj Hvar (40228470).jpeg"
+  ]
+ },
+ "cuba": {
+  "file": "File:Sierra del Purial mountains in Guantanamo Province, Cuba.jpg",
+  "page": "https://commons.wikimedia.org/w/index.php?curid=138471060",
+  "author": "Marek Ślusarczyk (Tupungato) Photo portfolio",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "description": "Sierra del Purial mountains in Guantanamo Province, Cuba",
+  "width": 1280,
+  "height": 853,
+  "alternatives": [
+   "File:010 Sierra del Purial mountains in Cuba.jpg",
+   "File:011 Cuba rainforest landscape - jungle view in Guantanamo province in Sierra del Purial mountains.jpg",
+   "File:Landscape of Viñales Valley, (Pinar del Río Province, Cuba).jpg",
+   "File:Valle de los Ingenios landscape.jpg",
+   "File:Country landscape, Sancti Spíritus province.jpg"
+  ]
  }
 }
