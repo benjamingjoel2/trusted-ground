@@ -58,7 +58,7 @@ export const en = {
   mainRegions: 'Main regions',
   entryBasics: 'Entry basics',
   noSnapshot:
-    'No reviewed snapshot for this country yet. Use the booking guide and checklist to vet any operator.',
+    'No reviewed snapshot for this country yet. ',
   readGuide: 'How to check an operator',
   shortAnswer: 'Short answer',
   detail: 'In detail',

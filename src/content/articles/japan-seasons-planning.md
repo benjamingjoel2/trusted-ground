@@ -69,7 +69,7 @@ JNTO says trees turn red, orange and yellow in many places from mid-November to 
 
 Autumn's lower humidity and settled weather make it a good time for walking. Typhoon season does not officially end until December, though, so the September and October warnings above still apply.
 
-For more on travelling in Japan, see our [Japan guide](/countries/japan/) and the [booking checklist](/checklist/).
+For more on travelling in Japan, see our [Japan guide](/countries/japan/).
 
 ## Questions to ask your operator
 

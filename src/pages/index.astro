@@ -17,7 +17,6 @@ const stories = (await published('articles')).sort((a, b) => b.data.published.ge
 const featured = stories[0];
 const rest = stories.slice(1);
 const categories = [...new Set(stories.map((a) => a.data.category))];
-const questions = (await published('questions')).sort((a, b) => a.data.order - b.data.order);
 const withPhoto = (slugs: string[]) => slugs.find((s) => placePhoto(s)) ?? '';
 const destinations = feed.countries.filter((d) => placePhoto(d.slug));
 const featuredDest = ['peru', 'japan', 'iceland', 'tanzania', 'bhutan', 'chile', 'cambodia', 'botswana', 'georgia', 'nepal', 'namibia', 'portugal']
@@ -74,7 +73,7 @@ const heroImg = placePhoto(heroPhoto) ? await getImage({ src: placePhoto(heroPho
         <Tile slug={withPhoto(['georgia', 'nepal'])} kicker="Get inspired" title="Stories" href={url.articles()} cta="All articles" />
         <Tile slug={withPhoto(['chile', 'iceland'])} kicker="Where to go" title="Destinations" href={url.countries()} cta="Browse countries" />
         <Tile slug={withPhoto(['zambia', 'botswana'])} kicker="Where to go" title="Regions" href={url.regions()} cta="Explore" />
-        <Tile slug={withPhoto(['cambodia', 'japan'])} kicker="One page" title="The checklist" href={url.checklist()} cta="Print it" />
+        <Tile slug={withPhoto(['cambodia', 'japan'])} kicker="About us" title="Who we are" href={url.about()} cta="Read more" />
       </div>
     </div>
   </section>
@@ -105,24 +104,4 @@ const heroImg = placePhoto(heroPhoto) ? await getImage({ src: placePhoto(heroPho
     </div>
   </section>
 
-  {questions.length > 0 && (
-    <section class="section section-grey" aria-labelledby="q-h">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2 id="q-h">Questions travellers ask</h2>
-          <div class="sec-tools"><a class="viewall" href={url.questions()}>View all</a><Carousel id="row-q" label="questions" /></div>
-        </div>
-        <div class="row" id="row-q">
-          {questions.map((q) => (
-            <article class="card card-text">
-              <p class="meta"><span>Question</span><span>Short answer</span></p>
-              <h3><a href={url.question(q.id)}>{q.data.title}</a></h3>
-              <p>{q.data.short_answer.split('. ')[0]}.</p>
-              <a class="pill" href={url.question(q.id)} aria-label={`Read the answer: ${q.data.title}`}>Read the answer</a>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
 </Base>

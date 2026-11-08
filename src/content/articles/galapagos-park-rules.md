@@ -33,7 +33,7 @@ Park rangers collect the fee at Baltra and San Cristóbal airports. The director
 
 **Other conditions.** The FCDO also lists these requirements:
 
-- Travel health insurance, which it describes as "mandatory for foreign tourists". See our insurance guide.
+- Travel health insurance, which it describes as "mandatory for foreign tourists".
 - Evidence of a hotel booking or an invitation letter from your host.
 - Evidence of a return flight to the Ecuadorean mainland.
 - Tourists can stay in the Galápagos for up to 60 days.
@@ -79,4 +79,3 @@ Our [Ecuador travel guide](/countries/ecuador/) covers the rest of the country.
 - What happens if the itinerary changes or a site is closed on our dates?
 - Do you need proof of our travel health insurance before departure?
 
-Before you pay a deposit, see our guides to operator licences and deposits and payment protection, and our [pre-booking checklist](/checklist/).

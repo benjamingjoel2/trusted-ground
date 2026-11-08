@@ -41,7 +41,7 @@ Green zones matter most to visitors. Snorkelling and diving are about looking, a
 
 Under the Act, many commercial activities in the marine park run under a permission granted under its regulations. Tourism permissions carry conditions, and the Act makes breaching those conditions an offence. An operator taking you to the reef should be able to tell you which permission it holds and what it allows: the areas it may visit, for example, and the activities it may offer there.
 
-Asking about the permit is a reasonable check, and a straight answer is a good sign. It is also worth reading our guides to operator licences and to red flags when booking.
+Asking about the permit is a reasonable check, and a straight answer is a good sign.
 
 ## The environmental management charge
 
@@ -67,7 +67,7 @@ If someone is stung, call Triple Zero (000) and ask for an ambulance, pour vineg
 
 The UK Foreign, Commonwealth and Development Office (FCDO) adds two points. You are required by law to complete a medical declaration for diving or snorkelling at a resort. And tropical cyclones mainly affect Queensland, the Northern Territory and Western Australia, with a season that normally runs from November to April. That overlaps with stinger season, so plan for the possibility of cancelled boat days and choose flexible bookings.
 
-See our [Australia guide](/countries/australia/), the [pre-trip checklist](/checklist/) and the insurance guide for wider planning.
+See our [Australia guide](/countries/australia/) for wider planning.
 
 ## Questions to ask your operator
 

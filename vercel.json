@@ -93,6 +93,21 @@
       "source": "/guide/:path*",
       "destination": "/articles/",
       "permanent": true
+    },
+    {
+      "source": "/questions",
+      "destination": "/articles/",
+      "permanent": true
+    },
+    {
+      "source": "/questions/:path*",
+      "destination": "/articles/",
+      "permanent": true
+    },
+    {
+      "source": "/checklist",
+      "destination": "/articles/",
+      "permanent": true
     }
   ]
 }

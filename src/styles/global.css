@@ -447,3 +447,7 @@ h3 { font-size: 1.375rem; }
 .xtile .display { font-size: clamp(2.5rem, 1.8rem + 2.4vw, 3.5rem); margin: 0.3rem 0 1rem; }
 .x1 { background: #F79FE0; } .x2 { background: #F95D0F; } .x3 { background: var(--yellow); }
 .xtile:hover .pill { background: #000; }
+
+/* Magazine card arrangement: photos keep their shape, text aligns to the bottom of each row */
+.grid4, .row { align-items: end; }
+.grid4 .card, .row .card { justify-content: flex-end; }

@@ -68,7 +68,7 @@ Two separate forecasts matter: space weather (how active the aurora is) and ordi
 - In Iceland, weather and road conditions can change fast. Safetravel, run by the Icelandic Association for Search and Rescue (ICE-SAR), recommends sharing a travel plan with someone you trust. Its app lets hikers send their GPS location to the 112 emergency service.
 - Build in several nights. A single night is a gamble on the weather, whatever the forecast says.
 
-If you are booking a guided aurora trip, see our [booking checklist](/checklist/) and our travel guides to [Iceland](/countries/iceland/) and [Finland](/countries/finland/).
+If you are booking a guided aurora trip, see our travel guides to [Iceland](/countries/iceland/) and [Finland](/countries/finland/).
 
 ## Questions to ask your operator
 

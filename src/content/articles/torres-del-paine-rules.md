@@ -77,7 +77,7 @@ CONAF divides the year into two seasons:
 - **Summer (October to April):** longer opening hours and the full range of concession services.
 - **Winter (May to September):** CONAF lists snow risk on the main trails, and avalanche and landslide risk on some sections. Several W sections can only be walked with a guide in winter under the park's winter visiting protocol. Pases Parques says microcrampons and trekking poles are required, and points to CONAF's list of accredited guides and its winter activities regulation.
 
-Whatever the season, the FCDO notes that Chile often has severe forest fires that have closed national parks and roads, so build some flexibility into your plans and check our [Chile guide](/countries/chile/) and insurance guide.
+Whatever the season, the FCDO notes that Chile often has severe forest fires that have closed national parks and roads, so build some flexibility into your plans and check our [Chile guide](/countries/chile/).
 
 ## Questions to ask your operator
 
@@ -88,4 +88,4 @@ Whatever the season, the FCDO notes that Chile often has severe forest fires tha
 - What is the plan if a weather alert closes trails mid-trek, and who pays for extra nights or transport?
 - How do you communicate with the park and emergency services where there is no mobile signal?
 
-For more on checking who you book with, see our [pre-booking checklist](/checklist/) and red flags guide.
+For more on checking who you book with, see.

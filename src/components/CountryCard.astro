@@ -8,7 +8,7 @@ const { d, label } = Astro.props;
 const region = label ?? regions.find((r) => r.slug === d.region)?.name ?? 'Destination';
 ---
 <article class="card">
-  <a class="photo-link" href={url.country(d.slug)} tabindex="-1" aria-hidden="true"><Photo slug={d.slug} alt="" credit={false} /></a>
+  <a class="photo-link" href={url.country(d.slug)} tabindex="-1" aria-hidden="true"><Photo slug={d.slug} alt="" credit={false} natural /></a>
   <p class="meta"><span>{region}</span></p>
   <h3><a href={url.country(d.slug)}>{d.name}</a></h3>
   <a class="pill pill-plain" href={url.country(d.slug)} aria-label={`Discover ${d.name}`}>Discover</a>

@@ -85,7 +85,6 @@ Biosecurity matters too. Under IAATO's "Don't Pack a Pest" guidance, you will us
 - What category is the ship, how many passengers does it carry, and how many landings do you plan?
 - With the 100-passengers-ashore limit, how is time ashore shared out, and how long does each group typically get?
 - Which port do we sail from, and do I need a visa or onward travel documents for that country?
-- What insurance do you require, and does it need to cover medical evacuation from Antarctica? (See our insurance guide.)
-- What happens to my deposit and balance if the voyage is cancelled or the itinerary changes because of weather or ice? (See deposits and payment protection.)
+- What insurance do you require, and does it need to cover medical evacuation from Antarctica?
+- What happens to my deposit and balance if the voyage is cancelled or the itinerary changes because of weather or ice?
 
-Before paying, work through our [booking checklist](/checklist/).

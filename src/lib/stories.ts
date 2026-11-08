@@ -1,10 +1,10 @@
-/** One list of everything readable as a "story": articles, guide chapters and questions. */
+/** One list of everything readable as a "story": articles. */
 import { published, readMinutes } from './content';
 import { url } from './urls';
 import { getFeed } from './feed';
 
 export interface Story {
-  kind: 'article' | 'question';
+  kind: 'article';
   id: string;
   href: string;
   title: string;
@@ -25,9 +25,5 @@ export async function allStories(): Promise<Story[]> {
     category: a.data.category, hero: a.data.hero ?? a.data.countries[0], countries: a.data.countries,
     regions: [...new Set(a.data.countries.map(regionOf).filter(Boolean) as string[])], published: a.data.published, minutes: readMinutes(a.body),
   }));
-  const qs = (await published('questions')).map((q): Story => ({
-    kind: 'question', id: q.id, href: url.question(q.id), title: q.data.title, description: q.data.short_answer,
-    category: 'Questions', hero: q.data.hero, countries: [], regions: [], published: q.data.published, minutes: readMinutes(q.body),
-  }));
-  return [...arts, ...qs].sort((a, b) => b.published.getTime() - a.published.getTime() || a.title.localeCompare(b.title));
+  return [...arts].sort((a, b) => b.published.getTime() - a.published.getTime() || a.title.localeCompare(b.title));
 }

@@ -88,4 +88,3 @@ Make sure your travel insurance covers all the activities you plan, and read our
 - What happens if the trail or the trains are closed on our dates?
 - What is your cancellation policy, given that site tickets themselves cannot be refunded?
 
-Before you pay a deposit, see our guides to operator licences and deposits and payment protection, and our [pre-booking checklist](/checklist/).

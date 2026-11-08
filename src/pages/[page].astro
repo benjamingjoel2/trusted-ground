@@ -9,7 +9,7 @@ import { render, type CollectionEntry } from 'astro:content';
 import { site } from '../config/site.config';
 import { t } from '../i18n/en';
 export async function getStaticPaths() {
-  return (await published('pages')).filter((e) => !['checklist', 'compare'].includes(e.id)).map((entry) => ({ params: { page: entry.id }, props: { entry } }));
+  return (await published('pages')).filter((e) => e.id !== 'compare').map((entry) => ({ params: { page: entry.id }, props: { entry } }));
 }
 const { entry } = Astro.props as { entry: CollectionEntry<'pages'> };
 const d = entry.data;

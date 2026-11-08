@@ -52,4 +52,4 @@ sources:
 | ABTA | Trade association | UK travel agents and tour operators | Yes, for many packages sold by members |
 | ATOL | Licence issued by the UK CAA | UK sellers of flight-inclusive trips | Yes, for ATOL-protected bookings |
 
-Read more in the guide: deposits and payment protection and memberships.
+Read more in our article on [paying a local operator abroad](/articles/paying-a-local-operator-abroad/).

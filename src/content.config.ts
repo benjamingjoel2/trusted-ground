@@ -35,11 +35,6 @@ const countries = defineCollection({
   ),
 });
 
-const questions = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/questions' }),
-  schema: z.intersection(base, z.object({ order: z.number().int(), short_answer: z.string().min(1), hero: z.string().optional() })),
-});
-
 const articles = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/articles' }),
   schema: z.intersection(
@@ -72,4 +67,4 @@ const pages = defineCollection({
   ),
 });
 
-export const collections = { countries, questions, pages, articles };
+export const collections = { countries, pages, articles };

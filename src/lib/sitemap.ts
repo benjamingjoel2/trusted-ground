@@ -4,7 +4,7 @@ import { niches, regions, site } from '../config/site.config';
 import { url, abs } from './urls';
 
 export type Entry = { loc: string; lastmod: string };
-export const SECTIONS = ['pages', 'articles', 'countries', 'questions'] as const;
+export const SECTIONS = ['pages', 'articles', 'countries'] as const;
 export type Section = (typeof SECTIONS)[number];
 
 export async function sectionEntries(section: Section): Promise<Entry[]> {
@@ -15,7 +15,7 @@ export async function sectionEntries(section: Section): Promise<Entry[]> {
   switch (section) {
     case 'pages': {
       const pages = (await published('pages')).map((p) => e(`/${p.id}/`, iso(p.data.reviewed)));
-      return [e('/', L), e('/credits/', L), e(url.compare(), L), e(url.checklist(), L), ...pages];
+      return [e('/', L), e('/credits/', L), e(url.compare(), L), ...pages];
     }
     case 'countries': {
       const out = [e(url.countries(), L), e(url.regions(), L)];
@@ -27,10 +27,6 @@ export async function sectionEntries(section: Section): Promise<Entry[]> {
     case 'articles': {
       const a = await published('articles');
       return [e(url.articles(), a.reduce((m, x) => max(m, iso(x.data.reviewed)), L)), ...a.map((x) => e(url.article(x.id), iso(x.data.reviewed)))];
-    }
-    case 'questions': {
-      const q = await published('questions');
-      return [e(url.questions(), q.reduce((m, x) => max(m, iso(x.data.reviewed)), L)), ...q.map((x) => e(url.question(x.id), iso(x.data.reviewed)))];
     }
   }
 }

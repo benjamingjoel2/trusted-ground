@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-type Name = 'countries' | 'questions' | 'pages' | 'articles';
+type Name = 'countries' | 'pages' | 'articles';
 
 /** Only reviewed, sourced entries are published. Drafts never leave the repo. */
 export async function published<N extends Name>(name: N): Promise<CollectionEntry<N>[]> {

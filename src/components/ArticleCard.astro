@@ -8,7 +8,7 @@ const { a } = Astro.props;
 const href = url.article(a.id);
 ---
 <article class="card">
-  <a class="photo-link" href={href} tabindex="-1" aria-hidden="true"><Photo slug={a.data.hero ?? a.data.countries[0] ?? ''} alt="" credit={false} /></a>
+  <a class="photo-link" href={href} tabindex="-1" aria-hidden="true"><Photo slug={a.data.hero ?? a.data.countries[0] ?? ''} alt="" credit={false} natural /></a>
   <p class="meta"><span>{fmtDate(a.data.published)}</span><span>{readMinutes(a.body)} min read</span></p>
   <h3><a href={href}>{a.data.title}</a></h3>
   <a class="pill" href={href} aria-label={`Read: ${a.data.title}`}>Read story</a>

@@ -41,7 +41,7 @@ Every visitor needs a visa to enter and leave Bhutan, according to the UK Foreig
 - **Passport:** the FCDO says UK passport holders need a passport with an expiry date at least six months after the date they plan to leave Bhutan.
 - **Extensions and refunds:** extensions can be paid through the online portal or in person at the Department of Immigration. SDF refund requests are made online through the visa portal.
 
-Travel insurance is no longer mandatory. According to the Department of Tourism, the requirement was lifted on 23 April 2024, but the department says it is "strongly recommended" that all guests have it. See our guide to travel insurance for what to check.
+Travel insurance is no longer mandatory. According to the Department of Tourism, the requirement was lifted on 23 April 2024, but the department says it is "strongly recommended" that all guests have it.
 
 ## Guides, operators and permits
 
@@ -62,7 +62,7 @@ Because the SDF is charged per night, it can make up a large share of the cost o
 - Check that the SDF is shown as a separate line, at the correct rate for each traveller's age.
 - Check that the USD 40 visa fee is included or clearly listed.
 - Confirm that the guide, approved hotels, internal transport and any national park permits are included, and say so in writing.
-- Ask how payments are handled and what happens to the SDF if your dates change. Our guide to deposits and payment protection covers what to ask before you send money.
+- Ask how payments are handled and what happens to the SDF if your dates change.
 
 ## Questions to ask your operator
 
@@ -73,4 +73,3 @@ Because the SDF is charged per night, it can make up a large share of the cost o
 - Does our itinerary enter any national parks, and will you arrange those permits?
 - If we shorten or cancel the trip, how will SDF refunds be requested and returned to us?
 
-Before you book, our [pre-booking checklist](/checklist/) and booking guide explain how to check an operator's details.

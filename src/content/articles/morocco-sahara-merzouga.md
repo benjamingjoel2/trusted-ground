@@ -71,9 +71,9 @@ ONMT also notes that the dunes are shaped by the Chergui, a Saharan wind. Ask wh
 - **Self-driving.** The FCDO says UK drivers need a 1968 international driving permit alongside their licence, plus an insurer's green card.
 - **The Algerian border.** Merzouga lies on Morocco's eastern side. The FCDO states that the land border between Morocco and Algeria is closed and patrolled, and that crossing it without authorisation is illegal.
 - **Activity standards.** The FCDO notes that adventure providers may not meet UK safety standards. It reports that quad biking accidents involving British nationals are frequent, and advises always wearing a helmet. Check that your insurance covers the activities you plan.
-- **Medical care.** The FCDO says public health facilities provide limited care and recommends insurance that covers local treatment and medical evacuation. See our insurance guide.
+- **Medical care.** The FCDO says public health facilities provide limited care and recommends insurance that covers local treatment and medical evacuation.
 
-For wider trip planning see our [Morocco travel guide](/countries/morocco/), and before you pay a deposit read our [booking checklist](/checklist/) and red flags guide.
+For wider trip planning see our [Morocco travel guide](/countries/morocco/).
 
 ## Planning desert nights
 

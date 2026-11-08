@@ -6,7 +6,7 @@ interface Props { s: Story }
 const { s } = Astro.props;
 ---
 <article class="card" data-cat={s.category} data-regions={s.regions.join(' ')}>
-  <a class="photo-link" href={s.href} tabindex="-1" aria-hidden="true"><Photo slug={s.hero ?? ''} alt="" credit={false} /></a>
+  <a class="photo-link" href={s.href} tabindex="-1" aria-hidden="true"><Photo slug={s.hero ?? ''} alt="" credit={false} natural /></a>
   <p class="meta"><span>{fmtDate(s.published)}</span><span>{s.minutes} min read</span></p>
   <h3><a href={s.href}>{s.title}</a></h3>
   <a class="pill pill-plain" href={s.href} aria-label={`Read: ${s.title}`}>Read story</a>

@@ -63,7 +63,7 @@ At the time of writing (November 2026), the FCDO's Benin advice was last updated
 - **Unrest.** The FCDO travel advice (updated 4 November 2026) refers to a recent attempted coup and advises avoiding demonstrations and complying with any curfews.
 - **Crime and roads.** Street crime is common in Cotonou. The FCDO advises against driving outside towns after dark and calls the sea currents along the whole coast, including Ouidah's beaches, very strong.
 
-Read the full advice yourself before booking and again before you travel, and check your insurance covers your itinerary. See our insurance guide.
+Read the full advice yourself before booking and again before you travel, and check your insurance covers your itinerary.
 
 ## Entry and guides
 

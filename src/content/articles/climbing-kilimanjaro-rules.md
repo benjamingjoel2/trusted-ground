@@ -42,7 +42,7 @@ TANAPA's visitor guide sets out the main rules:
 - **Restrictions.** Off-trail travel and open fires are restricted, and drones need prior authorisation.
 - **Special permits.** TANAPA lists camping in Kibo's crater (Crater Camp) as an activity that needs a special permit.
 
-Because the licence sits with the operator, check that the company you pay is licensed, not just an agent reselling someone else's climb. Our guide to licences explains what to look for.
+Because the licence sits with the operator, check that the company you pay is licensed, not just an agent reselling someone else's climb.
 
 ## Routes and itinerary length
 
@@ -65,7 +65,7 @@ TANAPA publishes its fees on its tariff page and advises climbers to confirm the
 
 Altitude is the main risk. TANAPA advises choosing an itinerary with acclimatisation days, climbing slowly, drinking plenty and reporting any symptoms to your guide promptly. It also recommends proper cold-weather and rain gear, a head torch and any personal medication. The UK Foreign, Commonwealth & Development Office (FCDO) warns that altitude sickness is a risk in parts of Tanzania and that medical facilities are limited outside Dar es Salaam.
 
-The FCDO also notes that wildfires can occur in hot, dry periods, including in Kilimanjaro National Park. If one affects you, contact your tour operator and follow the instructions of local authorities. Make sure your travel insurance covers trekking at the altitude you will reach. Our insurance guide explains what to check.
+The FCDO also notes that wildfires can occur in hot, dry periods, including in Kilimanjaro National Park. If one affects you, contact your tour operator and follow the instructions of local authorities. Make sure your travel insurance covers trekking at the altitude you will reach.
 
 ## Questions to ask your operator
 
@@ -74,6 +74,6 @@ The FCDO also notes that wildfires can occur in hot, dry periods, including in K
 - Can you give me an itemised list of the park fees in my price, by category, route and number of days?
 - How many guides and porters will there be, and how are they paid and equipped?
 - What is your procedure if I develop altitude sickness, and how would I be brought down or evacuated?
-- What are your deposit, cancellation and refund terms? (See deposits and payment protection.)
+- What are your deposit, cancellation and refund terms?
 
-For more on travelling in the country, see our [Tanzania guide](/countries/tanzania/) and the [booking checklist](/checklist/).
+For more on travelling in the country, see our [Tanzania guide](/countries/tanzania/).

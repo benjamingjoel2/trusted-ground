@@ -10,12 +10,15 @@ interface Props {
   priority?: boolean;
   class?: string;
   credit?: boolean;
+  /** Keep the photo's own shape (clamped), like a magazine grid. */
+  natural?: boolean;
 }
-const { slug, alt, sizes = '(min-width: 64rem) 25vw, 80vw', widths = [360, 560, 800], priority = false, class: cls = '', credit = true } = Astro.props;
+const { slug, alt, sizes = '(min-width: 64rem) 25vw, 80vw', widths = [360, 560, 800], priority = false, class: cls = '', credit = true, natural = false } = Astro.props;
 const p = placePhoto(slug);
+const ratio = p ? Math.min(1.55, Math.max(1.05, p.src.width / p.src.height)) : 1.2;
 ---
 {p ? (
-  <figure class={`photo ${cls}`}>
+  <figure class={`photo ${cls}`} style={natural ? `aspect-ratio:${ratio.toFixed(3)}` : undefined}>
     <Picture
       src={p.src}
       alt={alt}

@@ -57,11 +57,11 @@ If you do pay by transfer, confirm the bank details by phone using a number you 
 
 If you book a package that includes a flight through a UK travel company, you may have ATOL protection. The UK Civil Aviation Authority (CAA) says you should receive an ATOL Certificate. If the company fails while you are abroad, ATOL helps you continue your trip or reimburses you for replacing the protected parts. ATOL is not travel insurance, and it does not cover a flight bought on its own where you receive an e-ticket straight away.
 
-Booking ground arrangements directly with a local operator usually means no ATOL protection for that part of the trip, so your card protections and insurance matter more. The FOS notes that you can still ask your card provider about Section 75 or chargeback where ATOL or ABTA cover does not apply. See our guides to deposits and payment protection and insurance.
+Booking ground arrangements directly with a local operator usually means no ATOL protection for that part of the trip, so your card protections and insurance matter more. The FOS notes that you can still ask your card provider about Section 75 or chargeback where ATOL or ABTA cover does not apply.
 
 ## Check who you are paying
 
-Payment protection works best when you are paying a real, accountable business. In Kenya, the Tourism Regulatory Authority (TRA) licenses tourism businesses, including safari operators, and says licensing helps keep out unscrupulous operators. Ask for the operator's licence details and check them yourself. Our licences guide explains how licensing works country by country, and the [booking checklist](/checklist/) covers what to confirm before you pay a deposit.
+Payment protection works best when you are paying a real, accountable business. In Kenya, the Tourism Regulatory Authority (TRA) licenses tourism businesses, including safari operators, and says licensing helps keep out unscrupulous operators. Ask for the operator's licence details and check them yourself.
 
 Once you arrive, the FCDO advises against carrying large sums of cash in Kenya and warns of thieves posing as police or security guards. Settling as much as possible in advance by a traceable method also cuts down how much cash you need to carry.
 
