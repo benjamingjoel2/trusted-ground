@@ -3,13 +3,13 @@ import Photo from './Photo.astro';
 import type { Destination } from '../lib/feed';
 import { regions } from '../config/site.config';
 import { url } from '../lib/urls';
-interface Props { d: Destination }
-const { d } = Astro.props;
-const region = regions.find((r) => r.slug === d.region)?.name ?? '';
+interface Props { d: Destination; label?: string }
+const { d, label } = Astro.props;
+const region = label ?? regions.find((r) => r.slug === d.region)?.name ?? 'Destination';
 ---
 <article class="card">
   <a class="photo-link" href={url.country(d.slug)} tabindex="-1" aria-hidden="true"><Photo slug={d.slug} alt="" credit={false} /></a>
-  <p class="meta"><span>{region}</span><span>Travel guide</span></p>
+  <p class="meta"><span>{region}</span></p>
   <h3><a href={url.country(d.slug)}>{d.name}</a></h3>
-  <a class="pill" href={url.country(d.slug)} aria-label={`Explore ${d.name}`}>Explore</a>
+  <a class="pill pill-plain" href={url.country(d.slug)} aria-label={`Discover ${d.name}`}>Discover</a>
 </article>

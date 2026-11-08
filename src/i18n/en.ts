@@ -5,11 +5,11 @@
 export const en = {
   skip: 'Skip to content',
   nav: {
-    articles: 'Articles',
+    articles: 'Stories',
     countries: 'Destinations',
     regions: 'Regions',
     best: 'Specialties',
-    guide: 'Booking guide',
+    guide: 'Travel advice',
     verification: 'Verification',
     questions: 'Questions',
     checklist: 'Checklist',

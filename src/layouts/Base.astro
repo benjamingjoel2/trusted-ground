@@ -48,7 +48,7 @@ const nav = [
 const current = (href: string) => path.startsWith(href);
 const feed = getFeed();
 const topCountries = [...feed.countries].sort((a, b) => feed.byCountry.get(b.slug)!.length - feed.byCountry.get(a.slug)!.length || a.name.localeCompare(b.name)).slice(0, 10);
-const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.order);
+const categories = [...new Set((await published('articles')).map((a) => a.data.category))];
 ---
 <!doctype html>
 <html lang={site.language}>
@@ -104,8 +104,8 @@ const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.or
           </ul>
         </nav>
         <div class="hdr-cells">
-          <a href={url.checklist()}>{t.nav.checklist}</a>
           <a href={url.regions()}>{t.nav.regions}</a>
+          <a href={url.about()}>About</a>
         </div>
       </div>
     </header>
@@ -115,27 +115,8 @@ const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.or
       ) : (
         <div class="wrap">
           <div class="page-head">{allCrumbs.length > 0 && <Breadcrumbs items={allCrumbs} />}</div>
-          <div class="layout" style={aside ? undefined : 'grid-template-columns:1fr'}>
+          <div class="layout layout-single">
             <div class="main"><slot /></div>
-            {aside && (
-              <aside class="aside" aria-label="Before you book">
-                <slot name="aside" />
-                <div class="aside-box">
-                  <h2>Before you pay</h2>
-                  <ul>
-                    {guide.map((g) => <li><a href={url.guideChapter(g.id)}>{g.data.short_title}</a></li>)}
-                  </ul>
-                  <a class="pill pill-dark" href={url.checklist()}>The checklist</a>
-                </div>
-                <div class="aside-box">
-                  <h2>Destinations</h2>
-                  <ul>
-                    {topCountries.slice(0, 6).map((d) => <li><a href={url.country(d.slug)}>{d.name}</a></li>)}
-                  </ul>
-                  <a class="pill" href={url.countries()}>All countries</a>
-                </div>
-              </aside>
-            )}
           </div>
         </div>
       )}
@@ -156,13 +137,13 @@ const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.or
               <li><a href={url.countries()}>All countries</a></li>
             </ul>
           </nav>
-          <nav aria-label="Before you book">
-            <h2>Before you book</h2>
+          <nav aria-label="Stories">
+            <h2>Stories</h2>
             <ul>
-              {guide.map((g) => <li><a href={url.guideChapter(g.id)}>{g.data.short_title}</a></li>)}
-              <li><a href={url.checklist()}>Checklist</a></li>
+              {categories.map((c) => <li><a href={`${url.articles()}#${c.replace(/\W+/g, '-').toLowerCase()}`}>{c}</a></li>)}
+              <li><a href={url.articles()}>All stories</a></li>
+              <li><a href={url.guide()}>Travel advice</a></li>
               <li><a href={url.questions()}>Questions</a></li>
-              <li><a href={url.compare()}>{t.nav.compare}</a></li>
             </ul>
           </nav>
           <nav aria-label="About">

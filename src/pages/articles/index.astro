@@ -1,49 +1,31 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageMeta from '../../components/PageMeta.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { site } from '../../config/site.config';
 import { url, abs } from '../../lib/urls';
 import { published, iso } from '../../lib/content';
 import { article } from '../../lib/schema';
 import { t } from '../../i18n/en';
-const list = (await published('articles')).sort((a, b) => iso(b.data.published).localeCompare(iso(a.data.published)) || a.data.title.localeCompare(b.data.title));
-const guide = (await published('guide')).sort((a, b) => a.data.order - b.data.order);
+const list = (await published('articles')).sort((a, b) => b.data.published.getTime() - a.data.published.getTime() || a.data.title.localeCompare(b.data.title));
 const cats = [...new Set(list.map((a) => a.data.category))];
 const path = url.articles();
-const title = 'Travel articles';
-const description = 'Practical, sourced travel articles: permits and park rules, seasons, planning and booking safely with a local operator.';
+const title = 'Travel stories';
+const description = 'Practical, sourced travel stories: permits and park rules, seasons, planning and booking safely with a local operator.';
 const reviewed = list.reduce((m, a) => (iso(a.data.reviewed) > m ? iso(a.data.reviewed) : m), site.launch.published);
 const listLd = { '@type': 'ItemList', name: title, itemListOrder: 'https://schema.org/ItemListUnordered', numberOfItems: list.length, itemListElement: list.map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.data.title, url: abs(url.article(a.id)) })) };
 ---
 <Base title={title} description={description} path={path} full crumbs={[{ name: t.nav.articles, path }]}
   schema={[article({ path, title, description, published: site.launch.published, modified: reviewed }), ...(list.length ? [listLd] : [])]}>
-  <div class="wrap">
-    <div class="page-head">
-      <Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.articles, path }]} />
-      <h1 class="display" style="color:var(--ink)">Travel articles</h1>
-      <p class="standfirst">{description}</p>
-      <PageMeta published={site.launch.published} reviewed={reviewed} />
-    </div>
+  <div class="wrap listing">
+    <h1>Travel stories</h1>
+    <p class="listing-dek">{description}</p>
+    <p class="results">{cats.map((c, i) => (<>{i > 0 && ' · '}<a href={`#${c.replace(/\W+/g, '-').toLowerCase()}`}>{c}</a></>))}</p>
+    <div class="grid4">{list.map((a) => <ArticleCard a={a} />)}</div>
     {cats.map((c) => (
-      <section style="padding-bottom:3rem" aria-labelledby={`c-${c.replace(/\W+/g, '-').toLowerCase()}`}>
-        <div class="sec-head"><h2 id={`c-${c.replace(/\W+/g, '-').toLowerCase()}`}>{c}</h2></div>
-        <div class="grid">{list.filter((a) => a.data.category === c).map((a) => <ArticleCard a={a} />)}</div>
+      <section aria-labelledby={c.replace(/\W+/g, '-').toLowerCase()} style="padding-top:3rem">
+        <div class="sec-head"><h2 id={c.replace(/\W+/g, '-').toLowerCase()}>{c}</h2></div>
+        <div class="grid4">{list.filter((a) => a.data.category === c).map((a) => <ArticleCard a={a} />)}</div>
       </section>
     ))}
-    <section style="padding-bottom:4rem" aria-labelledby="guide-h">
-      <div class="sec-head"><h2 id="guide-h">From the booking guide</h2><a class="viewall" href={url.guide()}>View all</a></div>
-      <div class="grid">
-        {guide.map((g) => (
-          <article class="card card-text">
-            <p class="meta"><span>Guide · Part {g.data.order}</span><span>Booking safely</span></p>
-            <h3><a href={url.guideChapter(g.id)}>{g.data.title}</a></h3>
-            <p>{g.data.description}</p>
-            <a class="pill" href={url.guideChapter(g.id)} aria-label={`Read: ${g.data.title}`}>Read</a>
-          </article>
-        ))}
-      </div>
-    </section>
   </div>
 </Base>

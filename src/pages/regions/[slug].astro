@@ -1,13 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageMeta from '../../components/PageMeta.astro';
 import Photo from '../../components/Photo.astro';
 import CountryCard from '../../components/CountryCard.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import Carousel from '../../components/Carousel.astro';
 import { getFeed } from '../../lib/feed';
 import { regions, site } from '../../config/site.config';
 import { url, abs } from '../../lib/urls';
-import { placePhoto } from '../../lib/images';
+import { placePhoto, creditLine } from '../../lib/images';
+import { published, fmtDate } from '../../lib/content';
 import { article } from '../../lib/schema';
 import { t } from '../../i18n/en';
 export function getStaticPaths() {
@@ -16,38 +17,51 @@ export function getStaticPaths() {
 const { r } = Astro.props as { r: (typeof regions)[number] };
 const feed = getFeed();
 const list = feed.countriesByRegion.get(r.slug) ?? [];
+const slugs = new Set(list.map((d) => d.slug));
+const all = (await published('articles')).sort((a, b) => b.data.published.getTime() - a.data.published.getTime());
+const about = all.filter((a) => a.data.countries.some((c) => slugs.has(c)));
 const path = url.region(r.slug);
 const lname = r.name.replace(/^The /, 'the ');
-const title = `${r.name}: destination guides`;
-const description = list.length ? `Travel guides to ${t.countriesListed(list.length)} in ${lname}: when to go, main regions and entry basics.` : `No destination guides for ${lname} yet.`;
-const checked = site.launch.published;
+const title = `${r.name} travel guide`;
+const description = list.length ? `Travel guides to ${t.countriesListed(list.length)} in ${lname}: when to go, where to go and how to get in.` : `No destination guides for ${lname} yet.`;
 const heroSlug = list.map((d) => d.slug).find((s) => placePhoto(s));
-const placeList = {
-  '@type': 'ItemList',
-  name: `Destination guides in ${r.name}`,
-  numberOfItems: list.length,
-  itemListElement: list.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: abs(url.country(d.slug)) })),
-};
+const photo = heroSlug ? placePhoto(heroSlug) : null;
+const placeList = { '@type': 'ItemList', name: `Destinations in ${r.name}`, numberOfItems: list.length, itemListElement: list.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: abs(url.country(d.slug)) })) };
 ---
 <Base title={title} description={description} path={path} full
   crumbs={[{ name: t.nav.regions, path: url.regions() }, { name: r.name, path }]}
-  schema={[article({ path, title, description, published: site.launch.published, modified: checked }), placeList]}>
-  <section class="hero" aria-labelledby="r-h" style="min-height:min(60vh,34rem)">
-    {heroSlug && <Photo slug={heroSlug} alt="" priority sizes="100vw" widths={[640, 960, 1280, 1600]} />}
-    <div class="wrap hero-body">
-      <p class="hero-kicker">Region</p>
-      <h1 id="r-h" class="display">{r.name}<span class="vh"> destination guides</span></h1>
-      <div class="callout"><p>{description}</p></div>
+  schema={[article({ path, title, description, published: site.launch.published, modified: site.launch.published }), placeList]}>
+  <section class="dest" aria-labelledby="r-h">
+    <div class="dest-main">
+      <a class="chip chip-white" href={url.regions()}>Region</a>
+      <h1 id="r-h" class="display">{r.name}<span class="vh"> travel guide</span></h1>
+      <p>{description}</p>
+      {heroSlug && <Photo slug={heroSlug} alt="" priority credit={false} sizes="(min-width: 64rem) 46vw, 100vw" widths={[480, 720, 960, 1280]} />}
+      {photo && <p class="dest-credit"><a href={photo.credit.page}>{creditLine(photo.credit)}</a></p>}
+    </div>
+    <div class="dest-side">
+      <h2 class="boxlabel">Latest stories</h2>
+      <ul class="storylist">
+        {(about.length ? about : all).slice(0, 5).map((a) => (
+          <li><p class="mono">{site.name} editors <span aria-hidden="true">|</span> {fmtDate(a.data.published)}</p><a href={url.article(a.id)}>{a.data.title}</a></li>
+        ))}
+      </ul>
     </div>
   </section>
-  <div class="wrap">
-    <div style="padding-top:1.5rem"><Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.regions, path: url.regions() }, { name: r.name, path }]} /></div>
-    <PageMeta published={site.launch.published} reviewed={checked} />
-    {list.length > 0 ? (
-      <div class="grid" style="padding-bottom:3rem">{list.map((d) => <CountryCard d={d} />)}</div>
-    ) : (
-      <p>No destination guides for this region yet.</p>
-    )}
-    <div style="height:3rem"></div>
-  </div>
+  {list.length > 0 && (
+    <section class="section" aria-labelledby="top-h">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="top-h">Top destinations in {lname}</h2><a class="viewall" href={url.countries()}>Explore all</a></div>
+        <div class="grid4">{list.map((d) => <CountryCard d={d} label="Destination" />)}</div>
+      </div>
+    </section>
+  )}
+  {about.length > 0 && (
+    <section class="section section-grey" aria-labelledby="ls-h">
+      <div class="wrap">
+        <div class="sec-head"><h2 id="ls-h">Latest stories from {lname}</h2><div class="sec-tools"><a class="viewall" href={url.articles()}>Read more</a><Carousel id="row-rs" label="stories" /></div></div>
+        <div class="row" id="row-rs">{about.map((a) => <ArticleCard a={a} />)}</div>
+      </div>
+    </section>
+  )}
 </Base>

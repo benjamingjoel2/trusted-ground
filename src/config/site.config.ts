@@ -67,7 +67,7 @@ export const site = {
     grey3: '#DDDCD8',
     line: '#D3D4D5',
     ink: '#1F2528',
-    inkDeep: '#121A10',
+    inkDeep: '#2A3A1F',
     slate: '#50575C',
     lime: '#CFDCB2',
     yellow: '#FFD21F',

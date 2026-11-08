@@ -1,14 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Photo from '../../components/Photo.astro';
-import PageMeta from '../../components/PageMeta.astro';
 import Sources from '../../components/Sources.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import Carousel from '../../components/Carousel.astro';
 import { url } from '../../lib/urls';
 import { published, iso, fmtDate, readMinutes } from '../../lib/content';
 import { article } from '../../lib/schema';
-import { hasCountryPage, destName } from '../../lib/feed';
+import { destName } from '../../lib/feed';
+import { placePhoto, creditLine } from '../../lib/images';
 import { site } from '../../config/site.config';
 import { render, type CollectionEntry } from 'astro:content';
 import { t } from '../../i18n/en';
@@ -18,55 +18,41 @@ export async function getStaticPaths() {
 }
 type E = CollectionEntry<'articles'>;
 const { entry, others } = Astro.props as { entry: E; others: E[] };
-const { Content, headings } = await render(entry);
+const { Content } = await render(entry);
 const d = entry.data;
 const path = url.article(entry.id);
 const heroSlug = d.hero ?? d.countries[0];
-const related = others.filter((o) => o.data.category === d.category || o.data.countries.some((c) => d.countries.includes(c))).slice(0, 4);
-const more = (related.length >= 4 ? related : [...related, ...others.filter((o) => !related.includes(o))]).slice(0, 4);
-const countryLinks = d.countries.filter(hasCountryPage);
-const h2s = headings.filter((h) => h.depth === 2);
+const photo = heroSlug ? placePhoto(heroSlug) : null;
+const related = others.filter((o) => o.data.category === d.category || o.data.countries.some((c) => d.countries.includes(c)));
+const more = [...related, ...others.filter((o) => !related.includes(o))].slice(0, 8);
 ---
 <Base title={d.title} description={d.description} path={path} full ogType="article"
   crumbs={[{ name: t.nav.articles, path: url.articles() }, { name: d.title, path }]}
   schema={[article({ path, title: d.title, description: d.description, published: iso(d.published), modified: iso(d.reviewed), sources: d.sources })]}>
-  {heroSlug && <div class="article-hero"><Photo slug={heroSlug} alt={`${destName(heroSlug)}`} priority sizes="100vw" widths={[640, 960, 1280, 1600]} /></div>}
-  <div class="wrap">
-    <div class="article-head">
-      <Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.articles, path: url.articles() }, { name: d.category, path: url.articles() }]} />
-      <h1>{d.title}</h1>
-      <p class="article-meta"><span>{d.category}</span><span>{fmtDate(d.published)}</span><span>{readMinutes(entry.body)} min read</span></p>
-      <p class="standfirst">{d.description}</p>
-    </div>
-    <div class="layout">
-      <div class="main">
-        <PageMeta published={d.published} reviewed={d.reviewed} />
-        <div class="prose"><Content /></div>
-        <Sources sources={d.sources} />
+  <header class="ahead">
+    <div class="ahead-text">
+      <a class="chip" href={url.articles()}>{d.category}</a>
+      <div class="ahead-bottom">
+        <h1>{d.title}</h1>
+        <p class="ahead-meta">{fmtDate(d.published)} <span aria-hidden="true">•</span> <span class="mono">{readMinutes(entry.body)} min read</span></p>
+        <div class="byline"><span class="byline-name">{site.name} editors</span><span class="mono">Writer</span></div>
+        {photo && <p class="ahead-credit">{destName(heroSlug!)}. <a href={photo.credit.page}>{creditLine(photo.credit)}</a></p>}
       </div>
-      <aside class="aside" aria-label="In this article">
-        {h2s.length > 2 && (
-          <div class="aside-box"><h2>In this article</h2><ul>{h2s.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul></div>
-        )}
-        {countryLinks.length > 0 && (
-          <div class="aside-box">
-            <h2>Destination guides</h2>
-            <ul>{countryLinks.map((c) => <li><a href={url.country(c)}>{destName(c)}</a></li>)}</ul>
-          </div>
-        )}
-        <div class="aside-box">
-          <h2>Before you pay</h2>
-          <p class="small">Vet any operator with our one-page checklist.</p>
-          <a class="pill pill-dark" href={url.checklist()}>The checklist</a>
-        </div>
-      </aside>
     </div>
+    <div class="ahead-photo">{heroSlug && <Photo slug={heroSlug} alt={destName(heroSlug)} priority credit={false} sizes="(min-width: 64rem) 50vw, 100vw" widths={[480, 720, 960, 1280]} />}</div>
+  </header>
+  <div class="wrap">
+    <article class="abody">
+      <p class="adisclaimer">{site.name} articles are written from official sources, listed at the end. Rules, fees and advice change: check them before you book. Last reviewed {fmtDate(d.reviewed)}.</p>
+      <div class="prose"><Content /></div>
+      <Sources sources={d.sources} />
+    </article>
   </div>
   {more.length > 0 && (
     <section class="section section-grey" aria-labelledby="more-h">
       <div class="wrap">
-        <div class="sec-head"><h2 id="more-h">More articles</h2><a class="viewall" href={url.articles()}>View all</a></div>
-        <div class="row">{more.map((a) => <ArticleCard a={a} />)}</div>
+        <div class="sec-head"><h2 id="more-h">More stories</h2><div class="sec-tools"><a class="viewall" href={url.articles()}>Read more</a><Carousel id="row-more" label="more stories" /></div></div>
+        <div class="row" id="row-more">{more.map((a) => <ArticleCard a={a} />)}</div>
       </div>
     </section>
   )}

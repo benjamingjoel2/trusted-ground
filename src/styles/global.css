@@ -333,3 +333,76 @@ h3 { font-size: 1.375rem; }
 .hero-strip a:hover { background: rgba(255,255,255,.06); text-decoration: underline; }
 .hero-strip .mono { display: block; font-weight: 400; font-size: 0.75rem; color: #c9cdd0; margin-bottom: 0.35rem; }
 .hero-b .credit { bottom: auto; top: 0.75rem; }
+
+/* Article page (split header, single column body) */
+.ahead { display: grid; grid-template-columns: 1fr; background: var(--grey); }
+@media (min-width: 64rem) { .ahead { grid-template-columns: 1fr 1fr; min-height: 38rem; } }
+.ahead-text { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; padding: 2rem var(--gutter) 1.5rem; }
+.ahead .chip { align-self: flex-start; }
+.ahead h1 { font-size: clamp(2rem, 1.3rem + 2.4vw, 3rem); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 1rem; max-width: 20ch; }
+.ahead-meta { font-size: 0.95rem; margin: 0 0 1.25rem; display: flex; gap: 0.5rem; align-items: center; }
+.ahead-meta .mono { font-size: 0.8125rem; }
+.byline { display: inline-flex; flex-direction: column; background: var(--yellow); padding: 0.8rem 1.1rem 0.8rem 1.25rem; transform: rotate(-1.5deg); margin: 0 0 1.25rem 0.25rem; min-width: 14rem; }
+.byline-name { font-weight: 600; text-transform: uppercase; text-decoration: underline; text-underline-offset: 3px; font-size: 0.95rem; }
+.byline .mono { font-size: 0.6875rem; margin-top: 0.15rem; }
+.ahead-credit { font-size: 0.75rem; color: var(--slate); margin: 0; }
+.ahead-credit a { color: inherit; }
+.ahead-photo .photo { height: 100%; min-height: 18rem; }
+@media (min-width: 64rem) { .ahead-photo .photo { min-height: 38rem; } }
+.abody { max-width: 42rem; padding: 2.25rem 0 3rem; }
+@media (min-width: 64rem) { .abody { margin-left: 1.25rem; } }
+.adisclaimer { font-style: italic; font-size: 0.95rem; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 1rem; margin-bottom: 1.75rem; }
+.abody .prose { font-size: 1.0625rem; line-height: 1.7; }
+.abody .prose h2 { font-family: var(--sans); font-weight: 400; text-transform: uppercase; letter-spacing: 0.01em; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); margin: 2.75rem 0 1rem; }
+.abody .prose h3 { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.01em; margin: 2rem 0 0.75rem; }
+.abody .prose a { color: var(--blue); }
+
+/* Destination page (LP layout) */
+.chip-white { background: #fff; }
+.dest-main { padding-top: 2rem; }
+.dest-main .display { margin-top: 1.5rem; }
+.dest-main p a { color: #fff; }
+.dest-credit { font-size: 0.75rem; text-align: right; margin: 0.5rem 0 0; }
+.dest-credit a { color: #c9d0c6 !important; text-decoration: none; }
+.dest-side { padding-top: 2rem; }
+.boxlabel { font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 400; border: 1px solid var(--ink); display: inline-block; padding: 0 0.3rem; margin: 0 0 0.75rem; }
+.storylist { list-style: none; padding: 0; margin: 0 0 2rem; }
+.storylist li { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
+.storylist .mono { font-size: 0.6875rem; color: var(--slate); margin: 0 0 0.5rem; }
+.storylist a { text-decoration: none; font-size: 1.125rem; }
+.storylist a:hover { text-decoration: underline; }
+.promo { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.25rem 1rem; background: #fff; padding: 1rem 1.25rem; text-decoration: none; }
+.promo .mono { font-size: 0.75rem; grid-column: 1; }
+.promo strong { grid-column: 1; font-weight: 400; }
+.promo .pill { grid-row: 1 / span 2; grid-column: 2; }
+.center { text-align: center; margin-left: auto; margin-right: auto; }
+.tips h2 { font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem); margin-bottom: 0.75rem; }
+.tips .mono.center { font-size: 0.8125rem; }
+.tips-dek { max-width: 36rem; color: var(--slate); margin-bottom: 2.5rem; }
+.tipgrid { display: grid; gap: 0.75rem; grid-template-columns: 1fr; max-width: 70rem; margin: 0 auto; }
+@media (min-width: 48rem) { .tipgrid { grid-template-columns: repeat(3, 1fr); } }
+.tip { background: var(--grey-3); padding: 1.25rem 1.25rem 1.5rem; }
+.tip h3 { display: flex; align-items: center; gap: 0.6rem; font-weight: 400; text-transform: uppercase; font-size: 1.25rem; margin: 0 0 0.9rem; }
+.tip p { font-size: 0.95rem; margin: 0; }
+.tip-wide { grid-column: 1 / -1; }
+.tip-wide .prose { font-size: 0.95rem; max-width: none; }
+.tips-sources { max-width: 70rem; margin: 0 auto; }
+.tips-sources .sources { margin-top: 1.5rem; }
+
+/* Listing pages (destinations, stories) */
+.listing { padding-top: 3rem; padding-bottom: 4rem; }
+.listing h1 { font-size: clamp(2rem, 1.4rem + 2vw, 2.75rem); margin-bottom: 1.25rem; }
+.listing-dek { max-width: 56rem; margin-bottom: 2rem; }
+.results { border-top: 1px solid var(--line); padding-top: 1.5rem; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.results a { text-decoration: none; }
+.results a:hover { text-decoration: underline; }
+.grid4 { display: grid; gap: 2.5rem 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 64rem) { .grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 110rem) { .grid4 { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (max-width: 30rem) { .grid4 { grid-template-columns: 1fr; } }
+.card .meta:only-child, .card .meta span:only-child { }
+
+.layout-single { grid-template-columns: 1fr !important; }
+.layout-single .main { max-width: 46rem; }
+
+.tips .sources h2 { font-family: var(--mono); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 400; margin: 0 0 0.5rem; }

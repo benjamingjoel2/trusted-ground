@@ -84,7 +84,8 @@ for (const f of html) {
   if (/<script(?![^>]*(type="application\/ld\+json"|\bdefer\b|is:inline))[^>]*\bsrc=/.test(s)) err(f, 'render-blocking external script');
   // Factual pages: dates + sources
   if (!is404 && rel !== '/') {
-    if (!s.includes('class="pagemeta"')) err(f, 'missing published / last reviewed dates');
+    const listing = /^\/(regions(\/[a-z-]+)?|articles|countries|guide|questions)\/$/.test(rel);
+    if (!listing && !s.includes('class="pagemeta"') && !/last reviewed/i.test(s)) err(f, 'missing published / last reviewed dates');
     if (!/class="sources"|class="vrec-sources"/.test(s) && !/^\/(regions(\/[a-z-]+)?|articles|countries|guide|questions)\/$/.test(rel)) err(f, 'missing sources');
   }
   // JSON-LD

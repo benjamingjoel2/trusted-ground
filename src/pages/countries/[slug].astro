@@ -1,15 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageMeta from '../../components/PageMeta.astro';
-import Sources from '../../components/Sources.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Photo from '../../components/Photo.astro';
 import CountryCard from '../../components/CountryCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import Carousel from '../../components/Carousel.astro';
+import Icon from '../../components/Icon.astro';
+import Sources from '../../components/Sources.astro';
 import { getFeed, type Destination } from '../../lib/feed';
 import { regions, site } from '../../config/site.config';
 import { url } from '../../lib/urls';
-import { published, iso } from '../../lib/content';
+import { published, iso, fmtDate } from '../../lib/content';
+import { placePhoto, creditLine } from '../../lib/images';
 import { article, placeNode } from '../../lib/schema';
 import { render } from 'astro:content';
 import { t } from '../../i18n/en';
@@ -23,93 +24,79 @@ const region = regions.find((r) => r.slug === d.region)!;
 const snapId = d.content_dir ? d.content_dir.split('/').pop() : d.slug;
 const snap = (await published('countries')).find((e) => e.id === snapId);
 const Snap = snap ? (await render(snap)).Content : null;
-const stories = (await published('articles')).filter((a) => a.data.countries.includes(d.slug) || a.data.hero === d.slug);
+const all = (await published('articles')).sort((a, b) => b.data.published.getTime() - a.data.published.getTime());
+const about = all.filter((a) => a.data.countries.includes(d.slug) || a.data.hero === d.slug);
+const latest = [...about, ...all.filter((a) => !about.includes(a))].slice(0, 4);
 const path = url.country(d.slug);
 const title = `${d.name} travel guide`;
-const description = (snap?.data.best_months
-  ? `${d.name}: when to go, main regions and entry basics, with sources. ${snap.data.best_months}`
-  : `${d.name}: main regions, entry basics and travel advice, with sources.`).slice(0, 200);
+const intro = snap ? `${snap.data.main_regions.length ? `From ${snap.data.main_regions.slice(0, 3).join(', ')} and beyond: ` : ''}when to go, how to get in and what to know before you travel to ${d.name}.` : `When to go, how to get in and what to know before you travel to ${d.name}.`;
+const description = intro.slice(0, 200);
 const pub = snap ? iso(snap.data.published) : site.launch.published;
 const reviewed = snap ? iso(snap.data.reviewed) : site.launch.published;
-const sources = snap?.data.sources ?? [];
-const crumbs = [{ name: t.breadcrumbHome, path: '/' }, { name: region.name, path: url.region(region.slug) }, { name: d.name, path }];
-const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug !== d.slug).slice(0, 8);
+const photo = placePhoto(d.slug);
+const nearby = (feed.countriesByRegion.get(d.region) ?? []).filter((x) => x.slug !== d.slug);
+const tips = [
+  snap?.data.best_months && { icon: 'calendar', title: 'Best time to visit', text: snap.data.best_months },
+  snap && snap.data.main_regions.length > 0 && { icon: 'map', title: 'Where to go', text: snap.data.main_regions.join(', ') },
+  snap?.data.entry_basics && { icon: 'passport', title: 'Entry requirements', text: snap.data.entry_basics },
+].filter(Boolean) as { icon: 'calendar' | 'map' | 'passport'; title: string; text: string }[];
 ---
 <Base title={title} description={description} path={path} full
-  crumbs={crumbs.slice(1)}
-  schema={[placeNode(d, path), article({ path, title, description, published: pub, modified: reviewed, sources, about: { '@id': new URL(path, site.url) + '#place' } })]}>
+  crumbs={[{ name: region.name, path: url.region(region.slug) }, { name: d.name, path }]}
+  schema={[placeNode(d, path), article({ path, title, description, published: pub, modified: reviewed, sources: snap?.data.sources ?? [], about: { '@id': new URL(path, site.url) + '#place' } })]}>
   <section class="dest" aria-labelledby="dest-h">
     <div class="dest-main">
-      <Breadcrumbs items={crumbs} />
-      <a class="chip" href={url.region(region.slug)}>{region.name}</a>
+      <a class="chip chip-white" href={url.region(region.slug)}>{region.name}</a>
       <h1 id="dest-h" class="display">{d.name}<span class="vh"> travel guide</span></h1>
-      <p>{snap?.data.description ?? description}</p>
-      <Photo slug={d.slug} alt={`Landscape in ${d.name}`} priority sizes="(min-width: 64rem) 50vw, 100vw" widths={[480, 720, 960, 1280]} />
+      <p>{intro} <a href="#tips">Read more</a></p>
+      <Photo slug={d.slug} alt={`Landscape in ${d.name}`} priority credit={false} sizes="(min-width: 64rem) 46vw, 100vw" widths={[480, 720, 960, 1280]} />
+      {photo && <p class="dest-credit"><a href={photo.credit.page}>{creditLine(photo.credit)}</a></p>}
     </div>
     <div class="dest-side">
-      <h2>At a glance</h2>
-      <ul class="glance">
-        <li><span class="label">{t.bestMonths}</span><strong>{snap?.data.best_months ?? 'No reviewed source yet'}</strong></li>
-        {snap && snap.data.main_regions.length > 0 && <li><span class="label">{t.mainRegions}</span><strong>{snap.data.main_regions.join(', ')}</strong></li>}
-        <li><span class="label">{t.entryBasics}</span>{snap?.data.entry_basics ?? 'Check your own government\'s travel advice.'}</li>
-        {d.booster_url && <li><span class="label">More on {d.name}</span><a href={d.booster_url}>{new URL(d.booster_url).hostname}</a></li>}
-        <li><span class="label">{t.reviewed}</span>{reviewed}</li>
+      <h2 class="boxlabel">Latest stories</h2>
+      <ul class="storylist">
+        {latest.map((a) => (
+          <li><p class="mono">{site.name} editors <span aria-hidden="true">|</span> {fmtDate(a.data.published)}</p><a href={url.article(a.id)}>{a.data.title}</a></li>
+        ))}
       </ul>
-      <a class="pill pill-dark" href={site.publisher.url}>Find a local operator on Tourground</a>
+      {d.booster_url && (
+        <>
+          <h2 class="boxlabel">More on {d.name}</h2>
+          <a class="promo" href={d.booster_url}><span class="mono">Country guide</span><strong>{new URL(d.booster_url).hostname}</strong><span class="pill pill-dark pill-plain">Visit</span></a>
+        </>
+      )}
     </div>
   </section>
 
-  {stories.length > 0 && (
-    <section class="section" aria-labelledby="stories-h">
-      <div class="wrap">
-        <div class="sec-head"><h2 id="stories-h">Stories about {d.name}</h2><a class="viewall" href={url.articles()}>All articles</a></div>
-        <div class="row">{stories.map((a) => <ArticleCard a={a} />)}</div>
-      </div>
-    </section>
-  )}
-
-  <div class="wrap">
-    <div class="layout" style="padding-top:2.5rem">
-      <div class="main">
-        <PageMeta published={pub} reviewed={reviewed} />
-        <h2 id="snapshot">Before you go</h2>
-        {snap && Snap ? (
-          <>
-            <dl class="facts">
-              {snap.data.best_months && (<><dt>{t.bestMonths}</dt><dd>{snap.data.best_months}</dd></>)}
-              {snap.data.main_regions.length > 0 && (<><dt>{t.mainRegions}</dt><dd>{snap.data.main_regions.join(', ')}</dd></>)}
-              {snap.data.entry_basics && (<><dt>{t.entryBasics}</dt><dd>{snap.data.entry_basics}</dd></>)}
-            </dl>
-            <div class="prose"><Snap /></div>
-          </>
-        ) : (
-          <p>No reviewed guide for this country yet.</p>
+  <section class="section tips" id="tips" aria-labelledby="tips-h">
+    <div class="wrap">
+      <p class="mono center">Travel guides</p>
+      <h2 id="tips-h" class="center">{d.name} travel tips</h2>
+      <p class="center tips-dek">Practical, sourced guidance on when to go, where to go and how to get in. Last reviewed {fmtDate(reviewed)}.</p>
+      <div class="tipgrid">
+        {tips.map((x) => (
+          <div class="tip"><h3><Icon name={x.icon} />{x.title}</h3><p>{x.text}</p></div>
+        ))}
+        {snap && Snap && (
+          <div class="tip tip-wide"><h3><Icon name="alert" />Things to know</h3><div class="prose"><Snap /></div></div>
         )}
-        <h2 id="book">Booking a trip to {d.name}</h2>
-        <ul>
-          <li><a href={url.guide()}>How to check a local operator</a>: licences, insurance and payment protection.</li>
-          <li><a href={url.checklist()}>The before-you-pay checklist</a> (printable).</li>
-        </ul>
-        {sources.length > 0 && <Sources sources={sources} />}
       </div>
-      <aside class="aside" aria-label="More">
-        <div class="aside-box">
-          <h2>Booking guide</h2>
-          <ul>
-            <li><a href="/guide/licences/">Check a licence</a></li>
-            <li><a href="/guide/deposits-and-payment-protection/">Deposits and payment</a></li>
-            <li><a href="/guide/red-flags/">Red flags</a></li>
-          </ul>
-        </div>
-      </aside>
+      {snap && snap.data.sources.length > 0 && <div class="tips-sources"><Sources sources={snap.data.sources} /></div>}
     </div>
-  </div>
+  </section>
+
+  <section class="section" aria-labelledby="ls-h">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="ls-h">{about.length ? `Latest stories from ${d.name}` : 'Latest travel stories'}</h2><div class="sec-tools"><a class="viewall" href={url.articles()}>Read more</a><Carousel id="row-ls" label="stories" /></div></div>
+      <div class="row" id="row-ls">{(about.length ? about : all).slice(0, 10).map((a) => <ArticleCard a={a} />)}</div>
+    </div>
+  </section>
 
   {nearby.length > 0 && (
     <section class="section section-grey" aria-labelledby="near-h">
       <div class="wrap">
-        <div class="sec-head"><h2 id="near-h">More in {region.name}</h2><a class="viewall" href={url.region(region.slug)}>View all</a></div>
-        <div class="row">{nearby.map((x) => <CountryCard d={x} />)}</div>
+        <div class="sec-head"><h2 id="near-h">{d.name} and beyond</h2><div class="sec-tools"><a class="viewall" href={url.region(region.slug)}>View all</a><Carousel id="row-near" label="destinations" /></div></div>
+        <div class="row" id="row-near">{nearby.map((x) => <CountryCard d={x} />)}</div>
       </div>
     </section>
   )}

@@ -1,42 +1,23 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PageMeta from '../../components/PageMeta.astro';
 import CountryCard from '../../components/CountryCard.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getFeed } from '../../lib/feed';
-import { regions, site } from '../../config/site.config';
-import { url } from '../../lib/urls';
+import { site } from '../../config/site.config';
+import { url, abs } from '../../lib/urls';
 import { article } from '../../lib/schema';
 import { t } from '../../i18n/en';
 const feed = getFeed();
 const path = url.countries();
-const title = 'Destinations: travel guides by country';
-const description = `Travel guides to ${t.countriesListed(feed.countries.length)}: when to go, main regions, entry basics and the stories we have published about each.`;
-const list = {
-  '@type': 'ItemList',
-  name: 'Destination guides',
-  numberOfItems: feed.countries.length,
-  itemListElement: feed.countries.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: new URL(url.country(d.slug), site.url).toString() })),
-};
+const title = 'Explore top travel destinations';
+const description = `Travel guides to ${t.countriesListed(feed.countries.length)}: when to go, where to go, how to get in, and the stories we have published about each.`;
+const list = { '@type': 'ItemList', name: 'Destinations', numberOfItems: feed.countries.length, itemListElement: feed.countries.map((d, i) => ({ '@type': 'ListItem', position: i + 1, name: d.name, url: abs(url.country(d.slug)) })) };
 ---
 <Base title={title} description={description} path={path} full crumbs={[{ name: t.nav.countries, path }]}
   schema={[article({ path, title, description, published: site.launch.published, modified: site.launch.published }), list]}>
-  <div class="wrap">
-    <div class="page-head">
-      <Breadcrumbs items={[{ name: t.breadcrumbHome, path: '/' }, { name: t.nav.countries, path }]} />
-      <h1 class="display" style="color:var(--ink)">Destinations</h1>
-      <p class="standfirst">{description}</p>
-      <PageMeta published={site.launch.published} reviewed={site.launch.published} />
-      <p class="small">{regions.filter((r) => (feed.countriesByRegion.get(r.slug) ?? []).length).map((r, i) => (<>{i > 0 && ' · '}<a href={`#r-${r.slug}`}>{r.name}</a></>))}</p>
-    </div>
-    {regions.map((r) => {
-      const l = feed.countriesByRegion.get(r.slug) ?? [];
-      return l.length > 0 && (
-        <section aria-labelledby={`r-${r.slug}`} style="padding-bottom:2.5rem">
-          <div class="sec-head"><h2 id={`r-${r.slug}`}>{r.name}</h2><a class="viewall" href={url.region(r.slug)}>{t.countriesListed(l.length)}</a></div>
-          <div class="grid">{l.map((d) => <CountryCard d={d} />)}</div>
-        </section>
-      );
-    })}
+  <div class="wrap listing">
+    <h1>Explore top travel destinations</h1>
+    <p class="listing-dek">{description}</p>
+    <p class="results">Results ({feed.countries.length})</p>
+    <div class="grid4">{feed.countries.map((d) => <CountryCard d={d} />)}</div>
   </div>
 </Base>
