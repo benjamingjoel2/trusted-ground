@@ -1,15 +1,17 @@
 ---
-import Photo from './Photo.astro';
+import StoryCard from './StoryCard.astro';
 import { url } from '../lib/urls';
-import { fmtDate, readMinutes } from '../lib/content';
+import { readMinutes } from '../lib/content';
+import { getFeed } from '../lib/feed';
 import type { CollectionEntry } from 'astro:content';
-interface Props { a: CollectionEntry<'articles'> }
-const { a } = Astro.props;
-const href = url.article(a.id);
+interface Props { a: CollectionEntry<'articles'>; size?: 'lg' | 'md' }
+const { a, size } = Astro.props;
+const feed = getFeed();
+const s = {
+  kind: 'article' as const, id: a.id, href: url.article(a.id), title: a.data.title, description: a.data.description,
+  category: a.data.category, hero: a.data.hero ?? a.data.countries[0], countries: a.data.countries,
+  regions: [...new Set(a.data.countries.map((c) => feed.destBySlug.get(c)?.region).filter(Boolean) as string[])],
+  published: a.data.published, minutes: readMinutes(a.body),
+};
 ---
-<article class="card">
-  <a class="photo-link" href={href} tabindex="-1" aria-hidden="true"><Photo slug={a.data.hero ?? a.data.countries[0] ?? ''} alt="" credit={false} natural /></a>
-  <p class="meta"><span>{fmtDate(a.data.published)}</span><span>{readMinutes(a.body)} min read</span></p>
-  <h3><a href={href}>{a.data.title}</a></h3>
-  <a class="pill" href={href} aria-label={`Read: ${a.data.title}`}>Read story</a>
-</article>
+<StoryCard s={s} size={size} />

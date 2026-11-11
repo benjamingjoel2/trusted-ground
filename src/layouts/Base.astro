@@ -4,10 +4,12 @@ import '@fontsource/archivo/latin-700.css';
 import '@fontsource/archivo/latin-800.css';
 import '@fontsource/anton/latin-400.css';
 import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource/newsreader/latin-500.css';
 import '../styles/global.css';
 import archivo400 from '@fontsource/archivo/files/archivo-latin-400-normal.woff2?url';
 import archivo700 from '@fontsource/archivo/files/archivo-latin-700-normal.woff2?url';
 import anton400 from '@fontsource/anton/files/anton-latin-400-normal.woff2?url';
+import serif500 from '@fontsource/newsreader/files/newsreader-latin-500-normal.woff2?url';
 import { site, disclosure, regions } from '../config/site.config';
 import { t } from '../i18n/en';
 import { url, abs } from '../lib/urls';
@@ -58,6 +60,7 @@ const categories = [...new Set((await published('articles')).map((a) => a.data.c
     <link rel="preload" href={anton400} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={archivo400} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={archivo700} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={serif500} as="font" type="font/woff2" crossorigin />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
     {preloadSrcset && <link rel="preload" as="image" type="image/webp" imagesrcset={preloadSrcset} imagesizes={preloadSizes} fetchpriority="high" />}
     <link rel="canonical" href={canonical} />

@@ -1,13 +1,16 @@
 ---
+/** Editorial card: portrait photo, tag line, date, serif headline. */
 import Photo from './Photo.astro';
 import { fmtDate } from '../lib/content';
+import { destName } from '../lib/feed';
 import type { Story } from '../lib/stories';
-interface Props { s: Story }
-const { s } = Astro.props;
+interface Props { s: Story; size?: 'lg' | 'md' }
+const { s, size = 'md' } = Astro.props;
+const tags = [s.category, ...s.countries.slice(0, 2).map(destName)];
 ---
-<article class="card" data-cat={s.category} data-regions={s.regions.join(' ')}>
-  <a class="photo-link" href={s.href} tabindex="-1" aria-hidden="true"><Photo slug={s.hero ?? ''} alt="" credit={false} natural /></a>
-  <p class="meta"><span>{fmtDate(s.published)}</span><span>{s.minutes} min read</span></p>
-  <h3><a href={s.href}>{s.title}</a></h3>
-  <a class="pill pill-plain" href={s.href} aria-label={`Read: ${s.title}`}>Read story</a>
+<article class={`ecard ecard-${size}`} data-cat={s.category} data-regions={s.regions.join(' ')}>
+  <a class="ecard-photo" href={s.href} tabindex="-1" aria-hidden="true"><Photo slug={s.hero ?? ''} alt="" credit={false} sizes={size === 'lg' ? '(min-width: 64rem) 33vw, 90vw' : '(min-width: 64rem) 25vw, 50vw'} widths={[360, 560, 800]} /></a>
+  <p class="ecard-tags">{tags.map((t, i) => (<>{i > 0 && <span aria-hidden="true"> · </span>}<span>{t}</span></>))}</p>
+  <h3 class="ecard-title"><a href={s.href}>{s.title}</a></h3>
+  <p class="ecard-date">{fmtDate(s.published)} · {s.minutes} min read</p>
 </article>
