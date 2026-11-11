@@ -24,11 +24,11 @@ sources:
     label: "UK FCDO: South Africa travel advice, health"
 ---
 
-Kruger is one of the few great African parks you can explore in your own car, staying in rest camps run by South African National Parks (SANParks). You pay a daily conservation fee, day visitors may need to pre-book because of gate quotas, and you must be back in camp or out of the park before the gates close. In early 2026 floods closed roads and camps across the park, so check SANParks for the current situation before you book.
+Kruger National Park can be explored in your own car, staying overnight in camps run by South African National Parks (SANParks). You pay a daily conservation fee, day visitors may need to pre-book because of gate quotas, and you must be back in camp or out of the park before the gates close. In early 2026 floods closed roads and camps across the park, so check SANParks for the current situation before you book.
 
 ## How a self-drive visit works
 
-Kruger lies in the north-east of South Africa, spanning Limpopo and Mpumalanga. Visitors drive themselves along the park's tar and gravel roads between entrance gates, picnic sites and fenced rest camps. The UK Foreign, Commonwealth and Development Office (FCDO) notes that you can also fly directly to Kruger from Johannesburg, Cape Town and Durban, and that many people take a tour or drive overland.
+Visitors drive themselves along the park's tar and gravel roads between entrance gates, picnic sites and fenced rest camps. The UK Foreign, Commonwealth and Development Office (FCDO) notes that you can also fly directly to Kruger from Johannesburg, Cape Town and Durban, and that many people take a tour or drive overland.
 
 The main gates in the south include Paul Kruger, Phabeni, Numbi, Malelane and Crocodile Bridge. SANParks says these gates, and the fuel stations in the south of the park, use a cash-free payment system, so bring a card.
 
@@ -40,13 +40,13 @@ According to a SANParks statement reported by the government news agency SAnews 
 - **Other SADC nationals:** R275 per adult, R137 per child
 - **All other visitors:** R602 per adult, R300 per child
 
-Foreign visitors must show a passport. The fee is payable at the gate unless you hold a valid Wild Card, SANParks' annual pass. These were the latest published figures we could confirm at the time of writing (November 2026); SANParks reviews its fees, so check its website before you travel.
+Foreign visitors must show a passport. The fee is payable at the gate unless you show a valid Wild Card. These were the latest published figures we could confirm at the time of writing (November 2026); SANParks reviews its fees, so check its website before you travel.
 
 At busy times Kruger applies daily quotas at the gates. These apply to day visitors, not overnight guests. Once a gate's quota is reached, only pre-booked day visitors may enter; others must queue and wait for people to leave. Pre-booking is done online through SANParks and carries a non-refundable administration fee (R59 per adult and R29 per child in December 2025). Wild Card holders are not exempt from that fee. You book a time slot (05:30 to 08:00, 08:00 to 10:00, or 10:00 onwards), and SANParks says late arrivals are treated as non-booked.
 
 ## Rest camps and staying overnight
 
-SANParks rest camps are spread across the park, from Crocodile Bridge, Lower Sabie and Skukuza in the south to Satara, Olifants, Letaba and Mopani in the centre, and Shingwedzi and Punda Maria in the north. There are also smaller bush camps such as Biyamiti, Talamati and Bateleur.
+SANParks rest camps are spread across the park. In the southern Marula region they include Crocodile Bridge, Lower Sabie, Skukuza and Satara; in the northern Nxanatseni region, Olifants, Letaba, Mopani, Shingwedzi and Punda Maria. There are also smaller bush camps such as Biyamiti, Talamati and Bateleur.
 
 For something more unusual, South African Tourism describes two overnight hides that can be booked through SANParks. Sabie Hide sleeps nine, near Phalaborwa Gate beside Sabie Dam, and Shipandani Hide, south of Mopani, sleeps six. Each can be booked for one night only. There is no electricity, and the rule is simple: never go outside the hide at night.
 
@@ -54,7 +54,7 @@ Guided walking trails are another option. South African Tourism says the organis
 
 ## The 2026 floods and safety
 
-In January 2026, heavy rain pushed several rivers over their banks, including the Crocodile, Sabie, Letaba, Sand, Luvuvhu and Limpopo. At a briefing on 22 January, the environment minister said many camps were closed, including Letaba, Olifants, Shingwedzi, Lower Sabie and Crocodile Bridge, and that the north and south of the park were cut off from each other. A SANParks statement on 26 January announced that some gates and camps were reopening, said gravel roads were closed until further notice, and urged visitors not to remove barricades or enter closed roads.
+In January 2026, heavy rain pushed several rivers over their banks, including the Crocodile, Sabie, Letaba, Sand, Luvuvhu and Limpopo. At a briefing on 22 January, the Minister of Forestry, Fisheries and the Environment said many camps were closed, including Letaba, Olifants, Shingwedzi, Lower Sabie and Crocodile Bridge, and that the north and south of the park were cut off from each other. A SANParks statement on 26 January announced that some gates and camps were reopening, said gravel roads were closed until further notice, and urged visitors not to remove barricades or enter closed roads.
 
 Conditions have changed since then, so check SANParks' news page for the current status of camps, gates and roads.
 

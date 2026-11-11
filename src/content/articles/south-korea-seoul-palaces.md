@@ -50,7 +50,7 @@ According to Visit Seoul, the schedule is:
 
 The weather can change things. In heavy rain or snow, the ceremony may be cancelled. On winter days of −10°C or lower, or summer days of 30°C or higher, the ceremony continues in full but fewer guards may stand watch.
 
-## Changdeokgung and its Secret Garden
+## Changdeokgung, the Secret Garden and Jongmyo
 
 Changdeokgung was built by King Taejong in 1405 and rebuilt in 1610 after the Imjin War, says Visit Seoul. It then served as a royal palace for about 270 years and is a UNESCO World Heritage Site. Visit Seoul lists admission at KRW 3,000 for foreign adults aged 19 to 64. The palace is closed on Mondays.
 
@@ -61,7 +61,7 @@ The highlight is Huwon, the Secret Garden, which takes up 60% of the palace grou
 
 Book the garden through the palaces' official reservation service if your dates are fixed.
 
-## Jongmyo, Deoksugung and Changgyeonggung
+The other royal sites nearby each have their own pattern:
 
 - **Jongmyo Shrine** is closed on Tuesdays. On Mondays, Thursdays and Fridays, visits are by timed guided tour, lasting about 50 minutes. English tours start at 10:00, 12:00, 14:00 and 16:00. On Saturdays, Sundays, public holidays and Wednesdays (Culture Day), you can visit freely.
 - **Deoksugung and Changgyeonggung** are closed on Mondays and open late, from 09:00 to 21:00 with last entry at 20:00, according to the Korea Heritage Service.
