@@ -19,7 +19,7 @@ sources:
   - url: https://www.calmac.co.uk/en-gb/book/our-booking-process/
     label: "CalMac Ferries: Our booking process"
   - url: https://www.outdooraccess-scotland.scot/
-    label: "NatureScot: Scottish Outdoor Access Code"
+    label: "Scottish Outdoor Access Code: Know the Code before you go"
 ---
 
 Sea lochs, empty beaches, mountain passes and island ferries crossing grey-green water: the Highlands and islands reward slow travel, but they also punish a rushed plan. Ferries need booking, many roads are single-track, and from late spring the midges arrive. Build in time, learn the passing-place etiquette, and pack repellent.
