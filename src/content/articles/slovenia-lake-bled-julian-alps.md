@@ -1,5 +1,5 @@
 ---
-title: "Lake Bled and the Julian Alps: Triglav National Park and the Soča Valley"
+title: "Lake Bled and the Julian Alps: Triglav and the Soča Valley"
 description: "Lake Bled's island and pletna boats, Triglav National Park's rules for visitors, and the emerald Soča River, with practical notes on parking at the Vršič Pass."
 category: "Nature"
 hero: slovenia

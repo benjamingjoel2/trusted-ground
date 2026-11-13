@@ -1,5 +1,5 @@
 ---
-title: "Walking the Camino de Santiago: routes, the credential and the Compostela"
+title: "Walking the Camino de Santiago: routes, credential and Compostela"
 description: "How the Camino de Santiago works: the main routes into Galicia, the pilgrim credential and its stamps, the distance rules for the Compostela, and safety on the trail."
 category: "Planning"
 hero: spain
