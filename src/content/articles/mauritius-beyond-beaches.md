@@ -1,5 +1,5 @@
 ---
-title: "Mauritius beyond the beach: Black River Gorges, Le Morne and Aapravasi Ghat"
+title: "Beyond the beach in Mauritius: gorges, Le Morne and Aapravasi Ghat"
 description: "Three places that explain Mauritius beyond its lagoons: native forest in Black River Gorges, the mountain of Le Morne and the indenture depot at Aapravasi Ghat."
 category: "Culture"
 hero: mauritius
