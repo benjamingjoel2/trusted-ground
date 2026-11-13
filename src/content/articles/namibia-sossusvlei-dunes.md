@@ -1,5 +1,5 @@
 ---
-title: "Sossusvlei and Deadvlei: Namib dunes, gate times and the heat"
+title: "Sossusvlei and Deadvlei: the Namib dunes, access and the heat"
 description: "How to plan a visit to Sossusvlei and Deadvlei in Namibia's Namib-Naukluft Park: the dunes, the Sesriem gateway, the shuttle, park hours and the desert heat."
 category: "Nature"
 hero: namibia

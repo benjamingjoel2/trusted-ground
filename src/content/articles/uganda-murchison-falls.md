@@ -54,7 +54,6 @@ Other options listed by UWA include:
 
 - **Chimpanzee tracking** with forest guides at Kaniyo Pabidi, which is also a strong birding site for Albertine Rift species.
 - **Sport fishing** below the falls, where UWA records a rod-caught Nile perch of 108kg.
-- **Ziwa Rhino Sanctuary**, outside the park near the Kampala to Gulu road, home to Uganda's only wild rhinos.
 
 ## When to go and how to get there
 
@@ -62,13 +61,13 @@ UWA's brochure recommends the dry seasons from December to late February and fro
 
 By road, UWA puts the park 305km north of Kampala, four to five hours to the southern gate, with another hour or two from the gate to most lodges. From Fort Portal in the south-west, allow at least six hours. Northern gates (Chobe, Wankwar and Tangi) are reached from the Kampala to Pakwach road. Charter and scheduled flights from Entebbe or Kajjansi can land at Pakuba Airfield, the most convenient for the lodges around Paraa.
 
-UWA operates a campsite and dormitory at North Paraa, and camping is possible at the Top of the Falls; privately run lodges are in and around the park. The 2024 to 2026 UWA tariff that set entry and activity fees ran to June 2026, so check the current tariff on the UWA website rather than relying on older figures. UWA says 20 per cent of park fees go to communities in parishes bordering the park.
+The 2024 to 2026 UWA tariff that set entry and activity fees ran to June 2026, so check the current tariff on the UWA website rather than relying on older figures. UWA says 20 per cent of park fees go to communities in parishes bordering the park.
 
 ## Safety and health
 
 The UK Foreign, Commonwealth and Development Office (FCDO) says terrorists are very likely to try to carry out attacks in Uganda, and that past attacks have included national parks, notably in western Uganda near the border with the Democratic Republic of the Congo. It also warns that road travel can be hazardous and advises against travelling outside main towns after dark. Ferry accidents on Lake Albert and Lake Victoria have killed many passengers; the FCDO advises not boarding a vessel that looks overloaded.
 
-On health, the FCDO notes that the World Health Organisation declared Uganda's latest Ebola outbreak over on 27 August 2026, but that an outbreak continues in the DRC and screening may apply at entry points including Entebbe. You need a visa to enter Uganda. For the bigger picture, see our [Uganda travel guide](/countries/uganda/) and our article on [gorilla trekking permits](/articles/gorilla-trekking-permits/).
+On health, the FCDO notes that the World Health Organisation declared Uganda's latest Ebola outbreak over on 27 August 2026, but that an outbreak continues in the DRC and screening may apply at entry points including Entebbe. You need a visa to enter Uganda. See our [Uganda travel guide](/countries/uganda/) and our article on [gorilla trekking permits](/articles/gorilla-trekking-permits/).
 
 ## Before you go
 
