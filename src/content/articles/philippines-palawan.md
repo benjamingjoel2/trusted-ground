@@ -30,7 +30,7 @@ Limestone cliffs rise straight out of green water, outrigger boats slide between
 
 The Puerto Princesa Subterranean River National Park protects a karst landscape with one of the most complex cave systems in the Philippines. According to the park's official site, run by the Puerto Princesa City Government, the underground river is 8.2km long and flows directly into the sea; its lower half is brackish and rises and falls with the tide. The river is navigable for 4.3km, and the park was inscribed on the UNESCO World Heritage List on 4 December 1999.
 
-Visits are by park-operated paddle boat, on a tour of about an hour that takes in the rock formations and the bats and swiftlets that live in the cave. The park was the first Philippine national park devolved to and managed by a local government, through a multi-sector Protected Area Management Board.
+Visits are by park-operated paddle boat, on a tour of about an hour that takes in the rock formations and the bats and swiftlets that live in the cave.
 
 The rules are what most visitors need to know:
 
@@ -38,7 +38,7 @@ The rules are what most visitors need to know:
 - **No permit, no entry.** Every visitor needs a permit, booked through the Underground River Booking Office in Puerto Princesa. Visitors must present valid identification and register individually.
 - **Fixed hours.** The advisory gives tour times of 8am to 4pm, timed to avoid the animals' departure from and return to the cave. Tours run daily except in extreme weather.
 
-The park also describes other ways to spend the day: a 5.3km jungle trail from Sabang to the river entrance (listed as temporarily closed for renovation at the time of writing), a paddle-boat tour of the Sabang mangroves, and an ethnographic museum on the Batak and Tagbanua peoples at the park visitor centre. It records at least 165 bird species, including all 15 of Palawan's endemic birds, such as the Palawan peacock pheasant and Palawan hornbill.
+The park also describes other ways to spend the day: a 5.3km jungle trail from Sabang to the river entrance (listed as temporarily closed for renovation at the time of writing), a paddle-boat tour of the Sabang mangroves, and an ethnographic museum on the Batak and Tagbanua peoples at the park visitor centre. It records at least 165 bird species, including all 15 of Palawan's endemic birds.
 
 ## El Nido and its lagoons
 
@@ -48,14 +48,14 @@ PTV News, the state broadcaster, reported in 2018 on the rules that changed how 
 
 - **Big Lagoon and Small Lagoon are on different tours**, so they cannot be visited on the same day. This was done to spread visitor numbers.
 - **A separate environmental user fee** is charged for each lagoon, paid into the fund for the protected area's conservation and management. The protected area office said it is non-refundable except in force majeure cases such as Coast Guard cancellations for bad weather.
-- **Lagoon conduct rules** from the Protected Area Management Board include wearing life jackets, no cliff jumping, no loud noise, no feeding or throwing food into the water, no stepping on corals, and no smoking or alcohol near the lagoons.
+- **Lagoon conduct rules** from the Protected Area Management Board include wearing life jackets, no cliff jumping, no loud noise, no grilling, no throwing food scraps into the water, no stepping on corals, and no smoking or alcohol near the lagoons.
 - **Boats that break protected-area rules** can be refused dispatch by the Philippine Coast Guard.
 
-El Nido also charges a general environmental or eco-tourism fee on arrival. The amount has changed over the years and was not published on an official source we could open, so check the current rate with the El Nido municipal tourism office before you go rather than relying on figures quoted online.
+Fees and tour rates in El Nido are set by municipal ordinance and have changed since that report. We could not confirm current amounts on an official source, so check them with the El Nido municipal tourism office before you go rather than relying on figures quoted online.
 
 ## Coron
 
-Coron lies in the Calamian Islands, north of the main island of Palawan, and is reached separately by air or by boat. It is best known for its lakes, limestone islands and wreck diving. Some sites around Coron Island lie within the ancestral domain of the Tagbanua people, who manage access and charge their own entrance fees; we could not find an official source setting out current fees or rules, so ask your boat crew or guide what applies on the day and follow local instructions.
+Coron lies in the Calamian Islands, north of the main island of Palawan, and is usually treated as a separate leg of a Palawan trip. We could not find an official Philippine source setting out current visitor fees, access rules or site lists for the Coron area, so treat online figures with caution: ask your boat crew or guide which sites are open and what fees apply on the day, and follow any instructions from local communities and site staff.
 
 If you plan to dive, the UK Foreign, Commonwealth and Development Office (FCDO) warns that diving schools in the Philippines may have limited resources and do not always observe safety and maintenance standards. It advises checking a dive operator's credentials, making sure oxygen is on the boat, and asking how divers would be transferred to a recompression chamber.
 
