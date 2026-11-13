@@ -28,7 +28,7 @@ Brazil offers two very different wildlife journeys. In the Amazon, you travel by
 
 ## Two kinds of water country
 
-Brazil's Ministry of Tourism describes the Pantanal as "the largest continuous flood plain on planet Earth", a biome "in the heart of the country". Life there follows what ICMBio, Brazil's federal protected areas agency, calls the Pantanal's "flood pulse". In March 2026, ICMBio announced that it had enlarged the Pantanal Matogrossense National Park from 135,922 to about 183,000 hectares. It named the jaguar, giant armadillo, giant otter and marsh deer among the threatened species that use these flooded areas.
+Brazil's Ministry of Tourism describes the Pantanal as the largest continuous floodplain on Earth, a biome in the heart of the country. Life there follows what ICMBio, Brazil's federal protected areas agency, calls the Pantanal's flood pulse. In March 2026, ICMBio announced that it had enlarged the Pantanal Matogrossense National Park from 135,922 to about 183,000 hectares. It named the jaguar, giant armadillo, giant otter and marsh deer among the threatened species that use these flooded areas.
 
 The Amazon is reached mainly from Manaus. About 40 km upstream on the Rio Negro lies the Anavilhanas archipelago. INPA, Brazil's national Amazon research institute, describes it as one of the largest river archipelagos in the world, with more than 400 islands. The islands change shape as the river's water level varies by up to 10 metres between high and low water. The Rio Negro's dark "black water" feeds igapó, a type of flooded forest.
 
@@ -40,7 +40,7 @@ The archipelago is protected as the Anavilhanas National Park, which covers 350,
 
 - **Best time:** May to September, when it rains less. Wildlife viewing improves as the waters start to fall.
 - **Rainy season:** October to April, with January and February the wettest months.
-- **From December:** mosquito numbers become high, and the rains make the Transpantaneira road towards Porto Jofre "practically impassable".
+- **From December:** mosquito numbers become high, and the rains make the Transpantaneira road towards Porto Jofre practically impassable.
 
 **Amazon.** Here the experience changes with the river. INPA notes that the Anavilhanas islands change with the water level, which can rise and fall by up to 10 metres. Forest that is dry land in one season can be under water in another. Ask anyone you book with what the water level will be on your dates and what that means for the activities on offer.
 
